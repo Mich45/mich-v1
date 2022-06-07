@@ -9,10 +9,10 @@ import Experience from '../components/Experience';
 
 const bounce = keyframes`
 0%{
-  scale: 1.1
+  transform: scale(1.1);
 }
 100%{
-  scale: 1.2
+  transform: scale(1.2);
 }
 `;
 
@@ -121,6 +121,7 @@ font-size: 14px;
 
 const Details = styled.div`
 height: auto;
+padding-block: 20px;
 width: 100%;
 background: #0f0c22;
 position: relative;
