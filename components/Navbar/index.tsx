@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import ThemeSwitch from './ThemeSwitch';
-import { colors } from '../styles/themes';
+import ThemeSwitch from '../ThemeSwitch';
+import { colors } from '../../styles/themes';
 
 const Navigation = styled.div`
     height: 40px;
