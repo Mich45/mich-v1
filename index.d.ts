@@ -1,2 +1,2 @@
 declare module 'styled-components';
-// declare module 'react-icons/*';
+declare module 'react-icons/*';
