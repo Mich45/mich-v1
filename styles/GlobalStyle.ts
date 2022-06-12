@@ -31,7 +31,7 @@ ${fonts}
      overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-     font-family: 'Inter';
+     font-family: 'Inter', Segoe UI, sans-serif;
 }
 
 a {

@@ -18,7 +18,6 @@ const BulbOff = styled(IconBulbOff)`
 `;
 
 const ThemeSwitch = () => {
-    console.log(Bulb);
     const [isToggle, setIsToggle] = useState(true);
 
     const handleToggle = () => {

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const withPlugins = require('next-compose-plugins');
 const nextConfig = {
     reactStrictMode: true,
 
@@ -8,17 +9,14 @@ const nextConfig = {
 };
 
 const withMDX = require('@next/mdx')({
-    extension: /\.mdx?$/,
     options: {
         remarkPlugins: [],
         rehypePlugins: [],
-        // If you use `MDXProvider`, uncomment the following line.
-        // providerImportSource: "@mdx-js/react",
     },
 });
 
-module.exports = withMDX({
-    // Append the default value with md extensions
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
-    nextConfig,
-});
+const config = withMDX(nextConfig);
+
+config.pageExtensions = ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'];
+
+module.exports = config;
