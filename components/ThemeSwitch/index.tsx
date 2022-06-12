@@ -1,16 +1,49 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import { IconAward } from '@tabler/icons';
+import { IconBulb } from '@tabler/icons';
+import { IconBulbOff } from '@tabler/icons';
+import { colors } from '../../styles/themes';
+
+const Bulb = styled(IconBulb)`
+    :hover {
+        stroke: black;
+        cursor: pointer;
+    }
+`;
+const BulbOff = styled(IconBulbOff)`
+    :hover {
+        stroke: black;
+        cursor: pointer;
+    }
+`;
 
 const ThemeSwitch = () => {
+    console.log(Bulb);
+    const [isToggle, setIsToggle] = useState(true);
+
+    const handleToggle = () => {
+        setIsToggle(!isToggle);
+    };
+
     return (
         <>
-            <IconAward
-                size={36} // set custom `width` and `height`
-                color="red" // set `stroke` color
-                stroke={3} // set `stroke-width`
-                strokeLinejoin="miter" // override other SVG props
-            />
+            {isToggle ? (
+                <Bulb
+                    size={30}
+                    color={colors.gray.lightGray}
+                    stroke={1.5}
+                    strokeLinejoin="miter"
+                    onClick={handleToggle}
+                />
+            ) : (
+                <BulbOff
+                    size={30}
+                    color={colors.gray.lightGray}
+                    stroke={1.5}
+                    strokeLinejoin="miter"
+                    onClick={handleToggle}
+                />
+            )}
         </>
     );
 };

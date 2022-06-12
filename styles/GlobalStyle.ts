@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import * as fonts from "../public/assets/fonts"
+import * as fonts from '../public/assets/fonts';
 
 const GlobalStyle = createGlobalStyle`
 ${fonts}
@@ -36,9 +36,10 @@ ${fonts}
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 
-`
+`;
 
 export default GlobalStyle;

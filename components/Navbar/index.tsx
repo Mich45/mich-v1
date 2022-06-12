@@ -33,7 +33,13 @@ const Logo = styled.div`
     place-content: center;
     place-items: center;
     margin-left: 20px;
+
+    :hover {
+        cursor: pointer;
+    }
 `;
+
+const LogoItem = styled.a``;
 
 const NavItem = styled.li`
     display: flex;
@@ -62,19 +68,21 @@ const Navbar = (): JSX.Element => {
         <>
             <Navigation>
                 <NavigationWrapper>
-                    <Logo>Logoo</Logo>
+                    <Logo>
+                        <LogoItem href="/">Logoo</LogoItem>
+                    </Logo>
                     <NavLinkWrapper>
-                        <NavItem>
-                            <ThemeSwitch />
-                        </NavItem>
                         <NavItem>
                             <Anchor href="#">Projects</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="#">Blog</Anchor>
+                            <Anchor href="/blog">Blog</Anchor>
                         </NavItem>
                         <NavItem>
                             <Anchor href="#">Contact</Anchor>
+                        </NavItem>
+                        <NavItem>
+                            <ThemeSwitch />
                         </NavItem>
                     </NavLinkWrapper>
                 </NavigationWrapper>

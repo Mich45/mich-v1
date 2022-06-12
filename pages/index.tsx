@@ -18,43 +18,20 @@ const bounce = keyframes`
 const slideIn = keyframes`
 0%{
   opacity: 0;
-  margin-top: 30px;
+  transform: translateY(60%);
+  visibilty: hidden;
 }
 
 100%{
-  margin-top: 0;
   opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 `;
 
-const MainContent = styled.main`
-    height: 100vh;
+const MainContent = styled.section`
     width: 100%;
     position: relative;
-`;
-
-const MainOverlay = styled.div`
-    overflow: hidden;
-    position: relative;
-
-    ::after {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        background-image: url(${Noise.src});
-        opacity: 0.05;
-        background-repeat: repeat;
-    }
-
-    ::before {
-        content: '';
-        height: 100%;
-        width: 100%;
-        position: fixed;
-        background: ${colors.white.white_pink};
-        filter: blur(40px);
-    }
 `;
 
 const BannerWrapper = styled.div`
@@ -91,8 +68,7 @@ const Role = styled.p`
     font-weight: 600;
     color: ${colors.gray.lightGray};
     margin: 0;
-    position: absolute;
-    animation: ${slideIn} 1s ease-in-out;
+    animation: 1s ${slideIn} ease-in-out;
 `;
 
 const Gradient = styled.span`
@@ -109,20 +85,20 @@ const AboutWrapper = styled.div`
     place-items: center;
     place-content: center;
     padding-inline: 20px;
-    margin-top: 20px;
 `;
 
-const AboutText = styled.p`
-    font-size: 14px;
+const AboutParagraph = styled.p`
+    font-size: 16px;
 `;
 
 const Details = styled.div`
-    height: auto;
+    height: 200px;
     padding-block: 20px;
     width: 100%;
     background: #0f0c22;
     position: relative;
     color: white;
+    z-index: 1;
 `;
 
 const ArrowWrapper = styled.div`
@@ -154,7 +130,8 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-color: #091e39;
+    background-image: linear-gradient(to bottom, #1e5399, #091e39);
+    box-shadow: 0 2px 4px #8090a5;
     place-items: center;
     place-content: center;
     display: flex;
@@ -168,7 +145,7 @@ const Resume = styled.a`
 
     :hover {
         transform: scale(1.02);
-        color: ${colors.gray.lightGray};
+        color: #5e95f9;
     }
 `;
 
@@ -176,7 +153,7 @@ const Home: NextPage = (): JSX.Element => {
     return (
         <>
             <Head>
-                <title>Michael Hungbo</title>
+                <title>Michael Hungbo - Software Developer</title>
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
@@ -192,7 +169,6 @@ const Home: NextPage = (): JSX.Element => {
                 />
             </Head>
             <MainContent>
-                <MainOverlay></MainOverlay>
                 <BannerWrapper>
                     <Banner>
                         <Paragraph>
@@ -231,12 +207,17 @@ const Home: NextPage = (): JSX.Element => {
                             Creator of things.
                         </Role>
                         <AboutWrapper>
-                            <AboutText>
+                            <AboutParagraph>
                                 Hey there! I'm a fullstack software developer
                                 from Lagos, Nigeria. For over 2years+, I have
                                 been building exquisite and innovative
                                 applications on the web.
-                            </AboutText>
+                            </AboutParagraph>
+                            <AboutParagraph>
+                                I'm open to opportunities in web development and
+                                technical writing. I'm open to opportunities in
+                                web development and technical writing.
+                            </AboutParagraph>
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>

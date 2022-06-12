@@ -2,17 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterWrapper = styled.footer`
-    height: 40px;
+    height: 100px;
     width: 100%;
-    background: black;
+    display: flex;
+    background: #e3e3e361;
     display: flex;
     position: relative;
+    place-content: center;
+    place-items: center;
+`;
+
+const Paragraph = styled.p`
+    font-size: 14px;
 `;
 
 const Footer = (): JSX.Element => {
+    const date = new Date().getFullYear();
+
     return (
         <>
-            <FooterWrapper></FooterWrapper>
+            <FooterWrapper>
+                <Paragraph>
+                    Copyright © {date} Michael Hungbo. All rights reserved.
+                </Paragraph>
+            </FooterWrapper>
         </>
     );
 };
