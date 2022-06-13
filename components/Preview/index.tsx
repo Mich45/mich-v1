@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/themes';
+import Link from 'next/link';
 
 type PreviewProps = {
     meta: {
@@ -9,6 +10,7 @@ type PreviewProps = {
             excerpt: string;
             tags: string[];
         };
+        postPath: string;
     };
 };
 
@@ -72,17 +74,19 @@ const Tag = styled.div`
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
     return (
         <>
-            <Wrapper>
-                <ImageWrapper></ImageWrapper>
-                <InfoWrapper>
-                    <Excerpt>{meta.data.excerpt}</Excerpt>
-                    <TagsWrapper>
-                        {meta.data.tags.map((tag, index) => {
-                            return <Tag key={index}>{tag}</Tag>;
-                        })}
-                    </TagsWrapper>
-                </InfoWrapper>
-            </Wrapper>
+            <Link href={`posts/${meta.postPath.split('.')[0]}`}>
+                <Wrapper>
+                    <ImageWrapper></ImageWrapper>
+                    <InfoWrapper>
+                        <Excerpt>{meta.data.excerpt}</Excerpt>
+                        <TagsWrapper>
+                            {meta.data.tags.map((tag, index) => {
+                                return <Tag key={index}>{tag}</Tag>;
+                            })}
+                        </TagsWrapper>
+                    </InfoWrapper>
+                </Wrapper>
+            </Link>
         </>
     );
 };

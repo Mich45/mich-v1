@@ -13,7 +13,7 @@ const MainWrapper = styled.div`
 
 type PostLayoutProps = {
     meta: {
-        title: string;
+        title?: string;
     };
     children: React.ReactNode;
 };
@@ -22,7 +22,8 @@ const PostLayout = (props: PostLayoutProps): JSX.Element => {
     return (
         <>
             <Head>
-                <title>{props.meta.title}</title>
+                {/* <title>{props.meta.title}</title> */}
+                <title>Hello</title>
             </Head>
             <MainWrapper>{props.children}</MainWrapper>
         </>

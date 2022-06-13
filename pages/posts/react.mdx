@@ -3,6 +3,9 @@ title: 'React post with MDX'
 tags: [react, webdev, javascript]
 excerpt: 'React for Developers...'
 ---
+
+import PostLayout from '../../components/PostLayout/index.tsx';
+
 # My MDX Page with a Layout
 
 This is a list in markdown:
@@ -12,3 +15,5 @@ This is a list in markdown:
 - Three
 
 Checkout my React component:
+
+export default ({ children }) => <PostLayout >{children}</PostLayout>
