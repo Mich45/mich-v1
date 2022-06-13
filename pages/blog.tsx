@@ -83,7 +83,7 @@ const tags: string[] = [
 ];
 
 type BlogProps = {
-    posts: object;
+    posts: [];
 };
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
@@ -117,8 +117,9 @@ export function getServerSideProps() {
     const postsPath = api.posts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
-        data = [];
-        return postData;
+        const data = [];
+        data.push(postData);
+        return data;
     });
     return {
         props: {
