@@ -2,7 +2,9 @@ import type { NextPage } from 'next';
 import React from 'react';
 import styled from 'styled-components';
 import Search from '../components/Search';
+import Preview from '../components/Preview';
 import { colors } from '../styles/themes';
+import * as api from '../utils/api';
 
 const MainWrapper = styled.main`
     width: 100%;
@@ -60,6 +62,18 @@ const SearchWrapper = styled.div`
     place-items: center;
 `;
 
+const PostsWrapper = styled.div`
+width: 100%;
+display: grid;
+grid-template-columns: minmax(100px, max-content)
+                       repeat(auto-fill, 200px)
+gap: 20px;
+height: auto;
+padding: 20px;
+margin: 20px;
+background: blue;
+`;
+
 const tags: string[] = [
     'react.js',
     'javascript',
@@ -68,7 +82,11 @@ const tags: string[] = [
     'tutorial',
 ];
 
-const Blog: NextPage = () => {
+type BlogProps = {
+    posts: object;
+};
+
+const Blog: NextPage<BlogProps> = ({ posts }) => {
     return (
         <MainWrapper>
             <Jumbotron>
@@ -85,8 +103,28 @@ const Blog: NextPage = () => {
                     })}
                 </TagWrapper>
             </Jumbotron>
+
+            <PostsWrapper>
+                {posts.map((post, i) => {
+                    <Preview data={post} key={i} />;
+                })}
+            </PostsWrapper>
         </MainWrapper>
     );
 };
+
+export function getServerSideProps() {
+    const postsPath = api.posts();
+    const posts = postsPath.map((post) => {
+        const postData = api.readPost(post);
+        data = [];
+        return postData;
+    });
+    return {
+        props: {
+            posts,
+        },
+    };
+}
 
 export default Blog;
