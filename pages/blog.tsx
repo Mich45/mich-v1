@@ -8,7 +8,7 @@ import * as api from '../utils/api';
 
 const MainWrapper = styled.main`
     width: 100%;
-    height: 100vh;
+    height: auto;
     position: relative;
 `;
 
@@ -63,15 +63,15 @@ const SearchWrapper = styled.div`
 `;
 
 const PostsWrapper = styled.div`
-width: 100%;
-display: grid;
-grid-template-columns: minmax(100px, max-content)
-                       repeat(auto-fill, 200px)
-gap: 20px;
-height: auto;
-padding: 20px;
-margin: 20px;
-background: blue;
+    width: 100%;
+    display: grid;
+    grid-template-columns:
+        minmax(300px, max-content)
+        repeat(auto-fill, 200px);
+    gap: 20px;
+    height: 400px;
+    padding: 20px;
+    margin: 20px 0;
 `;
 
 const tags: string[] = [
@@ -106,7 +106,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
 
             <PostsWrapper>
                 {posts.map((post, i) => {
-                    <Preview data={post} key={i} />;
+                    return <Preview meta={post} key={i} />;
                 })}
             </PostsWrapper>
         </MainWrapper>
@@ -117,9 +117,9 @@ export function getServerSideProps() {
     const postsPath = api.posts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
-        const data = [];
-        data.push(postData);
-        return data;
+        // const data = [];
+        // data.push(postData);
+        return postData;
     });
     return {
         props: {

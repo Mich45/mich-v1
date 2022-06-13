@@ -10,7 +10,9 @@ export const posts = (): string[] => {
 };
 
 export const readPost = (postPath: string) => {
-    const postContent = fs.readFileSync(postPath);
+    const homeDirectory = process.cwd();
+    const post = path.join(homeDirectory, 'pages', 'posts', postPath);
+    const postContent = fs.readFileSync(post);
     const { data, content } = matter(postContent);
     return {
         data,
