@@ -14,4 +14,12 @@ export const colors = {
         defaultBlue: '#5156f7',
         darkBlue: '#0f0c22',
     },
+    dark: {
+        dark: '#232529',
+        textDark: '#e2e3e7',
+        lightDark: '#696e79',
+    },
+    green: {
+        codeGreen: '#77ffba',
+    },
 };

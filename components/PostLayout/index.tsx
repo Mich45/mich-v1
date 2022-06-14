@@ -7,8 +7,8 @@ const MainWrapper = styled.div`
     height: auto;
     padding: 20px;
     position: relative;
-    background: red;
-    color: white;
+    background: #efe6e6;
+    color: black;
 `;
 
 type PostLayoutProps = {
