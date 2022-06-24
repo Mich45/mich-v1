@@ -72,6 +72,7 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
+    console.log(meta);
     return (
         <>
             <Link href={`posts/${meta.postPath.split('.')[0]}`}>
@@ -80,9 +81,9 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                     <InfoWrapper>
                         <Excerpt>{meta.data.excerpt}</Excerpt>
                         <TagsWrapper>
-                            {meta.data.tags.map((tag, index) => {
+                            {/* {meta.data?.tags?.map((tag, index) => {
                                 return <Tag key={index}>{tag}</Tag>;
-                            })}
+                            })} */}
                         </TagsWrapper>
                     </InfoWrapper>
                 </Wrapper>

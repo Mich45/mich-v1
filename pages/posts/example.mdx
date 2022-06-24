@@ -1,16 +1,11 @@
----
-title: 'Example post with MDX'
-tags: [mdx, next.js, react]
-excerpt: 'Intro to MDX...'
-cover: ''
----
-
 import PostLayout from '../../components/PostLayout/index.tsx';
 
-import React from './react.mdx';
-
-
-<React/>
+export const meta = {
+    "title": 'Hello World',
+    "tags": ['mdx', 'next.js', 'react'],
+    "excerpt": 'Intro to react',
+    "cover": '',
+}
 
 # My MDX Page with a Layout
 
@@ -53,6 +48,16 @@ This is a list in markdown:
 -   One
 -   Two
 -   Three
+
+```javascript
+console.log('hello!)
+```
+
+```css
+div {
+    height: 10px;
+}
+```
 
 Checkout my React component:
 

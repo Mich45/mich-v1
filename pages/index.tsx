@@ -5,6 +5,7 @@ import Michael from '../public/assets/Devfestme.png';
 import Noise from '../public/assets/noise.png';
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
+import Projects from '../components/Projects'
 
 const bounce = keyframes`
 0%{
@@ -91,16 +92,6 @@ const AboutParagraph = styled.p`
     font-size: 16px;
 `;
 
-const Details = styled.div`
-    height: 200px;
-    padding-block: 20px;
-    width: 100%;
-    background: #0f0c22;
-    position: relative;
-    color: white;
-    z-index: 1;
-`;
-
 const ArrowWrapper = styled.div`
     display: flex;
     margin-block: 0;
@@ -148,6 +139,19 @@ const Resume = styled.a`
         color: #5e95f9;
     }
 `;
+
+const ToolsSection = styled.section`
+    width: 100%;
+    height: 100vh;
+    // background: #e7bfbf4d;
+`;
+
+const ProjectSection = styled.section`
+width: 100%;
+height: 100vh;
+background: green;
+`;
+
 
 const Home: NextPage = (): JSX.Element => {
     return (
@@ -221,14 +225,20 @@ const Home: NextPage = (): JSX.Element => {
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>
-                        <Resume href="#"> 📰 See my resume</Resume>
+                        <Resume href="#"> 📰Download Resume</Resume>
                     </ResumeWrapper>
                 </BannerWrapper>
 
                 <ArrowWrapper>
                     <Arrow>↓</Arrow>
                 </ArrowWrapper>
-                <Details>Detrtryuhfhffgdgg</Details>
+
+                <ProjectSection>
+                    <Projects/>
+                </ProjectSection>
+                <ToolsSection>
+                    <Tools />
+                </ToolsSection>
             </MainContent>
         </>
     );
