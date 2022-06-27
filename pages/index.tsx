@@ -97,6 +97,7 @@ const TextWrapper = styled.div`
 
 const AboutParagraph = styled.p`
     font-size: 16px;
+    text-align: center;
 `;
 
 const ArrowWrapper = styled.div`
