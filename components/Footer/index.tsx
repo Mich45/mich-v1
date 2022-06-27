@@ -5,7 +5,7 @@ const FooterWrapper = styled.footer`
     height: 100px;
     width: 100%;
     display: flex;
-    background: #e3e3e361;
+    background: #e7cfcf61;
     display: flex;
     position: relative;
     place-content: center;

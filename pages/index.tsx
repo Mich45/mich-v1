@@ -5,7 +5,8 @@ import Michael from '../public/assets/Devfestme.png';
 import Noise from '../public/assets/noise.png';
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
-import Projects from '../components/Projects'
+import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 const bounce = keyframes`
 0%{
@@ -88,6 +89,12 @@ const AboutWrapper = styled.div`
     padding-inline: 20px;
 `;
 
+const TextWrapper = styled.div`
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+`;
+
 const AboutParagraph = styled.p`
     font-size: 16px;
 `;
@@ -142,16 +149,20 @@ const Resume = styled.a`
 
 const ToolsSection = styled.section`
     width: 100%;
-    height: 100vh;
-    // background: #e7bfbf4d;
+    height: 70vh;
 `;
 
 const ProjectSection = styled.section`
-width: 100%;
-height: 100vh;
-background: green;
+    width: 100%;
+    height: 100vh;
+    background: green;
 `;
 
+const ContactSection = styled.section`
+    width: 100%;
+    height: 60vh;
+    background: pink;
+`;
 
 const Home: NextPage = (): JSX.Element => {
     return (
@@ -211,17 +222,23 @@ const Home: NextPage = (): JSX.Element => {
                             Creator of things.
                         </Role>
                         <AboutWrapper>
-                            <AboutParagraph>
-                                Hey there! I'm a fullstack software developer
-                                from Lagos, Nigeria. For over 2years+, I have
-                                been building exquisite and innovative
-                                applications on the web.
-                            </AboutParagraph>
-                            <AboutParagraph>
-                                I'm open to opportunities in web development and
-                                technical writing. I'm open to opportunities in
-                                web development and technical writing.
-                            </AboutParagraph>
+                            <TextWrapper>
+                                <AboutParagraph>
+                                    Hey there! I'm a fullstack software
+                                    developer from Lagos, Nigeria with 2+ years
+                                    of experience. Over the years, I have built
+                                    exquisite and innovative applications on the
+                                    web using modern tools and best practices.
+                                </AboutParagraph>
+                            </TextWrapper>
+                            <TextWrapper>
+                                <AboutParagraph>
+                                    I'm open to opportunities in web development
+                                    and technical writing. I'm open to
+                                    opportunities in web development and
+                                    technical writing.
+                                </AboutParagraph>
+                            </TextWrapper>
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>
@@ -234,11 +251,15 @@ const Home: NextPage = (): JSX.Element => {
                 </ArrowWrapper>
 
                 <ProjectSection>
-                    <Projects/>
+                    <Projects />
                 </ProjectSection>
                 <ToolsSection>
                     <Tools />
                 </ToolsSection>
+
+                <ContactSection>
+                    <Contact />
+                </ContactSection>
             </MainContent>
         </>
     );

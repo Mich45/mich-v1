@@ -15,36 +15,39 @@ type PreviewProps = {
 };
 
 const Wrapper = styled.div`
-    width: 300px;
+    width: 70%;
+    height: auto;
+    padding: 5px;
     display: flex;
     flex-direction: column;
-    height: 300px;
     border-radius: 4px;
-    border: 2px solid #f1e5e52e;
+    border: 2px solid transparent;
+    transition: background 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19),
+        border 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    color: ${colors.gray.darkGray};
 
     :hover {
         cursor: pointer;
+        background: #fbead359;
+        border: 2px solid #f7d0d0;
     }
 `;
-
-const ImageWrapper = styled.div`
+const TitleWrapper = styled.div`
     width: 100%;
-    height: 60%;
+    height: 30%;
     padding: 10px;
-    background: #f5f5f5;
 `;
 
 const InfoWrapper = styled.div`
     width: 100%;
     height: 40%;
-    background: teal;
     padding: 10px;
 `;
 
 const Excerpt = styled.p`
     font-size: 14px;
     font-weight: bold;
-    color: aliceblue;
+    margin-top: 0;
 `;
 
 const TagsWrapper = styled.div`
@@ -57,7 +60,7 @@ const Tag = styled.div`
     width: auto;
     height: 30px;
     color: white;
-    background: ${colors.blue.defaultBlue};
+    background: ${colors.gray.darkGray};
     border-radius: 25px;
     padding: 15px;
     font-size: 14px;
@@ -77,13 +80,15 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
         <>
             <Link href={`posts/${meta.postPath.split('.')[0]}`}>
                 <Wrapper>
-                    <ImageWrapper></ImageWrapper>
+                    <TitleWrapper>
+                        <h2>{meta.data.title}</h2>
+                    </TitleWrapper>
                     <InfoWrapper>
                         <Excerpt>{meta.data.excerpt}</Excerpt>
                         <TagsWrapper>
-                            {/* {meta.data?.tags?.map((tag, index) => {
+                            {meta.data?.tags?.map((tag, index) => {
                                 return <Tag key={index}>{tag}</Tag>;
-                            })} */}
+                            })}
                         </TagsWrapper>
                     </InfoWrapper>
                 </Wrapper>
