@@ -6,8 +6,6 @@ import styled from 'styled-components';
 import { posts, readPost } from '../../utils/api';
 
 const Post = ({ post }) => {
-    console.log(post);
-
     return (
         <>
             <Head>

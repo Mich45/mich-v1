@@ -31,7 +31,7 @@ ${fonts}
      overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-     font-family: 'Inter', Segoe UI, sans-serif;
+     font-family: 'Inter', "Segoe UI", system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 a {

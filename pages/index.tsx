@@ -92,6 +92,8 @@ const AboutWrapper = styled.div`
 const AboutParagraph = styled.p`
     font-size: 14px;
     text-align: center;
+    font-weight: bold;
+    color: ${colors.gray.darkGray};
 `;
 
 const ArrowWrapper = styled.div`
@@ -171,7 +173,7 @@ const Home: NextPage = (): JSX.Element => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Hi, there! I'm Michael Hungbo. Welcome to my personal website."
+                    content="Hi, there! I'm Michael Hungbo. Welcome to my personal portfolio website."
                 />
                 <meta
                     name="og:title"
