@@ -81,7 +81,7 @@ const Gradient = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     place-items: center;
@@ -89,14 +89,8 @@ const AboutWrapper = styled.div`
     padding-inline: 20px;
 `;
 
-const TextWrapper = styled.div`
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-`;
-
 const AboutParagraph = styled.p`
-    font-size: 16px;
+    font-size: 14px;
     text-align: center;
 `;
 
@@ -144,7 +138,7 @@ const Resume = styled.a`
 
     :hover {
         transform: scale(1.02);
-        color: #5e95f9;
+        color: #b6d0ff;
     }
 `;
 
@@ -223,27 +217,22 @@ const Home: NextPage = (): JSX.Element => {
                             Creator of things.
                         </Role>
                         <AboutWrapper>
-                            <TextWrapper>
-                                <AboutParagraph>
-                                    Hey there! I'm a fullstack software
-                                    developer from Lagos, Nigeria with 2+ years
-                                    of experience. Over the years, I have built
-                                    exquisite and innovative applications on the
-                                    web using modern tools and best practices.
-                                </AboutParagraph>
-                            </TextWrapper>
-                            <TextWrapper>
-                                <AboutParagraph>
-                                    I'm open to opportunities in web development
-                                    and technical writing. I'm open to
-                                    opportunities in web development and
-                                    technical writing.
-                                </AboutParagraph>
-                            </TextWrapper>
+                            <AboutParagraph>
+                                Hey there! I'm a fullstack software developer
+                                from Lagos, Nigeria with 2+ years of experience.
+                                Over the years, I have built exquisite and
+                                innovative applications on the web using modern
+                                tools and best practices.
+                            </AboutParagraph>
+
+                            <AboutParagraph>
+                                I'm open to opportunities in web and app
+                                development and technical writing.
+                            </AboutParagraph>
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>
-                        <Resume href="#"> 📰Download Resume</Resume>
+                        <Resume href="#"> 📰 Download Resume</Resume>
                     </ResumeWrapper>
                 </BannerWrapper>
 

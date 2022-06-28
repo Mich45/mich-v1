@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import * as Icons from '../Icons';
 import { motion, useAnimation, useViewportScroll } from 'framer-motion';
+import { colors } from '../../styles/themes';
 
 type ToolsType = {
     name: string;
@@ -153,7 +154,12 @@ const Tools = (): JSX.Element => {
     return (
         <>
             <Header variants={container} initial="hidden" animate="reveal">
-                <motion.h1 style={{ fontSize: '50px', color: '#747576' }}>
+                <motion.h1
+                    style={{
+                        fontSize: '40px',
+                        color: `${colors.blue.darkBlue}`,
+                    }}
+                >
                     My Toolkit <span style={{ color: '#fb3a67' }}>🛠</span>{' '}
                 </motion.h1>
                 <Paragraph>

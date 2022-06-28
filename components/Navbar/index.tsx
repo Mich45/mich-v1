@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ThemeSwitch from '../ThemeSwitch';
+import { useRouter } from 'next/router';
 import { colors } from '../../styles/themes';
 
 const Navigation = styled.div`
@@ -9,7 +10,7 @@ const Navigation = styled.div`
     position: absolute;
     top: 0;
     z-index: 1;
-    box-shadow: 0 2px 4px #e6dcdc;
+    box-shadow: ${(props) => (props.path ? 'none' : '0 2px 4px #e6dcdc')};
 `;
 
 const NavigationWrapper = styled.div`
@@ -64,9 +65,18 @@ const Anchor = styled.a`
 `;
 
 const Navbar = (): JSX.Element => {
+    const router = useRouter();
+    const [isPostPath, setIsPostPath] = useState(false);
+
+    useEffect(() => {
+        if (router.asPath.includes('/posts/')) {
+            setIsPostPath(true);
+        }
+    });
+
     return (
         <>
-            <Navigation>
+            <Navigation path={isPostPath}>
                 <NavigationWrapper>
                     <Logo>
                         <LogoItem href="/">Logoo</LogoItem>

@@ -27,7 +27,7 @@ const Wrapper = styled.div`
     color: ${colors.gray.darkGray};
 
     :hover {
-        cursor: pointer;
+        // cursor: pointer;
         background: #fbead359;
         border: 2px solid #f7d0d0;
     }
@@ -36,6 +36,12 @@ const TitleWrapper = styled.div`
     width: 100%;
     height: 30%;
     padding: 10px;
+`;
+
+const Title = styled.h2`
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 const InfoWrapper = styled.div`
@@ -81,7 +87,7 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
             <Link href={`posts/${meta.postPath.split('.')[0]}`}>
                 <Wrapper>
                     <TitleWrapper>
-                        <h2>{meta.data.title}</h2>
+                        <Title>{meta.data.title}</Title>
                     </TitleWrapper>
                     <InfoWrapper>
                         <Excerpt>{meta.data.excerpt}</Excerpt>

@@ -3,8 +3,11 @@ import PostWrapper from '../../components/MDXComponents/Post/PostWrapper.mdx';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled from 'styled-components';
+import { posts, readPost } from '../../utils/api';
 
-const Post = ({ data, content, ...rest }) => {
+const Post = ({ post }) => {
+    console.log(post);
+
     return (
         <>
             <Head>
@@ -12,14 +15,27 @@ const Post = ({ data, content, ...rest }) => {
                 <title>Hello</title>
             </Head>
 
-            <PostWrapper content={content} />
+            <PostWrapper content={post[0].content} />
         </>
     );
 };
 
 export function getServerSideProps() {
+    const allPosts = posts();
+    const result = allPosts.map((post) => {
+        const { data, content, postPath } = readPost(post);
+        return {
+            data,
+            content,
+            postPath,
+        };
+    });
+
+    const post = result;
     return {
-        props: {},
+        props: {
+            post,
+        },
     };
 }
 
