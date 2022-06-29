@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 
-const remarkFrontmatter = import('remark-frontmatter');
-const remarkMdxFrontmatter = import('remark-mdx-frontmatter');
-const remarkGfm = import('remark-gfm');
+import nextMdx from '@next/mdx';
+import remarkFrontmatter from 'remark-frontmatter';
+import { remarkMdxFrontmatter } from 'remark-mdx-frontmatter';
+import remarkGfm from 'remark-gfm';
 
 const nextConfig = {
     reactStrictMode: true,
@@ -12,7 +13,8 @@ const nextConfig = {
     },
 };
 
-const withMDX = require('@next/mdx')({
+const withMDX = nextMdx({
+    extension: /\.mdx?$/,
     options: {
         remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
         rehypePlugins: [],
@@ -24,4 +26,4 @@ const config = withMDX(nextConfig);
 
 config.pageExtensions = ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'];
 
-module.exports = config;
+export default config;
