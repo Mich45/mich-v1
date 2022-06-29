@@ -16,7 +16,7 @@ const nextConfig = {
 const withMDX = nextMdx({
     extension: /\.mdx?$/,
     options: {
-        remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter, remarkGfm],
+        remarkPlugins: [remarkFrontmatter, [remarkMdxFrontmatter, { name: 'frontmatter' }], remarkGfm],
         rehypePlugins: [],
         providerImportSource: '@mdx-js/react',
     },
