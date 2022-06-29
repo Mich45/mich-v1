@@ -9,10 +9,11 @@ const SearchInput = styled.input`
     background-color: transparent;
     color: black;
     border-radius: 4px;
+    padding-inline: 10px;
 `;
 
 const Search = () => {
-    return <SearchInput />;
+    return <SearchInput placeholder="🔍" />;
 };
 
 export default Search;

@@ -160,7 +160,7 @@ const Tools = (): JSX.Element => {
                         color: `${colors.blue.darkBlue}`,
                     }}
                 >
-                    My Toolkit <span style={{ color: '#fb3a67' }}>🛠</span>{' '}
+                    My Toolkit 🛠
                 </motion.h1>
                 <Paragraph>
                     Some of the tools and technologies I work with.

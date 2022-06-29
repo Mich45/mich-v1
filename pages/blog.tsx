@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Search from '../components/Search';
 import Preview from '../components/Preview';
 import Latest from '../components/Latest';
-import { colors } from '../styles/themes';
+import { colors, shadows } from '../styles/themes';
 import * as api from '../utils/api';
 import Pattern from '../public/assets/pattern.png';
 import { device } from '../styles/themes';
@@ -64,8 +64,8 @@ const TagWrapper = styled.div`
 const Tag = styled.a`
     width: auto;
     height: 30px;
-    color: white;
-    background: ${colors.gray.darkGray};
+    color: #2c2c2c;
+    background: rgb(6 8 10 / 16%);
     border-radius: 25px;
     padding: 15px;
     font-size: 14px;
@@ -73,6 +73,7 @@ const Tag = styled.a`
     display: flex;
     place-content: center;
     place-items: center;
+    box-shadow: ${shadows.light};
 
     :hover {
         cursor: pointer;

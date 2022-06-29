@@ -25,8 +25,7 @@ export const colors = {
 };
 
 export const shadows = {
-    //  offset-x | offset-y | blur-radius | spread-radius | color
-    light: '0 3px 10px 0',
+    light: '0px 3px 6px #d9c5c596',
 };
 
 export const size = {

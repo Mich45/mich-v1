@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import ThemeSwitch from '../ThemeSwitch';
 import { useRouter } from 'next/router';
-import { colors } from '../../styles/themes';
+import { colors, device } from '../../styles/themes';
 
 const Navigation = styled.div`
     height: 40px;
@@ -18,10 +18,20 @@ const NavigationWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+    @media ${device.mobileL} {
+        .dropdown {
+            display: none;
+        }
+
+        .links {
+            display: flex;
+        }
+    }
 `;
 
 const NavLinkWrapper = styled.ul`
-    display: flex;
+    display: none;
     place-content: center;
     place-items: center;
     list-style-type: none;
@@ -59,6 +69,13 @@ const NavItem = styled.li`
     }
 `;
 
+const Dropdown = styled.div`
+    width: 200px;
+    height: 40px;
+    background: red;
+    display: flex;
+`;
+
 const Anchor = styled.a`
     text-decoration: none;
     font-weight: bold;
@@ -81,7 +98,8 @@ const Navbar = (): JSX.Element => {
                     <Logo>
                         <LogoItem href="/">Logoo</LogoItem>
                     </Logo>
-                    <NavLinkWrapper>
+                    <Dropdown className="dropdown" />
+                    <NavLinkWrapper className="links">
                         <NavItem>
                             <Anchor href="#">Projects</Anchor>
                         </NavItem>
