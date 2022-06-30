@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import ThemeSwitch from '../ThemeSwitch';
 import { useRouter } from 'next/router';
 import { colors, device } from '../../styles/themes';
+import Dropdown from '../Dropdown';
+import Logo from '../../public/assets/logo.svg';
 
 const Navigation = styled.div`
     height: 40px;
@@ -19,7 +21,17 @@ const NavigationWrapper = styled.div`
     display: flex;
     justify-content: space-between;
 
-    @media ${device.mobileL} {
+    @media ${device.tablet} {
+        .dropdown {
+            display: none;
+        }
+
+        .links {
+            display: flex;
+        }
+    }
+
+    @media ${device.laptop} {
         .dropdown {
             display: none;
         }
@@ -37,7 +49,7 @@ const NavLinkWrapper = styled.ul`
     list-style-type: none;
 `;
 
-const Logo = styled.div`
+const LogoWrapper = styled.div`
     width: 80px;
     height: 100%;
     display: flex;
@@ -60,7 +72,7 @@ const NavItem = styled.li`
     height: 100%;
     padding: 20px;
     border-radius: 6px;
-    color: ${colors.gray.lightGray};
+    color: ${colors.gray.grayPrimary};
     margin-inline: 10px;
     transition: color 0.2s ease-in-out;
 
@@ -69,7 +81,7 @@ const NavItem = styled.li`
     }
 `;
 
-const Dropdown = styled.div`
+const DropdownWrapper = styled.div`
     width: 200px;
     height: 40px;
     background: red;
@@ -95,10 +107,17 @@ const Navbar = (): JSX.Element => {
         <>
             <Navigation path={isPostPath}>
                 <NavigationWrapper>
-                    <Logo>
-                        <LogoItem href="/">Logoo</LogoItem>
-                    </Logo>
-                    <Dropdown className="dropdown" />
+                    <LogoWrapper>
+                        <LogoItem href="/">
+                            <img
+                                style={{ height: '30px', width: '40px' }}
+                                src={Logo.src}
+                            />
+                        </LogoItem>
+                    </LogoWrapper>
+                    <DropdownWrapper className="dropdown">
+                        <Dropdown />
+                    </DropdownWrapper>
                     <NavLinkWrapper className="links">
                         <NavItem>
                             <Anchor href="#">Projects</Anchor>

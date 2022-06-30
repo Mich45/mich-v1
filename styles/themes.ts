@@ -7,6 +7,7 @@ export const colors = {
             'linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219))',
     },
     gray: {
+        grayPrimary: '#65758E',
         darkGray: 'rgba(31, 41, 55, 1)',
         lightGray: 'rgba(107, 114, 128, 1)',
     },
@@ -30,21 +31,17 @@ export const shadows = {
 };
 
 export const size = {
-    mobileS: '320px',
-    mobileM: '375px',
-    mobileL: '425px',
+    mobile: '320px',
+    mobileL: '480px',
     tablet: '768px',
     laptop: '1024px',
-    laptopL: '1440px',
-    desktop: '2560px',
+    laptopL: '1280px',
 };
 
 export const device = {
-    mobileS: `(min-width: ${size.mobileS})`,
-    mobileM: `(min-width: ${size.mobileM})`,
-    mobileL: `(min-width: ${size.mobileL})`,
-    tablet: `(min-width: ${size.tablet})`,
+    mobile: `(min-width: ${size.mobile}) and (max-width: ${size.mobileL})`,
+    mobileL: `(min-width: ${size.mobileL}) and (max-width: ${size.tablet})`,
+    tablet: `(min-width: ${size.tablet})and (max-width: ${size.laptop})`,
     laptop: `(min-width: ${size.laptop})`,
-    laptopL: `(min-width: ${size.laptopL})`,
-    desktop: `(min-width: ${size.desktop})`,
+    desktop: `(min-width: ${size.laptopL})`,
 };

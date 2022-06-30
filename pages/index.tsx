@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import Michael from '../public/assets/Devfestme.png';
 import Noise from '../public/assets/noise.png';
+
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
 import Projects from '../components/Projects';
@@ -33,6 +34,7 @@ const slideIn = keyframes`
 
 const MainContent = styled.section`
     width: 100%;
+    height: 100%;
     position: relative;
 `;
 
@@ -59,16 +61,16 @@ const Banner = styled.div`
 `;
 
 const Paragraph = styled.p`
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 600;
     margin: 0;
     color: ${colors.blue.darkBlue};
 `;
 
 const Role = styled.p`
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
-    color: ${colors.gray.lightGray};
+    color: ${colors.gray.grayPrimary};
     margin: 0;
     animation: 1s ${slideIn} ease-in-out;
 `;

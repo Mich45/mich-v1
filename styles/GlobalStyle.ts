@@ -1,11 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 import * as fonts from '../public/assets/fonts';
-
+import { colors } from './themes';
 const GlobalStyle = createGlobalStyle`
 ${fonts}
 
 * {
     box-sizing: border-box;
+    
   }
 
 ::-webkit-scrollbar {
@@ -26,9 +27,11 @@ ${fonts}
   }
 
  body {
+    color: ${colors.gray.grayPrimary}
      padding: 0;
      margin: 0;
      overflow-x: hidden;
+     scroll-behavior: smooth;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
      font-family: 'Inter', "Segoe UI", system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
