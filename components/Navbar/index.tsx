@@ -4,7 +4,7 @@ import ThemeSwitch from '../ThemeSwitch';
 import { useRouter } from 'next/router';
 import { colors, device } from '../../styles/themes';
 import Dropdown from '../Dropdown';
-import Logo from '../../public/assets/logo.svg';
+import { Logo } from '../Icons';
 
 const Navigation = styled.div`
     height: 40px;
@@ -109,10 +109,7 @@ const Navbar = (): JSX.Element => {
                 <NavigationWrapper>
                     <LogoWrapper>
                         <LogoItem href="/">
-                            <img
-                                style={{ height: '30px', width: '40px' }}
-                                src={Logo.src}
-                            />
+                            <Logo />
                         </LogoItem>
                     </LogoWrapper>
                     <DropdownWrapper className="dropdown">
@@ -120,13 +117,13 @@ const Navbar = (): JSX.Element => {
                     </DropdownWrapper>
                     <NavLinkWrapper className="links">
                         <NavItem>
-                            <Anchor href="#">Projects</Anchor>
+                            <Anchor href="#projects">Projects</Anchor>
                         </NavItem>
                         <NavItem>
                             <Anchor href="/blog">Blog</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="#">Contact</Anchor>
+                            <Anchor href="#contact">Contact</Anchor>
                         </NavItem>
                         <NavItem>
                             <ThemeSwitch />

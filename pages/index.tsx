@@ -61,6 +61,7 @@ const Banner = styled.div`
 `;
 
 const Paragraph = styled.p`
+    font-family: 'Product Sans';
     font-size: 60px;
     font-weight: 600;
     margin: 0;
@@ -148,7 +149,7 @@ const Resume = styled.a`
 
 const ToolsSection = styled.section`
     width: 100%;
-    height: 70vh;
+    height: auto;
 `;
 
 const ProjectSection = styled.section`
@@ -244,14 +245,14 @@ const Home: NextPage = (): JSX.Element => {
                     <Arrow>↓</Arrow>
                 </ArrowWrapper>
 
-                <ProjectSection>
+                <ProjectSection id="projects">
                     <Projects />
                 </ProjectSection>
                 <ToolsSection>
                     <Tools />
                 </ToolsSection>
 
-                <ContactSection>
+                <ContactSection id="contact">
                     <Contact />
                 </ContactSection>
             </MainContent>

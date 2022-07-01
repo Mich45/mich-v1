@@ -42,27 +42,31 @@ const container = {
 };
 
 const Wrapper = styled(motion.div)`
-    margin-top: 30px;
-    width: 100%;
+    margin: 30px 100px;
+    width: auto;
     height: auto;
     display: grid;
-    grid-template-columns:
-        minmax(200px, max-content)
-        repeat(auto-fill, 200px);
+    grid-template-columns: 2fr 2fr 2fr 2fr;
     gap: 20px;
     padding: 20px;
 `;
 
 const Tool = styled(motion.div)`
-    width: 200px;
-    height: 50px;
+    width: auto;
+    height: 100px;
     padding: 10px;
-    border: 2px solid #a7a7a7;
+    border: 3px solid #a7a7a7;
     border-radius: 4px;
     background: transparent;
     display: flex;
+    flex-direction: column;
     place-content: space-between;
     place-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+
+    :hover {
+        box-shadow: 0px 3px 6px #cfcbcb;
+    }
 `;
 
 const Paragraph = styled(motion.p)`
@@ -76,6 +80,34 @@ const Header = styled(motion.div)`
     flex-direction: column;
     place-content: center;
     place-items: center;
+
+    .header {
+        position: relative;
+
+        &:: before {
+            content: '';
+            height: 3px;
+            width: 100px;
+            left: -120px;
+            background: #a7a7a7;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 4px;
+        }
+
+        &:: after {
+            content: '';
+            height: 3px;
+            width: 100px;
+            right: -120px;
+            background: #a7a7a7;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 4px;
+        }
+    }
 `;
 
 const TOOLS: ToolsType[] = [
@@ -156,14 +188,16 @@ const Tools = (): JSX.Element => {
             <Header variants={container} initial="hidden" animate="reveal">
                 <motion.h1
                     style={{
+                        fontFamily: 'Product Sans',
                         fontSize: '40px',
                         color: `${colors.blue.darkBlue}`,
                     }}
+                    className="header"
                 >
-                    My Toolkit 🛠
+                    My toolkit 🛠
                 </motion.h1>
                 <Paragraph>
-                    Some of the tools and technologies I work with.
+                    Some of the tools and technologies I create magic with.
                 </Paragraph>
             </Header>
             <Wrapper variants={container} initial="hidden" animate="reveal">
