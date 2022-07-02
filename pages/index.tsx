@@ -47,10 +47,6 @@ const BannerWrapper = styled.div`
     place-content: center;
     position: relative;
     flex-direction: column;
-    background-color: transparent;
-    opacity: 0.8;
-    background-image: radial-gradient(#e7bcbc 0.8px, #ffffff 0.8px);
-    background-size: 16px 16px;
 `;
 
 const Banner = styled.div`
@@ -154,6 +150,10 @@ const Resume = styled.a`
 const ToolsSection = styled.section`
     width: 100%;
     height: auto;
+    background-color: transparent;
+    opacity: 0.8;
+    background-image: radial-gradient(#e7bcbc 0.8px, #ffffff 0.8px);
+    background-size: 16px 16px;
 `;
 
 const ProjectSection = styled.section`
