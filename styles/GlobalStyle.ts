@@ -31,7 +31,7 @@ ${fonts}
   }
 
  body {
-    color: ${colors.gray.grayPrimary}
+    color: ${colors.gray.grayPrimary};
      padding: 0;
      margin: 0;
     -moz-osx-font-smoothing: grayscale;

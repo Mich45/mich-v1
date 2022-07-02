@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -13,6 +14,8 @@ const Wrapper = styled.section`
 const Heading = styled.h1`
     font-size: 40px;
     position: relative;
+    font-family: 'Product Sans';
+    color: ${colors.blue.darkBlue};
 
     &:: before {
         content: '';

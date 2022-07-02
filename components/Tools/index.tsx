@@ -211,7 +211,7 @@ const Tools = (): JSX.Element => {
                             key={i}
                         >
                             <div>{tool.icon()}</div>
-                            <p>{tool.name}</p>
+                            <p style={{ fontWeight: 'bold' }}>{tool.name}</p>
                         </Tool>
                     );
                 })}

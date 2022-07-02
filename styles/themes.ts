@@ -7,7 +7,7 @@ export const colors = {
             'linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219))',
     },
     gray: {
-        grayPrimary: '#65758E',
+        grayPrimary: '#283344',
         darkGray: 'rgba(31, 41, 55, 1)',
         lightGray: 'rgba(107, 114, 128, 1)',
     },

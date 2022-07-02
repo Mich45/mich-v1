@@ -71,7 +71,7 @@ const Paragraph = styled.p`
 const Role = styled.p`
     font-size: 18px;
     font-weight: 600;
-    color: ${colors.gray.grayPrimary};
+    color: ${colors.gray.lightGray};
     margin: 0;
     animation: 1s ${slideIn} ease-in-out;
 `;
