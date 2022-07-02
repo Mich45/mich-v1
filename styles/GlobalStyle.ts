@@ -9,6 +9,10 @@ ${fonts}
     
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
 ::-webkit-scrollbar {
     width: 10px;
   }
@@ -30,8 +34,6 @@ ${fonts}
     color: ${colors.gray.grayPrimary}
      padding: 0;
      margin: 0;
-     overflow-x: hidden;
-     scroll-behavior: smooth;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
      font-family: 'Inter', "Segoe UI", system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
