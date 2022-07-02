@@ -151,21 +151,16 @@ const ToolsSection = styled.section`
     width: 100%;
     height: auto;
     background-color: transparent;
-    opacity: 0.8;
-    background-image: radial-gradient(#e7bcbc 0.8px, #ffffff 0.8px);
-    background-size: 16px 16px;
 `;
 
 const ProjectSection = styled.section`
     width: 100%;
     height: 100vh;
-    background: green;
 `;
 
 const ContactSection = styled.section`
     width: 100%;
-    height: 60vh;
-    background: pink;
+    height: 100vh;
 `;
 
 const Home: NextPage = (): JSX.Element => {

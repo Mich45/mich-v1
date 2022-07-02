@@ -2,20 +2,48 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
-width: 100%;
-height: 100%;
-display: flex;
-flex-direction: column;
-place-content: center;
-place-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+`;
+
+const Heading = styled.h1`
+    font-size: 40px;
+    position: relative;
+
+    &:: before {
+        content: '';
+        height: 3px;
+        width: 100px;
+        left: -120px;
+        background: #a7a7a7;
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 4px;
+    }
+
+    &:: after {
+        content: '';
+        height: 3px;
+        width: 100px;
+        right: -120px;
+        background: #a7a7a7;
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        border-radius: 4px;
+    }
 `;
 
 const Projects = () => {
-    return (        
+    return (
         <Wrapper>
-          <h1 style={{fontSize: '50px'}}>Projects</h1>
+            <Heading>Stuff I've built</Heading>
         </Wrapper>
-    )
+    );
 };
 
 export default Projects;
