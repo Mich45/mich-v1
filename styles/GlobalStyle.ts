@@ -44,6 +44,13 @@ a {
     text-decoration: none;
 }
 
+h1{
+    font-size: 40px;
+    position: relative;
+    font-family: 'Product Sans';
+    color: ${colors.blue.darkBlue};
+}
+
 
 `;
 

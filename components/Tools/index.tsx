@@ -186,16 +186,7 @@ const Tools = (): JSX.Element => {
     return (
         <>
             <Header variants={container} initial="hidden" animate="reveal">
-                <motion.h1
-                    style={{
-                        fontFamily: 'Product Sans',
-                        fontSize: '40px',
-                        color: `${colors.blue.darkBlue}`,
-                    }}
-                    className="header"
-                >
-                    My toolkit 🛠
-                </motion.h1>
+                <motion.h1 className="header">My toolkit 🛠</motion.h1>
                 <Paragraph>
                     Some of the tools and technologies I create magic with.
                 </Paragraph>

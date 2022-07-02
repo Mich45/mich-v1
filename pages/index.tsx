@@ -1,22 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
-import Michael from '../public/assets/Devfestme.png';
-import Noise from '../public/assets/noise.png';
 
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
 import Projects from '../components/Projects';
 import Contact from '../components/Contact';
-
-const bounce = keyframes`
-0%{
-  transform: scale(1.1);
-}
-100%{
-  transform: scale(1.2);
-}
-`;
 
 const slideIn = keyframes`
 0%{
@@ -99,27 +88,15 @@ const AboutParagraph = styled.p`
     color: ${colors.gray.darkGray};
 `;
 
-const ArrowWrapper = styled.div`
+const ResumeWrapper = styled.div`
+    position: relative;
     display: flex;
     margin-block: 0;
     height: auto;
     width: 100%;
     place-items: center;
     place-content: center;
-    position: absolute;
     bottom: 0%;
-`;
-
-const Arrow = styled.p`
-    font-size: 26px;
-    font-weight: 600;
-    color: ${colors.gray.lightGray};
-    animation: 0.7s ${bounce} infinite cubic-bezier(0.45, 0.2, 0.5, 0.94)
-        alternate;
-`;
-
-const ResumeWrapper = styled(ArrowWrapper)`
-    position: relative;
 `;
 
 const Resume = styled.a`
@@ -239,10 +216,6 @@ const Home: NextPage = (): JSX.Element => {
                         <Resume href="#"> 📰 Download Resume</Resume>
                     </ResumeWrapper>
                 </BannerWrapper>
-
-                <ArrowWrapper>
-                    <Arrow>↓</Arrow>
-                </ArrowWrapper>
 
                 <ProjectSection id="projects">
                     <Projects />

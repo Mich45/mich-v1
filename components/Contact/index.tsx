@@ -12,11 +12,6 @@ const Wrapper = styled.section`
 `;
 
 const Heading = styled.h1`
-    font-size: 40px;
-    position: relative;
-    font-family: 'Product Sans';
-    color: ${colors.blue.darkBlue};
-
     &:: before {
         content: '';
         height: 3px;
