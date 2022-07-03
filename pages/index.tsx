@@ -54,7 +54,16 @@ const Paragraph = styled.p`
     font-size: 60px;
     font-weight: 600;
     margin: 0;
-    color: ${colors.blue.darkBlue};
+    background-clip: text;
+    text-fill-color: transparent;
+    background: rgb(242, 40, 40);
+    background: linear-gradient(
+        0deg,
+        rgba(242, 40, 40, 1) 7%,
+        rgba(255, 68, 40, 1) 67%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 `;
 
 const Role = styled.p`
@@ -66,10 +75,13 @@ const Role = styled.p`
 `;
 
 const Gradient = styled.span`
-    background-image: ${(props: { bg: string }) => props.bg};
+    background: linear-gradient(0deg, rgb(13 17 26) 7%, rgb(0 12 76) 67%);
     -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
     -webkit-background-clip: text;
-    filter: contrast(25);
+    background-clip: text;
+    margin-inline: 5px;
+    transform: translateY(-10%);
 `;
 
 const AboutWrapper = styled.div`
@@ -105,8 +117,8 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, #1e5399, #091e39);
-    box-shadow: 0 2px 4px #8090a5;
+    background-image: linear-gradient(to bottom, #f56260, #f34030);
+    box-shadow: 0px 4px #ff7979;
     place-items: center;
     place-content: center;
     display: flex;
@@ -120,7 +132,7 @@ const Resume = styled.a`
 
     :hover {
         transform: scale(1.02);
-        color: #b6d0ff;
+        color: #322b2b;
     }
 `;
 
@@ -164,33 +176,7 @@ const Home: NextPage = (): JSX.Element => {
                     <Banner>
                         <Paragraph>
                             Hi, I'm
-                            <Gradient
-                                style={{ marginLeft: '10px' }}
-                                bg="repeating-linear-gradient(to right,#3c3c3e 20%,#171717 60%,#ff0018 100%)"
-                            >
-                                M
-                            </Gradient>
-                            <Gradient bg="repeating-linear-gradient(to bottom,#a64343 30%, #4c494f 50%, red 100%)">
-                                i
-                            </Gradient>
-                            <Gradient bg="conic-gradient(#fd5151c2 30%,#3e1010 60%,#7b6262 100%)">
-                                c
-                            </Gradient>
-                            <Gradient bg="conic-gradient(#ff0505 10%,#ff186e 60%,#ff6000 70%,#973466c2 80%,#400 100%)">
-                                h
-                            </Gradient>
-                            <Gradient bg="repeating-linear-gradient(to left, #2e4545, red 100%)">
-                                a
-                            </Gradient>
-                            <Gradient bg="conic-gradient(#c42433, #c57868 50%, #000 90%)">
-                                e
-                            </Gradient>
-                            <Gradient
-                                style={{ marginRight: '10px' }}
-                                bg="repeating-linear-gradient(to bottom,#b04949,#e8710891 ,#3e1f10 90%)"
-                            >
-                                l
-                            </Gradient>
+                            <Gradient>Michael</Gradient>
                             Hungbo.
                         </Paragraph>
                         <Role>

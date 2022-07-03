@@ -13,7 +13,7 @@ const Wrapper = styled.section`
 const Latest = () => {
     return (
         <>
-            <h1 style={{ marginInline: '20px', fontWeight: 500 }}>
+            <h1 style={{ marginInline: '20px', fontFamily: 'Product Sans' }}>
                 Latest article
             </h1>
             <Wrapper>

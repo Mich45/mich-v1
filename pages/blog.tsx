@@ -44,7 +44,17 @@ const TextWrapper = styled.div`
 const GreetingText = styled.p`
     font-size: 36px;
     font-weight: 700;
-    color: ${colors.blue.darkBlue};
+    font-family: 'Product Sans';
+    background-clip: text;
+    text-fill-color: transparent;
+    background: rgb(242, 40, 40);
+    background: linear-gradient(
+        0deg,
+        rgba(242, 40, 40, 1) 7%,
+        rgba(255, 68, 40, 1) 67%
+    );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 
     @media ${device.laptop} {
     }
@@ -64,8 +74,8 @@ const TagWrapper = styled.div`
 const Tag = styled.a`
     width: auto;
     height: 30px;
-    color: #2c2c2c;
-    background: rgb(6 8 10 / 16%);
+    color: #fff;
+    background-image: linear-gradient(to bottom, #eb3f2c, #f51700);
     border-radius: 25px;
     padding: 15px;
     font-size: 14px;
@@ -101,10 +111,12 @@ const PostsWrapper = styled.div`
 const tags: string[] = [
     'react.js',
     'javascript',
+    'typescript',
     'node.js',
     'styled-components',
     'tutorial',
     'css',
+    'tip',
 ];
 
 type BlogProps = {

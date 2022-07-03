@@ -11,7 +11,7 @@ export const posts = (): string[] => {
 
 export const readPost = (postPath: string) => {
     const homeDirectory = process.cwd();
-    const post = path.join(homeDirectory, 'pages', postPath);
+    const post = path.join(homeDirectory, 'pages', 'posts', postPath);
     const postContent = fs.readFileSync(post);
     const { data, content } = matter(postContent);
     return {

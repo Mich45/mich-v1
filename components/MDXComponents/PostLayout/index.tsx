@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
     height: auto;
     position: relative;
     background: #efe6e6;
-    color: black;
+    color: #030303;
 `;
 
 const Header = styled.div`
@@ -21,7 +21,7 @@ const Header = styled.div`
 const PostWrapper = styled.div`
     width: 70ch;
     height: auto;
-    margin: 0 auto;
+    margin-left: 100px;
     background: #f3eaea;
     padding: 20px;
 `;
@@ -34,6 +34,7 @@ type PostLayoutProps = {
 };
 
 const PostLayout = (props: PostLayoutProps): JSX.Element => {
+    console.log(props);
     // const node = useRef() as MutableRefObject<HTMLDivElement>;
     useEffect(() => {
         hljs.highlightAll();

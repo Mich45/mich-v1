@@ -4,11 +4,35 @@ import { colors } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
     margin: 20px 0;
+`;
+
+const ContactWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-block: 20px;
+`;
+
+const MessageWrapper = styled.div`
+    width: 50%;
+    height: 100%;
+    background: aqua;
+`;
+
+const FormWrapper = styled.div`
+    width: 50%;
+    height: 100%;
+    background: black;
+`;
+
+const Form = styled.form`
+    height: 100%;
+    width: 100%;
+    background: green;
 `;
 
 const Heading = styled.h1`
@@ -37,12 +61,32 @@ const Heading = styled.h1`
     }
 `;
 
+const Submit = styled.button`
+    width: 200px;
+    height: 35px;
+    background: red;
+    color: white;
+    border-radius: 4px;
+    padding: 10px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+`;
+
 const Contact = () => {
     return (
         <>
             <Wrapper>
                 <Heading>Get in touch</Heading>
             </Wrapper>
+            <ContactWrapper>
+                <MessageWrapper></MessageWrapper>
+                <FormWrapper>
+                    <Form>
+                        <Submit>Shoot ⚡</Submit>
+                    </Form>
+                </FormWrapper>
+            </ContactWrapper>
         </>
     );
 };
