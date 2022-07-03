@@ -34,7 +34,7 @@ type PostLayoutProps = {
 };
 
 const PostLayout = (props: PostLayoutProps): JSX.Element => {
-    console.log(props);
+    console.log(props.rest);
     // const node = useRef() as MutableRefObject<HTMLDivElement>;
     useEffect(() => {
         hljs.highlightAll();
