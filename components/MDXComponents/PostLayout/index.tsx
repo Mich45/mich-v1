@@ -40,7 +40,7 @@ type PostLayoutProps = {
     children: React.ReactNode;
 };
 
-const PostLayout = (props: PostLayoutProps): JSX.Element => {
+const PostLayout = (props): JSX.Element => {
     console.log(props);
     // const node = useRef() as MutableRefObject<HTMLDivElement>;
     useEffect(() => {
@@ -49,6 +49,9 @@ const PostLayout = (props: PostLayoutProps): JSX.Element => {
 
     return (
         <>
+            <Head>
+                <title>{props.frontmatter.title}</title>
+            </Head>
             <MainWrapper>
                 <Header></Header>
                 <PostWrapper>{props.children}</PostWrapper>

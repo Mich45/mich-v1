@@ -116,7 +116,7 @@ const Contact = () => {
                     <h3>or wanna say hi?</h3>
                 </MessageWrapper>
                 <FormWrapper>
-                    <Form>
+                    <Form method="post" action="/api/contact">
                         <label htmlFor="subject">Subject</label>
                         <input
                             id="subject"
