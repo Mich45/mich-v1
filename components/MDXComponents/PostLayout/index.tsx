@@ -27,7 +27,6 @@ const PostWrapper = styled.div`
     color: #232026;
     line-height: 1.5;
 
-    h1,
     p,
     ul {
         margin-left: 20px;

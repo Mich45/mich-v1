@@ -150,6 +150,7 @@ const ProjectSection = styled.section`
 const ContactSection = styled.section`
     width: 100%;
     height: 100vh;
+    margin-block: 30px;
 `;
 
 const Home: NextPage = (): JSX.Element => {

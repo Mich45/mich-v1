@@ -8,7 +8,7 @@ export const colors = {
     },
     gray: {
         grayPrimary: '#283344',
-        darkGray: 'rgba(31, 41, 55, 1)',
+        darkGray: 'rgb(46 66 94)',
         lightGray: 'rgba(107, 114, 128, 1)',
     },
     blue: {

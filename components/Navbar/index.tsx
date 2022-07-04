@@ -12,7 +12,8 @@ const Navigation = styled.div`
     position: absolute;
     top: 0;
     z-index: 1;
-    box-shadow: ${(props) => (props.path ? 'none' : '0 2px 4px #e6dcdc')};
+    box-shadow: ${(props: { path: string }) =>
+        props.path ? 'none' : '0 2px 4px #e6dcdc'};
 `;
 
 const NavigationWrapper = styled.div`

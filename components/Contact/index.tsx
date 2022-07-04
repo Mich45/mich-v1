@@ -28,13 +28,36 @@ const MessageWrapper = styled.div`
 const FormWrapper = styled.div`
     width: 50%;
     height: 100%;
-    background: black;
 `;
 
 const Form = styled.form`
     height: 100%;
     width: 100%;
-    background: green;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        width: 250px;
+        height: 40px;
+        border-radius: 4px;
+        outline: none;
+        border: 2px solid gray;
+        background: transparent;
+        margin: 20px 0;
+    }
+    textarea {
+        height: 200px;
+        width: 350px;
+        border-radius: 4px;
+        outline: none;
+        border: 2px solid gray;
+        resize: none;
+        background: none;
+    }
 `;
 
 const Heading = styled.h1`
@@ -64,15 +87,21 @@ const Heading = styled.h1`
 `;
 
 const Submit = styled.button`
-    width: 200px;
-    height: 35px;
-    background: red;
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(to bottom, #f56260, #f34030);
+    box-shadow: 0px 4px #ff7979;
     color: white;
+    font-weight: bold;
     border-radius: 4px;
+    border: none;
     padding: 10px;
-    display: flex;
-    place-content: center;
-    place-items: center;
+    text-align: center;
+    margin-top: 30px;
+
+    :hover {
+        cursor: pointer;
+    }
 `;
 
 const Contact = () => {
@@ -88,6 +117,30 @@ const Contact = () => {
                 </MessageWrapper>
                 <FormWrapper>
                     <Form>
+                        <label htmlFor="subject">Subject</label>
+                        <input
+                            id="subject"
+                            type="text"
+                            name="subject"
+                            autoComplete="name"
+                        />
+
+                        <label htmlFor="email">Email</label>
+                        <input
+                            id="email"
+                            required
+                            type="email"
+                            name="email"
+                            autoComplete="name"
+                        />
+
+                        <label htmlFor="message">Message</label>
+                        <textarea
+                            required
+                            id="message"
+                            name="message"
+                            autoComplete="name"
+                        />
                         <Submit>Shoot ⚡</Submit>
                     </Form>
                 </FormWrapper>

@@ -18,7 +18,6 @@ const FooterWrapper = styled.footer`
     position: relative;
     place-content: center;
     place-items: center;
-    margin: 10px 0;
 `;
 
 const SocialWrapper = styled.div`
@@ -68,18 +67,23 @@ const Footer = (): JSX.Element => {
             <FooterWrapper>
                 <Logo />
                 <SocialWrapper>
-                    <Link>
+                    <Link
+                        href="https://github.com/Mich45"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <GitHubIcon />
                     </Link>
-                    <Link>
+                    <Link
+                        href="https://twitter.com/michaelhungbo"
+                        target="_blank"
+                        rel="noopener"
+                    >
                         <TwitterIcon />
                     </Link>
                     <Link>
                         {' '}
                         <LinkedInIcon />
-                    </Link>
-                    <Link>
-                        <GmailIcon />
                     </Link>
                 </SocialWrapper>
                 <Paragraph>
