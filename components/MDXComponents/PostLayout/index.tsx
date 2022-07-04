@@ -14,8 +14,8 @@ const MainWrapper = styled.div`
 
 const Header = styled.div`
     width: 100%;
-    height: 400px;
-    background: #0b121c;
+    height: 350px;
+    background: #1f2a40;
 `;
 
 const PostWrapper = styled.div`
@@ -26,6 +26,12 @@ const PostWrapper = styled.div`
     font-weight: 500;
     color: #232026;
     line-height: 1.5;
+
+    h1,
+    p,
+    ul {
+        margin-left: 20px;
+    }
 `;
 
 type PostLayoutProps = {

@@ -83,8 +83,8 @@ const Contact = () => {
             </Wrapper>
             <ContactWrapper>
                 <MessageWrapper>
-                    <h1 style={{ margin: 0 }}>Got a project to talk about?</h1>
-                    <h2>or wanna say hi?</h2>
+                    <h2 style={{ margin: 0 }}>Got a project to talk about?</h2>
+                    <h3>or wanna say hi?</h3>
                 </MessageWrapper>
                 <FormWrapper>
                     <Form>

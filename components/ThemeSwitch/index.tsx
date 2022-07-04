@@ -29,7 +29,6 @@ const ThemeSwitch = () => {
             {isToggle ? (
                 <Bulb
                     size={30}
-                    color={colors.gray.lightGray}
                     stroke={1.5}
                     strokeLinejoin="miter"
                     onClick={handleToggle}
@@ -37,7 +36,6 @@ const ThemeSwitch = () => {
             ) : (
                 <BulbOff
                     size={30}
-                    color={colors.gray.lightGray}
                     stroke={1.5}
                     strokeLinejoin="miter"
                     onClick={handleToggle}

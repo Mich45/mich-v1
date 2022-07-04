@@ -72,7 +72,6 @@ const NavItem = styled.li`
     height: 100%;
     padding: 20px;
     border-radius: 6px;
-    color: ${colors.gray.lightGray};
     margin-inline: 10px;
     transition: color 0.2s ease-in-out;
 
