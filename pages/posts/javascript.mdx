@@ -12,8 +12,15 @@ This is a list in markdown:
 - Two
 - Three
 
+```javascript
+console.log("Hello world!")
+```
+
 Checkout my React component:
 
+```javascript
+console.log("Hello world!")
+```
 
 This is a list in markdown:
 
@@ -21,7 +28,40 @@ This is a list in markdown:
 - Two
 - Three
 
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Awesome Website</title>
+  </head>
+  <body>
+    <script>
+      /*
+        - Check localStorage
+        - Check the media query
+        - Update our CSS variables depending
+          on those values.
+      /*
+    </script>
+    <div>
+      <h1>My Awesome Website<h1>
+      <p>Content here.</p>
+    </div>
+  </body>
+</html>
+```
+
 Checkout my React component:This is a list in markdown:
+lorem React component: This is a list in markdown: React component:This is a list in markdown: 
+React component:This is a list in markdown:
+React component is the javascript library for building modern applications on the web.
+React component: This is a list in markdown: React component:This is a list in markdown:
+
+React component:This is a list in markdown: The following is an example of a blog post ritten in MDX in NextJS
+
+```javascript
+console.log("Hello world!")
+```
 
 - One
 - Two
@@ -33,10 +73,37 @@ Checkout my React component:This is a list in markdown:
 - Two
 - Three
 
+```javascript
+console.log("Hello world!")
+```
+
 Checkout my React component:This is a list in markdown:
 
 - One
 - Two
 - Three
+
+```javascript
+console.log("Hello world!")
+```
 
 Checkout my React component:
+
+```jsx
+
+const MagicScriptTag = () => {
+  const codeToRunOnClient = `
+(function() {
+  alert("Hi!");
+})()
+  `;
+  // eslint-disable-next-line react/no-danger
+  return <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />;
+};
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents(<MagicScriptTag />);
+};
+
+```
+
+AWWA

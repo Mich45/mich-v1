@@ -20,7 +20,9 @@ const ContactWrapper = styled.div`
 const MessageWrapper = styled.div`
     width: 50%;
     height: 100%;
-    background: aqua;
+    display: flex;
+    place-items: center;
+    flex-direction: column;
 `;
 
 const FormWrapper = styled.div`
@@ -80,7 +82,10 @@ const Contact = () => {
                 <Heading>Get in touch</Heading>
             </Wrapper>
             <ContactWrapper>
-                <MessageWrapper></MessageWrapper>
+                <MessageWrapper>
+                    <h1 style={{ margin: 0 }}>Got a project to talk about?</h1>
+                    <h2>or wanna say hi?</h2>
+                </MessageWrapper>
                 <FormWrapper>
                     <Form>
                         <Submit>Shoot ⚡</Submit>
