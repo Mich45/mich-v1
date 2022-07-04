@@ -12,7 +12,7 @@ const FooterWrapper = styled.footer`
     height: auto;
     width: 100%;
     display: flex;
-    background: #e7cfcf61;
+
     display: flex;
     flex-direction: column;
     position: relative;
@@ -65,6 +65,15 @@ const Footer = (): JSX.Element => {
     return (
         <>
             <FooterWrapper>
+                <div
+                    style={{
+                        height: '3px',
+                        width: '80%',
+                        background: '#f4493d',
+                        borderRadius: '4px',
+                        marginBlock: '50px',
+                    }}
+                />
                 <Logo />
                 <SocialWrapper>
                     <Link

@@ -16,6 +16,14 @@ const Header = styled.div`
     width: 100%;
     height: 350px;
     background: #1f2a40;
+    display: flex;
+    place-items: center;
+    place-content: center;
+
+    h1 {
+        color: white;
+        font-weight: bold;
+    }
 `;
 
 const PostWrapper = styled.div`
@@ -33,13 +41,6 @@ const PostWrapper = styled.div`
     }
 `;
 
-type PostLayoutProps = {
-    meta: {
-        title?: string;
-    };
-    children: React.ReactNode;
-};
-
 const PostLayout = (props): JSX.Element => {
     console.log(props);
     // const node = useRef() as MutableRefObject<HTMLDivElement>;
@@ -53,7 +54,9 @@ const PostLayout = (props): JSX.Element => {
                 <title>{props.frontmatter.title}</title>
             </Head>
             <MainWrapper>
-                <Header></Header>
+                <Header>
+                    <h1>{props.frontmatter.title}</h1>
+                </Header>
                 <PostWrapper>{props.children}</PostWrapper>
             </MainWrapper>
         </>
