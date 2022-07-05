@@ -200,7 +200,7 @@ const Home: NextPage = (): JSX.Element => {
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>
-                        <Resume href="#"> 📰 Download Resume</Resume>
+                        <Resume href="#"> Download Resume 📰</Resume>
                     </ResumeWrapper>
                 </BannerWrapper>
 

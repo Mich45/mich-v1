@@ -5,11 +5,13 @@ const Wrapper = styled.div`
     width: 40px;
     height: 200px;
     position: fixed;
+    left: 0;
+    top: 0;
     transform: translate(-50%, -50%);
     right: 10px;
     top: 50%;
     z-index: 1;
-    background-color: #2826260a;
+    background-color: red;
     border-radius: 4px;
 `;
 

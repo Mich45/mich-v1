@@ -42,8 +42,6 @@ const PostWrapper = styled.div`
 `;
 
 const PostLayout = (props): JSX.Element => {
-    console.log(props);
-    // const node = useRef() as MutableRefObject<HTMLDivElement>;
     useEffect(() => {
         hljs.highlightAll();
     });

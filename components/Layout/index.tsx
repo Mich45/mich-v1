@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
-import Sidebar from '../Sidebar';
 import { colors } from '../../styles/themes';
 import Noise from '../../public/assets/noise.png';
 
@@ -41,10 +40,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
         <>
             <Navbar />
             <Main>
-                <MainOverlay>
-                    <Sidebar />
-                    {children}
-                </MainOverlay>
+                <MainOverlay>{children}</MainOverlay>
             </Main>
             <Footer />
         </>
