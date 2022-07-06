@@ -1,28 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-    Logo,
-    TwitterIcon,
-    GitHubIcon,
-    LinkedInIcon,
-    GmailIcon,
-} from '../Icons';
+import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
 
 const FooterWrapper = styled.footer`
     height: auto;
     width: 100%;
     display: flex;
-
-    display: flex;
     flex-direction: column;
     position: relative;
     place-content: center;
     place-items: center;
+
+    .linkwrapper {
+        display: flex;
+        width: 60%;
+        place-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
 `;
 
 const SocialWrapper = styled.div`
     display: flex;
-    width: 100%;
     place-items: center;
     place-content: center;
     margin: 10px;
@@ -71,33 +70,35 @@ const Footer = (): JSX.Element => {
                         width: '80%',
                         background: '#f4493d',
                         borderRadius: '4px',
-                        marginBlock: '50px',
+                        marginTop: '50px',
+                        marginBottom: '20px',
                     }}
                 />
-                <Logo />
-                <SocialWrapper>
-                    <Link
-                        href="https://github.com/Mich45"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <GitHubIcon />
-                    </Link>
-                    <Link
-                        href="https://twitter.com/michaelhungbo"
-                        target="_blank"
-                        rel="noopener"
-                    >
-                        <TwitterIcon />
-                    </Link>
-                    <Link>
-                        {' '}
-                        <LinkedInIcon />
-                    </Link>
-                </SocialWrapper>
-                <Paragraph>
-                    Copyright © {date} Michael Hungbo. All rights reserved.
-                </Paragraph>
+                <div className="linkwrapper">
+                    <SocialWrapper>
+                        <Link
+                            href="https://github.com/Mich45"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <GitHubIcon />
+                        </Link>
+                        <Link
+                            href="https://twitter.com/michaelhungbo"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            <TwitterIcon />
+                        </Link>
+                        <Link>
+                            {' '}
+                            <LinkedInIcon />
+                        </Link>
+                    </SocialWrapper>
+                    <Paragraph>
+                        Copyright © {date} Michael Hungbo. All rights reserved.
+                    </Paragraph>
+                </div>
             </FooterWrapper>
         </>
     );

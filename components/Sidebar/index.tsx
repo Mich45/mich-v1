@@ -2,17 +2,14 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-    width: 40px;
-    height: 200px;
+    width: 200px;
+    height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    transform: translate(-50%, -50%);
-    right: 10px;
-    top: 50%;
     z-index: 1;
-    background-color: red;
-    border-radius: 4px;
+    background-color: pink;
+    opacity: 0.7;
 `;
 
 const Sidebar = (): JSX.Element => {

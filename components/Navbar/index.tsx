@@ -82,10 +82,10 @@ const NavItem = styled.li`
 `;
 
 const DropdownWrapper = styled.div`
-    width: 200px;
+    width: auto;
     height: 40px;
-    background: red;
     display: flex;
+    justify-content: end;
 `;
 
 const Anchor = styled.a`
