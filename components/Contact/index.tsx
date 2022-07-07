@@ -46,17 +46,30 @@ const Form = styled.form`
         border-radius: 4px;
         outline: none;
         border: 2px solid gray;
+        padding: 10px;
         background: transparent;
         margin: 20px 0;
+
+        :focus {
+            box-shadow: 0 4px #e86262;
+            border-color: #e86262;
+        }
     }
     textarea {
         height: 200px;
         width: 350px;
+        padding: 10px;
         border-radius: 4px;
         outline: none;
         border: 2px solid gray;
         resize: none;
+        margin: 20px 0;
         background: none;
+
+        :focus {
+            box-shadow: 0 4px #e86262;
+            border-color: #e86262;
+        }
     }
 `;
 
@@ -66,7 +79,7 @@ const Heading = styled.h1`
         height: 3px;
         width: 100px;
         left: -120px;
-        background: #a7a7a7;
+        background: #060f36;
         display: flex;
         position: absolute;
         bottom: 20px;
@@ -78,7 +91,7 @@ const Heading = styled.h1`
         height: 3px;
         width: 100px;
         right: -120px;
-        background: #a7a7a7;
+        background: #060f36;
         display: flex;
         position: absolute;
         bottom: 20px;
@@ -92,15 +105,20 @@ const Submit = styled.button`
     background-image: linear-gradient(to bottom, #f56260, #f34030);
     box-shadow: 0px 4px #ff7979;
     color: white;
+    font-family: Inter;
     font-weight: bold;
     border-radius: 4px;
     border: none;
     padding: 10px;
     text-align: center;
     margin-top: 30px;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
     :hover {
         cursor: pointer;
+        color: #322b2b;
+        background-image: #f34030;
+        box-shadow: none;
     }
 `;
 
@@ -113,7 +131,7 @@ const Contact = () => {
             <ContactWrapper>
                 <MessageWrapper>
                     <h2 style={{ margin: 0 }}>Got a project to talk about?</h2>
-                    <h3>or wanna say hi?</h3>
+                    <h3>or just wanna say hi?</h3>
                 </MessageWrapper>
                 <FormWrapper>
                     <Form method="post" action="/api/contact">

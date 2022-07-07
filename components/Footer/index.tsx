@@ -17,6 +17,7 @@ const FooterWrapper = styled.footer`
         place-content: center;
         align-items: center;
         margin-bottom: 20px;
+        flex-direction: column;
     }
 `;
 
@@ -29,7 +30,7 @@ const SocialWrapper = styled.div`
 
 const Paragraph = styled.p`
     font-size: 14px;
-    margin-top: 5px;
+    text-align: center;
 `;
 
 const Link = styled.a`

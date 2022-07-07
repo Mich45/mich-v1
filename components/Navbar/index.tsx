@@ -9,7 +9,8 @@ import { Logo } from '../Icons';
 const Navigation = styled.div`
     height: 40px;
     width: 100%;
-    position: absolute;
+    position: fixed;
+    background: #f7efef;
     top: 0;
     z-index: 1;
     box-shadow: ${(props: { path: string }) =>
@@ -56,7 +57,6 @@ const LogoWrapper = styled.div`
     display: flex;
     place-content: center;
     place-items: center;
-    margin-left: 20px;
 
     :hover {
         cursor: pointer;
@@ -82,10 +82,13 @@ const NavItem = styled.li`
 `;
 
 const DropdownWrapper = styled.div`
-    width: auto;
     height: 40px;
     display: flex;
     justify-content: end;
+
+    .reveal {
+        transform: translateX(0px);
+    }
 `;
 
 const Anchor = styled.a`

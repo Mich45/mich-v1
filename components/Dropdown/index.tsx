@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { MenuIcon, CloseIcon } from '../Icons';
 import Sidebar from '../Sidebar';
 import styled from 'styled-components';
 
@@ -67,28 +66,28 @@ const Anchor = styled.a`
 `;
 
 const Dropdown = () => {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const handleCLick = (e): void => {
-        e.addEventListener('click', () => {});
-    };
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
     useEffect(() => {
         const anchor = document.querySelector('.anchor');
         const span = document.querySelector('.span');
         const span1 = document.querySelector('.span1');
         const span2 = document.querySelector('.span2');
-        anchor.addEventListener('click', () => {
+        anchor!.addEventListener('click', () => {
             if (!isOpen) {
                 setIsOpen(true);
-                span.classList.add('hidden');
-                span1.classList.add('transform');
-                span2.classList.add('transform2');
+                span!.classList.add('hidden');
+                span1!.classList.add('transform');
+                span2!.classList.add('transform2');
+                var sidebar = document.querySelector('.sidebar_wrapper');
+                sidebar!.classList.add('reveal');
             } else {
                 setIsOpen(false);
-                span.classList.remove('hidden');
-                span1.classList.remove('transform');
-                span2.classList.remove('transform2');
+                var sidebar = document.querySelector('.sidebar_wrapper');
+                sidebar!.classList.remove('reveal');
+                span!.classList.remove('hidden');
+                span1!.classList.remove('transform');
+                span2!.classList.remove('transform2');
             }
         });
     });
@@ -100,7 +99,7 @@ const Dropdown = () => {
                 <Menu className="span"></Menu>
                 <XMenu className="span2"></XMenu>
             </Anchor>
-            {isOpen ? <Sidebar /> : null}
+            <Sidebar />
         </>
     );
 };

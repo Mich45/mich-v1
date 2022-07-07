@@ -89,7 +89,7 @@ const Header = styled(motion.div)`
             height: 3px;
             width: 100px;
             left: -120px;
-            background: #a7a7a7;
+            background: #060f36;
             display: flex;
             position: absolute;
             bottom: 20px;
@@ -101,7 +101,7 @@ const Header = styled(motion.div)`
             height: 3px;
             width: 100px;
             right: -120px;
-            background: #a7a7a7;
+            background: #060f36;
             display: flex;
             position: absolute;
             bottom: 20px;

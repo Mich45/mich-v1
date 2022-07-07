@@ -1,7 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
-
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
 import Projects from '../components/Projects';
@@ -127,12 +126,13 @@ const Resume = styled.a`
     font-weight: bold;
     margin: 0;
     text-decoration: none;
-    transition: transform 0.15s cubic-bezier(0, 0.2, 0.5, 3),
-        color 0.1s ease-in-out;
+    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
     :hover {
-        transform: scale(1.02);
+        cursor: pointer;
         color: #322b2b;
+        background-image: #f34030;
+        box-shadow: none;
     }
 `;
 
@@ -149,7 +149,6 @@ const ProjectSection = styled.section`
 
 const ContactSection = styled.section`
     width: 100%;
-    height: 100vh;
     margin-block: 30px;
 `;
 
