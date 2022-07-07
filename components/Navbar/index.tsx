@@ -11,8 +11,6 @@ const Navigation = styled.div`
     width: 100%;
     position: fixed;
     background: #f7efef;
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
     top: 0;
     z-index: 1;
     box-shadow: ${(props: { path: string }) =>
