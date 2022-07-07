@@ -44,10 +44,14 @@ const Anchor = styled.a`
     color: white;
 `;
 
-const Sidebar = (): JSX.Element => {
+type SidebarProps = {
+    isOpen: boolean;
+};
+
+const Sidebar = ({ isOpen }: SidebarProps): JSX.Element => {
     return (
         <>
-            <Wrapper className="sidebar_wrapper">
+            <Wrapper className={isOpen ? 'reveal' : ''}>
                 <LinkWrapper>
                     <Links>
                         <NavItem>

@@ -38,10 +38,9 @@ const XMenu = styled.span`
     background: gray;
     margin-block: 2px;
     position: absolute;
-    transition: transform;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-in-out;
-    transfrom-origin: center;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transform-origin: center;
 `;
 
 const Anchor = styled.a`
@@ -58,48 +57,34 @@ const Anchor = styled.a`
 
     .transform {
         transform: rotate(45deg);
+        opacity: 1;
     }
 
     .transform2 {
         transform: rotate(-45deg);
+        opacity: 1;
     }
 `;
 
 const Dropdown = () => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
-    useEffect(() => {
-        const anchor = document.querySelector('.anchor');
-        const span = document.querySelector('.span');
-        const span1 = document.querySelector('.span1');
-        const span2 = document.querySelector('.span2');
-        anchor!.addEventListener('click', () => {
-            if (!isOpen) {
-                setIsOpen(true);
-                span!.classList.add('hidden');
-                span1!.classList.add('transform');
-                span2!.classList.add('transform2');
-                var sidebar = document.querySelector('.sidebar_wrapper');
-                sidebar!.classList.add('reveal');
-            } else {
-                setIsOpen(false);
-                var sidebar = document.querySelector('.sidebar_wrapper');
-                sidebar!.classList.remove('reveal');
-                span!.classList.remove('hidden');
-                span1!.classList.remove('transform');
-                span2!.classList.remove('transform2');
-            }
-        });
-    });
+    const handleClick = (): void => {
+        if (!isOpen) {
+            setIsOpen(true);
+        } else {
+            setIsOpen(false);
+        }
+    };
 
     return (
         <>
-            <Anchor className="anchor">
-                <XMenu className="span1"></XMenu>
-                <Menu className="span"></Menu>
-                <XMenu className="span2"></XMenu>
+            <Anchor onClick={handleClick} className="anchor">
+                <XMenu className={isOpen ? 'transform2' : ''}></XMenu>
+                <Menu className={isOpen ? 'hidden' : ''}></Menu>
+                <XMenu className={isOpen ? 'transform' : ''}></XMenu>
             </Anchor>
-            <Sidebar />
+            <Sidebar isOpen={isOpen} />
         </>
     );
 };
