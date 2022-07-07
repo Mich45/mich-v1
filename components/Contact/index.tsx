@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
