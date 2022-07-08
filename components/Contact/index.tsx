@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.section`
@@ -122,6 +122,10 @@ const Submit = styled.button`
 `;
 
 const Contact = () => {
+    const [subject, setSubject] = useState<string>('');
+    const [email, setEmail] = useState<string>('');
+    const [message, setMessage] = useState<string>('');
+
     return (
         <>
             <Wrapper>

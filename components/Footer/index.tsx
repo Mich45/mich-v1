@@ -91,8 +91,11 @@ const Footer = (): JSX.Element => {
                         >
                             <TwitterIcon />
                         </Link>
-                        <Link>
-                            {' '}
+                        <Link
+                            href="https://www.linkedin.com/in/michaelhungbo/"
+                            target="_blank"
+                            rel="noopener"
+                        >
                             <LinkedInIcon />
                         </Link>
                     </SocialWrapper>
