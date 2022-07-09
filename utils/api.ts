@@ -25,6 +25,17 @@ export const readPost = (postPath: string) => {
 
 export const sortPosts = () => {
     const allPosts = posts();
+    const sorted = allPosts.sort((a, b) => {
+        const aDate = fs.stat(a, (err, stats) => {
+            return stats.birthtime;
+        });
 
-    const sorted = allPosts.sort();
+        const bDate = fs.stat(b, (err, stats) => {
+            return stats.birthtime;
+        });
+
+        return aDate > bDate ? -1 : 1;
+    });
+
+    return sorted;
 };

@@ -160,6 +160,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
 
 export function getServerSideProps() {
     const postsPath = api.posts();
+    console.log(api.sortPosts);
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
         return postData;
