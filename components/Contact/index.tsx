@@ -122,10 +122,6 @@ const Submit = styled.button`
 `;
 
 const Contact = () => {
-    const [subject, setSubject] = useState<string>('');
-    const [email, setEmail] = useState<string>('');
-    const [message, setMessage] = useState<string>('');
-
     return (
         <>
             <Wrapper>

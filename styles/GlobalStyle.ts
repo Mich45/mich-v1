@@ -51,7 +51,7 @@ h1{
     background-clip: text;
     text-fill-color: transparent;
     background: rgb(233,68,68);
-    background: linear-gradient(302deg, rgba(233,68,68,1) 19%, rgba(255,68,40,1) 67%);
+    background: linear-gradient(302deg,rgb(255 71 0) 19%,rgba(255,68,40,1) 67%);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 }

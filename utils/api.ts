@@ -3,16 +3,18 @@ import fs from 'fs';
 import matter from 'gray-matter';
 
 export const posts = (): string[] => {
+    let fullPath: string[] = [];
     const homeDirectory = process.cwd();
     const postsDirectory = path.join(homeDirectory, 'pages', 'posts');
     const allposts = fs.readdirSync(postsDirectory);
-    return allposts;
+    allposts.forEach((post) => {
+        fullPath.push(`${postsDirectory}/${post}`);
+    });
+    return fullPath;
 };
 
 export const readPost = (postPath: string) => {
-    const homeDirectory = process.cwd();
-    const post = path.join(homeDirectory, 'pages', 'posts', postPath);
-    const postContent = fs.readFileSync(post);
+    const postContent = fs.readFileSync(postPath);
     const { data, content } = matter(postContent);
     return {
         data,
@@ -21,4 +23,8 @@ export const readPost = (postPath: string) => {
     };
 };
 
-export const getAllPosts = () => {};
+export const sortPosts = () => {
+    const allPosts = posts();
+
+    const sorted = allPosts.sort();
+};

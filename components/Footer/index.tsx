@@ -43,6 +43,7 @@ const Link = styled.a`
     display: flex;
     place-content: center;
     place-items: center;
+    transition: transform 0.2s ease-out;
 
     &::after {
         content: '';
@@ -56,6 +57,7 @@ const Link = styled.a`
 
     :hover {
         cursor: pointer;
+        transform: scale(1.2);
     }
 `;
 

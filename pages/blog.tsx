@@ -150,6 +150,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
 
             <PostsWrapper>
                 {posts.map((post, i) => {
+                    console.log(post);
                     return <Preview meta={post} key={i} />;
                 })}
             </PostsWrapper>
@@ -161,8 +162,6 @@ export function getServerSideProps() {
     const postsPath = api.posts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
-        // const data = [];
-        // data.push(postData);
         return postData;
     });
     return {

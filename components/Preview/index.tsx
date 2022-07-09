@@ -22,13 +22,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     border-radius: 4px;
     border: 2px solid transparent;
-    transition: background 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19),
-        border 0.2s cubic-bezier(0.55, 0.06, 0.68, 0.19);
+    transition: 0.3s ease-out;
     color: ${colors.gray.darkGray};
 
     :hover {
         // cursor: pointer;
-        background: #fbead359;
+        background: #ffb3b359;
         border: 2px solid #f7d0d0;
     }
 `;
@@ -81,10 +80,13 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
-    console.log(meta);
     return (
         <>
-            <Link href={`posts/${meta.postPath.split('.')[0]}`}>
+            <Link
+                href={`posts/${meta.postPath
+                    .split('/')[1]
+                    .replace(/.md?./, '')}`}
+            >
                 <Wrapper>
                     <TitleWrapper>
                         <Title>{meta.data.title}</Title>

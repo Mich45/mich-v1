@@ -56,12 +56,12 @@ const Anchor = styled.a`
     }
 
     .transform {
-        transform: rotate(45deg);
+        transform: rotate(-45deg);
         opacity: 1;
     }
 
     .transform2 {
-        transform: rotate(-45deg);
+        transform: rotate(45deg);
         opacity: 1;
     }
 `;

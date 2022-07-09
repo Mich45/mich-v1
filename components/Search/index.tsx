@@ -10,6 +10,11 @@ const SearchInput = styled.input`
     color: black;
     border-radius: 4px;
     padding-inline: 10px;
+
+    :focus {
+        box-shadow: 0 4px #e86262;
+        border-color: #e86262;
+    }
 `;
 
 const Search = () => {
