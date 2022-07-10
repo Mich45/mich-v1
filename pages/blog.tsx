@@ -124,6 +124,8 @@ type BlogProps = {
 };
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
+    const latestPost = posts.slice(0, 1);
+    const otherPosts = posts.slice(1);
     return (
         <MainWrapper>
             <Jumbotron>
@@ -146,11 +148,10 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                 </TagWrapper>
             </Jumbotron>
 
-            <Latest />
-
+            <Latest post={latestPost} />
             <PostsWrapper>
-                {posts.map((post, i) => {
-                    console.log(post);
+                {otherPosts.map((post, i) => {
+                    console.log(otherPosts);
                     return <Preview meta={post} key={i} />;
                 })}
             </PostsWrapper>
@@ -159,8 +160,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
 };
 
 export function getServerSideProps() {
-    const postsPath = api.posts();
-    console.log(api.sortPosts);
+    const postsPath = api.sortPosts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
         return postData;
