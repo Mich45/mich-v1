@@ -10,6 +10,13 @@ const MainWrapper = styled.div`
     position: relative;
     background: #efe6e6;
     color: #030303;
+
+    p > code {
+        color: #ff1e1e;
+        font-weight: bold;
+        font-family: inherit;
+        font-size: 16px;
+    }
 `;
 
 const Header = styled.div`

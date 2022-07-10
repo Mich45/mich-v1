@@ -3,12 +3,19 @@ import Layout from '../components/Layout';
 import GlobalStyle from '../styles/GlobalStyle';
 import { MDXProvider } from '@mdx-js/react';
 import PostLayout from '../components/MDXComponents/PostLayout';
-import { Code, HeadingOne } from '../components/MDXComponents/Elements';
+import {
+    Code,
+    H2,
+    Pre,
+    HeadingOne,
+} from '../components/MDXComponents/Elements';
 
 function MyApp({ Component, pageProps }: AppProps) {
     const components = {
         code: Code,
         h1: HeadingOne,
+        pre: Pre,
+        h2: H2,
         wrapper: ({ components, ...rest }) => <PostLayout {...rest} />,
     };
 

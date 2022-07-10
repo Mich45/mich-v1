@@ -1,0 +1,289 @@
+---
+title: 'TailwindCSS post with MDX'
+tags: [javascript, webdev, javascript]
+excerpt: 'TailwindCSS for Web Developers...'
+coverImage: '/blog-assets/atwood.png'
+---
+
+# Getting Started with Tailwind CSS in NextJS
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Installing Tailwind CSS and NextJS](#installing-tailwind-css-and-nextjs)
+3. [Functions and Directives](#functions-and-directives)
+4. [Base, Components, and Utilities](#base-components-and-utilities)
+5. [Customizing Styles and Utilities](#)
+6. [Spacing in Tailwind CSS](#spacing-in-tailwind-css)
+7. [Responsive Design](#responsive-design)
+8. [Resources](#resources)
+
+
+
+## Introduction 
+Tailwind-CSS is a utility-based CSS framework for rapidly
+
+
+## Installing Tailwind CSS and NextJS  
+
+### Step 1
+I'm assuming you already have a NextJS project initialized, if you don't, you can run the following command to start a new NextJS project:
+
+```bash
+npx create-next-app tailwind-next
+
+# or if you use Yarn
+
+yarn create next-app tailwind-next
+```
+### Step 2 - Install Tailwind CSS
+The next step is to install Tailwind CSS and its peer dependencies. Run the following command in your terminal to do so:
+
+``` bash
+npm i tailwindcss postcss autoprefixer -D
+
+# with Yarn 
+
+yarn add tailwindcss postcss autoprefixer -D
+
+```
+### Step 3 - Generating configuration files
+After the installation, we'll need to generate configuration files for Tailwind CSS and postcss to customize tailwind's behavior. Run the following command to do so:
+
+```bash
+npx tailwind init -p
+
+# with Yarn
+
+yarn tailwind init -p
+```
+
+After running the above command, we should see `tailwind.config.js` and `postcss.config.js` configuration files generated in our project's root directory with the following content:
+
+**`tailwind.config.js`**
+
+![tailwind-config -file](tailwind-config.png)
+
+**`postcss.config.js`**
+
+![postcss-config-file](postcss-config.png)
+
+### Step 4 - Adding file paths
+Next, in `tailwind.config.js`, we'll add the file paths in the `content` key to tell tailwind where to find all files that will contain tailwind's utility classes for compilation. Add the following to the `content` key in `tailwind.config.js`:
+
+**`tailwind.config.js`**
+```js
+module.exports = {
+  content: [
+    "./pages/**/*.{html,js,jsx}",
+    "./components/**/*.{html,js,jsx}"
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+If you create a new folder or file that contains tailwind utility classes, you'll need to add it to the `content` key so it can be compiled by Tailwind CSS.
+
+
+
+
+### Step 5 - Adding Tailwind CSS directives
+In `styles/globals.css`, delete the contents of the file and add the following Tailwind CSS directives:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+The `global.css` file is already imported in `pages/_app.js` so all we have to do now is to start using Tailwind CSS!
+
+
+### Try it out  
+Now, let's see the result of what we have been doing so far. In `pages/index.js`, delete the file contents and add the following to see Tailwind CSS in action:
+
+```js
+import React from "react";
+import Head from "next/head";
+
+const Home = () => {
+  return (
+    <>
+    <Head>
+      <title>Tailwind CSS with NextJS</title>
+      <meta name="description" content="Tailwind CSS and NextJS App" />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+    <main className="w-full h-screen bg-gray-900">
+        <div className="w-52 h-52  text-white flex justify-center
+        items-center shadow-md shadow-emerald-900 ring-red-400 
+        rounded-md bg-emerald-700  absolute top-1/2 left-1/2 -translate-x-1/2  -translate-y-1/2 ">
+        <p>Hello Tailwind!</p>
+      </div>
+    </main>
+  </>
+  )
+};
+
+export default Home;
+```
+Start the development server by running **`npm run dev`** or **`yarn run dev`** then navigate to `http://localhost:3000` to see the result of the code above as shown below:
+![tailwind-css-in-action](homepage.png)
+
+And there you have it! We've centered a div with just a few lines of code without leaving our file! This is just a sneak-peak of what is achievable with Tailwind. In the next parts of the article, we'll see even more capabilities that Tailwind CSS possesses.
+
+## Functions and Directives
+
+### Functions 
+Functions in Tailwind CSS are useful for accessing Tailwind-specific values. These values are read-only and cannot be modified. Two major functions provided by Tailwind are the **`screen()`** and **`theme()`** functions.
+
+
+### Directives
+Directives in Tailwind CSS are custom **at-rules** provided by Tailwind.
+These include:
+
+1. **@apply** - this is used for applying inline style or adding Tailwind's utility classes in custom css. Example:
+```css
+ .btn {
+     @apply w-52 h-52 rounded-sm bg-blue-500
+ }
+```
+2. **@layer** - this is used to tell Tailwind which of the buckets (base, components, utilities, and variants) our custom styles should be attached to. E.g.:
+```css
+@layer base {
+    p {
+        @apply text-gray-500 text-sm
+    }
+}
+
+@layer components {
+    .btn {
+        @apply w-28 h-10 rounded-md p-2 m-2 text-white flex justify-center items-center
+    }
+}
+
+```
+3. **@tailwind** - this is used for injecting Tailwind's utilities, components, base, and variants into our css. This directive is usually used at the top of our css file like so:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+```
+
+## Base, Components, and Utilities
+
+### Base 
+The base bucket is used by Tailwind to import base elements (or HTML elements) utility classes and for their customization. We can customize the styles of any base element using the `@layer` directive. For example, the
+base bucket will be the best place to define custom fonts in our app.
+```css
+@layer base {
+
+    @font-face {
+      font-family: "Flama";
+      src: url("../assets/Flama-Regular.otf") format("opentype");
+    }
+
+    html {
+      font-family: "Flama", system-ui, sans-serif;
+    }
+}
+```
+
+### Components
+
+One of the the many advantages of using Tailwind is that it allows for composability. Components in Tailwind are mainly used to avoid repetition and for reusing utility classes. Take the following code snippet for example:
+
+```js
+<div className="flex justify-center items-center bg-white w-72 h-72 rounded-md">
+          <button className="w-28 h-10 rounded-md p-2 m-2 text-white bg-green-500 flex justify-center items-center">Success</button>
+          <button className="w-28 h-10 rounded-md p-2 m-2 text-white bg-red-500 flex justify-center items-center">Error</button>
+          </div>
+```
+
+Which gives the following:
+
+![buttons](buttons.png)
+
+If we look carefully at the buttons and the utility classes defined for them in the snippet above, we can see they are almost identical with only their background colors being different. This is repetitive and we can avoid repetition by composing the utility classes into a component. Here's how it can be done.
+
+In **`styles/global.css`**, add the following code:
+
+```css
+@layer components {
+    .btn {
+        @apply w-28 h-10 rounded-md p-2 m-2 text-white flex justify-center items-center
+    }
+}
+```
+
+And simply edit the previous code to the following:
+
+```js
+<div className="flex justify-center items-center bg-white w-72 h-72 rounded-md">
+          <button className=" bg-green-500 btn">Success</button>
+          <button className=" bg-red-500 btn">Error</button>
+          </div>
+```
+
+And we'll still get the same result as the previous code. This looks nicer and shorter, but let's understand what's going on with the new code we added to `styles/global.css`.
+
+In creating the `.btn` component above, we used the **@layer** directive with the component bucket and the **@apply** directive to add Tailwind's utility classes to our custom `.btn` component, and our custom styled will be applied to any element in our templates or markup with a `btn` class.
+
+
+### Utilities
+
+As already mentioned in the beginning of the article, Tailwind CSS is a utility based CSS framework. Utilities (or utility classes) in Tailwind are simply Tailwind-specific classes that we add to our markup for styling. Examples of utilities provided by Tailwind include `p-8`, `w-28`, `h-10` which will compile to the following CSS respectively: `padding: 32px`, `width: 112px`, and `height: 40px`. There may be instances when we'll need a different sizing scale from the ones Tailwind provides by default, this can be achieved by customizing the `theme.spacing` section in our `tailwind.config.js` file. We'll come to this later in the article.
+
+
+#### Custom utilities
+
+Tailwind's flexibility allows us to create our own custom utilities. Creating custom utilities is almost the same with creating components with a few differences. 
+```csss
+
+```
+
+
+## Spacing in Tailwind CSS
+
+Tailwind by default has a spacing scale for sizing elements. This scale is used by utilities such as padding, margin, width, height and many others.
+
+Tailwind uses the `rem` CSS unit for measurement. And one spacing unit equals `0.25rem`, which translates to `4px`. So, `p-1` will translate to `padding: 4px`, `p-2` will be `padding: 8px` and so on.
+
+#### Customizing spacing
+
+At times, our designs may require a custom sizing which may not be achievable with the default Tailwind's spacing system. Tailwind gives us the liberty to add or extend its spacing system in the `theme.spacing` or `theme.extend.spacing` sections of our `tailwind.config.js` file.
+
+Note: using the `theme.spacing` section will override Tailwind's default spacing system. You can keep the default spacing scale by using the `theme.extend.spacing` section instead.
+
+```js
+
+```
+
+#### Arbitrary values
+Another way of customizing the default spacing scale is by using arbitrary values on the fly in our components or markup. To use an arbitrary value for sizing any utility in Tailwind, we use square brackets `[]` as shown below: 
+
+```js
+<div className="w-[251px] h-[120px] bg-white rounded-[7px]">
+<p className="text-[22px] p-[12px]"> Arbitrary values in Tailwind CSS </p>
+</div>
+```
+
+
+## Responsive Design 
+
+
+## Resources
+
+1. [Tailwind CSS Cheat Sheet]()
+2. [Tailwind CSS Docs]()
+3. [Tailwind CSS Components]()
+4. [Tailwind CSS UI]()
+
+
+## Conclusion
+
+It's my hope that this article will help you get your feet into creating exquisite applications with Tailwind CSS and Next JS. And also, I hope you're convinced enough to start using Tailwind CSS in your next projects to enjoy the capabilities and flexibilty this awesome tool offers.
+
+Thanks for reading. 
