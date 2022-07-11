@@ -29,6 +29,7 @@
     "remark-frontmatter": "^4.0.1",
     "remark-gfm": "^3.0.1",
     "remark-mdx-frontmatter": "^1.1.1",
+    "remark-toc": "^8.0.1",
     "styled-components": "^5.3.5",
     "swr": "^1.2.2"
   },
