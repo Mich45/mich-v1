@@ -1,5 +1,5 @@
 ---
-title: 'TailwindCSS post with MDX'
+title: 'Getting Started with Tailwind CSS in NextJS'
 tags: [javascript, webdev, javascript]
 excerpt: 'TailwindCSS for Web Developers...'
 coverImage: '/blog-assets/atwood.png'
@@ -26,7 +26,7 @@ Tailwind-CSS is a utility-based CSS framework for rapidly
 
 ## Installing Tailwind CSS and NextJS  
 
-### Step 1
+### Step 1 - Initialize Next.js project
 I'm assuming you already have a NextJS project initialized, if you don't, you can run the following command to start a new NextJS project:
 
 ```bash
@@ -47,7 +47,7 @@ npm i tailwindcss postcss autoprefixer -D
 yarn add tailwindcss postcss autoprefixer -D
 
 ```
-### Step 3 - Generating configuration files
+### Step 3 - Generate configuration files
 After the installation, we'll need to generate configuration files for Tailwind CSS and postcss to customize tailwind's behavior. Run the following command to do so:
 
 ```bash
@@ -68,7 +68,7 @@ After running the above command, we should see `tailwind.config.js` and `postcss
 
 ![postcss-config-file](postcss-config.png)
 
-### Step 4 - Adding file paths
+### Step 4 - Add file paths
 Next, in `tailwind.config.js`, we'll add the file paths in the `content` key to tell tailwind where to find all files that will contain tailwind's utility classes for compilation. Add the following to the `content` key in `tailwind.config.js`:
 
 **`tailwind.config.js`**
@@ -89,7 +89,7 @@ If you create a new folder or file that contains tailwind utility classes, you'l
 
 
 
-### Step 5 - Adding Tailwind CSS directives
+### Step 5 - Add Tailwind CSS directives
 In `styles/globals.css`, delete the contents of the file and add the following Tailwind CSS directives:
 
 ```css
@@ -234,13 +234,15 @@ In creating the `.btn` component above, we used the **@layer** directive with th
 
 ### Utilities
 
-As already mentioned in the beginning of the article, Tailwind CSS is a utility based CSS framework. Utilities (or utility classes) in Tailwind are simply Tailwind-specific classes that we add to our markup for styling. Examples of utilities provided by Tailwind include `p-8`, `w-28`, `h-10` which will compile to the following CSS respectively: `padding: 32px`, `width: 112px`, and `height: 40px`. There may be instances when we'll need a different sizing scale from the ones Tailwind provides by default, this can be achieved by customizing the `theme.spacing` section in our `tailwind.config.js` file. We'll come to this later in the article.
+As already mentioned in the beginning of the article, Tailwind CSS is a utility based CSS framework. Utilities (or utility classes) in Tailwind are simply Tailwind-specific classes that we add to our markup for styling. 
+
+Examples of utilities provided by Tailwind include `p-8`, `w-28`, `h-10` which will compile to the following CSS respectively: `padding: 32px`, `width: 112px`, and `height: 40px`. There may be instances when we'll need a different sizing scale from the ones Tailwind provides by default, this can be achieved by customizing the `theme.spacing` section in our `tailwind.config.js` file. We'll come to this later in the article.
 
 
 #### Custom utilities
 
 Tailwind's flexibility allows us to create our own custom utilities. Creating custom utilities is almost the same with creating components with a few differences. 
-```csss
+```css
 
 ```
 

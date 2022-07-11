@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import ThemeSwitch from '../ThemeSwitch';
-import { useRouter } from 'next/router';
 import { colors, device } from '../../styles/themes';
 import Dropdown from '../Dropdown';
 import { Logo } from '../Icons';
+import usePath from '../../hooks/usePath';
 
 const Navigation = styled.div`
     height: 40px;
@@ -13,7 +13,7 @@ const Navigation = styled.div`
     background: #f7efef;
     top: 0;
     z-index: 1;
-    box-shadow: ${(props: { path: string }) =>
+    box-shadow: ${(props: { path: boolean }) =>
         props.path ? 'none' : '0 2px 4px #e6dcdc'};
 `;
 
@@ -97,15 +97,7 @@ const Anchor = styled.a`
 `;
 
 const Navbar = (): JSX.Element => {
-    const router = useRouter();
-    const [isPostPath, setIsPostPath] = useState(false);
-
-    useEffect(() => {
-        if (router.asPath.includes('/posts/')) {
-            setIsPostPath(true);
-        }
-    });
-
+    const isPostPath = usePath();
     return (
         <>
             <Navigation path={isPostPath}>

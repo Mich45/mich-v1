@@ -11,11 +11,42 @@ const MainWrapper = styled.div`
     background: #efe6e6;
     color: #030303;
 
-    p > code {
+    p > code,
+    strong > code,
+    ul > code,
+    li > code,
+    h1 > code,
+    h2 > code,
+    h3 > code,
+    h4 > code,
+    h5 > code,
+    h6 > code {
         color: #ff1e1e;
         font-weight: bold;
         font-family: inherit;
-        font-size: 16px;
+        font-size: 14px;
+        background: #ffd3cf;
+        padding: 2px 4px;
+        border: 1px solid transparent;
+        border-radius: 3px;
+    }
+
+    li {
+        position: relative;
+    }
+
+    a {
+        color: #13bd5f;
+
+        &:: after {
+            content: '';
+            width: inherit;
+            height: 3px;
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+            background-color: red;
+        }
     }
 `;
 
@@ -28,8 +59,9 @@ const Header = styled.div`
     place-content: center;
 
     h1 {
-        color: white;
         font-weight: bold;
+        background: none;
+        -webkit-text-fill-color: #dfdcdc;
     }
 `;
 
@@ -43,12 +75,15 @@ const PostWrapper = styled.div`
     line-height: 1.5;
 
     p,
-    ul {
-        margin-left: 20px;
+    ul,
+    h4,
+    h5,
+    h6 {
+        margin-left: 10px;
     }
 `;
 
-const PostLayout = (props): JSX.Element => {
+const PostLayout = (props: any): JSX.Element => {
     useEffect(() => {
         hljs.highlightAll();
     });

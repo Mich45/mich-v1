@@ -48,6 +48,7 @@ const Form = styled.form`
         padding: 10px;
         background: transparent;
         margin: 20px 0;
+        transition: 0.3s ease-out;
 
         :focus {
             box-shadow: 0 4px #e86262;
@@ -64,6 +65,7 @@ const Form = styled.form`
         resize: none;
         margin: 20px 0;
         background: none;
+        transition: 0.3s ease-out;
 
         :focus {
             box-shadow: 0 4px #e86262;

@@ -10,6 +10,7 @@ const SearchInput = styled.input`
     color: black;
     border-radius: 4px;
     padding-inline: 10px;
+    transition: 0.3s ease-out;
 
     :focus {
         box-shadow: 0 4px #e86262;
@@ -18,7 +19,7 @@ const SearchInput = styled.input`
 `;
 
 const Search = () => {
-    return <SearchInput placeholder="🔍" />;
+    return <SearchInput placeholder=" 🔍 " />;
 };
 
 export default Search;

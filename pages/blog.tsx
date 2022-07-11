@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
 import Search from '../components/Search';
@@ -127,35 +128,40 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
     const latestPost = posts.slice(0, 1);
     const otherPosts = posts.slice(1);
     return (
-        <MainWrapper>
-            <Jumbotron>
-                <Greeting>
-                    <TextWrapper>
-                        <GreetingText>
-                            Welcome. Explore adeptly curated technical contents
-                            and personal cogitation.
-                        </GreetingText>
-                    </TextWrapper>
-                </Greeting>
-                <SearchWrapper>
-                    <Search />
-                </SearchWrapper>
-                <TagWrapper>
-                    <h3>Popular tags: </h3>
-                    {tags.map((tag, index) => {
-                        return <Tag key={index}>{tag}</Tag>;
-                    })}
-                </TagWrapper>
-            </Jumbotron>
+        <>
+            <Head>
+                <title>Michael Hungbo's Blog</title>
+            </Head>
+            <MainWrapper>
+                <Jumbotron>
+                    <Greeting>
+                        <TextWrapper>
+                            <GreetingText>
+                                Welcome. Explore adeptly curated technical
+                                contents and personal cogitation.
+                            </GreetingText>
+                        </TextWrapper>
+                    </Greeting>
+                    <SearchWrapper>
+                        <Search />
+                    </SearchWrapper>
+                    <TagWrapper>
+                        <h3>Popular tags: </h3>
+                        {tags.map((tag, index) => {
+                            return <Tag key={index}>{tag}</Tag>;
+                        })}
+                    </TagWrapper>
+                </Jumbotron>
 
-            <Latest post={latestPost} />
-            <PostsWrapper>
-                {otherPosts.map((post, i) => {
-                    console.log(otherPosts);
-                    return <Preview meta={post} key={i} />;
-                })}
-            </PostsWrapper>
-        </MainWrapper>
+                <Latest post={latestPost} />
+                <PostsWrapper>
+                    {otherPosts.map((post, i) => {
+                        console.log(otherPosts);
+                        return <Preview meta={post} key={i} />;
+                    })}
+                </PostsWrapper>
+            </MainWrapper>
+        </>
     );
 };
 

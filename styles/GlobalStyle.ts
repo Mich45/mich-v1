@@ -11,6 +11,11 @@ ${fonts}
 
   html {
     scroll-behavior: smooth;
+    
+  }
+
+  ::selection {
+    background-color: #00dcff;
   }
 
 ::-webkit-scrollbar {

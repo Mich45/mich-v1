@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
+import usePath from '../../hooks/usePath';
 
 const FooterWrapper = styled.footer`
     height: auto;
@@ -10,6 +11,8 @@ const FooterWrapper = styled.footer`
     position: relative;
     place-content: center;
     place-items: center;
+    background: ${(props: { postPath: boolean }) =>
+        props.postPath ? '#efe6e6' : 'none'};
 
     .linkwrapper {
         display: flex;
@@ -62,11 +65,20 @@ const Link = styled.a`
 `;
 
 const Footer = (): JSX.Element => {
+    // const router = useRouter();
+    // const [isPostPath, setIsPostPath] = useState(false);
+
+    // useEffect(() => {
+    //     if (router.asPath.includes('/posts/')) {
+    //         setIsPostPath(true);
+    //     }
+    // });
+    const isPostPath = usePath();
     const date = new Date().getFullYear();
 
     return (
         <>
-            <FooterWrapper>
+            <FooterWrapper postPath={isPostPath}>
                 <div
                     style={{
                         height: '3px',
