@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/themes';
-import Link from 'next/link';
 
 type PreviewProps = {
     meta: {
@@ -36,6 +35,7 @@ const TitleWrapper = styled.div`
     height: 30%;
     padding: 10px;
 `;
+const Link = styled.a``;
 
 const Title = styled.h2`
     :hover {
@@ -82,25 +82,29 @@ const Tag = styled.div`
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
     return (
         <>
-            <Link
-                href={`posts/${meta.postPath
-                    .split('/')[1]
-                    .replace(/.md?./, '')}`}
-            >
-                <Wrapper>
-                    <TitleWrapper>
+            <Wrapper>
+                <TitleWrapper>
+                    <Link
+                        href={`posts/${meta.postPath
+                            .split('/')[1]
+                            .replace(/.md?./, '')}`}
+                    >
                         <Title>{meta.data.title}</Title>
-                    </TitleWrapper>
-                    <InfoWrapper>
-                        <Excerpt>{meta.data.excerpt}</Excerpt>
-                        <TagsWrapper>
-                            {meta.data?.tags?.map((tag, index) => {
-                                return <Tag key={index}>{tag}</Tag>;
-                            })}
-                        </TagsWrapper>
-                    </InfoWrapper>
-                </Wrapper>
-            </Link>
+                    </Link>
+                </TitleWrapper>
+                <InfoWrapper>
+                    <Excerpt>{meta.data.excerpt}</Excerpt>
+                    <TagsWrapper>
+                        {meta.data?.tags?.map((tag, index) => {
+                            return (
+                                <Tag key={index}>
+                                    <Link href={`/tags/${tag}`}>{tag}</Link>
+                                </Tag>
+                            );
+                        })}
+                    </TagsWrapper>
+                </InfoWrapper>
+            </Wrapper>
         </>
     );
 };
