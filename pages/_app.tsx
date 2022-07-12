@@ -1,3 +1,6 @@
+// eslint-disable-next-line
+// @ts-nocheck
+
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import Layout from '../components/Layout';

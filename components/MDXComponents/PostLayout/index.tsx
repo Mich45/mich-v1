@@ -10,19 +10,15 @@ const MainWrapper = styled.div`
     position: relative;
     background: #efe6e6;
     color: #030303;
+    font-size: 16px;
+    font-family: 'Product Sans', sans-serif;
 
-    p > code,
-    strong > code,
-    ul > code,
-    li > code,
-    h1 > code,
-    h2 > code,
-    h3 > code,
-    h4 > code,
-    h5 > code,
-    h6 > code {
+    pre codee.hljs {
+        font-size: 14px;
+    }
+
+    code:not(pre > code) {
         color: #ff1e1e;
-        font-weight: bold;
         font-family: inherit;
         font-size: 14px;
         background: #ffd3cf;
@@ -33,19 +29,17 @@ const MainWrapper = styled.div`
 
     li {
         position: relative;
+        margin-bottom: 0.5em;
     }
 
     a {
         color: #13bd5f;
+        transition: 0.3s ease-out;
 
-        &:: after {
-            content: '';
-            width: inherit;
-            height: 3px;
-            position: absolute;
-            left: 0;
-            bottom: 5px;
-            background-color: red;
+        :hover  {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-decoration-skip-ink: none;
         }
     }
 `;
@@ -68,10 +62,10 @@ const Header = styled.div`
 const PostWrapper = styled.div`
     width: 70ch;
     height: auto;
-    margin-left: 100px;
+    margin: 0 auto;
     padding: 20px;
     font-weight: 500;
-    color: #232026;
+    color: #2d2c36;
     line-height: 1.5;
 
     p,
@@ -79,7 +73,6 @@ const PostWrapper = styled.div`
     h4,
     h5,
     h6 {
-        margin-left: 10px;
     }
 `;
 

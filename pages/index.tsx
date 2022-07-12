@@ -49,7 +49,7 @@ const Banner = styled.div`
 `;
 
 const Paragraph = styled.p`
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', 'Segoe UI', sans-serif;
     font-size: 60px;
     font-weight: 600;
     margin: 0;
