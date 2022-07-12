@@ -11,7 +11,7 @@ const MainWrapper = styled.div`
     background: #efe6e6;
     color: #030303;
     font-size: 16px;
-    font-family: 'Product Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 
     pre codee.hljs {
         font-size: 14px;
@@ -36,7 +36,7 @@ const MainWrapper = styled.div`
         color: #13bd5f;
         transition: 0.3s ease-out;
 
-        :hover  {
+        :hover {
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-decoration-skip-ink: none;

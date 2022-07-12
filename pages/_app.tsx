@@ -30,10 +30,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/markdown.min.js" />
             <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/typescript.min.js" />
             <MDXProvider components={components}>
-                <GlobalStyle />
-                <Layout>
-                    <Component {...pageProps} />
-                </Layout>
+                <>
+                    <GlobalStyle />
+                    <Layout>
+                        <Component {...pageProps} />
+                    </Layout>
+                </>
             </MDXProvider>
         </>
     );
