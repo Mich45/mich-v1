@@ -47,7 +47,7 @@ const CardWrapper = styled.div`
     border: 1px solid #bdbdbd;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
-    width: 95%;
+    width: 90%;
     margin: 0 auto;
 `;
 
@@ -68,16 +68,21 @@ const ImageContainer = styled.div`
 `;
 
 const Link = styled.a`
-    cursor: pointer;
-    color: inherit;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
+    width: 100%;
+    height: 100%;
 `;
 
 const ImageWrapper = styled.div`
     width: 100%;
     height: 100%;
+    border-radius: 4px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        border-radius: 5px;
+    }
 `;
 
 const DetailsWrapper = styled.div`
@@ -146,8 +151,9 @@ padding: 15px 20px;
 
 const projectsList = [
     {
-        image: '/public/assets/portfolio.png',
-        description: 'A project built for school',
+        image: '/assets/portfolio.png',
+        description:
+            'A project built for school lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
         stack: ['react', 'redux', 'node.js'],
         link: 'https://google.com',
         source: 'https://github.com',
@@ -161,17 +167,13 @@ const Projects = () => {
             <ListWrapper>
                 <CardWrapper>
                     {projectsList.map((project, key) => {
+                        const img = project.image;
                         return (
                             <Card key={key}>
                                 <ImageContainer>
                                     <Link>
                                         <ImageWrapper>
-                                            <Image
-                                                src={project.image}
-                                                objectFit={'cover'}
-                                                width={100}
-                                                height={100}
-                                            />
+                                            <img src={img} />
                                         </ImageWrapper>
                                     </Link>
                                 </ImageContainer>
