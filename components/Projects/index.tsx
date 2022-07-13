@@ -38,7 +38,10 @@ const Heading = styled.h1`
 
 const ListWrapper = styled.div`
     width: 100%;
+    gap: 20px;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 `;
 
 const CardWrapper = styled.div`
@@ -65,6 +68,10 @@ const ImageContainer = styled.div`
     width: 40%;
     height: 100%;
     overflow: hidden;
+
+    :hover  {
+        cursor: pointer;
+    }
 `;
 
 const Link = styled.a`
@@ -75,13 +82,13 @@ const Link = styled.a`
 const ImageWrapper = styled.div`
     width: 100%;
     height: 100%;
-    border-radius: 4px;
 
     img {
         width: 100%;
         object-fit: cover;
         height: 100%;
         border-radius: 5px;
+        position: relative;
     }
 `;
 
@@ -99,7 +106,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 height: 100%;
-padding: 15px 20px;
+padding: 5px 20px;
 
 .detail {
     display: flex;
@@ -153,6 +160,14 @@ const projectsList = [
     {
         image: '/assets/portfolio.png',
         description:
+            'My portfolio website built with react and nad next with mdx. The wall of the woekd and make it oerlk.',
+        stack: ['react', 'next.js'],
+        link: 'https://google.com',
+        source: 'https://github.com',
+    },
+    {
+        image: '/assets/gdsc.png',
+        description:
             'A project built for school lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
         stack: ['react', 'redux', 'node.js'],
         link: 'https://google.com',
@@ -165,11 +180,11 @@ const Projects = () => {
         <Wrapper>
             <Heading>Stuff I've built</Heading>
             <ListWrapper>
-                <CardWrapper>
-                    {projectsList.map((project, key) => {
-                        const img = project.image;
-                        return (
-                            <Card key={key}>
+                {projectsList.map((project, key) => {
+                    const img = project.image;
+                    return (
+                        <CardWrapper key={key}>
+                            <Card>
                                 <ImageContainer>
                                     <Link>
                                         <ImageWrapper>
@@ -217,9 +232,9 @@ const Projects = () => {
                                     </Details>
                                 </DetailsWrapper>
                             </Card>
-                        );
-                    })}
-                </CardWrapper>
+                        </CardWrapper>
+                    );
+                })}
             </ListWrapper>
         </Wrapper>
     );

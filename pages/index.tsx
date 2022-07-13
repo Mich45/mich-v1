@@ -144,7 +144,7 @@ const ToolsSection = styled.section`
 
 const ProjectSection = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 100%;
 `;
 
 const ContactSection = styled.section`
