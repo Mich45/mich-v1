@@ -36,6 +36,7 @@ ${fonts}
   }
 
  body {
+    text-rendering: optimizeLegibility;
     color: ${colors.gray.grayPrimary};
      padding: 0;
      margin: 0;

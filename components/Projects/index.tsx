@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -38,7 +37,7 @@ const Heading = styled.h1`
 
 const ListWrapper = styled.div`
     width: 100%;
-    gap: 20px;
+    gap: 50px;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -60,7 +59,6 @@ const Card = styled.div`
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
-    gap: 20px;
     padding: 20px;
 `;
 
@@ -68,8 +66,10 @@ const ImageContainer = styled.div`
     width: 40%;
     height: 100%;
     overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
 
-    :hover  {
+    :hover {
         cursor: pointer;
     }
 `;
@@ -89,6 +89,11 @@ const ImageWrapper = styled.div`
         height: 100%;
         border-radius: 5px;
         position: relative;
+        transition: transform 0.3s ease-in-out;
+
+        :hover {
+            transform: scale(1.2);
+        }
     }
 `;
 
@@ -106,7 +111,7 @@ display: flex;
 flex-direction: column;
 width: 100%;
 height: 100%;
-padding: 5px 20px;
+padding: 5px 20px 5px 0;
 
 .detail {
     display: flex;
@@ -160,15 +165,15 @@ const projectsList = [
     {
         image: '/assets/portfolio.png',
         description:
-            'My portfolio website built with react and nad next with mdx. The wall of the woekd and make it oerlk.',
+            'My portfolio website built with react My portfolio website built with react  and nad next with mdx. The wall of the woekd and make it oerlk.',
         stack: ['react', 'next.js'],
-        link: 'https://google.com',
+        link: 'YOU ARE HERE!',
         source: 'https://github.com',
     },
     {
         image: '/assets/gdsc.png',
         description:
-            'A project built for school lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
+            'A project built for school My portfolio website built with react lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
         stack: ['react', 'redux', 'node.js'],
         link: 'https://google.com',
         source: 'https://github.com',
@@ -186,7 +191,13 @@ const Projects = () => {
                         <CardWrapper key={key}>
                             <Card>
                                 <ImageContainer>
-                                    <Link>
+                                    <Link
+                                        href={
+                                            project.link.includes('HERE')
+                                                ? '/'
+                                                : project.link
+                                        }
+                                    >
                                         <ImageWrapper>
                                             <img src={img} />
                                         </ImageWrapper>
@@ -219,7 +230,15 @@ const Projects = () => {
                                         </div>
                                         <div className="detail list">
                                             <h5>VIEW IT LIVE</h5>
-                                            <a href={project.link}>
+                                            <a
+                                                href={
+                                                    project.link.includes(
+                                                        'HERE'
+                                                    )
+                                                        ? '/'
+                                                        : project.link
+                                                }
+                                            >
                                                 {project.link}
                                             </a>
                                         </div>

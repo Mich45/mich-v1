@@ -80,6 +80,7 @@ const Header = styled(motion.div)`
     flex-direction: column;
     place-content: center;
     place-items: center;
+    padding-top: 150px;
 
     .header {
         position: relative;

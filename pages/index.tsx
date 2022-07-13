@@ -24,6 +24,7 @@ const MainContent = styled.section`
     width: 100%;
     height: 100%;
     position: relative;
+    scroll-snap-type: y mandatory;
 `;
 
 const BannerWrapper = styled.div`
@@ -138,13 +139,12 @@ const Resume = styled.a`
 
 const ToolsSection = styled.section`
     width: 100%;
-    height: auto;
-    background-color: transparent;
 `;
 
 const ProjectSection = styled.section`
     width: 100%;
     height: 100%;
+    scroll-snap-align: start;
 `;
 
 const ContactSection = styled.section`
