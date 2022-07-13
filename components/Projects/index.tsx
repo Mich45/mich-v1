@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -35,10 +36,189 @@ const Heading = styled.h1`
     }
 `;
 
+const ListWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+
+const CardWrapper = styled.div`
+    height: 324px;
+    min-width: 1px;
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
+    width: 95%;
+    margin: 0 auto;
+`;
+
+const Card = styled.div`
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+`;
+
+const ImageContainer = styled.div`
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+`;
+
+const Link = styled.a`
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+`;
+
+const ImageWrapper = styled.div`
+    width: 100%;
+    height: 100%;
+`;
+
+const DetailsWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-width: 1px;
+    width: 50%;
+    align-items: center;
+`;
+
+const Details = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+padding: 15px 20px;
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+
+    h5{
+        margin: 0;
+        margin-bottom: 5px;
+        color: #757878;
+    }
+
+    p{
+        margin-top: 0;
+    }
+    
+    a {
+        display: flex;
+        place-items: center;
+        margin: 0;
+        color: black;
+        text-decoration: underline;
+    }
+
+    .stack-list {
+        margin-top: 0;
+        display: flex;
+        place-content-center;
+        place-items: center;
+        list-style-type: none;
+        padding: 0;
+
+        .stack-item{
+            background: #f3483b;
+            margin-right: 10px;
+            padding: 10px;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+        }
+    }
+}
+
+.list{
+    margin-top: 20px;
+    font-size: 14px;
+}
+`;
+
+const projectsList = [
+    {
+        image: '/public/assets/portfolio.png',
+        description: 'A project built for school',
+        stack: ['react', 'redux', 'node.js'],
+        link: 'https://google.com',
+        source: 'https://github.com',
+    },
+];
+
 const Projects = () => {
     return (
         <Wrapper>
             <Heading>Stuff I've built</Heading>
+            <ListWrapper>
+                <CardWrapper>
+                    {projectsList.map((project, key) => {
+                        return (
+                            <Card key={key}>
+                                <ImageContainer>
+                                    <Link>
+                                        <ImageWrapper>
+                                            <Image
+                                                src={project.image}
+                                                objectFit={'cover'}
+                                                width={100}
+                                                height={100}
+                                            />
+                                        </ImageWrapper>
+                                    </Link>
+                                </ImageContainer>
+                                <DetailsWrapper>
+                                    <Details>
+                                        <div className="detail">
+                                            <h5>DESCRIPTION</h5>
+                                            <p>{project.description}</p>
+                                        </div>
+                                        <div className="detail list ">
+                                            <h5>STACK</h5>
+                                            <div>
+                                                <ul className="stack-list">
+                                                    {project.stack.map(
+                                                        (stack, key) => {
+                                                            return (
+                                                                <li
+                                                                    key={key}
+                                                                    className="stack-item"
+                                                                >
+                                                                    {stack}
+                                                                </li>
+                                                            );
+                                                        }
+                                                    )}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div className="detail list">
+                                            <h5>VIEW IT LIVE</h5>
+                                            <a href={project.link}>
+                                                {project.link}
+                                            </a>
+                                        </div>
+                                        <div className="detail list">
+                                            <h5>VIEW IT ON GITHUB </h5>
+                                            <a href={project.source}>
+                                                {project.source}
+                                            </a>
+                                        </div>
+                                    </Details>
+                                </DetailsWrapper>
+                            </Card>
+                        );
+                    })}
+                </CardWrapper>
+            </ListWrapper>
         </Wrapper>
     );
 };
