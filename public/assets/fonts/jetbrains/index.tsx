@@ -7,6 +7,7 @@ const jetBrainsFont = css`
             format('truetype');
         font-weight: 900;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -15,6 +16,7 @@ const jetBrainsFont = css`
             format('truetype');
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -23,6 +25,7 @@ const jetBrainsFont = css`
             format('truetype');
         font-weight: normal;
         font-style: Italic;
+        font-display: swap;
     }
 `;
 

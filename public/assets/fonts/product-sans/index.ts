@@ -7,6 +7,7 @@ const productSansFont = css`
             format('truetype');
         font-weight: 900;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -15,6 +16,7 @@ const productSansFont = css`
             format('truetype');
         font-weight: 500;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -23,6 +25,7 @@ const productSansFont = css`
             format('truetype');
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
     }
 
     @font-face {
@@ -31,6 +34,7 @@ const productSansFont = css`
             format('truetype');
         font-weight: 300;
         font-style: normal;
+        font-display: swap;
     }
 `;
 
