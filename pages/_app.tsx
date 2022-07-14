@@ -25,10 +25,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
-            <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/javascript.min.js" />
-            <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/bash.min.js" />
-            <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/markdown.min.js" />
-            <Script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/languages/typescript.min.js" />
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></Script>
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></Script>
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/markdown.min.js"></Script>
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/typescript.min.js"></Script>
+            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/react.min.js"></Script>
+            <Script id="hljs-script">hljs.initHighlightingOnLoad();</Script>
             <MDXProvider components={components}>
                 <>
                     <GlobalStyle />
