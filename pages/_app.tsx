@@ -29,7 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
             <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></Script>
             <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/markdown.min.js"></Script>
             <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/typescript.min.js"></Script>
-            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/react.min.js"></Script>
             <Script id="hljs-script">hljs.initHighlightingOnLoad();</Script>
             <MDXProvider components={components}>
                 <>
