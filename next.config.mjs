@@ -6,7 +6,7 @@ import { remarkMdxFrontmatter } from 'remark-mdx-frontmatter';
 import remarkGfm from 'remark-gfm';
 import recmaNextjsStaticProps from 'recma-nextjs-static-props';
 import remarkToc from 'remark-toc';
-import rehypeSlug from 'rehype-slug'
+import rehypeSlug from 'rehype-slug';
 
 const nextConfig = {
     reactStrictMode: true,
@@ -19,13 +19,18 @@ const nextConfig = {
 const withMDX = nextMdx({
     extension: /\.mdx?$/,
     options: {
-        remarkPlugins: [remarkFrontmatter, rehypeSlug, [remarkMdxFrontmatter, { name: 'frontmatter' }], remarkGfm, [remarkToc, { maxDepth: 2 }]],
+        remarkPlugins: [
+            remarkFrontmatter,
+            rehypeSlug,
+            [remarkMdxFrontmatter, { name: 'frontmatter' }],
+            remarkGfm,
+            [remarkToc, { maxDepth: 2 }],
+        ],
         recmaPlugins: [recmaNextjsStaticProps],
         rehypePlugins: [],
         providerImportSource: '@mdx-js/react',
     },
 });
-
 
 const config = withMDX(nextConfig);
 

@@ -165,7 +165,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
     );
 };
 
-export function getServerSideProps() {
+export function getStaticProps() {
     const postsPath = api.sortPosts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);
