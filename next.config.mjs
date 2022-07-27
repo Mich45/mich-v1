@@ -26,6 +26,7 @@ const withMDX = nextMdx({
     },
 });
 
+
 const config = withMDX(nextConfig);
 
 config.pageExtensions = ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'];

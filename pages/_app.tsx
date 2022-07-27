@@ -25,10 +25,22 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
-            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></Script>
-            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"></Script>
-            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/markdown.min.js"></Script>
-            <Script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/typescript.min.js"></Script>
+            <Script
+                src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"
+                strategy="afterInteractive"
+            ></Script>
+            <Script
+                src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/javascript.min.js"
+                strategy="afterInteractive"
+            ></Script>
+            <Script
+                src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/markdown.min.js"
+                strategy="afterInteractive"
+            ></Script>
+            <Script
+                src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/languages/typescript.min.js"
+                strategy="afterInteractive"
+            ></Script>
             <Script id="hljs-script">hljs.initHighlightingOnLoad();</Script>
             <MDXProvider components={components}>
                 <>
