@@ -2,9 +2,10 @@
 <img height='350' width='700' src='public/assets/portfolio.png' style='object-fit:center'>
 </p>
 
-<p align='center' style='font-size:32px'>My Portfolio Website</p>
+<p align='center' style='font-size: 50px'>My Portfolio Website</p>
 
 <br/>
+
 ## Contributing
 
 Clone this repository and run the following command to install the project's dependencies.
