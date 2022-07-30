@@ -1,6 +1,6 @@
-My Portfolio Website
+### My Portfolio Website
 
-<palign='center'>
+<p align='center'>
 <img height='350' width='500' src='public/assets/portfolio.png'>
 </p>
 
@@ -9,10 +9,12 @@ My Portfolio Website
 Clone this repository and run the following command to install the project's dependencies.
 
 ```bash
-yarn install or npm install
+yarn install 
+# or 
+npm install
 ```
 
-First, run the development server:
+Next, run the development server:
 
 ```bash
 npm run dev
