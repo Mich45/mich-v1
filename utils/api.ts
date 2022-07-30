@@ -4,10 +4,10 @@ import matter from 'gray-matter';
 
 export const posts = (): string[] => {
     let fullPaths: string[] = [];
-    const homeDirectory = process.cwd();
-    const postsDirectory = path.join(homeDirectory, 'pages', 'posts');
-    const allposts = fs.readdirSync(postsDirectory);
-    allposts.forEach((post) => {
+    const postsDirectory = path.resolve(process.cwd(), 'pages', 'posts');
+    const allPosts = fs.readdirSync(postsDirectory);
+    console.log(allPosts);
+    allPosts.forEach((post) => {
         fullPaths.push(`${postsDirectory}/${post}`);
     });
     return fullPaths;
@@ -15,7 +15,6 @@ export const posts = (): string[] => {
 
 export const readPost = (postPath: string) => {
     const postContent = fs.readFileSync(postPath);
-
     const { data, content } = matter(postContent);
     return {
         data,

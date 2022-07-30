@@ -80,13 +80,14 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
+    console.log('meta:' + meta.postPath);
     return (
         <>
             <Wrapper>
                 <TitleWrapper>
                     <Link
                         href={`posts/${meta.postPath
-                            .split('/')[1]
+                            .split('posts/')[1]
                             .replace(/.md?./, '')}`}
                     >
                         <Title>{meta.data.title}</Title>

@@ -156,7 +156,6 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                 <Latest post={latestPost} />
                 <PostsWrapper>
                     {otherPosts.map((post, i) => {
-                        console.log(otherPosts);
                         return <Preview meta={post} key={i} />;
                     })}
                 </PostsWrapper>
@@ -165,7 +164,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
     );
 };
 
-export function getStaticProps() {
+export async function getStaticProps() {
     const postsPath = api.sortPosts();
     const posts = postsPath.map((post) => {
         const postData = api.readPost(post);

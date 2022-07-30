@@ -51,6 +51,10 @@ const Anchor = styled.a`
     place-content: center;
     place-items: center;
 
+    :hover {
+        cursor: pointer;
+    }
+
     .hidden {
         display: none;
     }

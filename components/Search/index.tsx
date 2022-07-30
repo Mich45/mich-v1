@@ -10,7 +10,7 @@ const SearchInput = styled.input`
     color: black;
     border-radius: 4px;
     padding-inline: 10px;
-    transition: 0.3s ease-out;
+    transition: 0.1s ease-out;
 
     :focus {
         box-shadow: 0 4px #e86262;
