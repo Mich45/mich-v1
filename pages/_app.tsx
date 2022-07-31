@@ -43,12 +43,10 @@ function MyApp({ Component, pageProps }: AppProps) {
             ></Script>
             <Script id="hljs-script">hljs.initHighlightingOnLoad();</Script>
             <MDXProvider components={components}>
-                <>
-                    <GlobalStyle />
-                    <Layout>
-                        <Component {...pageProps} />
-                    </Layout>
-                </>
+                <GlobalStyle />
+                <Layout>
+                    <Component {...pageProps} />
+                </Layout>
             </MDXProvider>
         </>
     );
