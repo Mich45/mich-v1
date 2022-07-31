@@ -25,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
+            <GlobalStyle />
             <Script
                 src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"
                 strategy="afterInteractive"
@@ -42,8 +43,8 @@ function MyApp({ Component, pageProps }: AppProps) {
                 strategy="afterInteractive"
             ></Script>
             <Script id="hljs-script">hljs.initHighlightingOnLoad();</Script>
+
             <MDXProvider components={components}>
-                <GlobalStyle />
                 <Layout>
                     <Component {...pageProps} />
                 </Layout>
