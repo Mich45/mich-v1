@@ -25,7 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
-            <GlobalStyle />
             <Script
                 src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"
                 strategy="afterInteractive"
@@ -46,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
             <MDXProvider components={components}>
                 <Layout>
+                    <GlobalStyle />
                     <Component {...pageProps} />
                 </Layout>
             </MDXProvider>
