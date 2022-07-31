@@ -11,9 +11,9 @@ import rehypeSlug from 'rehype-slug';
 const nextConfig = {
     reactStrictMode: true,
 
-    // compiler: {
-    //     styledComponents: true,
-    // },
+    compiler: {
+        styledComponents: true,
+    },
 };
 
 const withMDX = nextMdx({

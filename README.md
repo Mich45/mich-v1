@@ -6,9 +6,14 @@
 
 <br/>
 
+## About
+
+
+## Tech stack
+
 ## Contributing
 
-Clone this repository and run the following command to install the project's dependencies.
+To get started, clone this repository and run the following command to install the project's dependencies.
 
 ```bash
 yarn install 
@@ -26,5 +31,4 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
