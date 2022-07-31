@@ -2,7 +2,7 @@
 <img height='350' width='700' src='public/assets/portfolio.png' style='object-fit:center'>
 </p>
 
-<p align='center' style='font-size: 50px'>My Portfolio Website</p>
+<p align='center' style='font-size:50px'>My Portfolio Website</p>
 
 <br/>
 
