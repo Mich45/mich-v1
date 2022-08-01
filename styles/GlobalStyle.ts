@@ -54,7 +54,7 @@ a {
 h1{
     font-size: 40px;
     position: relative;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', "Segoe UI", sans-serif;
     background-clip: text;
     text-fill-color: transparent;
     background: rgb(233,68,68);
