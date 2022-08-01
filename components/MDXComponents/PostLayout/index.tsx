@@ -11,20 +11,20 @@ const MainWrapper = styled.div`
     background: #efe6e6;
     color: #030303;
     font-size: 16px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
 
     pre codee.hljs {
         font-size: 14px;
     }
 
     code:not(pre > code) {
-        color: #ff1e1e;
+        color: #161414;
         font-family: inherit;
         font-size: 14px;
-        background: #ffd3cf;
+        background: #6af9aab8;
         padding: 2px 4px;
         border: 1px solid transparent;
-        border-radius: 3px;
+        border-radius: 2px;
     }
 
     li {

@@ -45,7 +45,7 @@ const TextWrapper = styled.div`
 const GreetingText = styled.p`
     font-size: 36px;
     font-weight: 700;
-    font-family: 'Product Sans';
+    font-family: 'Product Sans', 'Segoe UI', sans-serif;
     background-clip: text;
     text-fill-color: transparent;
     background: rgb(242, 40, 40);

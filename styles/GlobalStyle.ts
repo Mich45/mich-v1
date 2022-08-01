@@ -20,6 +20,7 @@ ${fonts}
 
 ::-webkit-scrollbar {
     width: 10px;
+    height: 10px;
   }
   
   ::-webkit-scrollbar-track {
@@ -27,7 +28,7 @@ ${fonts}
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #b3b3b3;
     border-radius: 6px;
   }
   
@@ -42,7 +43,7 @@ ${fonts}
      margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-     font-family: 'Inter', "Segoe UI", system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     font-family: Inter, "Segoe UI", system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 a {
