@@ -6,7 +6,7 @@ const interFont = css`
         src: url('/assets/fonts/inter/Inter-Bold.ttf') format('truetype');
         font-weight: 900;
         font-style: normal;
-        font-display: swap;
+        font-display: optional;
     }
 
     @font-face {
@@ -14,7 +14,7 @@ const interFont = css`
         src: url('/assets/fonts/inter/Inter-Medium.ttf') format('truetype');
         font-weight: 500;
         font-style: normal;
-        font-display: swap;
+        font-display: optional;
     }
 
     @font-face {
@@ -22,7 +22,7 @@ const interFont = css`
         src: url('/assets/fonts/inter/Inter-Regular.ttf') format('truetype');
         font-weight: normal;
         font-style: normal;
-        font-display: swap;
+        font-display: optional;
     }
 
     @font-face {
@@ -30,7 +30,7 @@ const interFont = css`
         src: url('/assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
         font-weight: 600;
         font-style: normal;
-        font-display: swap;
+        font-display: optional;
     }
 `;
 

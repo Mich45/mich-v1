@@ -44,7 +44,7 @@ export default class MyDocument extends Document {
                     />
                     <link
                         rel="preload"
-                        href="/fonts/Inter-Medium.ttf"
+                        href="/assets/fonts/Inter-Medium.ttf"
                         as="font"
                         type="font/ttf"
                         crossOrigin=""
