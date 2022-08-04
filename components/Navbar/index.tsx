@@ -19,7 +19,8 @@ const Navigation = styled.div`
 
 const NavigationWrapper = styled.div`
     height: 100%;
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
 

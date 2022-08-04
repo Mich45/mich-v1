@@ -42,18 +42,14 @@ const TextWrapper = styled.div`
     flex-direction: column;
 `;
 
-const GreetingText = styled.p`
+const GreetingText = styled.h1`
     font-size: 36px;
     font-weight: 700;
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
     background-clip: text;
     text-fill-color: transparent;
-    background: rgb(242, 40, 40);
-    background: linear-gradient(
-        0deg,
-        rgba(242, 40, 40, 1) 7%,
-        rgba(255, 68, 40, 1) 67%
-    );
+    background: white;
+
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
@@ -76,8 +72,8 @@ const Tag = styled.a`
     width: auto;
     height: 30px;
     color: #fff;
-    background-image: linear-gradient(to bottom, #eb3f2c, #f51700);
-    border-radius: 25px;
+    background-image: linear-gradient(to bottom, #426493, #2e425e);
+    border-radius: 4px;
     padding: 15px;
     font-size: 14px;
     margin: 10px;
@@ -99,14 +95,37 @@ const SearchWrapper = styled.div`
 `;
 
 const PostsWrapper = styled.div`
-    width: 100%;
+    width: 95%;
     height: auto;
     display: flex;
-    padding: 20px;
-    margin: 30px 0;
+    padding: 20px 85px;
+    margin: 30px auto;
     flex-direction: column;
     place-content: center;
     place-items: center;
+`;
+
+const Button = styled.button`
+    width: auto;
+    height: 30px;
+    color: white;
+    outline: none;
+    border: none;
+    background: ${colors.gray.darkGray};
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 14px;
+    margin-inline: 0 10px;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    margin-top: 20px;
+    transition: 0.1s ease-in;
+
+    :hover {
+        cursor: pointer;
+        background: #1d2a3c;
+    }
 `;
 
 const tags: string[] = [
@@ -146,7 +165,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                         <Search />
                     </SearchWrapper>
                     <TagWrapper>
-                        <h3>Popular tags: </h3>
+                        <h4>Popular tags: </h4>
                         {tags.map((tag, index) => {
                             return <Tag key={index}>{tag}</Tag>;
                         })}
@@ -158,6 +177,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     {otherPosts.map((post, i) => {
                         return <Preview meta={post} key={i} />;
                     })}
+                    <Button>Show more</Button>
                 </PostsWrapper>
             </MainWrapper>
         </>

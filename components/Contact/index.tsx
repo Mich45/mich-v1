@@ -6,7 +6,7 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     place-items: center;
-    margin: 20px 0;
+    // margin: 20px 0;
 `;
 
 const ContactWrapper = styled.div`
@@ -14,13 +14,13 @@ const ContactWrapper = styled.div`
     height: 100%;
     display: flex;
     margin-block: 20px;
+    font: small-caption;
 `;
 
 const MessageWrapper = styled.div`
     width: 50%;
     height: 100%;
     display: flex;
-    place-items: center;
     flex-direction: column;
 `;
 
@@ -34,6 +34,7 @@ const Form = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
+    padding-left: 50px;
 
     label {
         font-weight: bold;

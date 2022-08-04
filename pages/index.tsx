@@ -5,13 +5,11 @@ import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
-import Projects from '../components/Projects';
+import Contact from '../components/Contact';
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
-    loading: () => <Projects />,
+    suspense: true,
 });
-
-import Contact from '../components/Contact';
 
 const slideIn = keyframes`
 0%{
@@ -87,7 +85,7 @@ const Gradient = styled.span`
     text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    margin-inline: 5px;
+    margin-inline: 8px;
     transform: translateY(-10%);
 `;
 
@@ -155,8 +153,8 @@ const ProjectSection = styled.section`
 `;
 
 const ContactSection = styled.section`
-    width: 100%;
-    margin-block: 30px;
+    width: 80%;
+    margin: 0 auto;
 `;
 
 const Home: NextPage = (): JSX.Element => {

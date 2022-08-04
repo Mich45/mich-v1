@@ -42,8 +42,8 @@ const container = {
 };
 
 const Wrapper = styled(motion.div)`
-    margin: 30px 100px;
-    width: auto;
+    margin: 0 auto;
+    width: 85%;
     height: auto;
     display: grid;
     grid-template-columns: 2fr 2fr 2fr 2fr;
@@ -203,7 +203,14 @@ const Tools = (): JSX.Element => {
                             key={i}
                         >
                             <div>{tool.icon()}</div>
-                            <p style={{ fontWeight: 'bold' }}>{tool.name}</p>
+                            <p
+                                style={{
+                                    fontWeight: 'bold',
+                                    fontSize: 'small',
+                                }}
+                            >
+                                {tool.name}
+                            </p>
                         </Tool>
                     );
                 })}

@@ -14,20 +14,20 @@ type PreviewProps = {
 };
 
 const Wrapper = styled.div`
-    width: 70%;
+    width: 100%;
     height: auto;
     padding: 5px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    border: 2px solid transparent;
     transition: 0.3s ease-out;
     color: ${colors.gray.darkGray};
-    background: #f7efef;
     margin: 10px 0;
+    background: #e5dfdfb8;
+    border: 2px solid #d7d7d7;
 
     :hover {
-        background: #e5dfdfb8;
+        background: #f7efef;
         border: 2px solid #d7d7d7;
     }
 `;
@@ -67,16 +67,18 @@ const Tag = styled.div`
     height: 30px;
     color: white;
     background: ${colors.gray.darkGray};
-    border-radius: 25px;
+    border-radius: 4px;
     padding: 15px;
     font-size: 14px;
     margin-inline: 0 10px;
     display: flex;
     place-content: center;
     place-items: center;
+    transition: 0.3s ease-in-out;
 
     :hover {
         cursor: pointer;
+        background: #1d2a3c;
     }
 `;
 

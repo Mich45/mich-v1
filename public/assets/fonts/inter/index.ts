@@ -24,14 +24,6 @@ const interFont = css`
         font-style: normal;
         font-display: swap;
     }
-
-    @font-face {
-        font-family: 'Inter';
-        src: url('/assets/fonts/inter/Inter-SemiBold.ttf') format('truetype');
-        font-weight: 600;
-        font-style: normal;
-        font-display: swap;
-    }
 `;
 
 export default interFont;

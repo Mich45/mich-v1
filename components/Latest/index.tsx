@@ -9,6 +9,13 @@ const Wrapper = styled.section`
     place-content: center;
     background: #2b6852;
 `;
+const TextWrapper = styled.div`
+    width: 82%;
+    margin: auto;
+
+    h2 {
+    }
+`;
 
 type LatestPostProps = {
     post: {
@@ -25,9 +32,9 @@ type LatestPostProps = {
 const Latest = ({ post }: LatestPostProps) => {
     return (
         <>
-            <h1 style={{ marginInline: '20px', fontFamily: 'Product Sans' }}>
-                Latest on this blog
-            </h1>
+            <TextWrapper>
+                <h2>Latest on this blog 📖</h2>
+            </TextWrapper>
             <Wrapper>
                 <div>Latest Blogs</div>
                 <img src={post[0].data.coverImage} alt="post cover image" />

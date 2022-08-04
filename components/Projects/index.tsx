@@ -36,7 +36,8 @@ const Heading = styled.h1`
 `;
 
 const ListWrapper = styled.div`
-    width: 100%;
+    width: 85%;
+    margin: 0 auto;
     gap: 50px;
     height: 100%;
     display: flex;
@@ -126,6 +127,7 @@ padding: 5px 20px 5px 0;
 
     p{
         margin-top: 0;
+        margin-bottom: 0;
     }
     
     a {
@@ -163,7 +165,7 @@ padding: 5px 20px 5px 0;
 
 const projectsList = [
     {
-        image: '/assets/portfolio.png',
+        image: '/assets/portfolio.jpeg',
         description:
             'My portfolio website built with react My portfolio website built with react  and nad next with mdx. The wall of the woekd and make it oerlk.',
         stack: ['react', 'next.js'],
@@ -171,7 +173,7 @@ const projectsList = [
         source: 'https://github.com',
     },
     {
-        image: '/assets/gdsc.png',
+        image: '/assets/gdsc.jpeg',
         description:
             'A project built for school My portfolio website built with react lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
         stack: ['react', 'redux', 'node.js'],
