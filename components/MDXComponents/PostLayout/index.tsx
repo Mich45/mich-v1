@@ -21,7 +21,7 @@ const MainWrapper = styled.div`
         color: #161414;
         font-family: inherit;
         font-size: 14px;
-        background: #6af9aab8;
+        background: rgb(78 255 157 / 32%);
         padding: 2px 4px;
         border: 1px solid transparent;
         border-radius: 2px;

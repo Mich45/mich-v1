@@ -44,7 +44,21 @@ export default class MyDocument extends Document {
                     />
                     <link
                         rel="preload"
-                        href="/assets/fonts/Inter-Medium.ttf"
+                        href="/assets/fonts/inter/Inter-Medium.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/assets/fonts/product-sans/ProductSans-Medium.ttf"
+                        as="font"
+                        type="font/ttf"
+                        crossOrigin=""
+                    />
+                    <link
+                        rel="preload"
+                        href="/assets/fonts/product-sans/ProductSans-Regular.ttf"
                         as="font"
                         type="font/ttf"
                         crossOrigin=""

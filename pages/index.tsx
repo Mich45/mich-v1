@@ -1,9 +1,16 @@
+import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors } from '../styles/themes';
 import Tools from '../components/Tools';
 import Projects from '../components/Projects';
+
+const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
+    loading: () => <Projects />,
+});
+
 import Contact from '../components/Contact';
 
 const slideIn = keyframes`
@@ -204,7 +211,9 @@ const Home: NextPage = (): JSX.Element => {
                 </BannerWrapper>
 
                 <ProjectSection id="projects">
-                    <Projects />
+                    <Suspense fallback={`Loading Projects...`}>
+                        <DynamicProjects />
+                    </Suspense>
                 </ProjectSection>
                 <ToolsSection>
                     <Tools />

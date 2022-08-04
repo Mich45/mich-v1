@@ -23,11 +23,12 @@ const Wrapper = styled.div`
     border: 2px solid transparent;
     transition: 0.3s ease-out;
     color: ${colors.gray.darkGray};
+    background: #f7efef;
+    margin: 10px 0;
 
     :hover {
-        // cursor: pointer;
-        background: #ffb3b359;
-        border: 2px solid #f7d0d0;
+        background: #e5dfdfb8;
+        border: 2px solid #d7d7d7;
     }
 `;
 const TitleWrapper = styled.div`
@@ -80,7 +81,6 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
-    console.log('meta:' + meta.postPath);
     return (
         <>
             <Wrapper>

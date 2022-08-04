@@ -199,7 +199,12 @@ const Projects = () => {
                                         }
                                     >
                                         <ImageWrapper>
-                                            <img src={img} />
+                                            <img
+                                                src={img}
+                                                alt="project screenshot preview"
+                                                decoding="async"
+                                                loading="lazy"
+                                            />
                                         </ImageWrapper>
                                     </Link>
                                 </ImageContainer>

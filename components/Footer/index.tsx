@@ -65,15 +65,7 @@ const Link = styled.a`
 `;
 
 const Footer = (): JSX.Element => {
-    // const router = useRouter();
-    // const [isPostPath, setIsPostPath] = useState(false);
-
-    // useEffect(() => {
-    //     if (router.asPath.includes('/posts/')) {
-    //         setIsPostPath(true);
-    //     }
-    // });
-    const isPostPath = usePath();
+    const [isPostPath] = usePath();
     const date = new Date().getFullYear();
 
     return (

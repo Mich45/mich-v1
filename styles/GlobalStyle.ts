@@ -54,7 +54,7 @@ a {
 h1{
     font-size: 40px;
     position: relative;
-    font-family: 'Product Sans', "Segoe UI", sans-serif;
+    font-family: 'Product Sans', "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     background-clip: text;
     text-fill-color: transparent;
     background: rgb(233,68,68);

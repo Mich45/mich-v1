@@ -112,13 +112,13 @@ const Navbar = (): JSX.Element => {
                     </DropdownWrapper>
                     <NavLinkWrapper className="links">
                         <NavItem>
-                            <Anchor href="#projects">Projects</Anchor>
+                            <Anchor href="/#projects">Projects</Anchor>
                         </NavItem>
                         <NavItem>
                             <Anchor href="/blog">Blog</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="#contact">Contact</Anchor>
+                            <Anchor href="/#contact">Contact</Anchor>
                         </NavItem>
                         <NavItem>
                             <ThemeSwitch />

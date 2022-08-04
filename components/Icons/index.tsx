@@ -183,6 +183,7 @@ export const Logo = () => {
             id="svg5"
             xmlns="http://www.w3.org/2000/svg"
         >
+            <title>Hungbo Michael's Website Logo</title>
             <defs id="defs2" />
             <g id="layer1" transform="translate(-341.48572,-404.30853)">
                 <g id="g664" transform="matrix(1.0574674,0,0,1,-19.624277,0)">

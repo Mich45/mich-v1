@@ -7,7 +7,7 @@ import Preview from '../components/Preview';
 import Latest from '../components/Latest';
 import { colors, shadows } from '../styles/themes';
 import * as api from '../utils/api';
-import Pattern from '../public/assets/pattern.png';
+import Pattern from '../public/assets/Moon.svg';
 import { device } from '../styles/themes';
 
 const MainWrapper = styled.main`
@@ -137,8 +137,8 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     <Greeting>
                         <TextWrapper>
                             <GreetingText>
-                                Welcome. Explore adeptly curated technical
-                                contents and personal cogitation.
+                                Explore adeptly curated technical contents and
+                                personal cogitation.
                             </GreetingText>
                         </TextWrapper>
                     </Greeting>
