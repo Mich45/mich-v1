@@ -6,7 +6,7 @@ import Search from '../components/Search';
 import Preview from '../components/Preview';
 import Latest from '../components/Latest';
 import { colors, shadows } from '../styles/themes';
-import * as api from '../utils/api';
+import * as api from '../lib/api';
 import Pattern from '../public/assets/Moon.svg';
 import { device } from '../styles/themes';
 
