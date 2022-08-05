@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { colors } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -122,7 +123,7 @@ padding: 5px 20px 5px 0;
     h5{
         margin: 0;
         margin-bottom: 5px;
-        color: #757878;
+        color: ${colors.gray.lightGray};
     }
 
     p{

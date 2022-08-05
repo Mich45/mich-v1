@@ -42,20 +42,19 @@ const container = {
 };
 
 const Wrapper = styled(motion.div)`
-    margin: 0 auto;
-    width: 85%;
+    margin: 50px auto;
+    width: 80%;
     height: auto;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    gap: 20px;
+    grid-template-columns: repeat(6, max-content);
+    gap: 45px;
     padding: 20px;
 `;
 
 const Tool = styled(motion.div)`
-    width: auto;
-    height: 100px;
+    width: 140px;
+    height: 70px;
     padding: 10px;
-    border: 3px solid #a7a7a7;
     border-radius: 4px;
     background: transparent;
     display: flex;
@@ -63,6 +62,10 @@ const Tool = styled(motion.div)`
     place-content: space-between;
     place-items: center;
     transition: box-shadow 0.3s ease-in-out;
+
+    p {
+        margin: 0;
+    }
 
     :hover {
         box-shadow: 0px 3px 6px #cfcbcb;
@@ -187,7 +190,7 @@ const Tools = (): JSX.Element => {
     return (
         <>
             <Header variants={container} initial="hidden" animate="reveal">
-                <motion.h1 className="header">My toolkit 🛠</motion.h1>
+                <motion.h1 className="header">My toolkit</motion.h1>
                 <Paragraph>
                     Some of the tools and technologies I create magic with.
                 </Paragraph>
@@ -203,14 +206,7 @@ const Tools = (): JSX.Element => {
                             key={i}
                         >
                             <div>{tool.icon()}</div>
-                            <p
-                                style={{
-                                    fontWeight: 'bold',
-                                    fontSize: 'small',
-                                }}
-                            >
-                                {tool.name}
-                            </p>
+                            <p>{tool.name}</p>
                         </Tool>
                     );
                 })}

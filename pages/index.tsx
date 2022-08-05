@@ -101,7 +101,6 @@ const AboutWrapper = styled.div`
 const AboutParagraph = styled.p`
     font-size: 14px;
     text-align: center;
-    font-weight: bold;
     color: ${colors.gray.darkGray};
 `;
 

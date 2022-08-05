@@ -94,7 +94,11 @@ const DropdownWrapper = styled.div`
 
 const Anchor = styled.a`
     text-decoration: none;
-    font-weight: bold;
+    color: ${colors.gray.lightGray};
+
+    :hover {
+        color: ${colors.gray.darkGray};
+    }
 `;
 
 const Navbar = (): JSX.Element => {

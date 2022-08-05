@@ -38,7 +38,7 @@ ${fonts}
 
  body {
     text-rendering: optimizeLegibility;
-    color: ${colors.gray.grayPrimary};
+    color: ${colors.gray.lightGray};
      padding: 0;
      margin: 0;
     -moz-osx-font-smoothing: grayscale;

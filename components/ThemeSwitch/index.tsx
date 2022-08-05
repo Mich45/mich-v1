@@ -5,12 +5,16 @@ import { IconBulbOff } from '@tabler/icons';
 import { colors } from '../../styles/themes';
 
 const Bulb = styled(IconBulb)`
+    stroke: ${colors.gray.lightGray};
+
     :hover {
         stroke: black;
         cursor: pointer;
     }
 `;
 const BulbOff = styled(IconBulbOff)`
+    stroke: ${colors.gray.lightGray};
+
     :hover {
         stroke: black;
         cursor: pointer;
