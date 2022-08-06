@@ -86,7 +86,7 @@ const Form = styled.form`
     }
 
     input {
-        width: 250px;
+        width: 100%;
         height: 40px;
         border-radius: 4px;
         outline: none;
@@ -96,6 +96,10 @@ const Form = styled.form`
         margin: 20px 0;
         transition: 0.3s ease-out;
 
+        @media ${device.laptop} {
+            width: 250px;
+        }
+
         :focus {
             box-shadow: 0 4px #e86262;
             border-color: #e86262;
@@ -103,7 +107,7 @@ const Form = styled.form`
     }
     textarea {
         height: 200px;
-        width: 250px;
+        width: 100%;
         padding: 10px;
         border-radius: 4px;
         outline: none;
