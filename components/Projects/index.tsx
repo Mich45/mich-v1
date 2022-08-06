@@ -148,9 +148,9 @@ padding: 5px 20px 5px 0;
         padding: 0;
 
         .stack-item{
-            background: #f3483b;
+            background: #f5605e;
             margin-right: 10px;
-            padding: 10px;
+            padding: 7px;
             border-radius: 4px;
             color: white;
             font-size: 14px;
@@ -237,7 +237,7 @@ const Projects = () => {
                                             </div>
                                         </div>
                                         <div className="detail list">
-                                            <h5>VIEW IT LIVE</h5>
+                                            <h5>VIEW IT</h5>
                                             <a
                                                 href={
                                                     project.link.includes(

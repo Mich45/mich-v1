@@ -77,7 +77,7 @@ const Footer = (): JSX.Element => {
                         width: '80%',
                         background: '#f4493d',
                         borderRadius: '4px',
-                        marginTop: '50px',
+                        marginTop: '150px',
                         marginBottom: '20px',
                     }}
                 />

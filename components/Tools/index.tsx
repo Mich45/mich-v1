@@ -68,7 +68,7 @@ const Tool = styled(motion.div)`
     }
 
     :hover {
-        box-shadow: 0px 3px 6px #cfcbcb;
+        box-shadow: 0px 4px 9px #e1d5d5;
     }
 `;
 

@@ -23,6 +23,19 @@ const MessageWrapper = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
+    h2 {
+        margin: 0;
+        font-size: xx-large;
+    }
+
+    h3 {
+        color: ${colors.gray.lightGray};
+    }
+`;
+
+const Text = styled.div`
+    width: 100%;
+    height: 100%;
 `;
 
 const FormWrapper = styled.div`
@@ -133,8 +146,15 @@ const Contact = () => {
             </Wrapper>
             <ContactWrapper>
                 <MessageWrapper>
-                    <h2 style={{ margin: 0 }}>Got a project to talk about?</h2>
+                    <h2>Got a project to talk about?</h2>
                     <h3>or just wanna say hi?</h3>
+
+                    <Text>
+                        <p>
+                            I'm an experienced software developer looking to
+                            undertake new projects and challenges.
+                        </p>
+                    </Text>
                 </MessageWrapper>
                 <FormWrapper>
                     <Form method="post" action="/api/contact">
