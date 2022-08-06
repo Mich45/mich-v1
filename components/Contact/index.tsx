@@ -35,7 +35,11 @@ const MessageWrapper = styled.div`
 
     h2 {
         margin: 0;
-        font-size: xx-large;
+        font-size: 24px;
+
+        @media ${device.laptop} {
+            font-size: xx-large;
+        }
     }
 
     h3 {
