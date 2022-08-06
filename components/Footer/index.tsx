@@ -31,11 +31,11 @@ const FooterWrapper = styled.footer`
         border-radius: 4px;
         margin-top: 100px;
         margin-bottom: 20px;
-    }
 
-    @media ${device.laptop} {
-        width: 80%;
-        margin-top: 150px;
+        @media ${device.laptop} {
+            width: 80%;
+            margin-top: 150px;
+        }
     }
 `;
 
