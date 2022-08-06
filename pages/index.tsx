@@ -166,8 +166,13 @@ const ProjectSection = styled.section`
 
 const ContactSection = styled.section`
     background-repeat: no-repeat;
-    width: 80%;
+    width: 100%;
+    padding-inline: 20px;
     margin: 0 auto;
+
+    @media ${device.laptop} {
+        width: 80%;
+    }
 `;
 
 const Home: NextPage = (): JSX.Element => {

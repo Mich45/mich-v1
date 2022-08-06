@@ -14,15 +14,25 @@ const ContactWrapper = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: column;
     margin-block: 20px;
     color: ${colors.gray.darkGray};
+
+    @media ${device.laptop} {
+        flex-direction: row;
+    }
 `;
 
 const MessageWrapper = styled.div`
-    background: url(${Pattern.src});
-    width: 50%;
+    background: none;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
+    padding-inline: 10px;
+    place-items: center;
+    place-content: center;
+
     h2 {
         margin: 0;
         font-size: xx-large;
@@ -30,6 +40,15 @@ const MessageWrapper = styled.div`
 
     h3 {
         color: ${colors.gray.lightGray};
+        text-align: center;
+    }
+
+    @media ${device.laptop} {
+        background: url(${Pattern.src});
+        width: 50%;
+        padding: 0;
+        place-content: normal;
+        place-items: normal;
     }
 `;
 
@@ -39,8 +58,12 @@ const Text = styled.div`
 `;
 
 const FormWrapper = styled.div`
-    width: 50%;
+    width: 100%;
     height: 100%;
+
+    @media ${device.laptop} {
+        width: 50%;
+    }
 `;
 
 const Form = styled.form`
@@ -48,7 +71,11 @@ const Form = styled.form`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
+    padding-inline: 10px;
+
+    @media ${device.laptop} {
+        padding-left: 50px;
+    }
 
     label {
         font-weight: bold;
@@ -72,7 +99,7 @@ const Form = styled.form`
     }
     textarea {
         height: 200px;
-        width: 350px;
+        width: 250px;
         padding: 10px;
         border-radius: 4px;
         outline: none;
@@ -81,6 +108,10 @@ const Form = styled.form`
         margin: 20px 0;
         background: none;
         transition: 0.3s ease-out;
+
+        @media ${device.laptop} {
+            width: 350px;
+        }
 
         :focus {
             box-shadow: 0 4px #e86262;
@@ -130,8 +161,12 @@ const Submit = styled.button`
     padding: 10px;
     text-align: center;
     margin-top: 30px;
+    margin-inline: auto;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
+    @media ${device.laptop} {
+        margin-inline: 0;
+    }
     :hover {
         cursor: pointer;
         color: #322b2b;

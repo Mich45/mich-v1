@@ -19,8 +19,7 @@ const Navigation = styled.div`
 
 const NavigationWrapper = styled.div`
     height: 100%;
-    width: 85%;
-    margin: 0 auto;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 
@@ -35,6 +34,9 @@ const NavigationWrapper = styled.div`
     }
 
     @media ${device.laptop} {
+        width: 85%;
+        margin: 0 auto;
+
         .dropdown {
             display: none;
         }
