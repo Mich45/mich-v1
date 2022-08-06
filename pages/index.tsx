@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
-import { colors } from '../styles/themes';
+import { colors, device } from '../styles/themes';
 import Tools from '../components/Tools';
 import Contact from '../components/Contact';
 
@@ -56,7 +56,7 @@ const Banner = styled.div`
 
 const Paragraph = styled.p`
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 600;
     margin: 0;
     background-clip: text;
@@ -69,14 +69,22 @@ const Paragraph = styled.p`
     );
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
+
+    @media ${device.laptop} {
+        font-size: 60px;
+    }
 `;
 
 const Role = styled.p`
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 600;
     color: ${colors.gray.lightGray};
     margin: 0;
     animation: 1s ${slideIn} ease-in-out;
+
+    @media ${device.laptop} {
+        font-size: 18px;
+    }
 `;
 
 const Gradient = styled.span`
@@ -96,12 +104,17 @@ const AboutWrapper = styled.div`
     place-items: center;
     place-content: center;
     padding-inline: 20px;
+    margin-top: 10px;
 `;
 
 const AboutParagraph = styled.p`
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     color: ${colors.gray.darkGray};
+
+    @media ${device.laptop} {
+        font-size: 14px;
+    }
 `;
 
 const ResumeWrapper = styled.div`

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../styles/themes';
+import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -11,28 +11,30 @@ const Wrapper = styled.section`
 `;
 
 const Heading = styled.h1`
-    &:: before {
-        content: '';
-        height: 3px;
-        width: 100px;
-        left: -120px;
-        background: #060f36;
-        display: flex;
-        position: absolute;
-        bottom: 20px;
-        border-radius: 4px;
-    }
+    @media ${device.laptop} {
+        &:: before {
+            content: '';
+            height: 3px;
+            width: 100px;
+            left: -120px;
+            background: #060f36;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 4px;
+        }
 
-    &:: after {
-        content: '';
-        height: 3px;
-        width: 100px;
-        right: -120px;
-        background: #060f36;
-        display: flex;
-        position: absolute;
-        bottom: 20px;
-        border-radius: 4px;
+        &:: after {
+            content: '';
+            height: 3px;
+            width: 100px;
+            right: -120px;
+            background: #060f36;
+            display: flex;
+            position: absolute;
+            bottom: 20px;
+            border-radius: 4px;
+        }
     }
 `;
 

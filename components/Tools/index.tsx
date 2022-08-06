@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import * as Icons from '../Icons';
 import { motion, useAnimation } from 'framer-motion';
-import { colors } from '../../styles/themes';
+import { colors, device } from '../../styles/themes';
 
 type ToolsType = {
     name: string;
@@ -46,9 +46,13 @@ const Wrapper = styled(motion.div)`
     width: 80%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(6, max-content);
+    grid-template-columns: repeat(2, max-content);
     gap: 45px;
     padding: 20px;
+
+    @media ${device.laptop} {
+        grid-template-columns: repeat(6, max-content);
+    }
 `;
 
 const Tool = styled(motion.div)`
@@ -88,28 +92,30 @@ const Header = styled(motion.div)`
     .header {
         position: relative;
 
-        &:: before {
-            content: '';
-            height: 3px;
-            width: 100px;
-            left: -120px;
-            background: #060f36;
-            display: flex;
-            position: absolute;
-            bottom: 20px;
-            border-radius: 4px;
-        }
+        @media ${device.laptop} {
+            &:: before {
+                content: '';
+                height: 3px;
+                width: 100px;
+                left: -120px;
+                background: #060f36;
+                display: flex;
+                position: absolute;
+                bottom: 20px;
+                border-radius: 4px;
+            }
 
-        &:: after {
-            content: '';
-            height: 3px;
-            width: 100px;
-            right: -120px;
-            background: #060f36;
-            display: flex;
-            position: absolute;
-            bottom: 20px;
-            border-radius: 4px;
+            &:: after {
+                content: '';
+                height: 3px;
+                width: 100px;
+                right: -120px;
+                background: #060f36;
+                display: flex;
+                position: absolute;
+                bottom: 20px;
+                border-radius: 4px;
+            }
         }
     }
 `;

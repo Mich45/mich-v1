@@ -30,7 +30,7 @@ export const shadows = {
     light: '0px 3px 6px #d9c5c596',
 };
 
-export const size = {
+const size = {
     mobile: '320px',
     mobileL: '480px',
     tablet: '768px',
