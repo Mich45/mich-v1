@@ -152,6 +152,7 @@ const ProjectSection = styled.section`
 `;
 
 const ContactSection = styled.section`
+    background-repeat: no-repeat;
     width: 80%;
     margin: 0 auto;
 `;

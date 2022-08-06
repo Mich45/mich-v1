@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import * as Icons from '../Icons';
-import { motion, useAnimation, useViewportScroll } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 import { colors } from '../../styles/themes';
 
 type ToolsType = {
@@ -171,9 +171,6 @@ const TOOLS: ToolsType[] = [
 ];
 
 const Tools = (): JSX.Element => {
-    const { scrollY, scrollYProgress } = useViewportScroll();
-    // let position: number;
-
     const controls = useAnimation();
     const pref: React.MutableRefObject<any> = useRef();
     useEffect(() => {

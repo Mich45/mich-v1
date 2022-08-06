@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors } from '../../styles/themes';
+import Pattern from '../../public/assets/pattern.svg';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -18,8 +19,8 @@ const ContactWrapper = styled.div`
 `;
 
 const MessageWrapper = styled.div`
+    background: url(${Pattern.src});
     width: 50%;
-    height: 100%;
     display: flex;
     flex-direction: column;
 `;
