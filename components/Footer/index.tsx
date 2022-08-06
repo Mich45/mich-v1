@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
 import usePath from '../../hooks/usePath';
+import { device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
     height: auto;
@@ -21,6 +22,20 @@ const FooterWrapper = styled.footer`
         align-items: center;
         margin-bottom: 20px;
         flex-direction: column;
+    }
+
+    .divider {
+        height: 3px;
+        width: 90%;
+        background: #f4493d;
+        border-radius: 4px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    @media ${device.laptop} {
+        width: 80%;
+        margin-top: 150px;
     }
 `;
 
@@ -71,16 +86,7 @@ const Footer = (): JSX.Element => {
     return (
         <>
             <FooterWrapper postPath={isPostPath}>
-                <div
-                    style={{
-                        height: '3px',
-                        width: '80%',
-                        background: '#f4493d',
-                        borderRadius: '4px',
-                        marginTop: '150px',
-                        marginBottom: '20px',
-                    }}
-                />
+                <div className="divider" />
                 <div className="linkwrapper">
                     <SocialWrapper>
                         <Link
