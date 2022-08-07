@@ -145,7 +145,6 @@ type BlogProps = {
 };
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
-    console.log(posts[0].createdAt.split(' ', -1));
     const latestPost = posts.slice(-1);
     const otherPosts = posts.slice(0, posts.length - 1);
     return (
