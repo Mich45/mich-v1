@@ -7,7 +7,6 @@ const Wrapper = styled.section`
     display: flex;
     place-items: center;
     place-content: center;
-    background: #2b6852;
 `;
 const TextWrapper = styled.div`
     width: 82%;

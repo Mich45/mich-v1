@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
     width: 100%;
     height: auto;
     position: relative;
-    background: #efe6e6;
+    background: #f7efef;
     color: #030303;
     font-size: 16px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
@@ -54,6 +54,10 @@ const Header = styled.div`
     place-content: center;
     padding-inline: 20px;
 
+    @media ${device.laptop} {
+        padding: 0;
+    }
+
     h1 {
         font-size: 24px;
         text-align: center;
@@ -78,13 +82,6 @@ const PostWrapper = styled.div`
 
     @media ${device.laptop} {
         width: 70ch;
-    }
-
-    p,
-    ul,
-    h4,
-    h5,
-    h6 {
     }
 `;
 

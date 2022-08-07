@@ -10,6 +10,10 @@ type PreviewProps = {
             tags: string[];
         };
         postPath: string;
+        createdAt: string;
+        readTime: {
+            text: string;
+        };
     };
 };
 
@@ -64,17 +68,20 @@ const TagsWrapper = styled.div`
     width: 100%;
     display: flex;
     margin: 20px 0;
+    align-items: center;
+
+    span {
+        margin-inline: 15px;
+    }
 `;
 
 const Tag = styled.div`
     width: auto;
     height: 30px;
-    color: white;
-    background: ${colors.gray.darkGray};
+    color: ${colors.gray.darkGray};
     border-radius: 4px;
-    padding: 15px;
     font-size: 14px;
-    margin-inline: 0 10px;
+    margin-inline: 0 5px;
     display: flex;
     place-content: center;
     place-items: center;
@@ -87,6 +94,7 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
+    console.log(meta);
     return (
         <>
             <Wrapper>
@@ -102,13 +110,11 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                 <InfoWrapper>
                     <Excerpt>{meta.data.excerpt}</Excerpt>
                     <TagsWrapper>
-                        {meta.data?.tags?.map((tag, index) => {
-                            return (
-                                <Tag key={index}>
-                                    <Link href={`/tags/${tag}`}>{tag}</Link>
-                                </Tag>
-                            );
-                        })}
+                        <Tag>
+                            {meta.createdAt.split(' ', -1).slice(1).join(' ')}
+                        </Tag>{' '}
+                        <span>●</span>
+                        <Tag>{meta.readTime.text}</Tag>
                     </TagsWrapper>
                 </InfoWrapper>
             </Wrapper>

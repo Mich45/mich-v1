@@ -1,6 +1,7 @@
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
+import readingTime from 'reading-time';
 
 export const posts = (): string[] => {
     let fullPaths: string[] = [];
@@ -15,6 +16,7 @@ export const posts = (): string[] => {
 export const readPost = (postPath: string) => {
     const postContent = fs.readFileSync(postPath);
     const { data, content } = matter(postContent);
+    const readTime = readingTime(content);
     const lastMod = fs.statSync(postPath);
     const created = fs.statSync(postPath);
     const lastModified = lastMod.mtime.toDateString();
@@ -23,6 +25,7 @@ export const readPost = (postPath: string) => {
     console.log(lastModified, createdAt);
 
     return {
+        readTime,
         createdAt,
         lastModified,
         data,

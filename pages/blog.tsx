@@ -13,6 +13,7 @@ const MainWrapper = styled.main`
     width: 100%;
     height: auto;
     position: relative;
+    background: #f7efef;
 `;
 
 const Jumbotron = styled.section`
@@ -179,7 +180,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     {otherPosts.map((post, i) => {
                         return <Preview meta={post} key={i} />;
                     })}
-                    <Button>Show more</Button>
+                    {/* <Button>Show more</Button> */}
                 </PostsWrapper>
             </MainWrapper>
         </>

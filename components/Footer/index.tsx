@@ -12,8 +12,8 @@ const FooterWrapper = styled.footer`
     position: relative;
     place-content: center;
     place-items: center;
-    background: ${(props: { postPath: boolean }) =>
-        props.postPath ? '#efe6e6' : 'none'};
+    background: ${(props: { path: boolean }) =>
+        props.path ? '#f7efef' : 'none'};
 
     .linkwrapper {
         display: flex;
@@ -80,12 +80,12 @@ const Link = styled.a`
 `;
 
 const Footer = (): JSX.Element => {
-    const [isPostPath] = usePath();
+    const path = usePath();
     const date = new Date().getFullYear();
 
     return (
         <>
-            <FooterWrapper postPath={isPostPath}>
+            <FooterWrapper path={path}>
                 <div className="divider" />
                 <div className="linkwrapper">
                     <SocialWrapper>
