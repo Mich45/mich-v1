@@ -59,6 +59,18 @@ const MessageWrapper = styled.div`
 const Text = styled.div`
     width: 100%;
     height: 100%;
+
+    p {
+        font-size: 14px;
+
+        @media ${device.tablet} {
+            font-size: 16px;
+        }
+
+        @media ${device.laptop} {
+            font-size: 16px;
+        }
+    }
 `;
 
 const FormWrapper = styled.div`

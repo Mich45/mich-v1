@@ -49,6 +49,12 @@ const Wrapper = styled(motion.div)`
     grid-template-columns: repeat(2, max-content);
     gap: 45px;
 
+    @media ${device.tablet} {
+        grid-template-columns: repeat(4, max-content);
+        width: 90%;
+        gap: 50px;
+    }
+
     @media ${device.laptop} {
         grid-template-columns: repeat(6, max-content);
         padding: 20px;
