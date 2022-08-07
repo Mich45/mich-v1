@@ -137,7 +137,7 @@ const tags: string[] = [
     'styled-components',
     'tutorial',
     'css',
-    'tip',
+    'tips',
 ];
 
 type BlogProps = {
