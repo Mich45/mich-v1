@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/github-dark-dimmed.css';
+import { colors, device } from '../../../styles/themes';
 
 const MainWrapper = styled.div`
     width: 100%;
@@ -51,22 +52,33 @@ const Header = styled.div`
     display: flex;
     place-items: center;
     place-content: center;
+    padding-inline: 20px;
 
     h1 {
+        font-size: 24px;
+        text-align: center;
         font-weight: bold;
         background: none;
         -webkit-text-fill-color: #dfdcdc;
+
+        @media ${device.laptop} {
+            font-size: 40px;
+        }
     }
 `;
 
 const PostWrapper = styled.div`
-    width: 70ch;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     padding: 20px;
     font-weight: 500;
     color: #2d2c36;
     line-height: 1.5;
+
+    @media ${device.laptop} {
+        width: 70ch;
+    }
 
     p,
     ul,

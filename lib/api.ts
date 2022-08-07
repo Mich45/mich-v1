@@ -6,7 +6,6 @@ export const posts = (): string[] => {
     let fullPaths: string[] = [];
     const postsDirectory = path.resolve(process.cwd(), 'pages', 'posts');
     const allPosts = fs.readdirSync(postsDirectory);
-    console.log(allPosts);
     allPosts.forEach((post) => {
         fullPaths.push(`${postsDirectory}/${post}`);
     });
@@ -16,7 +15,16 @@ export const posts = (): string[] => {
 export const readPost = (postPath: string) => {
     const postContent = fs.readFileSync(postPath);
     const { data, content } = matter(postContent);
+    const lastMod = fs.statSync(postPath);
+    const created = fs.statSync(postPath);
+    const lastModified = lastMod.mtime.toDateString();
+    const createdAt = created.ctime.toDateString();
+
+    console.log(lastModified, createdAt);
+
     return {
+        createdAt,
+        lastModified,
         data,
         content,
         postPath,
@@ -25,22 +33,15 @@ export const readPost = (postPath: string) => {
 
 export const sortPosts = () => {
     const allPosts = posts();
+
     // Sort posts based on date created
     const sorted = allPosts.sort((a, b) => {
-        const aDate = fs.stat(a, (err, stats) => {
-            if (err) {
-                throw err;
-            }
-            return stats.birthtime;
-        });
-        const bDate = fs.stat(b, (err, stats) => {
-            if (err) {
-                throw err;
-            }
-            return stats.birthtime;
-        });
-        return aDate > bDate ? 1 : -1;
+        let aDate = fs.statSync(a);
+        let bDate = fs.statSync(b);
+
+        return aDate.birthtime > bDate.birthtime ? 1 : -1;
     });
 
+    console.log(sorted);
     return sorted;
 };

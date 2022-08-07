@@ -110,7 +110,6 @@ const AboutWrapper = styled.div`
     place-items: center;
     place-content: center;
     padding-inline: 20px;
-    margin-top: 10px;
 
     @media ${device.laptop} {
         width: 70%;
@@ -120,6 +119,7 @@ const AboutWrapper = styled.div`
 const AboutParagraph = styled.p`
     font-size: 14px;
     text-align: center;
+    margin-top: 5px;
     color: ${colors.gray.darkGray};
 
     @media ${device.laptop} {
@@ -225,12 +225,9 @@ const Home: NextPage = (): JSX.Element => {
                                 from Lagos, Nigeria with 2+ years of experience.
                                 Over the years, I have built exquisite and
                                 innovative applications on the web using modern
-                                tools and best practices.
-                            </AboutParagraph>
-
-                            <AboutParagraph>
-                                I'm open to opportunities in web and app
-                                development and technical writing.
+                                tools and best practices. I'm open to
+                                opportunities in web and app development and
+                                technical writing.
                             </AboutParagraph>
                         </AboutWrapper>
                     </Banner>

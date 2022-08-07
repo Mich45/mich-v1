@@ -45,6 +45,7 @@ const MessageWrapper = styled.div`
     h3 {
         color: ${colors.gray.lightGray};
         text-align: center;
+        margin: 0;
     }
 
     @media ${device.laptop} {
@@ -59,6 +60,7 @@ const MessageWrapper = styled.div`
 const Text = styled.div`
     width: 100%;
     height: 100%;
+    margin-top: 15px;
 
     p {
         font-size: 14px;
