@@ -104,13 +104,17 @@ const Gradient = styled.span`
 `;
 
 const AboutWrapper = styled.div`
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     place-items: center;
     place-content: center;
     padding-inline: 20px;
     margin-top: 10px;
+
+    @media ${device.laptop} {
+        width: 70%;
+    }
 `;
 
 const AboutParagraph = styled.p`
