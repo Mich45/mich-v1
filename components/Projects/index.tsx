@@ -11,7 +11,11 @@ const Wrapper = styled.section`
 `;
 
 const Heading = styled.h1`
+    font-size: 30px;
+
     @media ${device.laptop} {
+        font-size: 40px;
+
         &:: before {
             content: '';
             height: 3px;
@@ -39,12 +43,16 @@ const Heading = styled.h1`
 `;
 
 const ListWrapper = styled.div`
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     gap: 50px;
     height: 100%;
     display: flex;
     flex-direction: column;
+
+    @media ${device.laptop} {
+        width: 85%;
+    }
 `;
 
 const CardWrapper = styled.div`
@@ -63,11 +71,37 @@ const Card = styled.div`
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 10px;
+    position: relative;
+
+    :: after {
+        content: '↑';
+        color: white;
+        height: 30px;
+        width: 30px;
+        left: 46%;
+        background: #060f36;
+        display: flex;
+        position: absolute;
+        bottom: 2px;
+        border-radius: 50%;
+    }
+
+    @media ${device.laptop} {
+        padding: 20px;
+
+        .details {
+            display: flex;
+        }
+
+        .img-container {
+            width: 40%;
+        }
+    }
 `;
 
 const ImageContainer = styled.div`
-    width: 40%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -102,7 +136,7 @@ const ImageWrapper = styled.div`
 `;
 
 const DetailsWrapper = styled.div`
-    display: flex;
+    display: none;
     flex-direction: column;
     position: relative;
     min-width: 1px;
@@ -195,7 +229,7 @@ const Projects = () => {
                     return (
                         <CardWrapper key={key}>
                             <Card>
-                                <ImageContainer>
+                                <ImageContainer className="img-container">
                                     <Link
                                         href={
                                             project.link.includes('HERE')
@@ -213,7 +247,7 @@ const Projects = () => {
                                         </ImageWrapper>
                                     </Link>
                                 </ImageContainer>
-                                <DetailsWrapper>
+                                <DetailsWrapper className="details">
                                     <Details>
                                         <div className="detail">
                                             <h5>DESCRIPTION</h5>

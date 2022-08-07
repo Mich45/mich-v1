@@ -48,10 +48,10 @@ const Wrapper = styled(motion.div)`
     display: grid;
     grid-template-columns: repeat(2, max-content);
     gap: 45px;
-    padding: 20px;
 
     @media ${device.laptop} {
         grid-template-columns: repeat(6, max-content);
+        padding: 20px;
     }
 `;
 
@@ -77,7 +77,7 @@ const Tool = styled(motion.div)`
 `;
 
 const Paragraph = styled(motion.p)`
-    font-size: 16px;
+    font-size: 14px;
     margin: 0;
 `;
 
