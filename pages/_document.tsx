@@ -37,30 +37,30 @@ export default class MyDocument extends Document {
                 <Head>
                     <link
                         rel="preload"
-                        href="/assets/fonts/inter/Inter-Regular.ttf"
+                        href="/assets/fonts/inter/Inter-Regular.woff2"
                         as="font"
-                        type="font/ttf"
+                        type="font/woff2"
                         crossOrigin=""
                     />
                     <link
                         rel="preload"
-                        href="/assets/fonts/inter/Inter-Medium.ttf"
+                        href="/assets/fonts/inter/Inter-Medium.woff2"
                         as="font"
-                        type="font/ttf"
+                        type="font/woff2"
                         crossOrigin=""
                     />
                     <link
                         rel="preload"
-                        href="/assets/fonts/product-sans/ProductSans-Medium.ttf"
+                        href="/assets/fonts/product-sans/ProductSans-Medium.woff2"
                         as="font"
-                        type="font/ttf"
+                        type="font/woff2"
                         crossOrigin=""
                     />
                     <link
                         rel="preload"
-                        href="/assets/fonts/product-sans/ProductSans-Regular.ttf"
+                        href="/assets/fonts/product-sans/ProductSans-Regular.woff2"
                         as="font"
-                        type="font/ttf"
+                        type="font/woff2"
                         crossOrigin=""
                     />
                 </Head>

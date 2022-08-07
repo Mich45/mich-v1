@@ -151,7 +151,6 @@ const Resume = styled.a`
     display: flex;
     color: white;
     font-size: 14px;
-    font-weight: bold;
     margin: 0;
     text-decoration: none;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
