@@ -130,7 +130,10 @@ const Form = styled.form`
 `;
 
 const Heading = styled.h1`
+    font-size: 30px;
+
     @media ${device.laptop} {
+        font-size: 40px;
         &:: before {
             content: '';
             height: 3px;

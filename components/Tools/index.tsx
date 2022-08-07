@@ -91,8 +91,10 @@ const Header = styled(motion.div)`
 
     .header {
         position: relative;
+        font-size: 30px;
 
         @media ${device.laptop} {
+            font-size: 40px;
             &:: before {
                 content: '';
                 height: 3px;

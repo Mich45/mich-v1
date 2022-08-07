@@ -77,14 +77,16 @@ const Card = styled.div`
     :: after {
         content: '↑';
         color: white;
-        height: 30px;
-        width: 30px;
+        height: 25px;
+        width: 25px;
         left: 46%;
         background: #060f36;
         display: flex;
         position: absolute;
-        bottom: 2px;
+        bottom: 10px;
         border-radius: 50%;
+        align-items: center;
+        justify-content: center;
     }
 
     @media ${device.laptop} {
