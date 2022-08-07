@@ -54,9 +54,13 @@ const Banner = styled.div`
     position: relative;
 `;
 
+const ParagraphWrapper = styled.div`
+    padding-inline: 20px;
+`;
+
 const Paragraph = styled.p`
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
-    font-size: 40px;
+    font-size: 36px;
     font-weight: 600;
     margin: 0;
     background-clip: text;
@@ -75,8 +79,10 @@ const Paragraph = styled.p`
     }
 `;
 
+const RoleWrapper = styled.div``;
+
 const Role = styled.p`
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 600;
     color: ${colors.gray.lightGray};
     margin: 0;
@@ -197,15 +203,19 @@ const Home: NextPage = (): JSX.Element => {
             <MainContent>
                 <BannerWrapper>
                     <Banner>
-                        <Paragraph>
-                            Hi, I'm
-                            <Gradient>Michael</Gradient>
-                            Hungbo.
-                        </Paragraph>
-                        <Role>
-                            Fullstack Software Developer. Technical Writer.
-                            Creator of things.
-                        </Role>
+                        <ParagraphWrapper>
+                            <Paragraph>
+                                Hi, I'm
+                                <Gradient>Michael</Gradient>
+                                Hungbo.
+                            </Paragraph>
+                        </ParagraphWrapper>
+                        <RoleWrapper>
+                            <Role>
+                                Fullstack Software Developer. Technical Writer.
+                                Creator of things.
+                            </Role>
+                        </RoleWrapper>
                         <AboutWrapper>
                             <AboutParagraph>
                                 Hey there! I'm a fullstack software developer

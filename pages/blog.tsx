@@ -48,7 +48,6 @@ const GreetingText = styled.h1`
     background-clip: text;
     text-fill-color: transparent;
     background: white;
-
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
 
