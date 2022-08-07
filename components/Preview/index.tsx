@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../styles/themes';
+import { colors, device } from '../../styles/themes';
 
 type PreviewProps = {
     meta: {
@@ -14,7 +14,7 @@ type PreviewProps = {
 };
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 5px;
     display: flex;
@@ -29,6 +29,10 @@ const Wrapper = styled.div`
     :hover {
         background: #f7efef;
         border: 2px solid #d7d7d7;
+    }
+
+    @media ${device.laptop} {
+        width: 100%;
     }
 `;
 const TitleWrapper = styled.div`

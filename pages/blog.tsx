@@ -5,10 +5,9 @@ import styled from 'styled-components';
 import Search from '../components/Search';
 import Preview from '../components/Preview';
 import Latest from '../components/Latest';
-import { colors, shadows } from '../styles/themes';
+import { colors, shadows, device } from '../styles/themes';
 import * as api from '../lib/api';
 import Pattern from '../public/assets/Moon.svg';
-import { device } from '../styles/themes';
 
 const MainWrapper = styled.main`
     width: 100%;
@@ -43,7 +42,7 @@ const TextWrapper = styled.div`
 `;
 
 const GreetingText = styled.h1`
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 700;
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
     background-clip: text;
@@ -54,9 +53,7 @@ const GreetingText = styled.h1`
     -webkit-background-clip: text;
 
     @media ${device.laptop} {
-    }
-
-    @media ${device.laptop} {
+        font-size: 36px;
     }
 `;
 
@@ -95,14 +92,19 @@ const SearchWrapper = styled.div`
 `;
 
 const PostsWrapper = styled.div`
-    width: 95%;
+    width: 100%;
     height: auto;
     display: flex;
-    padding: 20px 85px;
-    margin: 30px auto;
     flex-direction: column;
     place-content: center;
     place-items: center;
+    padding: 0;
+    margin: 0;
+
+    @media ${device.laptop} {
+        padding: 20px 85px;
+        margin: 30px auto;
+    }
 `;
 
 const Button = styled.button`
