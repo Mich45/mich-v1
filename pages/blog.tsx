@@ -131,6 +131,7 @@ const Button = styled.button`
 
 const tags: string[] = [
     'react.js',
+    'next.js',
     'javascript',
     'typescript',
     'node.js',
