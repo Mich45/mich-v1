@@ -85,12 +85,6 @@ const Tag = styled.div`
     display: flex;
     place-content: center;
     place-items: center;
-    transition: 0.3s ease-in-out;
-
-    :hover {
-        cursor: pointer;
-        background: #1d2a3c;
-    }
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
