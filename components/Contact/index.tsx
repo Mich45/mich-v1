@@ -90,8 +90,7 @@ const Form = styled.form`
     padding-inline: 5px;
 
     @media ${device.laptop} {
-        padding-left: 50px;
-        padding-inline: 0;
+        padding-left: 100px;
     }
 
     label {
@@ -110,7 +109,7 @@ const Form = styled.form`
         transition: 0.3s ease-out;
 
         @media ${device.laptop} {
-            width: 250px;
+            width: 350px;
         }
 
         :focus {
