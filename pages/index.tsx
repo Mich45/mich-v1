@@ -175,6 +175,7 @@ const ProjectSection = styled.section`
 
 const ContactSection = styled.section`
     background-repeat: no-repeat;
+    background-size: cover;
     width: 100%;
     padding-inline: 20px;
     margin: 0 auto;

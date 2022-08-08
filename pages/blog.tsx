@@ -4,7 +4,6 @@ import React from 'react';
 import styled from 'styled-components';
 import Search from '../components/Search';
 import Preview from '../components/Preview';
-import Latest from '../components/Latest';
 import { colors, shadows, device } from '../styles/themes';
 import * as api from '../lib/api';
 import Pattern from '../public/assets/Moon.svg';
@@ -14,11 +13,29 @@ const MainWrapper = styled.main`
     height: auto;
     position: relative;
     background: #f7efef;
+
+    .all_posts {
+        margin-left: 24px;
+
+        @media ${device.laptop} {
+            margin-left: 124px;
+        }
+    }
 `;
 
 const Jumbotron = styled.section`
     width: 100%;
-    height: 100vh;
+    height: auto;
+
+    .tags_wrapper {
+        display: none;
+    }
+
+    @media ${device.laptop} {
+        .tags_wrapper {
+            display: flex;
+        }
+    }
 `;
 
 const Greeting = styled.div`
@@ -30,11 +47,14 @@ const Greeting = styled.div`
     background-image: url(${Pattern.src});
     background-repeat: no-repeat;
     background-size: cover;
-    object-position: cover;
+    padding: 0 24px;
+
+    @media ${device.laptop} {
+        padding: 0 100px;
+    }
 `;
 
 const TextWrapper = styled.div`
-    width: 60%;
     height: 50vh;
     display: flex;
     place-content: center;
@@ -43,7 +63,8 @@ const TextWrapper = styled.div`
 `;
 
 const GreetingText = styled.h1`
-    font-size: 24px;
+    font-size: 30px;
+    tex-align: center;
     font-weight: 700;
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
     background-clip: text;
@@ -59,7 +80,6 @@ const GreetingText = styled.h1`
 
 const TagWrapper = styled.div`
     width: 100%;
-    display: flex;
     place-content: center;
     place-items: center;
     margin: 0;
@@ -147,8 +167,7 @@ type BlogProps = {
 };
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
-    const latestPost = posts.slice(-1);
-    const otherPosts = posts.slice(0, posts.length - 1);
+    // const otherPosts = posts.slice(0, posts.length - 1);
     return (
         <>
             <Head>
@@ -167,17 +186,18 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     <SearchWrapper>
                         <Search />
                     </SearchWrapper>
-                    <TagWrapper>
+                    <TagWrapper className="tags_wrapper">
                         <h4>Popular tags: </h4>
                         {tags.map((tag, index) => {
                             return <Tag key={index}>{tag}</Tag>;
                         })}
                     </TagWrapper>
                 </Jumbotron>
-
-                <Latest post={latestPost} />
+                <div className="all_posts">
+                    <h1>All Posts</h1>
+                </div>
                 <PostsWrapper>
-                    {otherPosts.map((post, i) => {
+                    {posts.map((post, i) => {
                         return <Preview meta={post} key={i} />;
                     })}
                     {/* <Button>Show more</Button> */}

@@ -36,7 +36,7 @@ const Wrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        width: 100%;
+        width: 92.5%;
     }
 `;
 const TitleWrapper = styled.div`

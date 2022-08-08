@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
-import Pattern from '../../public/assets/pattern.svg';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -49,7 +48,6 @@ const MessageWrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        background: url(${Pattern.src});
         width: 50%;
         padding: 0;
         place-content: normal;
