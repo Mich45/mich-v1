@@ -19,7 +19,7 @@ const SearchInput = styled.input`
 `;
 
 const Search = () => {
-    return <SearchInput placeholder=" 🔍 " />;
+    return <SearchInput placeholder=" 🔍 Search posts " />;
 };
 
 export default Search;

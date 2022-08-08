@@ -64,7 +64,7 @@ const TextWrapper = styled.div`
 
 const GreetingText = styled.h1`
     font-size: 30px;
-    tex-align: center;
+    text-align: center;
     font-weight: 700;
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
     background-clip: text;
@@ -156,7 +156,6 @@ const tags: string[] = [
     'javascript',
     'typescript',
     'node.js',
-    'styled-components',
     'tutorial',
     'css',
     'tips',
