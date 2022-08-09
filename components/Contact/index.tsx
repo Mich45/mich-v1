@@ -199,6 +199,14 @@ const Submit = styled.button`
 `;
 
 const Contact = () => {
+    const [subject, setSubject] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+
+    const handleSubmit = () => {};
+
+    useEffect(() => {}, []);
+
     return (
         <>
             <Wrapper>
