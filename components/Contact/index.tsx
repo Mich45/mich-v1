@@ -203,7 +203,14 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = () => {};
+    const handleSubmit = (
+        e:
+            | React.ChangeEvent<HTMLInputElement>
+            | React.ChangeEvent<HTMLTextAreaElement>
+    ) => {
+        e.preventDefault();
+        console.log(subject, email, message);
+    };
 
     useEffect(() => {}, []);
 
@@ -225,13 +232,14 @@ const Contact = () => {
                     </Text>
                 </MessageWrapper>
                 <FormWrapper>
-                    <Form method="post" action="/api/contact">
+                    <Form onSubmit={handleSubmit}>
                         <label htmlFor="subject">Subject</label>
                         <input
                             id="subject"
                             type="text"
                             name="subject"
                             autoComplete="name"
+                            onChange={(e) => setSubject(e.target.value)}
                         />
 
                         <label htmlFor="email">Email</label>
@@ -241,6 +249,7 @@ const Contact = () => {
                             type="email"
                             name="email"
                             autoComplete="name"
+                            onChange={(e) => setEmail(e.target.value)}
                         />
 
                         <label htmlFor="message">Message</label>
@@ -249,6 +258,7 @@ const Contact = () => {
                             id="message"
                             name="message"
                             autoComplete="name"
+                            onChange={(e) => setMessage(e.target.value)}
                         />
                         <Submit>Shoot ⚡</Submit>
                     </Form>

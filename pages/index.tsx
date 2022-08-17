@@ -1,11 +1,13 @@
 import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
+import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Tools from '../components/Tools';
 import Contact from '../components/Contact';
+import Writing from '../components/Writing';
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
     suspense: true,
@@ -173,6 +175,10 @@ const ProjectSection = styled.section`
     scroll-snap-align: start;
 `;
 
+const WritingSection = styled.section`
+    width: 100%;
+`;
+
 const ContactSection = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
@@ -185,7 +191,8 @@ const ContactSection = styled.section`
     }
 `;
 
-const Home: NextPage = (): JSX.Element => {
+const Home: NextPage = ({ articles }: any): JSX.Element => {
+    console.log(articles);
     return (
         <>
             <Head>
@@ -242,6 +249,9 @@ const Home: NextPage = (): JSX.Element => {
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
+                <WritingSection>
+                    <Writing articles={articles} />
+                </WritingSection>
                 <ToolsSection>
                     <Tools />
                 </ToolsSection>
@@ -252,6 +262,14 @@ const Home: NextPage = (): JSX.Element => {
             </MainContent>
         </>
     );
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+    const myArticles = 'https://dev.to/api/articles?username=heymich';
+    const res = await fetch(myArticles);
+    const articles = await res.json();
+
+    return { props: { articles } };
 };
 
 export default Home;
