@@ -43,7 +43,6 @@ const container = {
 
 const Wrapper = styled(motion.div)`
     margin: 50px auto;
-    width: 80%;
     height: auto;
     display: grid;
     grid-template-columns: repeat(2, max-content);
