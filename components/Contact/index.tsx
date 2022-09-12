@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 import Pageclip from 'pageclip';
-import * as nextJS from 'next';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -215,9 +214,7 @@ const Contact = () => {
     };
 
     useEffect(() => {
-        console.log(nextJS);
         // let pageclip = new Pageclip(process.env.NEXT_PUBLIC_PAGECLIP_API_KEY)
-
         // // Send an item up to Pageclip
         // pageclip.send({some: 'data'}).then((response: any) => {
         // console.log(response.status, response.data) // => 200, [{payload: {...}}]

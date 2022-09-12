@@ -19,7 +19,14 @@ const Card = styled.div`
     place-items: center;
 `;
 
-const Writing = ({ articles }: any) => {
+type ArticleProp = {
+    articles: {
+        tags: string;
+        url: string;
+    }[];
+};
+
+const Writing = ({ articles }: ArticleProp) => {
     return (
         <>
             <Wrapper>
