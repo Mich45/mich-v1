@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
-import Pageclip from 'pageclip';
 
 const Wrapper = styled.section`
     width: 100%;
@@ -46,6 +45,10 @@ const MessageWrapper = styled.div`
         color: ${colors.gray.lightGray};
         text-align: center;
         margin: 0;
+
+        @media ${device.laptop} {
+            text-align: start;
+        }
     }
 
     @media ${device.laptop} {
@@ -210,21 +213,30 @@ const Contact = () => {
             | React.ChangeEvent<HTMLTextAreaElement>
     ) => {
         e.preventDefault();
-        console.log(subject, email, message);
+        const postData = async () => {
+            const data = {
+                email: email,
+                message: message,
+                subject: subject,
+            };
+
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                body: JSON.stringify(data),
+            });
+            return response.json();
+        };
+
+        postData().then((data) => {
+            alert(data.message);
+        });
+
+        setEmail('');
+        setSubject('');
+        setMessage('');
     };
 
-    useEffect(() => {
-        // let pageclip = new Pageclip(process.env.NEXT_PUBLIC_PAGECLIP_API_KEY)
-        // // Send an item up to Pageclip
-        // pageclip.send({some: 'data'}).then((response: any) => {
-        // console.log(response.status, response.data) // => 200, [{payload: {...}}]
-        // }).then(() => {
-        // // Fetch all items
-        // return pageclip.fetch()
-        // }).then((response: any) => {
-        // console.log(response.status, response.data) // => 200, [{payload: {...}}]
-        // })
-    }, []);
+    useEffect(() => {}, []);
 
     return (
         <>
@@ -247,10 +259,12 @@ const Contact = () => {
                     <Form onSubmit={handleSubmit}>
                         <label htmlFor="subject">Subject</label>
                         <input
+                            required
                             id="subject"
                             type="text"
                             name="subject"
                             autoComplete="name"
+                            value={subject}
                             onChange={(e) => setSubject(e.target.value)}
                         />
 
@@ -261,6 +275,7 @@ const Contact = () => {
                             type="email"
                             name="email"
                             autoComplete="name"
+                            value={email}
                             onChange={(e) => setEmail(e.target.value)}
                         />
 
@@ -270,9 +285,10 @@ const Contact = () => {
                             id="message"
                             name="message"
                             autoComplete="name"
+                            value={message}
                             onChange={(e) => setMessage(e.target.value)}
                         />
-                        <Submit>Shoot ⚡</Submit>
+                        <Submit type="submit">Shoot ⚡</Submit>
                     </Form>
                 </FormWrapper>
             </ContactWrapper>

@@ -204,7 +204,7 @@ padding: 5px 20px 5px 0;
 
 const projectsList = [
     {
-        image: '/assets/portfolio.jpeg',
+        image: '/assets/portfolio.png',
         description:
             'My portfolio website built with react My portfolio website built with react  and nad next with mdx. The wall of the woekd and make it oerlk.',
         stack: ['react', 'next.js'],
