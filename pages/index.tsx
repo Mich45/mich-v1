@@ -62,7 +62,7 @@ const ParagraphWrapper = styled.div`
 
 const Paragraph = styled.p`
     font-family: 'Product Sans', 'Segoe UI', sans-serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: 600;
     margin: 0;
     background-clip: text;
@@ -265,7 +265,8 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-    const myArticles = 'https://dev.to/api/articles?username=heymich';
+    const myArticles =
+        'https://dev.to/api/articles?username=heymich&per_page=3';
     const res = await fetch(myArticles);
     const articles = await res.json();
 
