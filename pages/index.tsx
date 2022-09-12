@@ -36,13 +36,17 @@ const MainContent = styled.section`
 
 const BannerWrapper = styled.div`
     display: flex;
-    margin: 0 auto;
+    margin: 120px auto;
     height: 100vh;
     width: 100%;
     place-items: center;
-    place-content: center;
     position: relative;
     flex-direction: column;
+
+    @media ${device.laptop} {
+        margin: 0 auto;
+        place-content: center;
+    }
 `;
 
 const Banner = styled.div`
@@ -81,7 +85,11 @@ const Paragraph = styled.p`
     }
 `;
 
-const RoleWrapper = styled.div``;
+const RoleWrapper = styled.div`
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+`;
 
 const Role = styled.p`
     font-size: 11px;
