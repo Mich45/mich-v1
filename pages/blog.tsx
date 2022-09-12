@@ -123,7 +123,7 @@ const PostsWrapper = styled.div`
 
     @media ${device.laptop} {
         padding: 20px 85px;
-        margin: 30px auto;
+        // margin: 30px auto;
     }
 `;
 
