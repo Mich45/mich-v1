@@ -29,8 +29,6 @@ const MessageWrapper = styled.div`
     flex-direction: column;
     margin: 0 auto;
     padding-inline: 10px;
-    place-items: center;
-    place-content: center;
 
     h2 {
         margin: 0;
@@ -43,12 +41,7 @@ const MessageWrapper = styled.div`
 
     h3 {
         color: ${colors.gray.lightGray};
-        text-align: center;
         margin: 0;
-
-        @media ${device.laptop} {
-            text-align: start;
-        }
     }
 
     @media ${device.laptop} {
