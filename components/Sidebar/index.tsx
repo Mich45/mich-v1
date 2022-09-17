@@ -50,9 +50,9 @@ const SocialWrapper = styled.div`
     display: flex;
     place-items: center;
     place-content: center;
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
+    // position: absolute;
+    // bottom: 20px;
+    // left: 40px;
 
     .items {
         display: flex;
@@ -109,32 +109,32 @@ const Sidebar = ({ isOpen }: SidebarProps): JSX.Element => {
                             <Anchor href="#contact">Contact</Anchor>
                         </NavItem>
                     </Links>
+                    <SocialWrapper>
+                        <div className="items">
+                            <Link
+                                href="https://github.com/Mich45"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <GitHubIcon />
+                            </Link>
+                            <Link
+                                href="https://twitter.com/michaelhungbo"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <TwitterIcon />
+                            </Link>
+                            <Link
+                                href="https://www.linkedin.com/in/michaelhungbo/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <LinkedInIcon />
+                            </Link>
+                        </div>
+                    </SocialWrapper>
                 </LinkWrapper>
-                <SocialWrapper>
-                    <div className="items">
-                        <Link
-                            href="https://github.com/Mich45"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <GitHubIcon />
-                        </Link>
-                        <Link
-                            href="https://twitter.com/michaelhungbo"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <TwitterIcon />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/michaelhungbo/"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <LinkedInIcon />
-                        </Link>
-                    </div>
-                </SocialWrapper>
             </Wrapper>
         </>
     );

@@ -36,7 +36,7 @@ const MainContent = styled.section`
 
 const BannerWrapper = styled.div`
     display: flex;
-    margin: 120px auto;
+    margin: 120px auto 0 auto;
     height: 100vh;
     width: 100%;
     place-items: center;
