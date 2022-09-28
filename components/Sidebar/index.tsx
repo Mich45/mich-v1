@@ -10,7 +10,6 @@ const Wrapper = styled.div`
     top: 0;
     z-index: 1;
     background-color: #060403;
-    opacity: 0.9;
     transform: translateX(-500px);
     transition: transform 0.5s ease-in-out;
 `;
@@ -23,8 +22,7 @@ const LinkWrapper = styled.div`
 `;
 
 const Links = styled.ul`
-    place-content: center;
-    place-items: center;
+    padding: 0;
     list-style-type: none;
 `;
 
@@ -39,6 +37,7 @@ const Anchor = styled.a`
     text-decoration: none;
     font-weight: bold;
     color: white;
+    vertical-align: center;
     transition: 0.2s ease-out;
 
     :hover {
@@ -48,8 +47,7 @@ const Anchor = styled.a`
 
 const SocialWrapper = styled.div`
     display: flex;
-    place-items: center;
-    place-content: center;
+    padding: 8px;
     // position: absolute;
     // bottom: 20px;
     // left: 40px;
@@ -100,13 +98,13 @@ const Sidebar = ({ isOpen }: SidebarProps): JSX.Element => {
                 <LinkWrapper>
                     <Links>
                         <NavItem>
-                            <Anchor href="#projects">Projects</Anchor>
+                            <Anchor href="#projects">💻 Projects</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="/blog">Blog</Anchor>
+                            <Anchor href="/blog">📖 Blog</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="#contact">Contact</Anchor>
+                            <Anchor href="#contact">📩 Contact</Anchor>
                         </NavItem>
                     </Links>
                     <SocialWrapper>

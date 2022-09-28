@@ -62,13 +62,14 @@ const Wrapper = styled(motion.div)`
 
 const Tool = styled(motion.div)`
     width: 140px;
-    height: 70px;
+    height: auto;
     padding: 10px;
     border-radius: 4px;
     background: transparent;
     display: flex;
     flex-direction: column;
     place-content: space-between;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     place-items: center;
     transition: box-shadow 0.3s ease-in-out;
 
