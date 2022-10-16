@@ -81,6 +81,10 @@ const Tool = styled(motion.div)`
     :hover {
         box-shadow: 0px 4px 9px #e1d5d5;
     }
+
+    @media ${device.laptop} {
+        width: 140px;
+    }
 `;
 
 const Paragraph = styled(motion.p)`
@@ -203,9 +207,11 @@ const Tools = (): JSX.Element => {
         <>
             <Header variants={container} initial="hidden" animate="reveal">
                 <motion.h1 className="header">My toolkit</motion.h1>
-                <Paragraph>
-                    Some of the tools and technologies I create magic with.
-                </Paragraph>
+                <div style={{ width: '90px' }}>
+                    <Paragraph>
+                        Some of the tools and technologies I create magic with.
+                    </Paragraph>
+                </div>
             </Header>
             <Wrapper variants={container} initial="hidden" animate="reveal">
                 {TOOLS.map((tool, i) => {

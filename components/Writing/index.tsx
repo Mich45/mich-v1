@@ -4,8 +4,9 @@ import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
     place-items: center;
 `;
 
