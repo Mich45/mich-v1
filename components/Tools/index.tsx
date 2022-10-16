@@ -45,8 +45,9 @@ const Wrapper = styled(motion.div)`
     margin: 50px auto;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(2, max-content);
-    gap: 45px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
+    gap: 40px;
+    width: 90%;
 
     @media ${device.tablet} {
         grid-template-columns: repeat(4, max-content);
@@ -61,7 +62,7 @@ const Wrapper = styled(motion.div)`
 `;
 
 const Tool = styled(motion.div)`
-    width: 140px;
+    width: auto;
     height: auto;
     padding: 10px;
     border-radius: 4px;
@@ -167,7 +168,7 @@ const TOOLS: ToolsType[] = [
     },
 
     {
-        name: 'Git && GitHub',
+        name: 'Git/GitHub',
         icon: Icons.GitHubIcon,
     },
     {
