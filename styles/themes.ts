@@ -4,7 +4,7 @@ export const colors = {
         white_pink:
             'linear-gradient(to right, #f5f6f8, rgb(239 217 217), rgb(255 253 227))',
         white_pink2:
-            'linear-gradient(to right, rgb(243, 244, 246), rgb(209, 213, 219))',
+            'linear-gradient(to right, rgb(245, 246, 248), rgb(245 241 231), rgb(255, 253, 227));',
     },
     gray: {
         grayPrimary: '#283344',
