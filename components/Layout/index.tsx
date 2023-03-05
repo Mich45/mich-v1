@@ -31,7 +31,6 @@ const MainOverlay = styled.div`
         width: 100%;
         position: fixed;
         background: ${colors.dark.bodyDark};
-        filter: blur(40px);
     }
 `;
 

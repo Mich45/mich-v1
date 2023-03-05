@@ -10,11 +10,8 @@ const Navigation = styled.div`
     height: 40px;
     width: 100%;
     position: fixed;
-    background: #f7efef;
     top: 0;
     z-index: 1;
-    box-shadow: ${(props: { path: boolean }) =>
-        props.path ? 'none' : '0 2px 4px #e6dcdc'};
 `;
 
 const NavigationWrapper = styled.div`
