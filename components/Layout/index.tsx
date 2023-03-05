@@ -30,7 +30,7 @@ const MainOverlay = styled.div`
         height: 100%;
         width: 100%;
         position: fixed;
-        background: ${colors.white.white_pink};
+        background: ${colors.dark.bodyDark};
         filter: blur(40px);
     }
 `;

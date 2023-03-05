@@ -16,6 +16,7 @@ export const colors = {
         darkBlue: '#0f0c22',
     },
     dark: {
+        bodyDark: '#040000',
         darkPrimary: '#0d1117',
         dark: '#232529',
         textDark: '#e2e3e7',
