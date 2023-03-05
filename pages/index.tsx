@@ -130,7 +130,7 @@ const AboutParagraph = styled.p`
     font-size: 14px;
     text-align: center;
     margin-top: 5px;
-    color: ${colors.gray.darkGray};
+    color: ${colors.gray.lightGray};
 
     @media ${device.laptop} {
         font-size: 16px;
@@ -154,8 +154,8 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, #f56260, #f34030);
-    box-shadow: 0px 4px #ff7979;
+    background-image: linear-gradient(rgb(151 149 149), rgb(163 157 157));
+    box-shadow: rgb(64 64 64) 0px 4px;
     place-items: center;
     place-content: center;
     display: flex;

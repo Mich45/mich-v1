@@ -10,8 +10,10 @@ const Navigation = styled.div`
     height: 40px;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 0px;
     z-index: 1;
+    background: #040000;
+    box-shadow: -6px -6px 4px 5px #6a717e;
 `;
 
 const NavigationWrapper = styled.div`

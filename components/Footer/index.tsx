@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
 import usePath from '../../hooks/usePath';
-import { device } from '../../styles/themes';
+import { colors, device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
     height: auto;
@@ -27,7 +27,7 @@ const FooterWrapper = styled.footer`
     .divider {
         height: 3px;
         width: 90%;
-        background: #f4493d;
+        background: ${colors.gray.darkGray};
         border-radius: 4px;
         margin-top: 100px;
         margin-bottom: 20px;

@@ -171,8 +171,8 @@ const Heading = styled.h1`
 const Submit = styled.button`
     width: 150px;
     height: 40px;
-    background-image: linear-gradient(to bottom, #f56260, #f34030);
-    box-shadow: 0px 4px #ff7979;
+    background-image: linear-gradient(rgb(151 149 149), rgb(163 157 157));
+    box-shadow: rgb(64 64 64) 0px 4px;
     color: white;
     font-family: Inter;
     font-weight: bold;
