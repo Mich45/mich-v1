@@ -158,7 +158,7 @@ const Submit = styled.button`
         ${colors.green.greenPrimary},
         rgb(0 219 128)
     );
-    box-shadow: rgb(0 145 51) 0px 4px;
+    box-shadow: rgb(14 139 93) 0px 4px;
     color: black;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: bold;
