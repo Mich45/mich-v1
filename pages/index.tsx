@@ -69,16 +69,12 @@ const Paragraph = styled.p`
     font-size: 28px;
     font-weight: 600;
     margin: 0;
-    background-clip: text;
-    text-fill-color: transparent;
-    background: rgb(242, 40, 40);
-    background: linear-gradient(
-        0deg,
-        rgba(242, 40, 40, 1) 7%,
-        rgba(255, 68, 40, 1) 67%
-    );
+    background: linear-gradient(rgb(14 253 110), rgb(0 219 128));
     -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
     -webkit-background-clip: text;
+    background-clip: text;
+    transform: translateY(-10%);
 
     @media ${device.laptop} {
         font-size: 60px;
@@ -101,16 +97,6 @@ const Role = styled.p`
     @media ${device.laptop} {
         font-size: 18px;
     }
-`;
-
-const Gradient = styled.span`
-    background: linear-gradient(0deg, rgb(13 17 26) 7%, rgb(0 12 76) 67%);
-    -webkit-text-fill-color: transparent;
-    text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    margin-inline: 8px;
-    transform: translateY(-10%);
 `;
 
 const AboutWrapper = styled.div`
@@ -154,20 +140,20 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(rgb(151 149 149), rgb(163 157 157));
-    box-shadow: rgb(64 64 64) 0px 4px;
+    background-image: linear-gradient(rgb(14 253 110), rgb(0 219 128));
+    box-shadow: rgb(0 145 51) 0px 4px;
     place-items: center;
     place-content: center;
     display: flex;
-    color: white;
+    color: black;
     font-size: 14px;
     margin: 0;
+    font-weight: bold;
     text-decoration: none;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
     :hover {
         cursor: pointer;
-        color: #322b2b;
         background-image: #f34030;
         box-shadow: none;
     }
@@ -224,11 +210,7 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                 <BannerWrapper>
                     <Banner>
                         <ParagraphWrapper>
-                            <Paragraph>
-                                Hi, I'm
-                                <Gradient>Michael</Gradient>
-                                Hungbo.
-                            </Paragraph>
+                            <Paragraph>Hi, I'm Michael Hungbo.</Paragraph>
                         </ParagraphWrapper>
                         <RoleWrapper>
                             <Role>
@@ -249,7 +231,10 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                         </AboutWrapper>
                     </Banner>
                     <ResumeWrapper>
-                        <Resume href="#"> Download Resume 📰</Resume>
+                        <Resume href="https://www.dropbox.com/s/poywv8wdnivawlm/Michael%20Hungbo%20Technical%20Writer%20CV.pdf?dl=0">
+                            {' '}
+                            Download Resume 📰
+                        </Resume>
                     </ResumeWrapper>
                 </BannerWrapper>
 

@@ -70,7 +70,6 @@ const Tool = styled(motion.div)`
     display: flex;
     flex-direction: column;
     place-content: space-between;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     place-items: center;
     transition: box-shadow 0.3s ease-in-out;
 
@@ -79,17 +78,13 @@ const Tool = styled(motion.div)`
     }
 
     :hover {
-        box-shadow: 0px 4px 9px #e1d5d5;
+        box-shadow: 0px 4px 0px #053c28;
+        cursor: pointer;
     }
 
     @media ${device.laptop} {
         width: 140px;
     }
-`;
-
-const Paragraph = styled(motion.p)`
-    font-size: 14px;
-    margin: 0;
 `;
 
 const Header = styled(motion.div)`
@@ -207,11 +202,6 @@ const Tools = (): JSX.Element => {
         <>
             <Header variants={container} initial="hidden" animate="reveal">
                 <motion.h1 className="header">My toolkit</motion.h1>
-                <div style={{ width: '90px' }}>
-                    <Paragraph>
-                        Some of the tools and technologies I create magic with.
-                    </Paragraph>
-                </div>
             </Header>
             <Wrapper variants={container} initial="hidden" animate="reveal">
                 {TOOLS.map((tool, i) => {
