@@ -52,24 +52,6 @@ const MessageWrapper = styled.div`
     }
 `;
 
-const Text = styled.div`
-    width: 100%;
-    height: 100%;
-    margin-top: 15px;
-
-    p {
-        font-size: 14px;
-
-        @media ${device.tablet} {
-            font-size: 16px;
-        }
-
-        @media ${device.laptop} {
-            font-size: 16px;
-        }
-    }
-`;
-
 const FormWrapper = styled.div`
     width: 100%;
     height: 100%;
@@ -91,6 +73,7 @@ const Form = styled.form`
     }
 
     label {
+        color: ${colors.gray.lightGray};
         font-weight: bold;
     }
 
@@ -99,7 +82,7 @@ const Form = styled.form`
         height: 40px;
         border-radius: 4px;
         outline: none;
-        border: 2px solid gray;
+        border: 2px solid ${colors.gray.darkGray};
         padding: 10px;
         background: transparent;
         margin: 20px 0;
@@ -110,8 +93,8 @@ const Form = styled.form`
         }
 
         :focus {
-            box-shadow: 0 4px #e86262;
-            border-color: #e86262;
+            box-shadow: 0 4px ${colors.green.greenPrimary};
+            border-color: ${colors.green.greenPrimary};
         }
     }
     textarea {
@@ -120,7 +103,7 @@ const Form = styled.form`
         padding: 10px;
         border-radius: 4px;
         outline: none;
-        border: 2px solid gray;
+        border: 2px solid ${colors.gray.darkGray};
         resize: none;
         margin: 20px 0;
         background: none;
@@ -131,8 +114,8 @@ const Form = styled.form`
         }
 
         :focus {
-            box-shadow: 0 4px #e86262;
-            border-color: #e86262;
+            box-shadow: 0 4px ${colors.green.greenPrimary};
+            border-color: ${colors.green.greenPrimary};
         }
     }
 `;
@@ -243,13 +226,6 @@ const Contact = () => {
                 <MessageWrapper>
                     <h2>Got a project to talk about?</h2>
                     <h3>or just wanna say hi?</h3>
-
-                    <Text>
-                        <p>
-                            I'm an experienced software developer looking to
-                            undertake new projects and challenges.
-                        </p>
-                    </Text>
                 </MessageWrapper>
                 <FormWrapper>
                     <Form onSubmit={handleSubmit}>
