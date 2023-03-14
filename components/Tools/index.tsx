@@ -45,6 +45,7 @@ const Wrapper = styled(motion.div)`
     margin: 50px auto;
     height: auto;
     display: grid;
+    justify-content: center;
     grid-template-columns: repeat(auto-fit, minmax(140px, 2fr));
     gap: 40px;
     width: 90%;
