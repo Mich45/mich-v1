@@ -76,11 +76,6 @@ const NavItem = styled.li`
     padding: 20px;
     border-radius: 6px;
     margin-inline: 10px;
-    transition: color 0.2s ease-in-out;
-
-    :hover {
-        color: ${colors.blue.darkBlue};
-    }
 `;
 
 const DropdownWrapper = styled.div`
@@ -96,6 +91,7 @@ const DropdownWrapper = styled.div`
 const Anchor = styled.a`
     text-decoration: none;
     color: ${colors.gray.lightGray};
+    transition: color 0.2s ease-in-out 0s;
 
     :hover {
         color: ${colors.gray.darkGray};
