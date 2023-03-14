@@ -6,21 +6,12 @@ import Search from '../components/Search';
 import Preview from '../components/Preview';
 import { colors, shadows, device } from '../styles/themes';
 import * as api from '../lib/api';
-import Pattern from '../public/assets/Moon.svg';
 
 const MainWrapper = styled.main`
     width: 100%;
     height: auto;
     position: relative;
-    background: #f7efef;
-
-    .all_posts {
-        margin-left: 24px;
-
-        @media ${device.laptop} {
-            margin-left: 124px;
-        }
-    }
+    background: ${colors.dark.bodyDark};
 `;
 
 const Jumbotron = styled.section`
@@ -35,46 +26,6 @@ const Jumbotron = styled.section`
         .tags_wrapper {
             display: flex;
         }
-    }
-`;
-
-const Greeting = styled.div`
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    background-image: url(${Pattern.src});
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 0 24px;
-
-    @media ${device.laptop} {
-        padding: 0 100px;
-    }
-`;
-
-const TextWrapper = styled.div`
-    height: 50vh;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    flex-direction: column;
-`;
-
-const GreetingText = styled.h1`
-    font-size: 30px;
-    text-align: center;
-    font-weight: 700;
-    font-family: 'Product Sans', 'Segoe UI', sans-serif;
-    background-clip: text;
-    text-fill-color: transparent;
-    background: white;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-
-    @media ${device.laptop} {
-        font-size: 36px;
     }
 `;
 
@@ -97,7 +48,6 @@ const Tag = styled.a`
     display: flex;
     place-content: center;
     place-items: center;
-    box-shadow: ${shadows.light};
 
     :hover {
         cursor: pointer;
@@ -174,14 +124,6 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             </Head>
             <MainWrapper>
                 <Jumbotron>
-                    <Greeting>
-                        <TextWrapper>
-                            <GreetingText>
-                                Explore adeptly curated technical contents and
-                                personal cogitation.
-                            </GreetingText>
-                        </TextWrapper>
-                    </Greeting>
                     <SearchWrapper>
                         <Search />
                     </SearchWrapper>
@@ -192,9 +134,6 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                         })}
                     </TagWrapper>
                 </Jumbotron>
-                <div className="all_posts">
-                    <h1>All Posts</h1>
-                </div>
                 <PostsWrapper>
                     {posts.map((post, i) => {
                         return <Preview meta={post} key={i} />;

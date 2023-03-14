@@ -27,12 +27,10 @@ const Wrapper = styled.div`
     transition: 0.3s ease-out;
     color: ${colors.gray.darkGray};
     margin: 10px 0;
-    background: #e5dfdfb8;
-    border: 2px solid #d7d7d7;
+    background: #0e0d10;
 
     :hover {
-        background: #f7efef;
-        border: 2px solid #d7d7d7;
+        background: #1e1e1e;
     }
 
     @media ${device.laptop} {

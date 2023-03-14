@@ -83,7 +83,7 @@ export const ExpressIcon = () => {
 export const FigmaIcon = () => {
     return (
         <SVG
-            fill="black"
+            fill="#fff"
             role="img"
             viewBox="0 0 24 24"
             xmlns="http://www.w3.org/2000/svg"
@@ -189,7 +189,7 @@ export const Logo = () => {
                 <g id="g664" transform="matrix(1.0574674,0,0,1,-19.624277,0)">
                     <g id="g654">
                         <circle
-                            fill="#f91818"
+                            fill="rgb(51 251 149)"
                             id="path339"
                             cx="344.57141"
                             cy="432.51428"
@@ -203,7 +203,7 @@ export const Logo = () => {
                             fontStretch="normal"
                             fontSize={40}
                             fontFamily="Nunito"
-                            fill="#f91818"
+                            fill="rgb(51 251 149)"
                             x="339.17142"
                             y="432.70853"
                             id="text407"

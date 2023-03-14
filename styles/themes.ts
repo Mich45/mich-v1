@@ -23,6 +23,7 @@ export const colors = {
         lightDark: '#696e79',
     },
     green: {
+        greenPrimary: 'rgb(51 251 149)',
         codeGreen: '#77ffba',
     },
 };

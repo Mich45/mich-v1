@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
-import usePath from '../../hooks/usePath';
 import { colors, device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
@@ -12,8 +11,7 @@ const FooterWrapper = styled.footer`
     position: relative;
     place-content: center;
     place-items: center;
-    background: ${(props: { path: boolean }) =>
-        props.path ? '#f7efef' : 'none'};
+    background: ${colors.dark.bodyDark};
 
     .linkwrapper {
         display: flex;
@@ -80,12 +78,11 @@ const Link = styled.a`
 `;
 
 const Footer = (): JSX.Element => {
-    const path = usePath();
     const date = new Date().getFullYear();
 
     return (
         <>
-            <FooterWrapper path={path}>
+            <FooterWrapper>
                 <div className="divider" />
                 <div className="linkwrapper">
                     <SocialWrapper>

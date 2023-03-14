@@ -65,11 +65,11 @@ const ParagraphWrapper = styled.div`
 `;
 
 const Paragraph = styled.p`
-    font-family: 'Product Sans', 'Segoe UI', sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
     font-size: 28px;
     font-weight: 600;
     margin: 0;
-    background: linear-gradient(rgb(14 253 110), rgb(0 219 128));
+    background: linear-gradient(${colors.green.greenPrimary}, rgb(0 219 128));
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -140,7 +140,10 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(rgb(14 253 110), rgb(0 219 128));
+    background-image: linear-gradient(
+        ${colors.green.greenPrimary},
+        rgb(0 219 128)
+    );
     box-shadow: rgb(0 145 51) 0px 4px;
     place-items: center;
     place-content: center;
@@ -215,7 +218,6 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                         <RoleWrapper>
                             <Role>
                                 Fullstack Software Developer. Technical Writer.
-                                Creator of things.
                             </Role>
                         </RoleWrapper>
                         <AboutWrapper>
