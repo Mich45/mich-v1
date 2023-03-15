@@ -16,7 +16,7 @@ const Wrapper = styled.section`
 const Card = styled.div`
     width: 350px;
     padding: 10px;
-    height: 350px;
+    height: 300px;
     border: 2px solid ${colors.gray.darkGray};
     border-radius: 6px;
     display: flex;
@@ -26,7 +26,7 @@ const Card = styled.div`
 
 const ImageWrapper = styled.div`
     width: 100%;
-    height: 50%;
+    height: 60%;
     border-radius: 6px;
     position: relative;
     border-radius: 6px;
@@ -34,7 +34,7 @@ const ImageWrapper = styled.div`
 
 const TextWrapper = styled.div`
     width: 100%;
-    height: 50%;
+    height: 40%;
 `;
 
 type ArticleProp = {
