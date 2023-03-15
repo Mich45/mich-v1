@@ -1,29 +1,49 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import Link from 'next/link';
 import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
-    width: 100%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 10px;
     place-items: center;
+    margin: 0 auto;
 `;
 
 const Card = styled.div`
-    width: 300px;
-    height: 400px;
-    border: 2px solid red;
-    border-radius: 4px;
+    width: 350px;
+    padding: 10px;
+    height: 350px;
+    border: 2px solid ${colors.gray.darkGray};
+    border-radius: 6px;
     display: flex;
     flex-direction: column;
     place-items: center;
 `;
 
+const ImageWrapper = styled.div`
+    width: 100%;
+    height: 50%;
+    border-radius: 6px;
+    position: relative;
+    border-radius: 6px;
+`;
+
+const TextWrapper = styled.div`
+    width: 100%;
+    height: 50%;
+`;
+
 type ArticleProp = {
     articles: {
+        cover_image: string;
         tags: string;
         url: string;
+        title: string;
+        readable_publish_date: string;
     }[];
 };
 
@@ -32,7 +52,27 @@ const Writing = ({ articles }: ArticleProp) => {
         <>
             <Wrapper>
                 {articles.map((article, key) => {
-                    return <Card key={key}></Card>;
+                    console.log(article);
+                    return (
+                        <Card key={key}>
+                            <ImageWrapper>
+                                <Image
+                                    src={article.cover_image}
+                                    layout="fill"
+                                />
+                            </ImageWrapper>
+                            <TextWrapper>
+                                <p>{article.readable_publish_date}</p>
+                                <a
+                                    href={article.url}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <h3>{article.title}</h3>
+                                </a>
+                            </TextWrapper>
+                        </Card>
+                    );
                 })}
             </Wrapper>
         </>

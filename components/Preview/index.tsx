@@ -86,7 +86,7 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
-    console.log(meta);
+    // console.log(meta);
     return (
         <>
             <Wrapper>

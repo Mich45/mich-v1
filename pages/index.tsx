@@ -190,7 +190,6 @@ const ContactSection = styled.section`
 `;
 
 const Home: NextPage = ({ articles }: any): JSX.Element => {
-    console.log(articles);
     return (
         <>
             <Head>
@@ -245,9 +244,6 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
-                <WritingSection>
-                    <Writing articles={articles} />
-                </WritingSection>
                 <ToolsSection>
                     <Tools />
                 </ToolsSection>

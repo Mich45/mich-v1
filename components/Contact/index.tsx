@@ -86,6 +86,7 @@ const Form = styled.form`
         padding: 10px;
         background: transparent;
         margin: 20px 0;
+        color: ${colors.gray.lightGray};
         transition: 0.3s ease-out;
 
         @media ${device.laptop} {
@@ -106,6 +107,7 @@ const Form = styled.form`
         border: 2px solid ${colors.gray.darkGray};
         resize: none;
         margin: 20px 0;
+        ${colors.gray.lightGray};
         background: none;
         transition: 0.3s ease-out;
 

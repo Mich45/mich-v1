@@ -7,6 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // Send an item up to Pageclip
     pageclip.send(body).then((response: any) => {
         if (response.status == 200) {
+            console.log('Email sent');
             res.status(200).json({ message: 'Message sent successfully!' });
         } else {
             res.status(400).json({

@@ -10,7 +10,9 @@ import rehypeSlug from 'rehype-slug';
 
 const nextConfig = {
     reactStrictMode: true,
-
+    images: {
+        domains: ['res.cloudinary.com'],
+      },
     compiler: {
         styledComponents: true,
     },
