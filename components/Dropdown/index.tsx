@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from '../Sidebar';
 import styled from 'styled-components';
+import { colors, device } from '../../styles/themes';
 
 const Menu = styled.span`
     height: 3px;
     width: 20px;
     position: relative;
-    background: gray;
+    background: ${colors.gray.darkGray};
     margin-block: 2px;
 
     &:: before {
@@ -16,7 +17,7 @@ const Menu = styled.span`
         top: 5px;
         height: 3px;
         width: 20px;
-        background: gray;
+        background: ${colors.gray.darkGray};
     }
 
     &:: after {
@@ -26,7 +27,7 @@ const Menu = styled.span`
         top: -5px;
         height: 3px;
         width: 20px;
-        background: gray;
+        background: ${colors.gray.darkGray};
     }
 `;
 
@@ -35,7 +36,7 @@ const XMenu = styled.span`
     width: 20px;
     border-radius: 3px;
     position: relative;
-    background: gray;
+    background: ${colors.gray.darkGray};
     margin-block: 2px;
     position: absolute;
     opacity: 0;

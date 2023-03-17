@@ -233,8 +233,7 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                     </Banner>
                     <ResumeWrapper>
                         <Resume href="https://www.dropbox.com/s/poywv8wdnivawlm/Michael%20Hungbo%20Technical%20Writer%20CV.pdf?dl=0">
-                            {' '}
-                            Download Resume 📰
+                            Resume 📰
                         </Resume>
                     </ResumeWrapper>
                 </BannerWrapper>

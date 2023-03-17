@@ -17,8 +17,12 @@ const MainWrapper = styled.main`
     background: ${colors.dark.bodyDark};
 
     .text {
-        margin-left: 90px;
+        margin-left: 20px;
         color: ${colors.gray.darkGray};
+
+        @media ${device.laptop} {
+            margin-left: 90px;
+        }
     }
 `;
 

@@ -27,7 +27,6 @@ const MessageWrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
     padding-inline: 10px;
 
     h2 {
@@ -47,6 +46,7 @@ const MessageWrapper = styled.div`
     @media ${device.laptop} {
         width: 50%;
         padding: 0;
+        margin: 0 auto;
         place-content: normal;
         place-items: normal;
     }
