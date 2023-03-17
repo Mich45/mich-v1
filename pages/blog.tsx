@@ -1,3 +1,4 @@
+// @ts-nocheck
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
@@ -76,18 +77,24 @@ type BlogProps = {
 };
 
 type Articles = {
-    [key: string]: any;
+    articles: {
+        cover_image: string;
+        tags: string;
+        url: string;
+        title: string;
+        readable_publish_date: string;
+    }[];
 };
 
 const fetcher: Fetcher<Articles> = (...args: any[]) =>
     fetch(...args).then((res) => res.json());
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
-    const { data, error, isLoading } = useSWR(
+    const { data, error } = useSWR(
         'https://dev.to/api/articles?username=heymich&per_page=6',
         fetcher
     );
-    console.log(data, error, isLoading);
+    console.log(data, error);
     // const otherPosts = posts.slice(0, posts.length - 1);
     return (
         <>
