@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     border-radius: 4px;
     transition: 0.3s ease-out;
-    color: ${colors.gray.darkGray};
+    color: ${colors.gray.lightGray};
     margin: 10px 0;
     background: #0e0d10;
 
@@ -76,7 +76,7 @@ const TagsWrapper = styled.div`
 const Tag = styled.div`
     width: auto;
     height: 30px;
-    color: ${colors.gray.darkGray};
+    color: ${colors.gray.lightGray};
     border-radius: 4px;
     font-size: 14px;
     margin-inline: 0 5px;

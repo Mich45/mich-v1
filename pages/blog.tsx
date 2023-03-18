@@ -18,7 +18,7 @@ const MainWrapper = styled.main`
 
     .text {
         margin-left: 20px;
-        color: ${colors.gray.darkGray};
+        color: ${colors.gray.lightGray};
 
         @media ${device.laptop} {
             margin-left: 90px;
