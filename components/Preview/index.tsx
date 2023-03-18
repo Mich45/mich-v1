@@ -18,7 +18,7 @@ type PreviewProps = {
 };
 
 const Wrapper = styled.div`
-    width: 100%;
+    width: 90%;
     height: auto;
     padding: 5px;
     display: flex;

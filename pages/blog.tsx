@@ -17,7 +17,7 @@ const MainWrapper = styled.main`
     background: ${colors.dark.bodyDark};
 
     .text {
-        margin-left: 20px;
+        margin-left: 50px;
         color: ${colors.gray.lightGray};
 
         @media ${device.laptop} {
@@ -44,13 +44,6 @@ const Jumbotron = styled.section`
 const ArticlesWrapper = styled.div`
     width: 100%;
     margin-top: 100px;
-`;
-
-const TagWrapper = styled.div`
-    width: 100%;
-    place-content: center;
-    place-items: center;
-    margin: 0;
 `;
 
 const SearchWrapper = styled.div`

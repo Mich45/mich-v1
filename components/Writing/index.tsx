@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;

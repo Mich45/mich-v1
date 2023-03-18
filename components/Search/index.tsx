@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 
 const SearchInput = styled.input`
-    width: 80%;
+    width: 100%;
     height: 40px;
     border: 2px solid ${colors.gray.darkGray};
     outline: none;
@@ -24,7 +24,7 @@ const SearchInput = styled.input`
 `;
 
 const Search = () => {
-    return <SearchInput placeholder=" 🔍 Search posts " />;
+    return <SearchInput placeholder=" 🔍Search... " />;
 };
 
 export default Search;
