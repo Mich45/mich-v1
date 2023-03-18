@@ -27,7 +27,7 @@ const MessageWrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-inline: 10px;
+    margin-bottom: 20px;
 
     h2 {
         margin: 0;
@@ -221,9 +221,6 @@ const Contact = () => {
 
     return (
         <>
-            <Wrapper>
-                <Heading>Get in touch</Heading>
-            </Wrapper>
             <ContactWrapper>
                 <MessageWrapper>
                     <h2>Got a project to talk about?</h2>

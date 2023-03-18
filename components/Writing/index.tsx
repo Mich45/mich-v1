@@ -16,7 +16,7 @@ const Wrapper = styled.section`
 const Card = styled.div`
     width: 90%;
     padding: 2px;
-    height: 340px;
+    height: 330px;
     border: 2px solid ${colors.gray.darkGray};
     border-radius: 6px;
     display: flex;
