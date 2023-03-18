@@ -14,14 +14,19 @@ const Wrapper = styled.section`
 `;
 
 const Card = styled.div`
-    width: 350px;
-    padding: 15px;
-    height: 320px;
+    width: 90%;
+    padding: 2px;
+    height: 340px;
     border: 2px solid ${colors.gray.darkGray};
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     place-items: center;
+
+    @media ${device.laptop} {
+        width: 350px;
+        padding: 15px;
+    }
 `;
 
 const ImageWrapper = styled.div`

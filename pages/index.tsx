@@ -172,11 +172,6 @@ const ProjectSection = styled.section`
     scroll-snap-align: start;
 `;
 
-const WritingSection = styled.section`
-    width: 100%;
-    margin-top: 50px;
-`;
-
 const ContactSection = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
@@ -189,11 +184,13 @@ const ContactSection = styled.section`
     }
 `;
 
-const Home: NextPage = ({ articles }: any): JSX.Element => {
+const Home: NextPage = (): JSX.Element => {
     return (
         <>
             <Head>
-                <title>Michael Hungbo - Software Developer</title>
+                <title>
+                    Michael Hungbo - Software Developer & Technical Writer
+                </title>
                 <meta
                     name="viewport"
                     content="initial-scale=1.0, width=device-width"
@@ -201,11 +198,11 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Hi, there! I'm Michael Hungbo. Welcome to my personal portfolio website."
+                    content="Hi there! I'm Michael Hungbo. A full-stack software developer and technical writer. Welcome to my personal portfolio website."
                 />
                 <meta
                     name="og:title"
-                    content="Michael Hungbo, Fullstack Software Developer"
+                    content="Michael Hungbo, Full-stack Software Developer & Technical Writer"
                 />
             </Head>
             <MainContent>
@@ -216,12 +213,12 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
                         </ParagraphWrapper>
                         <RoleWrapper>
                             <Role>
-                                Fullstack Software Developer. Technical Writer.
+                                Full-stack Software Developer. Technical Writer.
                             </Role>
                         </RoleWrapper>
                         <AboutWrapper>
                             <AboutParagraph>
-                                Hey there! I'm a fullstack software developer
+                                Hey there! I'm a full-stack software developer
                                 from Lagos, Nigeria with 2+ years of experience.
                                 Over the years, I have built exquisite and
                                 innovative applications on the web using modern
@@ -253,15 +250,6 @@ const Home: NextPage = ({ articles }: any): JSX.Element => {
             </MainContent>
         </>
     );
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-    const myArticles =
-        'https://dev.to/api/articles?username=heymich&per_page=3';
-    const res = await fetch(myArticles);
-    const articles = await res.json();
-
-    return { props: { articles } };
 };
 
 export default Home;
