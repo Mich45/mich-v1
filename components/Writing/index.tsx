@@ -8,13 +8,17 @@ const Wrapper = styled.section`
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 10px;
+    gap: 15px;
     place-items: center;
     margin: 0 auto;
+
+    @media ${device.laptop} {
+        gap: 10px;
+    }
 `;
 
 const Card = styled.div`
-    width: 100%;
+    width: 90%;
     padding: 5px;
     height: 330px;
     border: 2px solid ${colors.gray.darkGray};
