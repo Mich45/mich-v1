@@ -13,7 +13,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
 
     @media ${device.laptop} {
-        width: 80%;
+        width: 82%;
         gap: 10px;
     }
 `;

@@ -21,7 +21,7 @@ const MainWrapper = styled.main`
         color: ${colors.gray.lightGray};
 
         @media ${device.laptop} {
-            margin-left: 90px;
+            margin-left: 127px;
         }
     }
 `;
