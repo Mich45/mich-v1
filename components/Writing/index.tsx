@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px;
@@ -14,8 +14,8 @@ const Wrapper = styled.section`
 `;
 
 const Card = styled.div`
-    width: 90%;
-    padding: 2px;
+    width: 100%;
+    padding: 5px;
     height: 330px;
     border: 2px solid ${colors.gray.darkGray};
     border-radius: 6px;
@@ -61,10 +61,12 @@ const Writing = ({ articles }: ArticleProp) => {
                     return (
                         <Card key={key}>
                             <ImageWrapper>
-                                <Image
-                                    src={article.cover_image}
-                                    layout="fill"
-                                />
+                                <div>
+                                    <Image
+                                        src={article.cover_image}
+                                        layout="fill"
+                                    />
+                                </div>
                             </ImageWrapper>
                             <TextWrapper>
                                 <p>{article.readable_publish_date}</p>
