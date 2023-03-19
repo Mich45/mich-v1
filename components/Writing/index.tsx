@@ -13,7 +13,7 @@ const Wrapper = styled.section`
     margin: 0 auto;
 
     @media ${device.laptop} {
-        width: 82%;
+        width: 85%;
         gap: 10px;
     }
 `;
@@ -21,12 +21,16 @@ const Wrapper = styled.section`
 const Card = styled.div`
     width: 90%;
     padding: 5px;
-    height: 330px;
-    border: 2px solid ${colors.gray.darkGray};
+    height: 330px
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     place-items: center;
+    transition: .2s box-shadow ease-in-out; 
+
+    &:hover {
+        box-shadow: 2px 4px;
+    }
 
     @media ${device.laptop} {
         width: 350px;
