@@ -7,6 +7,7 @@ import { colors, device } from '../../styles/themes';
 const Wrapper = styled.section`
     width: 100%;
     display: grid;
+    padding-block: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
     place-items: center;
@@ -21,12 +22,12 @@ const Wrapper = styled.section`
 const Card = styled.div`
     width: 90%;
     padding: 5px;
-    height: 330px
+    height: auto;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
     place-items: center;
-    transition: .2s box-shadow ease-out; 
+    transition: 0.2s box-shadow ease-out;
 
     &:hover {
         box-shadow: 2px 4px;
@@ -36,14 +37,6 @@ const Card = styled.div`
         width: 350px;
         padding: 15px;
     }
-`;
-
-const ImageWrapper = styled.div`
-    width: 100%;
-    height: 60%;
-    border-radius: 6px;
-    position: relative;
-    border-radius: 6px;
 `;
 
 const TextWrapper = styled.div`
@@ -66,17 +59,8 @@ const Writing = ({ articles }: ArticleProp) => {
         <>
             <Wrapper>
                 {articles.map((article, key) => {
-                    console.log(article);
                     return (
                         <Card key={key}>
-                            <ImageWrapper>
-                                <div>
-                                    <Image
-                                        src={article.cover_image}
-                                        layout="fill"
-                                    />
-                                </div>
-                            </ImageWrapper>
                             <TextWrapper>
                                 <p>{article.readable_publish_date}</p>
                                 <a
