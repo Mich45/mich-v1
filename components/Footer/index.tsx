@@ -23,7 +23,7 @@ const FooterWrapper = styled.footer`
     }
 
     .divider {
-        height: 3px;
+        height: 1px;
         width: 90%;
         background: ${colors.gray.darkGray};
         border-radius: 4px;
