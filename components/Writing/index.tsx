@@ -26,7 +26,7 @@ const Card = styled.div`
     display: flex;
     flex-direction: column;
     place-items: center;
-    transition: .2s box-shadow ease-in-out; 
+    transition: .2s box-shadow ease-out; 
 
     &:hover {
         box-shadow: 2px 4px;
