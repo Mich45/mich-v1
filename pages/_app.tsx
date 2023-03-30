@@ -1,6 +1,7 @@
 // eslint-disable-next-line
 // @ts-nocheck
 
+import { useEffect } from 'react';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import Layout from '../components/Layout';
@@ -13,8 +14,17 @@ import {
     Pre,
     HeadingOne,
 } from '../components/MDXComponents/Elements';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
+    useEffect(() => {
+        AOS.init({
+            ease: 'ease-out-cubic',
+            duration: 1000,
+        });
+    }, []);
+
     const components = {
         code: Code,
         h1: HeadingOne,

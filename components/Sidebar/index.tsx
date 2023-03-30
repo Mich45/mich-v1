@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
+import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.div`
     width: 50%;
@@ -41,7 +42,7 @@ const Anchor = styled.a`
     transition: 0.2s ease-out;
 
     :hover {
-        color: #ff3f05;
+        color: ${colors.gray.lightGray};
     }
 `;
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import ThemeSwitch from '../ThemeSwitch';
 import { colors, device } from '../../styles/themes';
 import Dropdown from '../Dropdown';
 import { Logo } from '../Icons';
@@ -122,9 +121,7 @@ const Navbar = (): JSX.Element => {
                         <NavItem>
                             <Anchor href="/#contact">Contact</Anchor>
                         </NavItem>
-                        <NavItem>
-                            <ThemeSwitch />
-                        </NavItem>
+                        <NavItem></NavItem>
                     </NavLinkWrapper>
                 </NavigationWrapper>
             </Navigation>

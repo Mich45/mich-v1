@@ -14,6 +14,7 @@
     "@next/mdx": "^12.1.6",
     "@tabler/icons": "^1.68.0",
     "@types/styled-components": "^5.1.25",
+    "aos": "^2.3.4",
     "dotenv": "^16.0.0",
     "framer-motion": "^6.2.8",
     "gray-matter": "^4.0.3",

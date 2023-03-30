@@ -36,7 +36,7 @@ const MainContent = styled.section`
 
 const BannerWrapper = styled.div`
     display: flex;
-    margin: 120px auto 0 auto;
+    margin: 70px auto 0 auto;
     height: 100vh;
     width: 100%;
     place-items: center;
@@ -44,8 +44,7 @@ const BannerWrapper = styled.div`
     flex-direction: column;
 
     @media ${device.laptop} {
-        margin: 0 auto;
-        place-content: center;
+        margin: 70px auto;
     }
 `;
 
@@ -66,7 +65,7 @@ const ParagraphWrapper = styled.div`
 
 const Paragraph = styled.p`
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
-    font-size: 28px;
+    font-size: 48px;
     font-weight: 600;
     margin: 0;
     background: linear-gradient(${colors.green.greenPrimary}, rgb(0 219 128));
@@ -74,7 +73,6 @@ const Paragraph = styled.p`
     text-fill-color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-    transform: translateY(-10%);
 
     @media ${device.laptop} {
         font-size: 60px;
@@ -82,17 +80,21 @@ const Paragraph = styled.p`
 `;
 
 const RoleWrapper = styled.div`
-    margin: 0 auto;
-    width: 80%;
-    text-align: center;
+    width: 100%;
+    padding: 20px;
+
+    @media ${device.laptop} {
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+    }
 `;
 
 const Role = styled.p`
-    font-size: 11px;
+    font-size: 20px;
     font-weight: 600;
     color: ${colors.gray.lightGray};
     margin: 0;
-    animation: 1s ${slideIn} ease-in-out;
 
     @media ${device.laptop} {
         font-size: 18px;
@@ -132,6 +134,11 @@ const ResumeWrapper = styled.div`
     place-items: center;
     place-content: center;
     bottom: 0%;
+    padding: 30px;
+
+    @media ${device.laptop} {
+        padding: 0;
+    }
 `;
 
 const Resume = styled.a`
@@ -151,7 +158,6 @@ const Resume = styled.a`
     color: black;
     font-size: 14px;
     margin: 0;
-    font-weight: bold;
     text-decoration: none;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
@@ -159,6 +165,7 @@ const Resume = styled.a`
         cursor: pointer;
         background-image: #f34030;
         box-shadow: none;
+        font-weight: bold;
     }
 `;
 
@@ -209,28 +216,30 @@ const Home: NextPage = (): JSX.Element => {
                 <BannerWrapper>
                     <Banner>
                         <ParagraphWrapper>
-                            <Paragraph>Hi, I'm Michael Hungbo.</Paragraph>
+                            <Paragraph
+                                data-aos="fade-up"
+                                data-aos-duration="2000"
+                            >
+                                Hi, I'm Michael Hungbo.
+                            </Paragraph>
                         </ParagraphWrapper>
                         <RoleWrapper>
-                            <Role>
+                            <Role
+                                data-aos="fade-up"
+                                data-aos-duration="2000"
+                                data-aos-delay="2000"
+                            >
                                 Full-stack Software Developer. Technical Writer.
                             </Role>
                         </RoleWrapper>
-                        <AboutWrapper>
-                            <AboutParagraph>
-                                Hey there! I'm a full-stack software developer
-                                from Lagos, Nigeria with 2+ years of experience.
-                                Over the years, I have built exquisite and
-                                innovative applications on the web using modern
-                                tools and best practices. I'm open to
-                                opportunities in web and app development and
-                                technical writing.
-                            </AboutParagraph>
-                        </AboutWrapper>
                     </Banner>
-                    <ResumeWrapper>
-                        <Resume href="https://www.dropbox.com/s/poywv8wdnivawlm/Michael%20Hungbo%20Technical%20Writer%20CV.pdf?dl=0">
-                            Resume 📰
+                    <ResumeWrapper
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay="3000"
+                    >
+                        <Resume href="https://www.dropbox.com/s/qb9ltoqtikl36q8/Michael-Hungbo-Tech-Writer-resume-1.pdf?dl=0">
+                            Download Résumé 📰
                         </Resume>
                     </ResumeWrapper>
                 </BannerWrapper>

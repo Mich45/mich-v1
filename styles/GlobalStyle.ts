@@ -46,6 +46,11 @@ ${fonts}
      font-family: "Space Grotesk", sans-serif, "Segoe UI",  system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+body[data-aos-delay='4000'] [data-aos],
+[data-aos][data-aos][data-aos-delay='4000'] {
+  transition-delay: 4000ms;
+}
+
 a {
     color: inherit;
     text-decoration: none;

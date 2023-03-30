@@ -6,6 +6,7 @@ import { colors, device } from '../../styles/themes';
 const Menu = styled.span`
     height: 3px;
     width: 20px;
+    border-radius: 3px;
     position: relative;
     background: ${colors.gray.darkGray};
     margin-block: 2px;
@@ -17,6 +18,7 @@ const Menu = styled.span`
         top: 5px;
         height: 3px;
         width: 20px;
+        border-radius: 3px;
         background: ${colors.gray.darkGray};
     }
 
@@ -27,6 +29,7 @@ const Menu = styled.span`
         top: -5px;
         height: 3px;
         width: 20px;
+        border-radius: 3px;
         background: ${colors.gray.darkGray};
     }
 `;
