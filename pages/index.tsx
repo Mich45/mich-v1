@@ -239,7 +239,7 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos-delay="3000"
                     >
                         <Resume href="https://www.dropbox.com/s/qb9ltoqtikl36q8/Michael-Hungbo-Tech-Writer-resume-1.pdf?dl=0">
-                            Download Résumé 📰
+                            See my résumé 📰
                         </Resume>
                     </ResumeWrapper>
                 </BannerWrapper>

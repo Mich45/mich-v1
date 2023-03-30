@@ -10,9 +10,11 @@ const Wrapper = styled.div`
     left: 0;
     top: 0;
     z-index: 1;
-    background-color: #060403;
+    background-color: ##06040385;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transform: translateX(-500px);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-out;
 `;
 
 const LinkWrapper = styled.div`
