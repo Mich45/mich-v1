@@ -28,16 +28,16 @@ const About = () => {
                 <Right>
                     <p>
                         {' '}
-                        I'm Michael Hungbo, a versatile professional with a
-                        passion for technology, genetics, and effective
-                        communication. As a technical writer, I excel at
-                        translating complex conceptsinto accessible language,
-                        ensuring that users and developers can easily understand
-                        and implement software solutions
+                        I'm a versatile professional with a passion for
+                        technology, genetics, and effective communication. As a
+                        technical writer, I excel at translating complex
+                        conceptsinto accessible language, ensuring that users
+                        and developers can easily understand and implement
+                        software solutions
                     </p>
                     <br />
                     <p>
-                        n addition to my proficiency as a technical writer, I am
+                        In addition to my expertise as a technical writer, I am
                         also a full-stack developer. Armed with a strong
                         foundation in multiple programming languages,
                         frameworks, and databases, I enjoy building robust and

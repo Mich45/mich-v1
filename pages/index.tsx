@@ -183,7 +183,7 @@ const AboutSection = styled.section`
 
 const ToolsSection = styled.section`
     width: 100%;
-    margin: 200px auto 0 auto;
+    margin: 150px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
@@ -193,7 +193,7 @@ const ToolsSection = styled.section`
 const ProjectSection = styled.section`
     width: 100%;
     height: 100%;
-    margin: 200px auto 0 auto;
+    margin: 150px auto 0 auto;
     scroll-snap-align: start;
 
     @media ${device.laptop} {
@@ -206,7 +206,7 @@ const ContactSection = styled.section`
     background-size: cover;
     width: 100%;
     padding-inline: 20px;
-    margin: 200px auto 0 auto;
+    margin: 150px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
