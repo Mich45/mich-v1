@@ -10,38 +10,6 @@ const Wrapper = styled.section`
     place-items: center;
 `;
 
-const Heading = styled.h1`
-    font-size: 30px;
-
-    @media ${device.laptop} {
-        font-size: 40px;
-
-        &:: before {
-            content: '';
-            height: 3px;
-            width: 100px;
-            left: -120px;
-            background: #060f36;
-            display: flex;
-            position: absolute;
-            bottom: 20px;
-            border-radius: 4px;
-        }
-
-        &:: after {
-            content: '';
-            height: 3px;
-            width: 100px;
-            right: -120px;
-            background: #060f36;
-            display: flex;
-            position: absolute;
-            bottom: 20px;
-            border-radius: 4px;
-        }
-    }
-`;
-
 const ListWrapper = styled.div`
     width: 100%;
     margin: 0 auto;
@@ -51,7 +19,7 @@ const ListWrapper = styled.div`
     flex-direction: column;
 
     @media ${device.laptop} {
-        width: 85%;
+        width: 100%;
     }
 `;
 
@@ -61,7 +29,6 @@ const CardWrapper = styled.div`
     border: 1px solid #bdbdbd;
     border-radius: 5px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
-    width: 90%;
     margin: 0 auto;
 `;
 
@@ -224,7 +191,6 @@ const projectsList = [
 const Projects = () => {
     return (
         <Wrapper>
-            <Heading>Stuff I've built</Heading>
             <ListWrapper>
                 {projectsList.map((project, key) => {
                     const img = project.image;

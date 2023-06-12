@@ -1,5 +1,7 @@
 import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
+import Image from 'next/image';
+import Human from '../public/assets/human-svg.svg';
 import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
@@ -7,6 +9,7 @@ import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Tools from '../components/Tools';
 import Contact from '../components/Contact';
+import About from '../components/About';
 import Writing from '../components/Writing';
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
@@ -168,15 +171,34 @@ const Resume = styled.a`
         font-weight: bold;
     }
 `;
+const AboutSection = styled.section`
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    @media ${device.laptop} {
+        width: 80%;
+    }
+`;
 
 const ToolsSection = styled.section`
     width: 100%;
+    margin: 200px auto 0 auto;
+
+    @media ${device.laptop} {
+        width: 80%;
+    }
 `;
 
 const ProjectSection = styled.section`
     width: 100%;
     height: 100%;
+    margin: 200px auto 0 auto;
     scroll-snap-align: start;
+
+    @media ${device.laptop} {
+        width: 80%;
+    }
 `;
 
 const ContactSection = styled.section`
@@ -184,7 +206,7 @@ const ContactSection = styled.section`
     background-size: cover;
     width: 100%;
     padding-inline: 20px;
-    margin: 0 auto;
+    margin: 200px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
@@ -242,14 +264,27 @@ const Home: NextPage = (): JSX.Element => {
                             See my résumé 📰
                         </Resume>
                     </ResumeWrapper>
+                    {/* <div>
+                        <Image priority
+                        src={Human}
+                        alt="A 3D image of a person"/>
+                    </div> */}
                 </BannerWrapper>
 
+                <AboutSection>
+                    <h1>About</h1>
+                    <About />
+                </AboutSection>
+
                 <ProjectSection id="projects">
+                    <h1>Projects</h1>
                     <Suspense fallback={`Loading Projects...`}>
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
+
                 <ToolsSection>
+                    <h1>Skillset</h1>
                     <Tools />
                 </ToolsSection>
 

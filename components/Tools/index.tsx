@@ -201,9 +201,6 @@ const Tools = (): JSX.Element => {
 
     return (
         <>
-            <Header variants={container} initial="hidden" animate="reveal">
-                <motion.h1 className="header">My toolkit</motion.h1>
-            </Header>
             <Wrapper variants={container} initial="hidden" animate="reveal">
                 {TOOLS.map((tool, i) => {
                     return (
