@@ -242,7 +242,13 @@ const Home: NextPage = (): JSX.Element => {
                                 data-aos="fade-up"
                                 data-aos-duration="2000"
                             >
-                                Hi, I'm Michael Hungbo.
+                                Hi!{' '}
+                                <span
+                                    style={{ fontFamily: 'Apple Color Emoji' }}
+                                >
+                                    👀
+                                </span>{' '}
+                                I'm Michael Hungbo.
                             </Paragraph>
                         </ParagraphWrapper>
                         <RoleWrapper>

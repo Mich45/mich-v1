@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
+import Michael from '../../public/assets/michael-min.jpg';
 
 const AboutWrapper = styled.section`
     width: 100%;
@@ -10,7 +12,7 @@ const AboutWrapper = styled.section`
 
 const Left = styled.div`
     width: 30%;
-    background: red;
+    border: 4px solid white;
     height: 100%;
 `;
 
@@ -24,7 +26,14 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
-                <Left>my photo goes here</Left>
+                <Left>
+                    <Image
+                        src={Michael}
+                        width={700}
+                        height={950}
+                        style={{ display: 'block' }}
+                    />
+                </Left>
                 <Right>
                     <p>
                         {' '}
