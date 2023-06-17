@@ -15,7 +15,7 @@ ${fonts}
   }
 
   ::selection {
-    background-color: #00dcff;
+    background-color: ${colors.gray.darkGray};;
   }
 
 ::-webkit-scrollbar {
