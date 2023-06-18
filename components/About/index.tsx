@@ -2,12 +2,18 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Michael from '../../public/assets/michael-min.jpg';
+import { colors, device } from '../../styles/themes';
 
 const AboutWrapper = styled.section`
     width: 100%;
     display: flex;
+    flex-direction: column;
     place-items: center;
     height: 100%;
+
+    @media ${device.laptop} {
+        flex-direction: row;
+    }
 `;
 
 const Left = styled.div`
