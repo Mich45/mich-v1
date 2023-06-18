@@ -17,16 +17,24 @@ const AboutWrapper = styled.section`
 `;
 
 const Left = styled.div`
-    width: 30%;
+    width: 50%;
     border: 4px solid white;
     height: 100%;
     display: inherit;
+
+    @media ${device.laptop} {
+        width: 30%;
+    }
 `;
 
 const Right = styled.div`
-    width: 70%;
-    padding: 0px 20px;
+    padding: 0px 35px;
     height: 100%;
+
+    @media ${device.laptop} {
+        width: 100%;
+        padding: 0px 20px;
+    }
 `;
 
 const About = () => {

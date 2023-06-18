@@ -39,13 +39,7 @@ const NavItem = styled.li`
 const Anchor = styled.a`
     text-decoration: none;
     font-weight: bold;
-    color: white;
     vertical-align: center;
-    transition: 0.2s ease-out;
-
-    :hover {
-        color: ${colors.gray.lightGray};
-    }
 `;
 
 const SocialWrapper = styled.div`

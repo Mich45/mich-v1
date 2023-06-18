@@ -52,6 +52,14 @@ const BannerWrapper = styled.div`
     }
 `;
 
+const SectionHeading = styled.h1`
+    padding-left: 25px;
+
+    @media ${device.laptop} {
+        padding-left: 0;
+    }
+`;
+
 const Banner = styled.div`
     display: flex;
     flex-direction: column;
@@ -279,19 +287,19 @@ const Home: NextPage = (): JSX.Element => {
                 </BannerWrapper>
 
                 <AboutSection>
-                    <h1>About</h1>
+                    <SectionHeading>About</SectionHeading>
                     <About />
                 </AboutSection>
 
                 <ProjectSection id="projects">
-                    <h1>Projects</h1>
+                    <SectionHeading>Projects</SectionHeading>
                     <Suspense fallback={`Loading Projects...`}>
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
 
                 <ToolsSection>
-                    <h1>Skillset</h1>
+                    <SectionHeading>Skillset</SectionHeading>
                     <Tools />
                 </ToolsSection>
 
