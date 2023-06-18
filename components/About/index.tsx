@@ -14,6 +14,7 @@ const Left = styled.div`
     width: 30%;
     border: 4px solid white;
     height: 100%;
+    display: inherit;
 `;
 
 const Right = styled.div`
@@ -31,6 +32,7 @@ const About = () => {
                         src={Michael}
                         width={700}
                         height={950}
+                        priority={true}
                         style={{ display: 'block' }}
                     />
                 </Left>

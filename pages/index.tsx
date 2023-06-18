@@ -39,8 +39,9 @@ const MainContent = styled.section`
 
 const BannerWrapper = styled.div`
     display: flex;
-    margin: 70px auto 0 auto;
-    height: 100vh;
+    margin: 150px auto 0 auto;
+    padding-top: 50px;
+    height: 80vh;
     width: 100%;
     place-items: center;
     position: relative;
