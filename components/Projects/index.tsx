@@ -34,7 +34,7 @@ const CardWrapper = styled.div`
 
 const Card = styled.div`
     height: 100%;
-    width: 100%;
+    width: 75vw;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -140,7 +140,6 @@ padding: 5px 20px 5px 0;
         display: flex;
         place-items: center;
         margin: 0;
-        color: black;
         text-decoration: underline;
     }
 
@@ -172,8 +171,7 @@ padding: 5px 20px 5px 0;
 const projectsList = [
     {
         image: '/assets/portfolio.png',
-        description:
-            'My portfolio website built with react My portfolio website built with react  and nad next with mdx. The wall of the woekd and make it oerlk.',
+        description: 'My portfolio website built with React, Next.js and MDX',
         stack: ['react', 'next.js'],
         link: 'YOU ARE HERE!',
         source: 'https://github.com',
@@ -181,8 +179,8 @@ const projectsList = [
     {
         image: '/assets/gdsc.jpeg',
         description:
-            'A project built for school My portfolio website built with react lorem23 loremsee stht thee you will see thr wall of the woekd and make it oerlk.',
-        stack: ['react', 'redux', 'node.js'],
+            'A project built for the Google Developer Students Club in my school',
+        stack: ['react', 'redux', 'node.js', 'mongodb'],
         link: 'https://google.com',
         source: 'https://github.com',
     },
@@ -241,7 +239,6 @@ const Projects = () => {
                                             </div>
                                         </div>
                                         <div className="detail list">
-                                            <h5>VIEW IT</h5>
                                             <a
                                                 href={
                                                     project.link.includes(
@@ -255,9 +252,8 @@ const Projects = () => {
                                             </a>
                                         </div>
                                         <div className="detail list">
-                                            <h5>VIEW IT ON GITHUB </h5>
                                             <a href={project.source}>
-                                                {project.source}
+                                                VIEW ON GITHUB
                                             </a>
                                         </div>
                                     </Details>
