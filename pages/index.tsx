@@ -76,10 +76,11 @@ const ParagraphWrapper = styled.div`
 `;
 
 const Paragraph = styled.p`
-    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+    font-family: 'Space Grotesk', 'Segoe UI', 'Apple Color Emoji', sans-serif;
     font-size: 48px;
     font-weight: 600;
     margin: 0;
+    font-style: normal;
     background: linear-gradient(${colors.green.greenPrimary}, rgb(0 219 128));
     -webkit-text-fill-color: transparent;
     text-fill-color: transparent;
@@ -227,7 +228,8 @@ const Home: NextPage = (): JSX.Element => {
         <>
             <Head>
                 <title>
-                    Michael Hungbo - Software Developer & Technical Writer
+                    Michael Hungbo - Geneticist, Software Developer & Technical
+                    Writer
                 </title>
                 <meta
                     name="viewport"
@@ -236,11 +238,11 @@ const Home: NextPage = (): JSX.Element => {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Hi there! I'm Michael Hungbo. A full-stack software developer and technical writer. Welcome to my personal portfolio website."
+                    content="Hey! I'm Michael Hungbo. A geneticist, software developer and technical writer. Welcome to my home on the internet."
                 />
                 <meta
                     name="og:title"
-                    content="Michael Hungbo, Full-stack Software Developer & Technical Writer"
+                    content="Geneticist, Software Developer & Technical Writer"
                 />
             </Head>
             <MainContent>
@@ -253,9 +255,11 @@ const Home: NextPage = (): JSX.Element => {
                             >
                                 Hi!{' '}
                                 <span
-                                    style={{ fontFamily: 'Apple Color Emoji' }}
+                                    style={{
+                                        WebkitTextFillColor: 'powderblue',
+                                    }}
                                 >
-                                    👀
+                                    👋🏾
                                 </span>{' '}
                                 I'm Michael Hungbo.
                             </Paragraph>
@@ -266,7 +270,7 @@ const Home: NextPage = (): JSX.Element => {
                                 data-aos-duration="2000"
                                 data-aos-delay="2000"
                             >
-                                Full-stack Software Developer. Technical Writer.
+                                Geneticist. Software Developer. Tech Writer.
                             </Role>
                         </RoleWrapper>
                     </Banner>
@@ -299,7 +303,9 @@ const Home: NextPage = (): JSX.Element => {
                 </ProjectSection>
 
                 <ToolsSection>
-                    <SectionHeading>Skillset</SectionHeading>
+                    <SectionHeading>
+                        You can talk to me about any of these...
+                    </SectionHeading>
                     <Tools />
                 </ToolsSection>
 

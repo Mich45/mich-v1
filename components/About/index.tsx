@@ -53,35 +53,34 @@ const About = () => {
                 <Right>
                     <p>
                         {' '}
-                        I'm a versatile professional with a passion for
-                        technology, genetics, and effective communication. As a
-                        technical writer, I excel at translating complex
-                        conceptsinto accessible language, ensuring that users
-                        and developers can easily understand and implement
-                        software solutions
-                    </p>
-                    <br />
-                    <p>
-                        In addition to my expertise as a technical writer, I am
-                        also a full-stack developer. Armed with a strong
-                        foundation in multiple programming languages,
-                        frameworks, and databases, I enjoy building robust and
-                        user-friendly web applications. Whether it's crafting
-                        responsive front-end interfaces or developing scalable
-                        back-end architectures, I thrive in the dynamic world of
-                        software development.
+                        Hey! I'm glad you're here. 🤝🏾 I wear a couple of hats
+                        when it comes to my career. Not to bore you with the
+                        details, here's a quick rundown of what I do.
                     </p>
 
-                    <br />
                     <p>
-                        Alongside my passion for technology, I have a background
-                        in genetics. I hold a degree in Genetics and have
-                        conducted extensive research in the field. The
-                        intersection of technology and genetics is a fascinating
-                        space for me, and I'm always looking for ways to
-                        leverage my technical and scientific knowledge to
-                        contribute to advancements in genetic research and
-                        healthcare.
+                        Academic-wise, I'm in my penultimate year, pursuing a
+                        degree in Animal Breeding and Genetics - a result of my
+                        passion for science and biology. Feel free to chat with
+                        me about diversity and advancements in genetic research!
+                    </p>
+
+                    <p>
+                        On the technical side of things, I'm a fervent
+                        JavaScript developer and a rookie Python developer. I'm
+                        particularly interested in web development with React
+                        and Node.js, as well as data science with Python. I also
+                        happen to have a knack for writing, specifically
+                        technical writing - I have not the same genes as Mark
+                        Twain. 😆
+                    </p>
+
+                    <p>
+                        And when I'm not busy with school activities or CODM,
+                        you can always find me on the internet, contributing to
+                        open-source projects. Got a project that matches my
+                        profile? Feel free to shoot me a DM. I'm happy to help.
+                        :){' '}
                     </p>
                 </Right>
             </AboutWrapper>
