@@ -11,6 +11,7 @@ import Tools from '../components/Tools';
 import Contact from '../components/Contact';
 import About from '../components/About';
 import Writing from '../components/Writing';
+import Meteors from '../components/Meteors';
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
     suspense: true,
@@ -246,9 +247,11 @@ const Home: NextPage = (): JSX.Element => {
                 />
             </Head>
             <MainContent>
+                <Meteors />
                 <BannerWrapper>
                     <Banner>
                         <ParagraphWrapper>
+                            <Meteors />
                             <Paragraph
                                 data-aos="fade-up"
                                 data-aos-duration="2000"
@@ -265,6 +268,7 @@ const Home: NextPage = (): JSX.Element => {
                             </Paragraph>
                         </ParagraphWrapper>
                         <RoleWrapper>
+                            <Meteors />
                             <Role
                                 data-aos="fade-up"
                                 data-aos-duration="2000"
@@ -279,6 +283,8 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos-duration="2000"
                         data-aos-delay="3000"
                     >
+                        <Meteors />
+
                         <Resume href="https://www.dropbox.com/s/qb9ltoqtikl36q8/Michael-Hungbo-Tech-Writer-resume-1.pdf?dl=0">
                             See my résumé 📰
                         </Resume>

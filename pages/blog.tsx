@@ -9,6 +9,7 @@ import Preview from '../components/Preview';
 import Writing from '../components/Writing';
 import { colors, shadows, device } from '../styles/themes';
 import * as api from '../lib/api';
+import Meteors from '../components/Meteors';
 
 const MainWrapper = styled.main`
     width: 100%;
