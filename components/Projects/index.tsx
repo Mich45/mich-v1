@@ -174,15 +174,15 @@ const projectsList = [
         description: 'My portfolio website built with React, Next.js and MDX',
         stack: ['react', 'next.js'],
         link: 'YOU ARE HERE!',
-        source: 'https://github.com',
+        source: 'https://hungbo.dev',
     },
     {
-        image: '/assets/gdsc.jpeg',
+        image: '/assets/toolkitz.png',
         description:
-            'A project built for the Google Developer Students Club in my school',
-        stack: ['react', 'redux', 'node.js', 'mongodb'],
-        link: 'https://google.com',
-        source: 'https://github.com',
+            'A curated list of useful resources for developers and non-developers',
+        stack: ['react', 'next.js', 'mongodb'],
+        link: 'https://toolkitz.vercel.app/',
+        source: 'https://github.com/Mich45/toolkit',
     },
 ];
 

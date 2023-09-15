@@ -253,7 +253,7 @@ const Home: NextPage = (): JSX.Element => {
                         <ParagraphWrapper>
                             <Meteors />
                             <Paragraph
-                                data-aos="fade-up"
+                                data-aos="zoom-in"
                                 data-aos-duration="2000"
                             >
                                 Hi!{' '}
