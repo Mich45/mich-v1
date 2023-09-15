@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         AOS.init({
             ease: 'ease-out-cubic',
             duration: 1000,
+            once: true,
         });
     }, []);
 
