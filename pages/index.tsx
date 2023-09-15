@@ -285,7 +285,10 @@ const Home: NextPage = (): JSX.Element => {
                     >
                         <Meteors />
 
-                        <Resume href="https://www.dropbox.com/s/qb9ltoqtikl36q8/Michael-Hungbo-Tech-Writer-resume-1.pdf?dl=0">
+                        <Resume
+                            target="_blank"
+                            href="https://docs.google.com/document/d/1Puzs2I0emQXrAo9WJP9ggvIoX2EMQkGQ8kcznwaGSwQ/edit?usp=sharing"
+                        >
                             See my résumé 📰
                         </Resume>
                     </ResumeWrapper>

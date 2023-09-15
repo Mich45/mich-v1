@@ -266,7 +266,13 @@ const Contact = () => {
                             data-aos-duration="1000"
                             data-aos-delay="1000"
                         />
-                        <Submit type="submit">Shoot ⚡</Submit>
+                        <Submit
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"
+                            type="submit"
+                        >
+                            Shoot ⚡
+                        </Submit>
                     </Form>
                 </FormWrapper>
             </ContactWrapper>
