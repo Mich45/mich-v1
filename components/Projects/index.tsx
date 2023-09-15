@@ -201,6 +201,7 @@ const Projects = () => {
                             <Card>
                                 <ImageContainer className="img-container">
                                     <Link
+                                        target="_blank"
                                         href={
                                             project.link.includes('HERE')
                                                 ? '/'
@@ -244,6 +245,7 @@ const Projects = () => {
                                         </div>
                                         <div className="detail list">
                                             <a
+                                                target="_blank"
                                                 href={
                                                     project.link.includes(
                                                         'HERE'
@@ -251,12 +253,17 @@ const Projects = () => {
                                                         ? '/'
                                                         : project.link
                                                 }
+                                                rel="noreferrer"
                                             >
                                                 {project.link}
                                             </a>
                                         </div>
                                         <div className="detail list">
-                                            <a href={project.source}>
+                                            <a
+                                                href={project.source}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                            >
                                                 VIEW ON GITHUB
                                             </a>
                                         </div>
