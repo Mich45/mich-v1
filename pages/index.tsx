@@ -297,19 +297,32 @@ const Home: NextPage = (): JSX.Element => {
                 </BannerWrapper>
 
                 <AboutSection>
-                    <SectionHeading>About</SectionHeading>
+                    <SectionHeading
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
+                        About
+                    </SectionHeading>
                     <About />
                 </AboutSection>
 
                 <ProjectSection id="projects">
-                    <SectionHeading>Projects</SectionHeading>
+                    <SectionHeading
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
+                        Projects
+                    </SectionHeading>
                     <Suspense fallback={`Loading Projects...`}>
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
 
                 <ToolsSection>
-                    <SectionHeading>
+                    <SectionHeading
+                        data-aos="fade-right"
+                        data-aos-duration="1000"
+                    >
                         You can talk to me about any of these...
                     </SectionHeading>
                     <Tools />

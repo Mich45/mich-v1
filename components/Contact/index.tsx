@@ -236,6 +236,8 @@ const Contact = () => {
                             autoComplete="name"
                             value={subject}
                             onChange={(e) => setSubject(e.target.value)}
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"
                         />
 
                         <label htmlFor="email">Email</label>
@@ -247,6 +249,9 @@ const Contact = () => {
                             autoComplete="name"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"
+                            data-aos-delay="1000"
                         />
 
                         <label htmlFor="message">Message</label>
@@ -257,6 +262,9 @@ const Contact = () => {
                             autoComplete="name"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}
+                            data-aos="zoom-in"
+                            data-aos-duration="1000"
+                            data-aos-delay="1000"
                         />
                         <Submit type="submit">Shoot ⚡</Submit>
                     </Form>

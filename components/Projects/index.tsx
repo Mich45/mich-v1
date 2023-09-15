@@ -26,7 +26,7 @@ const ListWrapper = styled.div`
 const CardWrapper = styled.div`
     height: 324px;
     min-width: 1px;
-    border: 1px solid #bdbdbd;
+    border: 1px solid rgb(43 43 43);
     border-radius: 5px;
     box-shadow: 0 5px 10px rgb(0 0 0 / 12%);
     margin: 0 auto;
@@ -152,7 +152,7 @@ padding: 5px 20px 5px 0;
         padding: 0;
 
         .stack-item{
-            background: #f5605e;
+            background: #151b24;
             margin-right: 10px;
             padding: 7px;
             border-radius: 4px;
@@ -193,7 +193,11 @@ const Projects = () => {
                 {projectsList.map((project, key) => {
                     const img = project.image;
                     return (
-                        <CardWrapper key={key}>
+                        <CardWrapper
+                            key={key}
+                            data-aos="fade-up"
+                            data-aos-duration="2000"
+                        >
                             <Card>
                                 <ImageContainer className="img-container">
                                     <Link

@@ -41,7 +41,7 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
-                <Left>
+                <Left data-aos="zoom-in-down" data-aos-duration="2000">
                     <Image
                         src={Michael}
                         width={700}
@@ -51,21 +51,28 @@ const About = () => {
                     />
                 </Left>
                 <Right>
-                    <p>
-                        {' '}
+                    <p data-aos="fade-up" data-aos-duration="2000">
                         Hey! I'm glad you're here. 🤝🏾 I wear a couple of hats
                         when it comes to my career. Not to bore you with the
                         details, here's a quick rundown of what I do.
                     </p>
 
-                    <p>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay="1000"
+                    >
                         Academic-wise, I'm in my penultimate year, pursuing a
                         degree in Animal Breeding and Genetics - a result of my
                         passion for science and biology. Feel free to chat with
                         me about diversity and advancements in genetic research!
                     </p>
 
-                    <p>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay="2000"
+                    >
                         On the technical side of things, I'm a fervent
                         JavaScript developer and a rookie Python developer. I'm
                         particularly interested in web development with React
@@ -75,7 +82,11 @@ const About = () => {
                         Twain. 😆
                     </p>
 
-                    <p>
+                    <p
+                        data-aos="fade-up"
+                        data-aos-duration="2000"
+                        data-aos-delay="3000"
+                    >
                         And when I'm not busy with school activities or CODM,
                         you can always find me on the internet, contributing to
                         open-source projects. Got a project that matches my
