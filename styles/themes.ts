@@ -9,7 +9,7 @@ export const colors = {
     gray: {
         grayPrimary: '#283344',
         darkGray: 'rgb(46 66 94)',
-        lightGray: 'rgba(107, 114, 128, 1)',
+        lightGray: 'rgb(140 150 169)',
     },
     blue: {
         defaultBlue: '#5156f7',

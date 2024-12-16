@@ -10,6 +10,7 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     place-items: center;
     height: 100%;
+    margin-top: 65px;
 
     @media ${device.laptop} {
         flex-direction: row;
@@ -21,6 +22,8 @@ const Left = styled.div`
     border: 4px solid white;
     height: 100%;
     display: inherit;
+    position: relative;
+    height: 375px;
 
     @media ${device.laptop} {
         width: 30%;
@@ -30,10 +33,12 @@ const Left = styled.div`
 const Right = styled.div`
     padding: 0px 35px;
     height: 100%;
+    text-align: justify;
 
     @media ${device.laptop} {
         width: 100%;
         padding: 0px 20px;
+        
     }
 `;
 
@@ -41,38 +46,38 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
-                <Left data-aos="zoom-in-down" data-aos-duration="2000">
+                {/* data-aos="zoom-in-down" data-aos-duration="2000" */}
+                <Left> 
                     <Image
                         src={Michael}
-                        width={700}
-                        height={950}
+                        // width={700}
+                        // height={950}
                         priority={true}
-                        style={{ display: 'block' }}
+                        alt='Picture of Michael Hungbo'
+                        style={{ display: 'block', objectFit: 'cover' }}
+                        fill = {true}
                     />
                 </Left>
                 <Right>
-                    <p data-aos="fade-up" data-aos-duration="2000">
+                    {/* data-aos="fade-up" data-aos-duration="2000" */}
+                    <p>
                         Hey! I'm glad you're here. 🤝🏾 I wear a couple of hats
                         when it comes to my career. Not to bore you with the
                         details, here's a quick rundown of what I do.
                     </p>
-
-                    <p
-                        data-aos="fade-up"
+                    {/* data-aos="fade-up"
                         data-aos-duration="2000"
-                        data-aos-delay="1000"
-                    >
+                        data-aos-delay="1000" */}
+                    <p>
                         Academic-wise, I'm in my penultimate year, pursuing a
                         degree in Animal Breeding and Genetics - a result of my
                         passion for science and biology. Feel free to chat with
                         me about diversity and advancements in genetic research!
                     </p>
-
-                    <p
-                        data-aos="fade-up"
+                    {/* data-aos="fade-up"
                         data-aos-duration="2000"
-                        data-aos-delay="2000"
-                    >
+                        data-aos-delay="2000" */}
+                    <p>
                         On the technical side of things, I'm a fervent
                         JavaScript developer and a rookie Python developer. I'm
                         particularly interested in web development with React

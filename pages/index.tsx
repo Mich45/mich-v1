@@ -14,7 +14,6 @@ import Writing from '../components/Writing';
 import Meteors from '../components/Meteors';
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
-    suspense: true,
 });
 
 const slideIn = keyframes`
@@ -248,7 +247,7 @@ const Home: NextPage = (): JSX.Element => {
             </Head>
             <MainContent>
                 <Meteors />
-                <BannerWrapper>
+                {/* <BannerWrapper>
                     <Banner>
                         <ParagraphWrapper>
                             <Meteors />
@@ -292,19 +291,14 @@ const Home: NextPage = (): JSX.Element => {
                             See my résumé 📰
                         </Resume>
                     </ResumeWrapper>
-                    {/* <div>
-                        <Image priority
-                        src={Human}
-                        alt="A 3D image of a person"/>
-                    </div> */}
-                </BannerWrapper>
+                </BannerWrapper> */}
 
                 <AboutSection>
                     <SectionHeading
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        About
+                        Hi, I am Michael Hungbo
                     </SectionHeading>
                     <About />
                 </AboutSection>

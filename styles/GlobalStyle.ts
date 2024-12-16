@@ -43,7 +43,7 @@ ${fonts}
      margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-     font-family: "Space Grotesk", sans-serif, "Segoe UI",  system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     font-family: "Inter", sans-serif, "Segoe UI",  system-ui, -apple-system, blinkmacsystemfont, helvetica, arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 body[data-aos-delay='4000'] [data-aos],
@@ -55,6 +55,7 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
 
 h1{
     font-size: 40px;
