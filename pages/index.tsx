@@ -30,6 +30,16 @@ const slideIn = keyframes`
 }
 `;
 
+const gradient = keyframes`
+0% {
+background-position: 200% 50%
+}
+
+100% {
+background-position: 0% 50%
+}
+`;
+
 const MainContent = styled.section`
     width: 100%;
     height: 100%;
@@ -138,49 +148,6 @@ const AboutParagraph = styled.p`
     }
 `;
 
-const ResumeWrapper = styled.div`
-    position: relative;
-    display: flex;
-    margin-block: 0;
-    height: auto;
-    width: 100%;
-    place-items: center;
-    place-content: center;
-    bottom: 0%;
-    padding: 30px;
-
-    @media ${device.laptop} {
-        padding: 0;
-    }
-`;
-
-const Resume = styled.a`
-    width: auto;
-    height: 36px;
-    outline: none;
-    padding-inline: 10px;
-    border-radius: 4px;
-    background-image: linear-gradient(
-        ${colors.green.greenPrimary},
-        rgb(0 219 128)
-    );
-    box-shadow: rgb(14 139 93) 0px 4px;
-    place-items: center;
-    place-content: center;
-    display: flex;
-    color: black;
-    font-size: 14px;
-    margin: 0;
-    text-decoration: none;
-    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-    :hover {
-        cursor: pointer;
-        background-image: #f34030;
-        box-shadow: none;
-        font-weight: bold;
-    }
-`;
 const AboutSection = styled.section`
     width: 100%;
     height: 100%;
@@ -188,6 +155,8 @@ const AboutSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
+        margin: 0 135px;
+
     }
 `;
 
@@ -209,6 +178,14 @@ const ProjectSection = styled.section`
     @media ${device.laptop} {
         width: 80%;
     }
+`;
+
+const Name = styled.span`
+ color: transparent;
+ background: linear-gradient(to right, rgb(86 222 173), rgb(45 235 187), rgb(23 149 123), rgb(97 225 151), rgb(94 235 168));
+ background-clip: text;
+ background-size: 200% auto;
+ animation: ${gradient} 3s linear infinite;
 `;
 
 const ContactSection = styled.section`
@@ -277,12 +254,12 @@ const Home: NextPage = (): JSX.Element => {
                             </Role>
                         </RoleWrapper>
                     </Banner>
+                    <Meteors />
                     <ResumeWrapper
                         data-aos="fade-up"
                         data-aos-duration="2000"
                         data-aos-delay="3000"
                     >
-                        <Meteors />
 
                         <Resume
                             target="_blank"
@@ -298,7 +275,7 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Hi, I am Michael Hungbo
+                        Hi, I am <Name>Michael Hungbo</Name>
                     </SectionHeading>
                     <About />
                 </AboutSection>
