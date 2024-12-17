@@ -20,7 +20,6 @@ const MainOverlay = styled.div`
         height: 100%;
         width: 100%;
         position: fixed;
-        background-image: url(${Noise.src});
         opacity: 0.05;
         background-repeat: repeat;
     }
@@ -30,7 +29,6 @@ const MainOverlay = styled.div`
         height: 100%;
         width: 100%;
         position: fixed;
-        background: ${colors.dark.bodyDark};
     }
 `;
 

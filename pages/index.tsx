@@ -182,9 +182,9 @@ const ProjectSection = styled.section`
 
 const Name = styled.span`
  color: transparent;
- background: linear-gradient(to right, rgb(86 222 173), rgb(45 235 187), rgb(23 149 123), rgb(97 225 151), rgb(94 235 168));
+ background: linear-gradient(to right, rgb(67 231 172), rgb(45 235 187), rgb(83 226 197), rgb(125 226 168), rgb(94 235 168));
  background-clip: text;
- background-size: 200% auto;
+ background-size: 225% auto;
  animation: ${gradient} 3s linear infinite;
 `;
 

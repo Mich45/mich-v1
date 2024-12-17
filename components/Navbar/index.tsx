@@ -8,10 +8,7 @@ import usePath from '../../hooks/usePath';
 const Navigation = styled.div`
     height: 40px;
     width: 100%;
-    position: fixed;
     top: 0px;
-    z-index: 1;
-    background: #040000;
     box-shadow: -6px -6px 4px 5px #6a717e;
 `;
 
@@ -89,11 +86,10 @@ const DropdownWrapper = styled.div`
 
 const Anchor = styled.a`
     text-decoration: none;
-    color: ${colors.gray.lightGray};
     transition: color 0.2s ease-in-out 0s;
 
     :hover {
-        color: ${colors.gray.darkGray};
+        color: ${colors.gray.lightGray};
     }
 `;
 

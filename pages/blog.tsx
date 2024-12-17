@@ -15,16 +15,6 @@ const MainWrapper = styled.main`
     width: 100%;
     height: auto;
     position: relative;
-    background: ${colors.dark.bodyDark};
-
-    .text {
-        margin-left: 20px;
-        color: ${colors.gray.lightGray};
-
-        @media ${device.laptop} {
-            margin-left: 127px;
-        }
-    }
 `;
 
 const Jumbotron = styled.section`
@@ -44,7 +34,7 @@ const Jumbotron = styled.section`
 
 const ArticlesWrapper = styled.div`
     width: 100%;
-    margin-top: 100px;
+    padding-inline: 134px;
 `;
 
 const SearchWrapper = styled.div`

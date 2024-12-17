@@ -7,26 +7,21 @@ import { colors, device } from '../../styles/themes';
 const Wrapper = styled.section`
     width: 100%;
     display: grid;
-    padding-block: 20px;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 15px;
-    place-items: center;
     margin: 0 auto;
 
     @media ${device.laptop} {
-        width: 85%;
         gap: 10px;
     }
 `;
 
 const Card = styled.div`
     width: 90%;
-    padding: 5px;
     height: auto;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    place-items: center;
     transition: 0.2s box-shadow ease-out;
 
     &:hover {
@@ -35,7 +30,6 @@ const Card = styled.div`
 
     @media ${device.laptop} {
         width: 350px;
-        padding: 15px;
     }
 `;
 

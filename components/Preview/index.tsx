@@ -20,18 +20,11 @@ type PreviewProps = {
 const Wrapper = styled.div`
     width: 90%;
     height: auto;
-    padding: 5px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    transition: 0.3s ease-out;
-    color: ${colors.gray.lightGray};
+    transition: 0.2s ease-out;
     margin: 10px 0;
-    background: #0e0d10;
-
-    :hover {
-        background: #1e1e1e;
-    }
 
     @media ${device.laptop} {
         width: 92.5%;
@@ -40,20 +33,19 @@ const Wrapper = styled.div`
 const TitleWrapper = styled.div`
     width: 100%;
     height: 30%;
-    padding: 10px;
 `;
 const Link = styled.a``;
 
 const Title = styled.h2`
     :hover {
         cursor: pointer;
+        color: ${colors.gray.lightGray}
     }
 `;
 
 const InfoWrapper = styled.div`
     width: 100%;
     height: 40%;
-    padding: 10px;
 `;
 
 const Excerpt = styled.p`
@@ -76,7 +68,6 @@ const TagsWrapper = styled.div`
 const Tag = styled.div`
     width: auto;
     height: 30px;
-    color: ${colors.gray.lightGray};
     border-radius: 4px;
     font-size: 14px;
     margin-inline: 0 5px;

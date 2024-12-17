@@ -11,7 +11,6 @@ const FooterWrapper = styled.footer`
     position: relative;
     place-content: center;
     place-items: center;
-    background: ${colors.dark.bodyDark};
 
     .linkwrapper {
         display: flex;

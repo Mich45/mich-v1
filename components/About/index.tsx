@@ -19,7 +19,7 @@ const AboutWrapper = styled.section`
 
 const Left = styled.div`
     width: 50%;
-    border: 4px solid white;
+    border: 4px solid ${colors.gray.darkGray};
     height: 100%;
     display: inherit;
     position: relative;
@@ -68,13 +68,11 @@ const Resume = styled.a`
         ${colors.green.greenPrimary},
         rgb(0 219 128)
     );
-    box-shadow: rgb(14 139 93) 0px 4px;
     place-items: center;
     place-content: center;
     display: flex;
     color: black;
     font-size: 14px;
-    font-weight: bold;
     margin: 0;
     text-decoration: none;
     transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
