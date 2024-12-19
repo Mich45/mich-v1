@@ -96,6 +96,7 @@ const About = () => {
                         // width={700}
                         // height={950}
                         priority={true}
+                        quality={100}
                         alt='Picture of Michael Hungbo'
                         style={{ display: 'block', objectFit: 'cover' }}
                         fill = {true}

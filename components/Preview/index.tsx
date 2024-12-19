@@ -24,14 +24,21 @@ const Wrapper = styled.div`
     flex-direction: column;
     border-radius: 4px;
     transition: 0.2s ease-out;
-    margin: 10px 0;
-    border: 2px solid #706a6a7d;
+    border: 2px solid #706a6a7d;;
+    margin: 20px auto;
     padding: 5px;
     background-color: #dcdfe191;
 }
 
     @media ${device.laptop} {
         width: 92.5%;
+        margin: 10px 0;
+
+    }
+
+    @media ${device.tablet}{
+        width: 92.5%;
+        margin: 10px 0;
     }
 `;
 const TitleWrapper = styled.div`

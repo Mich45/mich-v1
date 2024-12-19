@@ -6,13 +6,26 @@ import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
 
+    @media ${device.tablet} {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    @media ${device.desktop} {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
     @media ${device.laptop} {
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
     }
 `;
 

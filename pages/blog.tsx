@@ -34,7 +34,12 @@ const Jumbotron = styled.section`
 
 const ArticlesWrapper = styled.div`
     width: 100%;
-    padding-inline: 134px;
+    padding-inline: 20px;
+
+    @media ${device.laptop}{
+     padding-inline: 134px;
+    
+    }
 `;
 
 const SearchWrapper = styled.div`
@@ -47,13 +52,24 @@ const SearchWrapper = styled.div`
 const PostsWrapper = styled.div`
     width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 3fr);
+    displaay: flex;
+    flex-direction: column;
 
     @media ${device.laptop} {
         padding: 20px 135px;
-        // margin: 30px auto;
+        display: grid;
+        grid-template-columns: repeat(3, 3fr);
     }
+
+    @media ${device.tablet} {
+            padding: 20px 135px;
+
+    display: grid;
+    
+    grid-template-columns: repeat(3, 3fr);
+    
+    }
+    
 `;
 
 type BlogProps = {
