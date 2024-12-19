@@ -94,7 +94,6 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
         'https://dev.to/api/articles?username=heymich&per_page=6',
         fetcher
     );
-    console.log(data, error);
     // const otherPosts = posts.slice(0, posts.length - 1);
     return (
         <>
