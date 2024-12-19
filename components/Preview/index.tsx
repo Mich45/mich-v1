@@ -19,12 +19,16 @@ type PreviewProps = {
 
 const Wrapper = styled.div`
     width: 90%;
-    height: auto;
+    height: 215px;
     display: flex;
     flex-direction: column;
     border-radius: 4px;
     transition: 0.2s ease-out;
     margin: 10px 0;
+    border: 2px solid #706a6a7d;
+    padding: 5px;
+    background-color: #dcdfe191;
+}
 
     @media ${device.laptop} {
         width: 92.5%;
@@ -32,7 +36,7 @@ const Wrapper = styled.div`
 `;
 const TitleWrapper = styled.div`
     width: 100%;
-    height: 30%;
+    height: 70%;
 `;
 const Link = styled.a``;
 
@@ -45,7 +49,7 @@ const Title = styled.h2`
 
 const InfoWrapper = styled.div`
     width: 100%;
-    height: 40%;
+    height: 30%;
 `;
 
 const Excerpt = styled.p`
@@ -57,7 +61,6 @@ const Excerpt = styled.p`
 const TagsWrapper = styled.div`
     width: 100%;
     display: flex;
-    margin: 20px 0;
     align-items: center;
 
     span {

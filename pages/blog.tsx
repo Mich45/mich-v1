@@ -47,15 +47,11 @@ const SearchWrapper = styled.div`
 const PostsWrapper = styled.div`
     width: 100%;
     height: auto;
-    display: flex;
-    flex-direction: column;
-    place-content: center;
-    place-items: center;
-    padding: 0;
-    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
 
     @media ${device.laptop} {
-        padding: 20px 85px;
+        padding: 20px 135px;
         // margin: 30px auto;
     }
 `;

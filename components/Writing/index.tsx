@@ -7,7 +7,7 @@ import { colors, device } from '../../styles/themes';
 const Wrapper = styled.section`
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin: 0 auto;
 
