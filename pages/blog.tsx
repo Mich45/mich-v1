@@ -36,9 +36,8 @@ const ArticlesWrapper = styled.div`
     width: 100%;
     padding-inline: 20px;
 
-    @media ${device.laptop}{
-     padding-inline: 134px;
-    
+    @media ${device.laptop} {
+        padding-inline: 134px;
     }
 `;
 
@@ -58,18 +57,20 @@ const PostsWrapper = styled.div`
     @media ${device.laptop} {
         padding: 20px 135px;
         display: grid;
-        grid-template-columns: repeat(3, 3fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
     @media ${device.tablet} {
-            padding: 20px 135px;
-
-    display: grid;
-    
-    grid-template-columns: repeat(3, 3fr);
-    
+        padding-inline: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
     }
-    
+
+     @media ${device.desktop} {
+        padding: 20px 135px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 type BlogProps = {

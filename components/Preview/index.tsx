@@ -22,13 +22,17 @@ const Wrapper = styled.div`
     height: 215px;
     display: flex;
     flex-direction: column;
-    border-radius: 4px;
     transition: 0.2s ease-out;
-    border: 2px solid #706a6a7d;;
+    border: 1px solid #706a6a7d;;
     margin: 20px auto;
-    padding: 5px;
-    background-color: #dcdfe191;
+    padding: 0px 12px;
+    background-color: #f4f4f4;
 }
+
+    :hover {
+        cursor: pointer;
+        background-color: #e8e8e8;
+    }
 
     @media ${device.laptop} {
         width: 92.5%;
@@ -47,10 +51,9 @@ const TitleWrapper = styled.div`
 `;
 const Link = styled.a``;
 
-const Title = styled.h2`
+const Title = styled.h3`
     :hover {
         cursor: pointer;
-        color: ${colors.gray.lightGray}
     }
 `;
 
@@ -61,7 +64,6 @@ const InfoWrapper = styled.div`
 
 const Excerpt = styled.p`
     font-size: 14px;
-    font-weight: bold;
     margin-top: 0;
 `;
 
