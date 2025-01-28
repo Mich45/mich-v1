@@ -8,8 +8,7 @@ import usePath from '../../hooks/usePath';
 const Navigation = styled.div`
     height: 40px;
     width: 100%;
-    top: 0px;
-    box-shadow: -6px -6px 4px 5px #6a717e;
+    padding-top: 50px;
 `;
 
 const NavigationWrapper = styled.div`
@@ -53,8 +52,6 @@ const LogoWrapper = styled.div`
     width: 80px;
     height: 100%;
     display: flex;
-    place-content: center;
-    place-items: center;
 
     :hover {
         cursor: pointer;

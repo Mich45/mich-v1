@@ -15,7 +15,6 @@ const ContactWrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin-block: 20px;
-    color: ${colors.gray.darkGray};
 
     @media ${device.laptop} {
         flex-direction: row;
@@ -79,7 +78,7 @@ const Form = styled.form`
         height: 40px;
         border-radius: 4px;
         outline: none;
-        border: 2px solid ${colors.gray.darkGray};
+        border: 2px solid ${colors.slate.textSlate};
         padding: 10px;
         background: transparent;
         margin: 20px 0;
@@ -100,7 +99,7 @@ const Form = styled.form`
         padding: 10px;
         border-radius: 4px;
         outline: none;
-        border: 2px solid ${colors.gray.darkGray};
+        border: 2px solid ${colors.slate.textSlate};
         resize: none;
         margin: 20px 0;
         background: none;

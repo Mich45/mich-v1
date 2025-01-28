@@ -15,7 +15,7 @@ ${fonts}
   }
 
   ::selection {
-    background-color: ${colors.gray.darkGray};;
+    background-color: ${colors.gray.lightGray};;
   }
 
 ::-webkit-scrollbar {
@@ -38,7 +38,8 @@ ${fonts}
 
  body {
     text-rendering: optimizeLegibility;
-    color: ${colors.gray.darkGray};
+    background-color: ${colors.slate.darkSlate};
+    color: ${colors.slate.textSlate};
      padding: 0;
      margin: 0;
     -moz-osx-font-smoothing: grayscale;
@@ -61,7 +62,6 @@ h1{
     font-size: 40px;
     position: relative;
     font-family: 'Product Sans', "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: ${colors.gray.darkGray};
 }
 
 

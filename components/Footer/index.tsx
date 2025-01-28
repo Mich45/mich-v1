@@ -4,33 +4,32 @@ import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
 import { colors, device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
-    height: auto;
+    height: 750px;
     width: 100%;
     display: flex;
     flex-direction: column;
     position: relative;
-    place-content: center;
-    place-items: center;
+ 
+
 
     .linkwrapper {
         display: flex;
-        width: 60%;
-        place-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        bottom: 30px;
+        justify-content: space-between;
+        padding-inline: 40px;
     }
 
     .divider {
         height: 1px;
-        width: 90%;
-        background: ${colors.gray.darkGray};
+        width: 100%;
+        background: ${colors.slate.textSlate};
         border-radius: 4px;
         margin-top: 100px;
         margin-bottom: 20px;
 
         @media ${device.laptop} {
-            width: 80%;
             margin-top: 150px;
         }
     }
@@ -56,8 +55,6 @@ const Link = styled.a`
     border-radius: 50%;
     background: #d7cccc;
     display: flex;
-    place-content: center;
-    place-items: center;
     transition: transform 0.2s ease-out;
 
     &::after {
@@ -84,6 +81,9 @@ const Footer = (): JSX.Element => {
             <FooterWrapper>
                 <div className="divider" />
                 <div className="linkwrapper">
+                    <Paragraph>
+                        Copyright © {date} Michael Hungbo. All rights reserved.
+                    </Paragraph>
                     <SocialWrapper>
                         <Link
                             href="https://github.com/Mich45"
@@ -107,9 +107,6 @@ const Footer = (): JSX.Element => {
                             <LinkedInIcon />
                         </Link>
                     </SocialWrapper>
-                    <Paragraph>
-                        Copyright © {date} Michael Hungbo. All rights reserved.
-                    </Paragraph>
                 </div>
             </FooterWrapper>
         </>

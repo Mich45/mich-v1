@@ -6,6 +6,12 @@ export const colors = {
         white_pink2:
             'linear-gradient(to right, rgb(245, 246, 248), rgb(245 241 231), rgb(255, 253, 227));',
     },
+
+    slate: {
+        darkSlate: '#213c3c',
+        textSlate: '#8ba9a9'
+    },
+
     gray: {
         grayPrimary: '#283344',
         darkGray: 'rgb(46 66 94)',

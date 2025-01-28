@@ -64,10 +64,7 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(
-        ${colors.green.greenPrimary},
-        rgb(0 219 128)
-    );
+    background-image: linear-gradient(to right, rgb(67, 231, 172), rgb(45, 235, 187), rgb(83, 226, 197), rgb(46 232 186), rgb(66 231 173));
     place-items: center;
     place-content: center;
     display: flex;
