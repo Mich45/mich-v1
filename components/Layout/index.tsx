@@ -35,8 +35,8 @@ const MainOverlay = styled.div`
 const Layout = ({ children }: { children: React.ReactNode }) => {
     return (
         <>
-            <Navbar />
             <Main>
+            <Navbar />
                 <MainOverlay>{children}</MainOverlay>
             </Main>
             <Footer />

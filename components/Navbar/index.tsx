@@ -56,6 +56,10 @@ const LogoWrapper = styled.div`
     :hover {
         cursor: pointer;
     }
+
+    @media ${device.laptop} {
+        margin-left: 40px;
+    }
 `;
 
 const LogoItem = styled.a``;

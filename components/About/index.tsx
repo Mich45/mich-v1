@@ -35,7 +35,6 @@ const Right = styled.div`
 
     @media ${device.laptop} {
         width: 50%;
-        padding: 0px 20px;
         
     }
 `;
@@ -46,10 +45,6 @@ const ResumeWrapper = styled.div`
     margin-block: 0;
     height: auto;
     width: 100%;
-    place-items: center;
-    place-content: center;
-    bottom: 0%;
-    padding: 30px;
 
     @media ${device.laptop} {
         padding: 0;
@@ -109,8 +104,7 @@ const About = () => {
                         data-aos-delay="1000" */}
                     <p>
                         Academic-wise, I have a Bachelor's degree in Animal Breeding and Genetics - a result of my
-                        passion for science and biology. I'm currently looking for opportunities to pursue graduate studies in medical genomics, computational biology, and immunology. Feel free to reach out
-                        to me if you'd like to talk about genetics!
+                        passion for science and biology. I'm currently looking for opportunities to pursue graduate studies in medical genomics, computational biology, or immunology.
                     </p>
                     {/* data-aos="fade-up"
                         data-aos-duration="2000"
