@@ -23,15 +23,15 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     transition: 0.2s ease-out;
-    border: 1px solid #706a6a7d;;
+    border: 1px solid rgb(40 22 22 / 49%);
     margin: 20px auto;
     padding: 0px 12px;
-    background-color: #f4f4f4;
+    background-color: ${colors.slate.lightSlate};
 }
 
     :hover {
         cursor: pointer;
-        background-color: #e8e8e8;
+        background-color:rgb(24 40 40);
     }
 
     @media ${device.laptop} {

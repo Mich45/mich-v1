@@ -35,6 +35,7 @@ const Jumbotron = styled.section`
 const ArticlesWrapper = styled.div`
     width: 100%;
     padding-inline: 20px;
+    margin-bottom: 30px;
 
     @media ${device.laptop} {
         padding-inline: 134px;

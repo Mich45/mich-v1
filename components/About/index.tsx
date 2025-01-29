@@ -31,12 +31,10 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-    padding: 0px 35px;
     height: 100%;
-    text-align: justify;
 
     @media ${device.laptop} {
-        width: 100%;
+        width: 50%;
         padding: 0px 20px;
         
     }
@@ -87,7 +85,7 @@ const About = () => {
         <>
             <AboutWrapper>
                 {/* data-aos="zoom-in-down" data-aos-duration="2000" */}
-                <Left> 
+                {/* <Left> 
                     <Image
                         src={Michael}
                         // width={700}
@@ -98,11 +96,11 @@ const About = () => {
                         style={{ display: 'block', objectFit: 'cover' }}
                         fill = {true}
                     />
-                </Left>
+                </Left> */}
                 <Right>
                     {/* data-aos="fade-up" data-aos-duration="2000" */}
                     <p>
-                        Hey! I'm glad you're here. 🤝🏾 I wear a couple of hats
+                        Hey! I'm glad you're here. I wear a couple of hats
                         when it comes to my career. But not to bore you with the
                         details, here's a quick rundown of what I do.
                     </p>

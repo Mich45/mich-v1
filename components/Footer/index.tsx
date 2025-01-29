@@ -4,10 +4,13 @@ import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
 import { colors, device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
-    height: 750px;
+    height: 600px;
     width: 100%;
     display: flex;
+    margin-top: 30px;
     flex-direction: column;
+    border: 1px solid darkslategrey;
+    background-color: rgb(24 40 40);
     position: relative;
  
 
@@ -79,7 +82,6 @@ const Footer = (): JSX.Element => {
     return (
         <>
             <FooterWrapper>
-                <div className="divider" />
                 <div className="linkwrapper">
                     <Paragraph>
                         Copyright © {date} Michael Hungbo. All rights reserved.

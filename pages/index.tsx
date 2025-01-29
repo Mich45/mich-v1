@@ -275,7 +275,7 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Hi, I am <Name>Michael Hungbo</Name>
+                        <Name>Software Developer & Technical Writer</Name>
                     </SectionHeading>
                     <About />
                 </AboutSection>
@@ -285,7 +285,7 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Projects
+                        Portfolio
                     </SectionHeading>
                     <Suspense fallback={`Loading Projects...`}>
                         <DynamicProjects />

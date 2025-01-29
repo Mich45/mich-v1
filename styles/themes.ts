@@ -8,7 +8,8 @@ export const colors = {
     },
 
     slate: {
-        darkSlate: '#213c3c',
+        lightSlate: '#213c3c',
+        darkSlate: '#142525',
         textSlate: '#8ba9a9'
     },
 
