@@ -14,6 +14,7 @@ const Main = styled.main`
 const MainOverlay = styled.div`
     overflow: hidden;
     position: relative;
+    padding-inline: 15px;
 
     ::after {
         content: '';

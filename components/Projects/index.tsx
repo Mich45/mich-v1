@@ -34,7 +34,6 @@ const CardWrapper = styled.div`
 
 const Card = styled.div`
     height: 100%;
-    width: 75vw;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -58,6 +57,8 @@ const Card = styled.div`
 
     @media ${device.laptop} {
         padding: 20px;
+        width: 75vw;
+
 
         .details {
             display: flex;

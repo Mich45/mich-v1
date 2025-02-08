@@ -10,7 +10,7 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     place-items: center;
     height: 100%;
-    margin-top: 65px;
+    margin-top: 50px;
 
     @media ${device.laptop} {
         flex-direction: row;

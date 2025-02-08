@@ -63,7 +63,6 @@ const BannerWrapper = styled.div`
 `;
 
 const SectionHeading = styled.h1`
-    padding-left: 25px;
 
     @media ${device.laptop} {
         padding-left: 0;
