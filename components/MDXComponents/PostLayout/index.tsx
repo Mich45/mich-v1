@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
     width: 100%;
     height: auto;
     position: relative;
-    color: #030303;
+    color: ${colors.slate.textSlate};
     font-size: 16px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
 
@@ -21,7 +21,7 @@ const MainWrapper = styled.div`
         color: #161414;
         font-family: inherit;
         font-size: 14px;
-        background: rgb(78 255 157 / 32%);
+        background: ${colors.green.codeGreen};
         padding: 2px 4px;
         border: 1px solid transparent;
         border-radius: 2px;
@@ -33,7 +33,7 @@ const MainWrapper = styled.div`
     }
 
     a {
-        color: #13bd5f;
+        color: ${colors.green.textGreen};
         transition: 0.3s ease-out;
 
         :hover {
@@ -76,11 +76,10 @@ const PostWrapper = styled.div`
     margin: 0 auto;
     padding: 20px;
     font-weight: 500;
-    color: #2d2c36;
     line-height: 1.5;
 
     @media ${device.laptop} {
-        width: 70ch;
+        width: 90ch;
     }
 `;
 

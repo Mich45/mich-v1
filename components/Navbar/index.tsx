@@ -8,7 +8,6 @@ import usePath from '../../hooks/usePath';
 const Navigation = styled.div`
     height: 40px;
     width: 100%;
-    padding-top: 20px;
     padding-inline: 15px;
 `;
 

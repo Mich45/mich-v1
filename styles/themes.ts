@@ -31,7 +31,8 @@ export const colors = {
     },
     green: {
         greenPrimary: 'rgb(51 251 149)',
-        codeGreen: '#77ffba',
+        codeGreen: '#86908ed6',
+        textGreen: 'rgb(83, 226, 197)'
     },
 };
 
