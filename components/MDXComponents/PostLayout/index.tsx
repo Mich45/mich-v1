@@ -44,10 +44,12 @@ const MainWrapper = styled.div`
     }
 `;
 
-const Header = styled.div`
+const Header = styled.div<{ $src?: string; }>`
     width: 100%;
     height: 350px;
-    background: #1f2a40;
+    background: ${(props: { $src: string; }) => props.$src ? `url(${props.$src})` : "#1f2a40"};
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     place-items: center;
     place-content: center;
@@ -94,7 +96,7 @@ const PostLayout = (props: any): JSX.Element => {
                 <title>{props.frontmatter.title}</title>
             </Head>
             <MainWrapper>
-                <Header>
+                <Header $src = {props.frontmatter.coverImage}>
                     <h1>{props.frontmatter.title}</h1>
                 </Header>
                 <PostWrapper>{props.children}</PostWrapper>
