@@ -5,7 +5,6 @@ import { colors } from '../../styles/themes';
 export const Code = styled.code`
     border-radius: 4px;
     font-family: 'JetBrains Mono', monospace;
-
 `;
 
 export const H2 = styled.h2`
@@ -18,6 +17,6 @@ export const Pre = styled.pre`
     font-size: 13.5px;
 `;
 
-export const HeadingOne = styled.h1`
-
+export const HeadingThree = styled.h3`
+ color: ${colors.gray.grayPrimary}
 `;

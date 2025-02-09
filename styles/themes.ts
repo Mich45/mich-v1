@@ -14,7 +14,7 @@ export const colors = {
     },
 
     gray: {
-        grayPrimary: '#283344',
+        grayPrimary: '#dfdcdc',
         darkGray: 'rgb(46 66 94)',
         lightGray: 'rgb(140 150 169)',
     },

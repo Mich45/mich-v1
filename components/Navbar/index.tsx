@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 import Dropdown from '../Dropdown';
-import { Logo } from '../Icons';
+import Image from 'next/image';
+import {Logo} from '../Icons'
 import usePath from '../../hooks/usePath';
 
 const Navigation = styled.div`
@@ -58,7 +59,7 @@ const LogoWrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        margin-left: 40px;
+        margin-left: 27px;
     }
 `;
 
@@ -102,7 +103,7 @@ const Navbar = (): JSX.Element => {
                 <NavigationWrapper>
                     <LogoWrapper>
                         <LogoItem href="/">
-                            <Logo />
+                            <Logo/>
                         </LogoItem>
                     </LogoWrapper>
                     <DropdownWrapper className="dropdown">
@@ -110,7 +111,7 @@ const Navbar = (): JSX.Element => {
                     </DropdownWrapper>
                     <NavLinkWrapper className="links">
                         <NavItem>
-                            <Anchor href="/#projects">Projects</Anchor>
+                            <Anchor href="/#projects">Portfolio</Anchor>
                         </NavItem>
                         <NavItem>
                             <Anchor href="/blog">Blog</Anchor>

@@ -12,7 +12,7 @@ import {
     Code,
     H2,
     Pre,
-    HeadingOne,
+    HeadingThree,
 } from '../components/MDXComponents/Elements';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -28,7 +28,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const components = {
         code: Code,
-        h1: HeadingOne,
+        h3: HeadingThree,
         pre: Pre,
         h2: H2,
         wrapper: ({ components, ...rest }) => <PostLayout {...rest} />,
