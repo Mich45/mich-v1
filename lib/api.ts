@@ -18,15 +18,10 @@ export const readPost = (postPath: string) => {
     const { data, content } = matter(postContent);
     const readTime = readingTime(content);
     const lastMod = fs.statSync(postPath);
-    const created = fs.statSync(postPath);
     const lastModified = lastMod.mtime.toDateString();
-    const createdAt = created.ctime.toDateString();
-
-    console.log(lastModified, createdAt);
 
     return {
         readTime,
-        createdAt,
         lastModified,
         data,
         content,
@@ -36,15 +31,13 @@ export const readPost = (postPath: string) => {
 
 export const sortPosts = () => {
     const allPosts = posts();
-
     // Sort posts based on date created
     const sorted = allPosts.sort((a, b) => {
-        let aDate = fs.statSync(a);
-        let bDate = fs.statSync(b);
-
-        return aDate.birthtime > bDate.birthtime ? 1 : -1;
+        let aData = readPost(a);
+        let bData = readPost(b)
+        let aDate = new Date(aData.data.createdAt);
+        let bDate = new Date(bData.data.createdAt);
+        return aDate > bDate ? 1 : -1;
     });
-
-    console.log(sorted);
     return sorted;
 };

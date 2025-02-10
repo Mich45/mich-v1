@@ -8,9 +8,9 @@ type PreviewProps = {
             title: string;
             excerpt: string;
             tags: string[];
+            createdAt: string;
         };
         postPath: string;
-        createdAt: string;
         readTime: {
             text: string;
         };
@@ -23,15 +23,15 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     transition: 0.2s ease-out;
-    border: 1px solid rgb(40 22 22 / 49%);
+    border: 2px solid rgb(102 193 170 / 99%);
     margin: 20px auto;
     padding: 0px 12px;
-    background-color: ${colors.slate.lightSlate};
+   
 }
 
     :hover {
         cursor: pointer;
-        background-color:rgb(24 40 40);
+        background-color:rgb(20 55 55);
     }
 
     @media ${device.laptop} {
@@ -89,7 +89,7 @@ const Tag = styled.div`
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {
-    // console.log(meta);
+    console.log(meta.data.createdAt);
     return (
         <>
             <Wrapper>
@@ -106,7 +106,7 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                     <Excerpt>{meta.data.excerpt}</Excerpt>
                     <TagsWrapper>
                         <Tag>
-                            {meta.createdAt.split(' ', -1).slice(1).join(' ')}
+                            {new Date(meta.data.createdAt).toDateString().split(' ', -1).slice(1).join(' ')}
                         </Tag>{' '}
                         <span>●</span>
                         <Tag>{meta.readTime.text}</Tag>
