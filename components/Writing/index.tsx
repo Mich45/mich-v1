@@ -35,11 +35,7 @@ const Card = styled.div`
     border-radius: 6px;
     display: flex;
     flex-direction: column;
-    transition: 0.2s box-shadow ease-out;
 
-    &:hover {
-        box-shadow: 2px 4px;
-    }
 
     @media ${device.laptop} {
         width: 350px;

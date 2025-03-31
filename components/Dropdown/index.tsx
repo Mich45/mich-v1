@@ -19,8 +19,6 @@ const Menu = styled.span`
         height: 3px;
         width: 20px;
         border-radius: 3px;
-        background: ${colors.gray.darkGray};
-    }
 
     &:: after {
         content: '';

@@ -9,8 +9,7 @@ import usePath from '../../hooks/usePath';
 const Navigation = styled.div`
     height: 40px;
     width: 100%;
-    padding-inline: 15px;
-    z-index: 1000;
+    margin-top: 40px;
 
 `;
 
@@ -19,8 +18,6 @@ const NavigationWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
-            z-index: 1000;
-
 
     @media ${device.tablet} {
         .dropdown {
@@ -65,7 +62,7 @@ const LogoWrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        margin-left: 27px;
+        margin-left: 40px;
     }
 `;
 

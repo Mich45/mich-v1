@@ -32,7 +32,6 @@ const Article = styled.div`
 `;
 
 const Title = styled.h3`
-    font-size: 1.5rem;
     font-weight: bold;
 `;
 

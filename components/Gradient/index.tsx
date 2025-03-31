@@ -20,6 +20,7 @@ const Container = styled.div`
     position: absolute;
     top: 50px !important;
     inset: 0;
+    height: 100vh;
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
@@ -33,14 +34,15 @@ const BackgroundContainer = styled.div`
 `;
 
 const Shape1 = styled.div`
-    width: 400px;
-    height: 400px;
+    width: 200px;
+    height: 200px;
     border-radius: 9999px;
     position: relative;
     background-color: rgb(0 215 175);
     opacity: 0.5;
     filter: blur(90px);
-    right: 50%;
+    right: 60%;
+    top: 700%;
     // animation: ${one} 10s infinite;
 `;
 
@@ -52,8 +54,8 @@ const Shape2 = styled.div`
     background-color: rgb(0 215 175);
     opacity: 0.5;
     filter: blur(90px);
-    bottom: -34%;
-    right: 40%;
+    top: 4%;
+    left: -40%;
     // animation: ${two} 10s infinite;
 `;
 
@@ -65,6 +67,7 @@ const Shape3 = styled.div`
     background-color: rgb(0 215 175);
     opacity: 0.5;
     filter: blur(90px);
+
     // animation: ${one} 10s infinite;
 `;
 

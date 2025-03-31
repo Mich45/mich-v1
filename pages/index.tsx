@@ -188,6 +188,7 @@ const ProjectSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
+        margin: 100px 135px;
     }
 `;
 
@@ -210,11 +211,12 @@ const ContactSection = styled.section`
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    padding-inline: 20px;
     margin: 100px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
+        margin: 100px 135px;
+
     }
 `;
 

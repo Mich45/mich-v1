@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
-import Michael from '../../public/assets/michael-min.jpg';
+import Gradient from '../Gradient';
 import { colors, device } from '../../styles/themes';
 
 const AboutWrapper = styled.section`
@@ -11,6 +10,8 @@ const AboutWrapper = styled.section`
     place-items: center;
     height: 100%;
     margin-top: 50px;
+    z-index: 1000;
+    position: relative;
 
     @media ${device.laptop} {
         flex-direction: row;
@@ -77,6 +78,8 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
+            <Gradient/>
+
                 {/* data-aos="zoom-in-down" data-aos-duration="2000" */}
                 {/* <Left> 
                     <Image
