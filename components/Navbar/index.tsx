@@ -10,6 +10,8 @@ const Navigation = styled.div`
     height: 40px;
     width: 100%;
     padding-inline: 15px;
+    z-index: 1000;
+
 `;
 
 const NavigationWrapper = styled.div`
@@ -17,6 +19,8 @@ const NavigationWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+            z-index: 1000;
+
 
     @media ${device.tablet} {
         .dropdown {
@@ -53,6 +57,8 @@ const LogoWrapper = styled.div`
     width: 80px;
     height: 100%;
     display: flex;
+    margin-left: 30px;
+
 
     :hover {
         cursor: pointer;

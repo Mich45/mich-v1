@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.section`
@@ -7,6 +7,16 @@ const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     place-items: center;
+`;
+
+const gradient = keyframes`
+0% {
+background-position: 200% 50%
+}
+
+100% {
+background-position: 0% 50%
+}
 `;
 
 const ContactWrapper = styled.div`
@@ -31,6 +41,19 @@ const MessageWrapper = styled.div`
     h2 {
         margin: 0;
         font-size: 24px;
+          color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(83 224 173),
+        rgb(45 235 187),
+        rgb(83 226 197),
+        rgb(141 248 212),
+        rgb(94 235 168)
+    );
+    background-clip: text;
+    background-size: 225% auto;
+    -webkit-animation: ${gradient} 3s linear infinite;
+    animation: ${gradient} 3s linear infinite;
 
         @media ${device.laptop} {
             font-size: xx-large;

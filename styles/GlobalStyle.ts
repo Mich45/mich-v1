@@ -62,6 +62,12 @@ h1{
     font-size: 40px;
     position: relative;
     font-family: 'Product Sans', "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    color: transparent;
+    background: linear-gradient(to right, rgb(83 224 173), rgb(45 235 187), rgb(83 226 197), rgb(141 248 212), rgb(94 235 168));
+    background-clip: text;
+    background-size: 225% auto;
+    -webkit-animation: eApUOg 3s linear infinite;
+    animation: eApUOg 3s linear infinite;
 }
 
 

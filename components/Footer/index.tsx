@@ -39,10 +39,11 @@ const FooterWrapper = styled.footer`
 `;
 
 const SocialWrapper = styled.div`
-    display: flex;
-    place-items: center;
-    place-content: center;
-    margin: 10px;
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 `;
 
 const Paragraph = styled.p`
@@ -51,29 +52,19 @@ const Paragraph = styled.p`
 `;
 
 const Link = styled.a`
-    position: relative;
-    margin-inline: 10px;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #d7cccc;
-    display: flex;
-    transition: transform 0.2s ease-out;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(81 79 79 / 50%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none;
 
-    &::after {
-        content: '';
-        width: 22px;
-        height: 22px;
-        background: #847a975e;
-        opacity: 0.5;
-        border-radius: 50%;
-        position: absolute;
-    }
-
-    :hover {
-        cursor: pointer;
-        transform: scale(1.2);
-    }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
 `;
 
 const Footer = (): JSX.Element => {

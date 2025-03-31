@@ -12,7 +12,6 @@ export const posts = (): string[] => {
         const stats = fs.statSync(path.join(postsDirectory, post))
         if (stats.isFile()){
             fullPaths.push(`${postsDirectory}/${post}`);
-            return 'It is a file'
         }
 
         else if (stats.isDirectory()){
@@ -20,8 +19,7 @@ export const posts = (): string[] => {
             console.log("Content of folder:", content)
             const mdxFile = content.filter(file => file.endsWith('.mdx'));
             console.log("MdxFile:", mdxFile)
-            fullPaths.push(`${postsDirectory}/${post}/${mdxFile}`);
-            return 'It is a directory'
+            fullPaths.push(`${postsDirectory}/${post}/${mdxFile[0]}`);
         }
     });
     return fullPaths;

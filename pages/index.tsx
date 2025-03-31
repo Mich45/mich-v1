@@ -5,17 +5,16 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
-import Tools from '../components/Tools';
 import Articles from '../components/Articles';
 import Contact from '../components/Contact';
 import About from '../components/About';
-import Writing from '../components/Writing';
 import Meteors from '../components/Meteors';
 import * as api from '../lib/api';
 
-
-const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
-});
+const DynamicProjects: any = dynamic(
+    () => import('../components/Projects'),
+    {}
+);
 
 const slideIn = keyframes`
 0%{
@@ -63,7 +62,20 @@ const BannerWrapper = styled.div`
     }
 `;
 
-const SectionHeading = styled.h1`
+const SectionHeading = styled.h2`
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(83 224 173),
+        rgb(45 235 187),
+        rgb(83 226 197),
+        rgb(141 248 212),
+        rgb(94 235 168)
+    );
+    background-clip: text;
+    background-size: 225% auto;
+    -webkit-animation: ${gradient} 3s linear infinite;
+    animation: ${gradient} 3s linear infinite;
 
     @media ${device.laptop} {
         padding-left: 0;
@@ -148,6 +160,14 @@ const AboutSection = styled.section`
     }
 `;
 
+const LineBreak = styled.hr`
+    height: 1px;
+    margin: 100px auto;
+    width: 100%;
+    background-color: darkslategray;
+    border: 0 none;
+`;
+
 const ArticlesSection = styled.section`
     width: 100%;
     height: 100%;
@@ -155,15 +175,13 @@ const ArticlesSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
-        margin: 150px 135px;
-
+        margin: 100px 135px;
     }
-
 `;
 
 const ToolsSection = styled.section`
     width: 100%;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
@@ -173,7 +191,7 @@ const ToolsSection = styled.section`
 const ProjectSection = styled.section`
     width: 100%;
     height: 100%;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
     scroll-snap-align: start;
 
     @media ${device.laptop} {
@@ -182,11 +200,18 @@ const ProjectSection = styled.section`
 `;
 
 const Name = styled.span`
- color: transparent;
- background: linear-gradient(to right, rgb(67 231 172), rgb(45 235 187), rgb(83 226 197), rgb(125 226 168), rgb(94 235 168));
- background-clip: text;
- background-size: 225% auto;
- animation: ${gradient} 3s linear infinite;
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(67 231 172),
+        rgb(45 235 187),
+        rgb(83 226 197),
+        rgb(125 226 168),
+        rgb(94 235 168)
+    );
+    background-clip: text;
+    background-size: 225% auto;
+    animation: ${gradient} 3s linear infinite;
 `;
 
 const ContactSection = styled.section`
@@ -194,7 +219,7 @@ const ContactSection = styled.section`
     background-size: cover;
     width: 100%;
     padding-inline: 20px;
-    margin: 150px auto 0 auto;
+    margin: 100px auto 0 auto;
 
     @media ${device.laptop} {
         width: 80%;
@@ -205,7 +230,7 @@ type BlogProps = {
     posts: [];
 };
 
-const Home: NextPage<BlogProps> = ({posts}): JSX.Element => {
+const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
     return (
         <>
             <Head>
@@ -285,11 +310,13 @@ const Home: NextPage<BlogProps> = ({posts}): JSX.Element => {
                     <About />
                 </AboutSection>
 
+                <LineBreak />
                 <ArticlesSection>
-                    <h1>Articles and thoughts.</h1>
-                    <Articles posts={posts}/>
+                    <SectionHeading>Articles and thoughts.</SectionHeading>
+                    <Articles posts={posts} />
                 </ArticlesSection>
 
+                <LineBreak />
                 <ProjectSection id="projects">
                     <SectionHeading
                         data-aos="fade-right"
@@ -301,17 +328,7 @@ const Home: NextPage<BlogProps> = ({posts}): JSX.Element => {
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
-
-                <ToolsSection>
-                    <SectionHeading
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
-                    >
-                        You can talk to me about any of these...
-                    </SectionHeading>
-                    <Tools />
-                </ToolsSection>
-
+                <LineBreak />
                 <ContactSection id="contact">
                     <Contact />
                 </ContactSection>

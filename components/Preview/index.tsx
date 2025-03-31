@@ -19,11 +19,9 @@ type PreviewProps = {
 
 const Wrapper = styled.div`
     width: 90%;
-    height: 215px;
     display: flex;
     flex-direction: column;
     transition: 0.2s ease-out;
-    border: 2px solid rgb(102 193 170 / 99%);
     margin: 20px auto;
     padding: 0px 12px;
    
@@ -36,18 +34,30 @@ const Wrapper = styled.div`
 
     @media ${device.laptop} {
         width: 92.5%;
+            height: 215px;
+
         margin: 10px 0;
+        border: 2px solid rgb(102 193 170 / 99%);
 
     }
 
     @media ${device.tablet}{
         width: 92.5%;
+            height: 215px;
+
         margin: 10px 0;
+        border: 2px solid rgb(102 193 170 / 99%);
+
     }
 `;
 const TitleWrapper = styled.div`
     width: 100%;
+   height: auto
+
+    @media ${device.laptop} {
     height: 55%;
+
+    }
 `;
 const Link = styled.a``;
 
@@ -59,7 +69,12 @@ const Title = styled.h3`
 
 const InfoWrapper = styled.div`
     width: 100%;
+height: auto
+
+    @media ${device.laptop} {
     height: 45%;
+
+    }
 `;
 
 const Excerpt = styled.p`
@@ -69,7 +84,6 @@ const Excerpt = styled.p`
 
 const ExcerptWrapper = styled.div`
     width: 100%;
-    height: 50%;
 `;
 
 const TagsWrapper = styled.div`
@@ -111,13 +125,13 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                     <ExcerptWrapper>
                     <Excerpt>{meta.data.excerpt.split(/\s+/).slice(0, 10).join(' ') + '...' }</Excerpt>
                     </ExcerptWrapper>
-                    <TagsWrapper>
+                    {/* <TagsWrapper>
                         <Tag>
                             {new Date(meta.data.createdAt).toDateString().split(' ', -1).slice(1).join(' ')}
                         </Tag>{' '}
                         <span>●</span>
                         <Tag>{meta.readTime.text}</Tag>
-                    </TagsWrapper>
+                    </TagsWrapper> */}
                 </InfoWrapper>
             </Wrapper>
         </>

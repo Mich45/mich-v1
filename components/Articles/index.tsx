@@ -31,7 +31,7 @@ const Article = styled.div`
     gap: 8px;
 `;
 
-const Title = styled.h2`
+const Title = styled.h3`
     font-size: 1.5rem;
     font-weight: bold;
 `;
