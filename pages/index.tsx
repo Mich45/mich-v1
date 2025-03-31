@@ -179,14 +179,6 @@ const ArticlesSection = styled.section`
     }
 `;
 
-const ToolsSection = styled.section`
-    width: 100%;
-    margin: 100px auto 0 auto;
-
-    @media ${device.laptop} {
-        width: 80%;
-    }
-`;
 
 const ProjectSection = styled.section`
     width: 100%;
