@@ -36,17 +36,6 @@ const Title = styled.h2`
     font-weight: bold;
 `;
 
-<<<<<<< HEAD
-=======
-const Subtitle = styled.a`
-    font-size: 1rem;
-    color: #6b7280;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-`;
->>>>>>> 069c07250f985a2d5e4234fcf55c6c5675a2d00e
 
 const Excerpt = styled.p`
     font-size: 1rem;
@@ -95,13 +84,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 48px;
-<<<<<<< HEAD
 
     @media ${device.laptop} {
         width: 70%;
     }
-=======
->>>>>>> 069c07250f985a2d5e4234fcf55c6c5675a2d00e
 `;
 
 type BlogProps = {

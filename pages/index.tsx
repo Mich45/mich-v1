@@ -161,19 +161,6 @@ const ArticlesSection = styled.section`
 
 `;
 
-const ArticlesSection = styled.section`
-    width: 100%;
-    height: 100%;
-    margin: 5rem auto;
-
-    @media ${device.laptop} {
-        width: 80%;
-        margin: 0 135px;
-
-    }
-
-`;
-
 const ToolsSection = styled.section`
     width: 100%;
     margin: 150px auto 0 auto;
