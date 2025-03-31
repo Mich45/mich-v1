@@ -8,7 +8,21 @@ export const posts = (): string[] => {
     const postsDirectory = path.resolve(process.cwd(), 'pages', 'posts');
     const allPosts = fs.readdirSync(postsDirectory);
     allPosts.forEach((post) => {
-        fullPaths.push(`${postsDirectory}/${post}`);
+        console.log("Post:", post)
+        const stats = fs.statSync(path.join(postsDirectory, post))
+        if (stats.isFile()){
+            fullPaths.push(`${postsDirectory}/${post}`);
+            return 'It is a file'
+        }
+
+        else if (stats.isDirectory()){
+            const content = fs.readdirSync(path.join(postsDirectory, post));
+            console.log("Content of folder:", content)
+            const mdxFile = content.filter(file => file.endsWith('.mdx'));
+            console.log("MdxFile:", mdxFile)
+            fullPaths.push(`${postsDirectory}/${post}/${mdxFile}`);
+            return 'It is a directory'
+        }
     });
     return fullPaths;
 };

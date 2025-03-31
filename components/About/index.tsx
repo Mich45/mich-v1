@@ -60,17 +60,15 @@ const Resume = styled.a`
     background-image: linear-gradient(to right, rgb(67, 231, 172), rgb(45, 235, 187), rgb(83, 226, 197), rgb(46 232 186), rgb(66 231 173));
     place-items: center;
     place-content: center;
-    display: flex;
+    display: inline-block;
     color: black;
     font-size: 14px;
     margin: 0;
     text-decoration: none;
-    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-
-    :hover {
+    transition: color 0.2s ease-in-out, ease-in-out;
+    &:hover {
         cursor: pointer;
-        background-image: #f34030;
-        box-shadow: none;
+        color: floralwhite;
         font-weight: normal;
     }
 `;

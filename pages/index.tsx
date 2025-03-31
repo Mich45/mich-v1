@@ -1,17 +1,18 @@
 import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import Human from '../public/assets/human-svg.svg';
-import { GetServerSideProps } from 'next';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Tools from '../components/Tools';
+import Articles from '../components/Articles';
 import Contact from '../components/Contact';
 import About from '../components/About';
 import Writing from '../components/Writing';
 import Meteors from '../components/Meteors';
+import * as api from '../lib/api';
+
 
 const DynamicProjects: any = dynamic(() => import('../components/Projects'), {
 });
@@ -136,17 +137,6 @@ const AboutWrapper = styled.div`
     }
 `;
 
-const AboutParagraph = styled.p`
-    font-size: 14px;
-    text-align: center;
-    margin-top: 5px;
-    color: ${colors.gray.lightGray};
-
-    @media ${device.laptop} {
-        font-size: 16px;
-    }
-`;
-
 const AboutSection = styled.section`
     width: 100%;
     height: 100%;
@@ -155,8 +145,20 @@ const AboutSection = styled.section`
     @media ${device.laptop} {
         width: 80%;
         margin: 0 135px;
+    }
+`;
+
+const ArticlesSection = styled.section`
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    @media ${device.laptop} {
+        width: 80%;
+        margin: 150px 135px;
 
     }
+
 `;
 
 const ToolsSection = styled.section`
@@ -199,7 +201,11 @@ const ContactSection = styled.section`
     }
 `;
 
-const Home: NextPage = (): JSX.Element => {
+type BlogProps = {
+    posts: [];
+};
+
+const Home: NextPage<BlogProps> = ({posts}): JSX.Element => {
     return (
         <>
             <Head>
@@ -274,17 +280,22 @@ const Home: NextPage = (): JSX.Element => {
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        <Name>Software Developer & Technical Writer</Name>
+                        <Name>Software Developer & Technical Writer.</Name>
                     </SectionHeading>
                     <About />
                 </AboutSection>
+
+                <ArticlesSection>
+                    <h1>Articles and thoughts.</h1>
+                    <Articles posts={posts}/>
+                </ArticlesSection>
 
                 <ProjectSection id="projects">
                     <SectionHeading
                         data-aos="fade-right"
                         data-aos-duration="1000"
                     >
-                        Portfolio
+                        Portfolio.
                     </SectionHeading>
                     <Suspense fallback={`Loading Projects...`}>
                         <DynamicProjects />
@@ -308,5 +319,18 @@ const Home: NextPage = (): JSX.Element => {
         </>
     );
 };
+
+export async function getStaticProps() {
+    const postsPath = api.sortPosts();
+    const posts = postsPath.map((post) => {
+        const postData = api.readPost(post);
+        return postData;
+    });
+    return {
+        props: {
+            posts,
+        },
+    };
+}
 
 export default Home;

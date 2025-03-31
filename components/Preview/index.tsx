@@ -47,7 +47,7 @@ const Wrapper = styled.div`
 `;
 const TitleWrapper = styled.div`
     width: 100%;
-    height: 70%;
+    height: 55%;
 `;
 const Link = styled.a``;
 
@@ -59,12 +59,17 @@ const Title = styled.h3`
 
 const InfoWrapper = styled.div`
     width: 100%;
-    height: 30%;
+    height: 45%;
 `;
 
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
+`;
+
+const ExcerptWrapper = styled.div`
+    width: 100%;
+    height: 50%;
 `;
 
 const TagsWrapper = styled.div`
@@ -103,7 +108,9 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                     </Link>
                 </TitleWrapper>
                 <InfoWrapper>
-                    <Excerpt>{meta.data.excerpt}</Excerpt>
+                    <ExcerptWrapper>
+                    <Excerpt>{meta.data.excerpt.split(/\s+/).slice(0, 10).join(' ') + '...' }</Excerpt>
+                    </ExcerptWrapper>
                     <TagsWrapper>
                         <Tag>
                             {new Date(meta.data.createdAt).toDateString().split(' ', -1).slice(1).join(' ')}
