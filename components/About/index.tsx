@@ -33,6 +33,8 @@ const Left = styled.div`
 
 const Right = styled.div`
     height: 100%;
+    font-size: 14px;
+    font-color: white;
 
     @media ${device.laptop} {
         width: 50%;

@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
     width: 100%;
     height: auto;
     position: relative;
-    color: ${colors.slate.textSlate};
+    color: white;
     font-size: 16px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
 
@@ -18,7 +18,7 @@ const MainWrapper = styled.div`
     }
 
     code:not(pre > code) {
-        color: #161414;
+        color: white;
         font-family: inherit;
         font-size: 14px;
         background: ${colors.green.codeGreen};
@@ -78,6 +78,7 @@ const PostWrapper = styled.div`
     margin: 0 auto;
     padding: 20px;
     font-weight: 500;
+    font-size: 14px;
     line-height: 1.5;
 
     @media ${device.laptop} {

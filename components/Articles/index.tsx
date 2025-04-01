@@ -37,7 +37,7 @@ const Title = styled.h3`
 
 
 const Excerpt = styled.p`
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 500;
     color: white;
     margin-top: 0;

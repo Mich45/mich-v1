@@ -1,4 +1,6 @@
 import styled, { keyframes } from "styled-components";
+import { colors, shadows, device } from '../../styles/themes';
+
 
 const one = keyframes`
     0% { left: 0px; top: 0px; }
@@ -21,9 +23,13 @@ const Container = styled.div`
     top: 50px !important;
     inset: 0;
     height: 100vh;
-    display: inline-flex;
     flex-direction: row;
     justify-content: center;
+    display: none;
+
+     @media ${device.laptop} {
+        display: inline-flex;
+    }
 `;
 
 const BackgroundContainer = styled.div`

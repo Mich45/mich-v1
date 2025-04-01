@@ -18,5 +18,5 @@ export const Pre = styled.pre`
 `;
 
 export const HeadingThree = styled.h3`
- color: ${colors.gray.grayPrimary}
+ color: ${colors.gray.lightGray}
 `;

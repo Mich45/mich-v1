@@ -54,7 +54,7 @@ const LogoWrapper = styled.div`
     width: 80px;
     height: 100%;
     display: flex;
-    margin-left: 30px;
+    // margin-left: 30px;
 
 
     :hover {
