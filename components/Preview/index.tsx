@@ -80,31 +80,12 @@ height: auto
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
+    color: floralwhite;
+    font-weight: 500;
 `;
 
 const ExcerptWrapper = styled.div`
     width: 100%;
-`;
-
-const TagsWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    align-items: center;
-
-    span {
-        margin-inline: 15px;
-    }
-`;
-
-const Tag = styled.div`
-    width: auto;
-    height: 30px;
-    border-radius: 4px;
-    font-size: 14px;
-    margin-inline: 0 5px;
-    display: flex;
-    place-content: center;
-    place-items: center;
 `;
 
 const Preview = ({ meta }: PreviewProps): JSX.Element => {

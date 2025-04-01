@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import useSWR, { Fetcher } from 'swr';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import Search from '../components/Search';
 import Preview from '../components/Preview';
 import Writing from '../components/Writing';
@@ -15,6 +15,16 @@ const MainWrapper = styled.main`
     width: 100%;
     height: auto;
     position: relative;
+`;
+
+const gradient = keyframes`
+0% {
+background-position: 200% 50%
+}
+
+100% {
+background-position: 0% 50%
+}
 `;
 
 const Jumbotron = styled.section`
@@ -36,6 +46,23 @@ const ArticlesWrapper = styled.div`
     width: 100%;
     padding-inline: 20px;
     margin-bottom: 30px;
+    padding-inline: 30px;
+
+    .text {
+    color: transparent;
+    background: linear-gradient(
+        to right,
+        rgb(67 231 172),
+        rgb(45 235 187),
+        rgb(83 226 197),
+        rgb(125 226 168),
+        rgb(94 235 168)
+    );
+    background-clip: text;
+    background-size: 225% auto;
+    animation: ${gradient} 3s linear infinite;
+    
+    }
 
     @media ${device.laptop} {
         padding-inline: 134px;
@@ -112,7 +139,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     {/* <Button>Show more</Button> */}
                 </PostsWrapper>
                 <ArticlesWrapper>
-                    <h2 className="text"> My posts from around the internet</h2>
+                    <h2 className="text">External posts.</h2>
                     <div>
                         {data ? (
                             <Writing articles={data} />

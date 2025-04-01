@@ -17,11 +17,17 @@ const FooterWrapper = styled.footer`
 
     .linkwrapper {
         display: flex;
+        flex-direction: column;
         width: 100%;
         position: absolute;
         bottom: 30px;
         justify-content: space-between;
         padding-inline: 40px;
+
+        @media ${device.laptop} {
+            flex-direction: row;
+        }
+
     }
 
     .divider {
