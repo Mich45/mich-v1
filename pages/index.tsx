@@ -156,7 +156,7 @@ const AboutSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
-        margin: 0 135px;
+        margin: 100px 135px 0 135px;
     }
 `;
 
@@ -167,6 +167,7 @@ const LineBreak = styled.hr`
     background-color: darkslategray;
     border: 0 none;
 `;
+
 
 const ArticlesSection = styled.section`
     width: 100%;
@@ -185,6 +186,7 @@ const ProjectSection = styled.section`
     height: 100%;
     margin: 100px auto 0 auto;
     scroll-snap-align: start;
+    display: none;
 
     @media ${device.laptop} {
         width: 80%;
@@ -304,14 +306,14 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     <About />
                 </AboutSection>
 
-                <LineBreak />
+                <LineBreak/>
                 <ArticlesSection>
                     <SectionHeading>Articles and thoughts.</SectionHeading>
                     <Articles posts={posts} />
                 </ArticlesSection>
 
                 <LineBreak />
-                <ProjectSection id="projects">
+                {/* <ProjectSection id="projects">
                     <SectionHeading
                         data-aos="fade-right"
                         data-aos-duration="1000"
@@ -322,7 +324,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                         <DynamicProjects />
                     </Suspense>
                 </ProjectSection>
-                <LineBreak />
+                <LineBreak /> */}
                 <ContactSection id="contact">
                     <Contact />
                 </ContactSection>

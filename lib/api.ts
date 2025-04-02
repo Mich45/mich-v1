@@ -8,17 +8,15 @@ export const posts = (): string[] => {
     const postsDirectory = path.resolve(process.cwd(), 'pages', 'posts');
     const allPosts = fs.readdirSync(postsDirectory);
     allPosts.forEach((post) => {
-        console.log("Post:", post)
-        const stats = fs.statSync(path.join(postsDirectory, post))
-        if (stats.isFile()){
+        console.log('Post:', post);
+        const stats = fs.statSync(path.join(postsDirectory, post));
+        if (stats.isFile()) {
             fullPaths.push(`${postsDirectory}/${post}`);
-        }
-
-        else if (stats.isDirectory()){
+        } else if (stats.isDirectory()) {
             const content = fs.readdirSync(path.join(postsDirectory, post));
-            console.log("Content of folder:", content)
-            const mdxFile = content.filter(file => file.endsWith('.mdx'));
-            console.log("MdxFile:", mdxFile)
+            console.log('Content of folder:', content);
+            const mdxFile = content.filter((file) => file.endsWith('.mdx'));
+            console.log('MdxFile:', mdxFile);
             fullPaths.push(`${postsDirectory}/${post}/${mdxFile[0]}`);
         }
     });
@@ -46,10 +44,10 @@ export const sortPosts = () => {
     // Sort posts based on date created
     const sorted = allPosts.sort((a, b) => {
         let aData = readPost(a);
-        let bData = readPost(b)
+        let bData = readPost(b);
         let aDate = new Date(aData.data.createdAt);
         let bDate = new Date(bData.data.createdAt);
-        return aDate > bDate ? 1 : -1;
+        return bDate.getTime() - aDate.getTime();
     });
     return sorted;
 };

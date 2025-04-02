@@ -34,7 +34,7 @@ const Left = styled.div`
 const Right = styled.div`
     height: 100%;
     font-size: 14px;
-    font-color: white;
+    color: white;
 
     @media ${device.laptop} {
         width: 50%;
@@ -45,7 +45,7 @@ const Right = styled.div`
 const ResumeWrapper = styled.div`
     position: relative;
     display: flex;
-    margin-block: 0;
+    margin-top: 40px;
     height: auto;
     width: 100%;
 

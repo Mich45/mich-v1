@@ -76,7 +76,7 @@ const PostWrapper = styled.div`
     width: 100%;
     height: auto;
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 0;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.5;
