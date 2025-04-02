@@ -21,7 +21,7 @@ const MainWrapper = styled.div`
         color: white;
         font-family: inherit;
         font-size: 14px;
-        background: ${colors.green.codeGreen};
+        background: #16483ed6;
         padding: 2px 4px;
         border: 1px solid transparent;
         border-radius: 2px;
