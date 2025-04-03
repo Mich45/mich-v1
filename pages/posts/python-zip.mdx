@@ -1,0 +1,154 @@
+---
+title: "Understanding the `zip` function in Python"
+tags: [python, webdev, tutorial]
+excerpt: "Learn how to use the `zip` function in Python along with and other tips and tricks."
+coverImage: '/blog-assets/background-min.jpg'
+createdAt: '2025-04-03'
+---
+ 
+
+## Introduction
+ [`zip()`](https://docs.python.org/3/library/functions.html#zip) is a built-in function in Python used for unpacking values from one or more iterables into a tuple, with one value from each of the iterables in the tuple. Another way of thinking about the `zip` function is transposing a square matrix.
+
+## Syntax
+The `zip()` function has the following syntax: 
+
+```python
+zip(*iterable, strict=False)
+```
+
+- `iterable`: An object that can be looped or iterated over. Examples include strings, lists, dictionaries, tuples, sets, etc.
+- `strict`:  A boolean value that allows you to set whether the length of the iterables should be the same or not.
+- **Return value**: The return value is an iterator of tuples, where the _i_-th tuple contains the _i_-th element from each of the argument iterables. Note that until the zip function is iterated upon, for example, using a **for** loop, or wrapping in a `list()` constructor, the iterables won't be processed or accessible. 
+
+## Understanding the `zip` function through examples
+
+1. Here we're using a **for** loop with the `zip` function to unpack iterables like, a range function, a list, a tuple and a string:
+
+```python
+for item in zip(range(4),  ['fee', 'fi', 'fo', 'fum'], ('bam', 'baz', 'bat', 'ban'), 'abot'):  
+    print(item)
+```
+
+Running the code above prints the following tuples : 
+```python
+(0, 'fee', 'bam', 'a')
+(1, 'fi', 'baz', 'b')
+(2, 'fo', 'bat', 'o')
+(3, 'fum', 'ban', 't')
+```
+
+2. In the following example, we're using the `list()` constructor together with the `zip` function: 
+
+```python
+list(zip(range(4),['fee', 'fi', 'fo', 'fum'], ['bam', 'baz', 'bat', 'ban']))
+```
+
+The code above outputs:
+
+```python
+[(0, 'fee', 'bam'), (1, 'fi', 'baz'), (2, 'fo', 'bat'), (3, 'fum', 'ban')]
+```
+
+
+3. When using the `zip` function, if the `strict` argument is not set to True and the iterables provided are of different lengths, `zip` will only consider the values up to the length of the shortest iterable, ignoring any extra values in the longer iterables. In the example below, the third iterable which is a tuple has a length shorter than other iterables in the function:
+ 
+```python
+for item in zip(range(4),  ['fee', 'fi', 'fo', 'fum'], ('bam', 'baz', 'bat'), 'abot'):  
+    print(item)
+```
+
+And as you can see below, the last item of each of the longer iterables is discarded:
+
+```python
+(0, 'fee', 'bam', 'a')
+(1, 'fi', 'baz', 'b')
+(2, 'fo', 'bat', 'o')
+```
+
+4. If you set the value of `strict` to True, and of the iterables passed to the `zip` function has a unequal length, a `ValueError` will be raised.  Here's the code from the last example, but with  `strict=True`:
+```python
+for item in zip(range(4),  ['fee', 'fi', 'fo', 'fum'], ('bam', 'baz', 'bat'), 'abot', strict=True):  
+    print(item)
+```
+
+A `ValueError` is thrown as shown below:
+
+```python
+(0, 'fee', 'bam', 'a')
+(1, 'fi', 'baz', 'b')
+(2, 'fo', 'bat', 'o')
+
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Cell In[13], line 1
+----> 1 for item in zip(range(4),  ['fee', 'fi', 'fo', 'fum'], ('bam', 'baz', 'bat'), 'abot', strict=True):  
+      2 print(item)
+
+ValueError: zip() argument 3 is shorter than arguments 1-2
+```
+
+
+## Tips and tricks for using the `zip` function
+
+### Create a dictionary from two lists
+One common use case of the zip function is for creating a dictionary from two lists: 
+```python
+keys = [0, 1, 2, 3, 4, 5]
+values = ["John", "Jane", "Max", "Dave", "Ella"]
+
+create_dict = dict(zip(keys, values))
+print(create_dict) # {0: 'John', 1: 'Jane', 2: 'Max', 3: 'Dave', 4: 'Ella'}
+```
+
+### Parallel iteration of two or more lists
+Here's how you can use the `zip` function to loop through two or more sequences simultaneously.
+
+```python
+users = ['Max', 'Jane', 'Jack']
+ages = [25, 30, 25]
+for name, age in zip(users, ages):
+    print(f'{name} is {age} years old.')
+
+# prints:
+# Max is 25 years old.
+# Jane is 30 years old.
+# Jack is 25 years old.
+```
+
+### Using `itertools.zip_longest()` to fill missing values
+If one or more of the iterables passed to the `zip` function has a shorter length than others, you can use `itertools.zip_longest()` to fill in the missing values. The example below fills the missing values with 0:
+
+```python
+from itertools import zip_longest
+list1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+list2 = ['a', 'b', 'c', 'd', 'e']
+zipped = list(zip_longest(list1, list2, fillvalue=0))
+print(zipped) 
+
+# prints:
+# [(1, 'a'), (2, 'b'), (3, 'c'), (4, 'd'), (5, 'e'), (6, 0), (7, 0), (8, 0), (9, 0), (10, 0)]
+```
+
+### Unzip a sequence using the * operator 
+Perhaps you have been wondering if there's an `unzip` function that does the the opposite of `zip`, well, there's none. You can actually use the `zip` function to zip and unzip a sequence of iterables. 
+
+The example below shows how you can use the `*` operator with `zip` to unzip a list of tuples into separate tuples:
+
+```python
+zipped = [('a', 1), ('b', 2), ('c', 3), ('d', 4)]
+letters, numbers = zip(*zipped)
+print(letters)
+print(numbers)
+
+# prints:
+# ('a', 'b', 'c', 'd')
+# (1, 2, 3, 4)
+```
+
+## Conclusion
+`zip` is a very handy function every Python developer should have in their arsenal. Its versatility can help make your code look more readable and professional. 
+
+Hopefully, this article has shed light on the potentials of `zip` and equipped you with valuable tips to leverage its capabilities in your next projects.
+
+Until next time, happy coding!

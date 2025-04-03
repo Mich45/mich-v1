@@ -18,10 +18,10 @@ const MainWrapper = styled.div`
     }
 
     code:not(pre > code) {
-        color: white;
+        color: #14b8a6;
         font-family: inherit;
-        font-size: 14px;
-        background: #16483ed6;
+        font-size: 15px;
+        background: #262626;
         padding: 2px 4px;
         border: 1px solid transparent;
         border-radius: 2px;

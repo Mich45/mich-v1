@@ -1,23 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { colors, shadows, device } from '../../styles/themes';
 
-
-const one = keyframes`
-    0% { left: 0px; top: 0px; }
-    25% { left: -100px; top: 70px; }
-    50% { left: 20px; top: 150px; }
-    75% { left: 50px; top: 100px; }
-    100% { left: 0px; top: 0px; }
-`;
-
-const two = keyframes`
-    0% { left: 0px; top: 0px; }
-    25% { left: 50px; top: 100px; }
-    50% { left: 100px; top: 50px; }
-    75% { left: 50px; top: 100px; }
-    100% { left: 0px; top: 0px; }
-`;
-
 const Container = styled.div`
     position: absolute;
     top: 50px !important;
@@ -49,7 +32,6 @@ const Shape1 = styled.div`
     filter: blur(90px);
     right: 60%;
     top: 700%;
-    // animation: ${one} 10s infinite;
 `;
 
 const Shape2 = styled.div`
@@ -61,22 +43,32 @@ const Shape2 = styled.div`
     opacity: 0.5;
     filter: blur(90px);
     top: 4%;
-    left: -40%;
-    // animation: ${two} 10s infinite;
+    left: -60%;
 `;
 
 const Shape3 = styled.div`
-    width: 400px;
-    height: 400px;
+    width: 250px;
+    height: 250px;
     border-radius: 9999px;
     position: relative;
     background-color: rgb(0 215 175);
     opacity: 0.5;
     filter: blur(90px);
-
-    // animation: ${one} 10s infinite;
+    left: 80%;
+    top: 30%;
 `;
 
+
+const Shape4 = styled.div`
+    width: 250px;
+    height: 250px;
+    border-radius: 9999px;
+    position: relative;
+    background-color: rgb(0 215 175);
+    opacity: 0.5;
+    filter: blur(90px);
+    top: -67%;
+`;
 
 const Gradient = () => {
     return (
@@ -84,7 +76,8 @@ const Gradient = () => {
             <BackgroundContainer>
                 <Shape1 />
                 <Shape2 />
-                <Shape3 />
+                {/* <Shape3 /> */}
+                <Shape4/>
             </BackgroundContainer>
         </Container>
     );

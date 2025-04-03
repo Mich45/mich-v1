@@ -1,0 +1,49 @@
+---
+title: "You Don't Need `dotenv` in Node.js 20.6.0"
+tags: ['javascript', 'nodejs']
+excerpt: "Starting from Node.js 20.6.0, you won't need to install dotenv anymore. Yay!"
+coverImage: '/blog-assets/background-min.jpg'
+createdAt: '2025-04-04'
+---
+
+
+## Introduction
+Following the release of version 20.6.0, the Node.js team [announced](https://nodejs.org/en/blog/release/v20.6.0) that there will be built-in support for .env configuration files going forward. This update is long overdue and represents a significant win for all Node.js developers. Environment variables are a common aspect of Node.js app development that every developer must deal with in most of their applications.
+
+Before this release, the Node.js community relies on an npm package called `dotenv` to manage and simplify loading environment variables in Node.js applications.
+
+In this short article, I'll show you how you can start using the built-in feature in your applications.
+
+First of all, if you haven't updated your Node.js installation to v20.6.0 or above, you can download the installer for your platform on the official website [here](https://nodejs.org/en/download/).
+
+After the installation is complete, run `node -v` to confirm you have a version not older than v20.6.0.
+
+## How to use the built-in .env file support
+
+I assume you already have a project you'd like to test this feature in. Note that for this to work, the `.env`` configuration file you want to load the environment variable from must follow the INI file format.
+
+Here's an example:
+
+```bash
+ADMIN_PASSWORD=XT56yf45te
+DATABASE_URL=https:127.0.0.1
+```
+
+One way to load the environment variables into your application is to use the following CLI command: 
+```bash
+node --env-file=config.env index.js
+```
+
+In the above example, `config.env` is the name of the file containing the environment variables. However, you're free to name it whatever you like - you may be familiar with the more  common `.env` file name.
+
+Another way is to use the command in `package.json`. So if you have a `.env` file in your project directory, you can do something like so:
+
+```json
+//...
+"scripts": {
+  "start": "node --env-file=.env index.js" // Assuming index.js is the entry point of your application.
+}
+```
+Now, when you run `npm start`, Node.js will load the environment variables and you can them access them like `process.env.ADMIN_PASSWORD`, etc.
+
+If you'd like to read more about other features in the release, feel free to check it out [here](https://nodejs.org/en/blog/release/v20.6.0).

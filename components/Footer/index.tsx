@@ -14,18 +14,18 @@ const FooterWrapper = styled.footer`
     position: relative;
  
 
-
     .linkwrapper {
         display: flex;
         flex-direction: column;
-        width: 100%;
-        position: absolute;
-        bottom: 30px;
+        width: 80%;
         justify-content: space-between;
+        position: relative;
+        top: 90%;
         padding-inline: 40px;
 
         @media ${device.laptop} {
             flex-direction: row;
+            margin: 100px 135px;
         }
 
     }

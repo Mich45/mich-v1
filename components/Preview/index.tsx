@@ -37,7 +37,8 @@ const Wrapper = styled.div`
             height: 215px;
 
         margin: 10px 0;
-        border: 2px solid rgb(102 193 170 / 99%);
+        border: 1px solid rgb(102 193 170 / 99%);
+        border-radius: 4px;
 
     }
 
