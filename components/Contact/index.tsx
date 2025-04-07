@@ -173,10 +173,7 @@ const Heading = styled.h1`
 const Submit = styled.button`
     width: 150px;
     height: 40px;
-    background-image: linear-gradient(
-        ${colors.green.greenPrimary},
-        rgb(0 219 128)
-    );
+    background-image: linear-gradient(to right, rgb(67, 231, 172), rgb(45, 235, 187), rgb(83, 226, 197), rgb(46 232 186), rgb(66 231 173));
     box-shadow: rgb(14 139 93) 0px 4px;
     color: black;
     font-family: 'Space Grotesk', sans-serif;

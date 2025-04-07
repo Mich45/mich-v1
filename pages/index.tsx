@@ -8,7 +8,6 @@ import { colors, device } from '../styles/themes';
 import Articles from '../components/Articles';
 import Contact from '../components/Contact';
 import About from '../components/About';
-import Meteors from '../components/Meteors';
 import * as api from '../lib/api';
 
 const DynamicProjects: any = dynamic(
@@ -231,7 +230,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
         <>
             <Head>
                 <title>
-                    Michael Hungbo - Geneticist, Software Developer & Technical
+                    Michael Hungbo - Software Developer & Technical
                     Writer
                 </title>
                 <meta
@@ -245,11 +244,10 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                 />
                 <meta
                     name="og:title"
-                    content="Geneticist, Software Developer & Technical Writer"
+                    content="Software Developer & Technical Writer"
                 />
             </Head>
             <MainContent>
-                <Meteors />
                 {/* <BannerWrapper>
                     <Banner>
                         <ParagraphWrapper>

@@ -62,7 +62,7 @@ const LogoWrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        margin-left: 40px;
+        margin-left: 24px;
     }
 `;
 

@@ -17,15 +17,16 @@ const FooterWrapper = styled.footer`
     .linkwrapper {
         display: flex;
         flex-direction: column;
+        height: 100%;
         width: 80%;
         justify-content: space-between;
         position: relative;
-        top: 90%;
-        padding-inline: 40px;
+        align-items: end;
+        padding: 30px 10px;
 
         @media ${device.laptop} {
             flex-direction: row;
-            margin: 100px 135px;
+            margin: 0px 135px;
         }
 
     }

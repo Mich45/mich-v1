@@ -43,9 +43,9 @@ const Excerpt = styled.p`
     margin-top: 0;
 `;
 
-const ReadMore = styled.a`
+const ReadMore = styled.p`
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-decoration: none;
     color: floralwhite;
     margin-top: 0;
