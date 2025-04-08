@@ -103,7 +103,7 @@ const Articles: NextPage<BlogProps> = ({ posts }) => {
                         return <ArticlesPreview meta={post} key={i} />;
                     })}
                     <ButtonWrapper>
-        <Link href="/blog" passHref>
+        <Link href="/blog">
           <Button>More articles</Button>
         </Link>
       </ButtonWrapper>
