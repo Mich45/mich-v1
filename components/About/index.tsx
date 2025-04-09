@@ -103,7 +103,6 @@ const About = () => {
                     />
                 </Left> */}
                 <Right>
-                    {/* data-aos="fade-up" data-aos-duration="2000" */}
                     <p>Hey there, I'm glad you're here.</p>
                     <p>
                         My name is Michael. I'm a software developer and
@@ -117,8 +116,8 @@ const About = () => {
                         have a strong flair for writing. As a technical writer,
                         I’ve created high-quality content ranging from API
                         documentation and user guides to technical articles and
-                        editing support. Clear, helpful communication is at the
-                        heart of my work.
+                        editing support. Clear, helpful communication is one of the
+                        philosophies that drive my work.
                     </p>
                     <p>
                         I also have a blog where I write about programming and

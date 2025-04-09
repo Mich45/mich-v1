@@ -39,8 +39,7 @@ const XMenu = styled.span`
     position: relative;
     background: ${colors.gray.darkGray};
     margin-block: 2px;
-    position: absolute;
-    opacity: 0;
+    opacity: 1;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform-origin: center;
 `;
@@ -62,12 +61,13 @@ const Anchor = styled.a`
     }
 
     .transform {
-        transform: rotate(-45deg);
+        transform: rotate(-39deg);
+        top: -7px;
         opacity: 1;
     }
 
     .transform2 {
-        transform: rotate(45deg);
+        transform: rotate(223deg);
         opacity: 1;
     }
 `;

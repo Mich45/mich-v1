@@ -160,11 +160,15 @@ const AboutSection = styled.section`
 `;
 
 const LineBreak = styled.hr`
-    height: 1px;
-    margin: 100px auto;
+    height: 0;
+    margin: 50px auto;
     width: 100%;
     background-color: darkslategray;
     border: 0 none;
+
+     @media ${device.laptop} {
+         margin: 100px auto;
+         height: 1px;    }
 `;
 
 

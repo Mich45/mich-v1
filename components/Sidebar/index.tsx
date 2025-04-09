@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 
 const Wrapper = styled.div`
-    width: 50%;
+    width: 70%;
     height: 100vh;
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 1;
+    z-index: 10000;
     background-color: #06040385;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -52,13 +52,13 @@ const Sidebar = ({ isOpen }: SidebarProps): JSX.Element => {
                 <LinkWrapper>
                     <Links>
                         <NavItem>
-                            <Anchor href="#projects">💻 Projects</Anchor>
+                            <Anchor href="/writing">Writing </Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="/blog">📖 Blog</Anchor>
+                            <Anchor href="/blog">Blog</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="#contact">📩 Contact</Anchor>
+                            <Anchor href="#contact">Contact</Anchor>
                         </NavItem>
                     </Links>
                 </LinkWrapper>

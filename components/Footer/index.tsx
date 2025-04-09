@@ -19,13 +19,16 @@ const FooterWrapper = styled.footer`
         flex-direction: column;
         height: 100%;
         width: 80%;
-        justify-content: space-between;
+        justify-content: end;
+        margin: 0 auto;
         position: relative;
-        align-items: end;
         padding: 30px 10px;
 
         @media ${device.laptop} {
             flex-direction: row;
+            justify-content: space-between;
+                    align-items: end;
+
             margin: 0px 135px;
         }
 
