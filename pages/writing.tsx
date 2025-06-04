@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
 import Link from 'next/link';
+import Head from 'next/head';
 import { colors, device } from '../styles/themes';
 
 const PortfolioContainer = styled.div`
@@ -14,7 +15,8 @@ const PortfolioContainer = styled.div`
 `;
 
 const Banner = styled.div`
-    height: 45vh;
+    height: 100%;
+    width: 100%;
     position: relative;
 `;
 
@@ -123,6 +125,25 @@ const Summary = styled.summary`
 
 const Writing = () => {
     return (
+        <>
+         <Head>
+                <title>
+                    Michael Hungbo - Technical Writing Portfolio
+                </title>
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+                <link rel="icon" href="/favicon.ico" />
+                <meta
+                    name="description"
+                    content="Michael Hungbo's technical writing portfolio showcasing expertise in software development and documentation."
+                />
+                <meta
+                    name="og:title"
+                    content="Technical Writer & Documentation Specialist"
+                />
+            </Head>
         <PortfolioContainer>
             <Banner>
                 <Image
@@ -134,11 +155,6 @@ const Writing = () => {
                     style={{ objectFit: 'contain' }}
                 />
             </Banner>
-
-            {/* <Title>Hi, I'm Michael.</Title>
-            <Title>
-                And I'm a technical writer and documentation specialist.
-            </Title> */}
             <Intro>
                 <p>
                     They say the best software engineers make good writers -
@@ -278,11 +294,10 @@ const Writing = () => {
                 <Details>
                     <Summary>Refine</Summary>
                     <p>
-                        I wrote over 50 articles for Cloudinary Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Sunt labore
-                        eos corporis ab rem harum accusantium maiores
-                        consectetur perferendis quos culpa magni repellendus,
-                        mollitia qui sapiente, expedita sequi dolorum error.
+                        I wrote technical articles for Refine, a React framework
+                        for building data-intensive applications. My articles
+                        cover topics such as data fetching, image optimization,
+                        and using Material UI components.
                     </p>
                     <ArticleList>
                         <ArticleItem>
@@ -325,11 +340,11 @@ const Writing = () => {
                 <Details>
                     <Summary>Proxycurl</Summary>
                     <p>
-                        I wrote over 50 articles for Cloudinary Lorem ipsum
-                        dolor sit amet consectetur adipisicing elit. Sunt labore
-                        eos corporis ab rem harum accusantium maiores
-                        consectetur perferendis quos culpa magni repellendus,
-                        mollitia qui sapiente, expedita sequi dolorum error.
+                        I worked as a ghost writer to create technical articles for Proxycurl, a company
+                        that provides APIs for data enrichment and web scraping.
+                        My articles cover topics such as integrating their APIs,
+                        enhancing web scraping, and using their services
+                        effectively.
                     </p>
                     <ArticleList>
                         <ArticleItem>
@@ -409,6 +424,7 @@ const Writing = () => {
                 </VideoContainer>
             </Section>
         </PortfolioContainer>
+        </>
     );
 };
 
