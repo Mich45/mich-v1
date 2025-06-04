@@ -71,7 +71,7 @@ const VideoContainer = styled.div`
 
     .iframe {
         width: 380px;
-        height: 300px;
+        height: 250px;
     }
 
          @media ${device.tablet} {
@@ -374,19 +374,19 @@ const Writing = () => {
                         src="/assets/Moon.svg"
                         alt="Documentation 1"
                         width={380}
-                        height={300}
+                        height={250}
                     />
                     <Image
                         src="/assets/Moon.svg"
                         alt="Documentation 2"
                         width={380}
-                        height={300}
+                        height={250}
                     />
                     <Image
                         src="/assets/Moon.svg"
                         alt="Documentation 3"
                         width={380}
-                        height={300}
+                        height={250}
                     />
                 </ImageGrid>
             </Section>
@@ -396,28 +396,24 @@ const Writing = () => {
                 <VideoContainer>
                     <iframe
                         className="iframe"
-                        height="300"
                         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                         allowFullScreen
                     ></iframe>
                     <iframe
                         className="iframe"
-                        width="400"
-                        height="300"
+                       
                         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                         allowFullScreen
                     ></iframe>
                     <iframe
                         className="iframe"
-                        width="400"
-                        height="300"
+                    
                         src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
                         allowFullScreen
                     ></iframe>
                     <iframe
                         className="iframe"
-                        width="400"
-                        height="300"
+                      
                         src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
                         allowFullScreen
                     ></iframe>
