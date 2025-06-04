@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Image from 'next/image';
 import Gradient from '../Gradient';
 import { colors, device } from '../../styles/themes';
 
@@ -20,7 +21,6 @@ const AboutWrapper = styled.section`
 
 const Left = styled.div`
     width: 50%;
-    border: 4px solid ${colors.gray.darkGray};
     height: 100%;
     display: inherit;
     position: relative;
@@ -134,6 +134,13 @@ const About = () => {
                         </Resume>
                     </ResumeWrapper>
                 </Right>
+                {/* <Left>
+                    <Image src='/assets/Michael-3D-transparent.png' 
+                    width={500}
+                    height={500}
+                    quality={100}
+                    alt='Michael Hungbo 3D Headshot'/>
+                </Left> */}
             </AboutWrapper>
         </>
     );

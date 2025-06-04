@@ -3,9 +3,8 @@ import { colors, shadows, device } from '../../styles/themes';
 
 const Container = styled.div`
     position: absolute;
-    top: 50px !important;
-    inset: 0;
     height: 100vh;
+    inset: 0;
     flex-direction: row;
     justify-content: center;
     display: none;

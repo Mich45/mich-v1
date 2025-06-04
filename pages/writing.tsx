@@ -7,10 +7,15 @@ import { colors, device } from '../styles/themes';
 const PortfolioContainer = styled.div`
     color: white;
 
-     @media ${device.laptop} {
-    margin: 0 115px;
-    padding: 20px;
+    @media ${device.laptop} {
+        margin: 0 150px 0 78px;
+        padding: 20px;
     }
+`;
+
+const Banner = styled.div`
+    height: 45vh;
+    position: relative;
 `;
 
 const Section = styled.section`
@@ -23,8 +28,7 @@ const Heading = styled.h2`
 `;
 
 const ArticleList = styled.ul`
-    list-style: none;
-    padding: 0;
+    list-style: auto;
 `;
 
 const ArticleItem = styled.li`
@@ -40,16 +44,45 @@ const ArticleItem = styled.li`
 
 const ImageGrid = styled.div`
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
     margin-top: 20px;
+
+           @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+        @media ${device.laptop} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+         @media ${device.desktop} {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 const VideoContainer = styled.div`
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     gap: 20px;
+
+    .iframe {
+        width: 380px;
+        height: 300px;
+    }
+
+         @media ${device.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+        @media ${device.laptop} {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+         @media ${device.desktop} {
+        grid-template-columns: repeat(3, 1fr);
+    }
 `;
 
 const Intro = styled.div`
@@ -70,7 +103,15 @@ const Details = styled.details`
     border-radius: 4px;
     padding: 0.5em 0.5em 0;
     margin-top: 10px;
-    width: 70%;
+    width: 100%;
+
+    @media ${device.tablet} {
+        width: 100%;
+    }
+
+    @media ${device.laptop} {
+        width: 100%;
+    }
 `;
 
 const Summary = styled.summary`
@@ -83,10 +124,21 @@ const Summary = styled.summary`
 const Writing = () => {
     return (
         <PortfolioContainer>
-            <Title>Hi, I'm Michael.</Title>
+            <Banner>
+                <Image
+                    src="/assets/Michael-linkedin-banner.png"
+                    alt="Michael Hungbo"
+                    quality={100}
+                    priority={true}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                />
+            </Banner>
+
+            {/* <Title>Hi, I'm Michael.</Title>
             <Title>
                 And I'm a technical writer and documentation specialist.
-            </Title>
+            </Title> */}
             <Intro>
                 <p>
                     They say the best software engineers make good writers -
@@ -97,8 +149,6 @@ const Writing = () => {
                     because they make my work, and that of others, less
                     laborious. My experience as a software developer has helped
                     me understand just how important good writing really is.
-                </p>
-                <p>
                     Over the past five years, I’ve built professional technical
                     writing skills while working with reputable companies such
                     as Cloudinary, Minexa.ai, CustomGPT.ai, and Proxycurl. These
@@ -206,6 +256,22 @@ const Writing = () => {
                                 8 Tips To Make Amazing Video Thumbnails
                             </Link>
                         </ArticleItem>
+                        <ArticleItem>
+                            <Link
+                                href="https://cloudinary.com/guides/video-effects/video-urls"
+                                target="_blank"
+                            >
+                                Five Things You Can Do with Video URLs
+                            </Link>
+                        </ArticleItem>
+                        <ArticleItem>
+                            <Link
+                                href="https://cloudinary.com/guides/ecosystems/amazon-s3-image-optimization-with-cloudinary"
+                                target="_blank"
+                            >
+                                Amazon S3 Image Optimization with Cloudinary
+                            </Link>
+                        </ArticleItem>
                     </ArticleList>
                 </Details>
 
@@ -292,20 +358,20 @@ const Writing = () => {
                     <Image
                         src="/assets/Moon.svg"
                         alt="Documentation 1"
-                        width={300}
-                        height={200}
+                        width={380}
+                        height={300}
                     />
                     <Image
                         src="/assets/Moon.svg"
                         alt="Documentation 2"
-                        width={300}
-                        height={200}
+                        width={380}
+                        height={300}
                     />
                     <Image
                         src="/assets/Moon.svg"
                         alt="Documentation 3"
-                        width={300}
-                        height={200}
+                        width={380}
+                        height={300}
                     />
                 </ImageGrid>
             </Section>
@@ -314,14 +380,29 @@ const Writing = () => {
                 <Heading>Talks and Videos</Heading>
                 <VideoContainer>
                     <iframe
-                        width="560"
-                        height="315"
+                        className="iframe"
+                        height="300"
                         src="https://www.youtube.com/embed/dQw4w9WgXcQ"
                         allowFullScreen
                     ></iframe>
                     <iframe
-                        width="560"
-                        height="315"
+                        className="iframe"
+                        width="400"
+                        height="300"
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                        allowFullScreen
+                    ></iframe>
+                    <iframe
+                        className="iframe"
+                        width="400"
+                        height="300"
+                        src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
+                        allowFullScreen
+                    ></iframe>
+                    <iframe
+                        className="iframe"
+                        width="400"
+                        height="300"
                         src="https://www.youtube.com/embed/3JZ_D3ELwOQ"
                         allowFullScreen
                     ></iframe>

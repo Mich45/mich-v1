@@ -13,6 +13,7 @@ import {
     H2,
     Pre,
     HeadingThree,
+    PostImage
 } from '../components/MDXComponents/Elements';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -31,6 +32,15 @@ function MyApp({ Component, pageProps }: AppProps) {
         h3: HeadingThree,
         pre: Pre,
         h2: H2,
+        img: (props) => (
+            <PostImage
+              alt={props.alt}
+              src={props.src}
+              width={500}
+              height={500}
+              {...props}
+            />
+          ),
         wrapper: ({ components, ...rest }) => <PostLayout {...rest} />,
     };
 

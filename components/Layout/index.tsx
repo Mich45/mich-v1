@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { colors, device } from '../../styles/themes';
-import Noise from '../../public/assets/noise.png';
 
 const Main = styled.main`
     height: auto;
