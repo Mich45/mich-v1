@@ -72,6 +72,7 @@ const VideoContainer = styled.div`
     .iframe {
         width: 380px;
         height: 250px;
+        border: none
     }
 
          @media ${device.tablet} {
@@ -151,8 +152,9 @@ const Writing = () => {
                     alt="Michael Hungbo"
                     quality={100}
                     priority={true}
-                    fill
-                    style={{ objectFit: 'contain' }}
+                    width={1200}
+                    height={400}
+                    style={{ objectFit: 'cover', width: '100%', height: 'auto' }}
                 />
             </Banner>
             <Intro>
