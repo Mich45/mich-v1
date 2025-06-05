@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
     "prepare": "husky install"
   },
@@ -23,6 +24,7 @@
     "lint-staged": "^13.0.0",
     "mrm": "2",
     "next": "^15.1.0",
+    "next-sitemap": "^4.2.3",
     "nodemailer": "^6.7.6",
     "pageclip": "^1.0.0",
     "react": "^18.0.0",
