@@ -139,7 +139,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     {/* <Button>Show more</Button> */}
                 </PostsWrapper>
                 <ArticlesWrapper>
-                    <h2 className="text">External posts.</h2>
+                    <h2 className="text">My posts from elsewhere.</h2>
                     <div>
                         {data ? (
                             <Writing articles={data} />

@@ -71,13 +71,21 @@ const SectionHeading = styled.h2`
         rgb(141 248 212),
         rgb(94 235 168)
     );
+    padding-top: 45px;
     background-clip: text;
     background-size: 225% auto;
     -webkit-animation: ${gradient} 3s linear infinite;
     animation: ${gradient} 3s linear infinite;
 
+    @media ${device.tablet} {
+        padding-top: 0;
+
+    }
+    
     @media ${device.laptop} {
         padding-left: 0;
+        padding-top: 0;
+
     }
 `;
 

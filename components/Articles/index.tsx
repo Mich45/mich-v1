@@ -33,6 +33,7 @@ const Article = styled.div`
 
 const Title = styled.h3`
     font-weight: bold;
+    text-decoration: underline;
 `;
 
 
