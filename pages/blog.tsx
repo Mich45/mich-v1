@@ -44,9 +44,7 @@ const Jumbotron = styled.section`
 
 const ArticlesWrapper = styled.div`
     width: 100%;
-    padding-inline: 20px;
     margin-bottom: 30px;
-    padding-inline: 30px;
 
     .text {
     color: transparent;
@@ -66,6 +64,10 @@ const ArticlesWrapper = styled.div`
 
     @media ${device.laptop} {
         padding-inline: 134px;
+    }
+        
+    @media ${device.tablet} {
+        padding-inline: 20px;
     }
 `;
 

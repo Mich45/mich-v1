@@ -13,7 +13,7 @@ const Wrapper = styled.div`
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     transform: translateX(-500px);
-    transition: transform 1s ease-out;
+    transition: transform 0.5s ease-out;
 `;
 
 const LinkWrapper = styled.div`

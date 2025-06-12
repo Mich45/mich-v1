@@ -18,36 +18,40 @@ type PreviewProps = {
 };
 
 const Wrapper = styled.div`
-    width: 90%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     transition: 0.2s ease-out;
-    margin: 20px auto;
-    padding: 0px 12px;
+    margin: 20px 0;
    
 }
 
-    :hover {
+    @media ${device.laptop} {
+        width: 92.5%;
+        height: 215px;
+        padding: 0px 12px;
+        margin: 10px 0;
+        border: 1px solid rgb(22 86 69 / 99%);
+        border-radius: 4px;
+
+        :hover {
         cursor: pointer;
         background-color:rgb(20 55 55);
     }
-
-    @media ${device.laptop} {
-        width: 92.5%;
-            height: 215px;
-
-        margin: 10px 0;
-        border: 1px solid rgb(102 193 170 / 99%);
-        border-radius: 4px;
 
     }
 
     @media ${device.tablet}{
         width: 92.5%;
-            height: 215px;
-
+        height: 215px;
+        padding: 0px 12px;
         margin: 10px 0;
-        border: 2px solid rgb(102 193 170 / 99%);
+        border: 1px solid rgb(22 86 69 / 99%);
+
+        :hover {
+        cursor: pointer;
+        background-color:rgb(20 55 55);
+    }
 
     }
 `;
@@ -63,6 +67,7 @@ const TitleWrapper = styled.div`
 const Link = styled.a``;
 
 const Title = styled.h3`
+margin-bottom: 6px;
     :hover {
         cursor: pointer;
     }
