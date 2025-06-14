@@ -45,6 +45,10 @@ const Card = styled.div`
 const TextWrapper = styled.div`
     width: 100%;
     height: 40%;
+
+    .title{
+    color: #c7d9db;
+    }
 `;
 
 type ArticleProp = {
@@ -71,7 +75,7 @@ const Writing = ({ articles }: ArticleProp) => {
                                     target="_blank"
                                     rel="noreferrer"
                                 >
-                                    <h3>{article.title}</h3>
+                                    <h3 className='title'>{article.title}</h3>
                                 </a>
                             </TextWrapper>
                         </Card>

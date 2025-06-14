@@ -9,7 +9,7 @@ const MainWrapper = styled.div`
     width: 100%;
     height: auto;
     position: relative;
-    color: white;
+    color: #a9b8c2;
     font-size: 16px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
 

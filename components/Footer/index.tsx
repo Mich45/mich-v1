@@ -12,7 +12,6 @@ const FooterWrapper = styled.footer`
     border-top: 1px solid darkslategrey;
     background-color: rgb(24 40 40);
     position: relative;
- 
 
     .linkwrapper {
         display: flex;
@@ -27,11 +26,10 @@ const FooterWrapper = styled.footer`
         @media ${device.laptop} {
             flex-direction: row;
             justify-content: space-between;
-                    align-items: end;
+            align-items: end;
 
             margin: 0px 135px;
         }
-
     }
 
     .divider {
@@ -48,12 +46,35 @@ const FooterWrapper = styled.footer`
     }
 `;
 
-const SocialWrapper = styled.div`
+const QuickLinks = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: ${colors.slate.textSlate};
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
 
-display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
+    .title {
+        font-size: 18px;
+}
+
+    .list {
+        list-style: none;
+    }
+`;
+
+const QuickLinkItem = styled.li`
+    padding-block: 10px;
+`;
+
+const QuickLink = styled.a``;
+
+const SocialWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 `;
 
 const Paragraph = styled.p`
@@ -62,19 +83,19 @@ const Paragraph = styled.p`
 `;
 
 const Link = styled.a`
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid rgb(81 79 79 / 50%);
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  text-decoration: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(81 79 79 / 50%);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
 `;
 
 const Footer = (): JSX.Element => {
@@ -83,6 +104,23 @@ const Footer = (): JSX.Element => {
     return (
         <>
             <FooterWrapper>
+                <QuickLinks>
+                    <div>
+                        <p className="title">Quick Links</p>
+                        <ul className="list">
+                            <QuickLinkItem>
+                                <QuickLink href="/about">About</QuickLink>
+                            </QuickLinkItem>
+                            <QuickLinkItem>
+                                <QuickLink href="/blog">Blog</QuickLink>
+                            </QuickLinkItem>
+                            <QuickLinkItem>
+                                <QuickLink href="/projects">Projects</QuickLink>
+                            </QuickLinkItem>
+                        </ul>
+                    </div>
+                </QuickLinks>
+
                 <div className="linkwrapper">
                     <Paragraph>
                         Copyright © {date} Michael Hungbo. All rights reserved.

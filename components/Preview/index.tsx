@@ -17,7 +17,7 @@ type PreviewProps = {
     };
 };
 
-const Wrapper = styled.div`
+const Wrapper = styled.a`
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -68,6 +68,7 @@ const Link = styled.a``;
 
 const Title = styled.h3`
 margin-bottom: 6px;
+color: #c7d9db;
     :hover {
         cursor: pointer;
     }
@@ -86,7 +87,7 @@ height: auto
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
-    color: floralwhite;
+    color: #a9b8c2;
     font-weight: 500;
 `;
 
@@ -98,7 +99,9 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
     console.log(meta.data.createdAt);
     return (
         <>
-            <Wrapper>
+            <Wrapper href={`posts/${meta.postPath
+                            .split('posts/')[1]
+                            .replace(/.md?./, '')}`}>
                 <TitleWrapper>
                     <Link
                         href={`posts/${meta.postPath

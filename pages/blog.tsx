@@ -30,15 +30,25 @@ background-position: 0% 50%
 const Jumbotron = styled.section`
     width: 100%;
     height: auto;
+    
+    .heading {
+    margin-top: 4em;
+    }
 
-    .tags_wrapper {
-        display: none;
+    .text{
+    color: #a9b8c2;
     }
 
     @media ${device.laptop} {
-        .tags_wrapper {
-            display: flex;
-        }
+        padding: 20px 135px;
+    }
+
+    @media ${device.tablet} {
+        padding-inline: 20px;
+    }
+
+     @media ${device.desktop} {
+        padding: 20px 135px;
     }
 `;
 
@@ -81,7 +91,7 @@ const SearchWrapper = styled.div`
 const PostsWrapper = styled.div`
     width: 100%;
     height: auto;
-    displaay: flex;
+    display: flex;
     flex-direction: column;
 
     @media ${device.laptop} {
@@ -133,6 +143,12 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             </Head>
             <MainWrapper>
                 <Jumbotron>
+                    <div className="heading">
+                        <h1 className="heading-text">Bits and Bytes</h1>
+                    </div>
+                    <div className="text-wrapper">
+                        <p className="text">This is where I document my journey as a software developer and technical writer. From tutorials to tech rants, if it involves code or curiosity, it might end up here.</p>
+                    </div>
                 </Jumbotron>
                 <PostsWrapper>
                     {posts.map((post, i) => {
