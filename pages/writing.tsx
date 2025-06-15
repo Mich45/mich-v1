@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { colors, device } from '../styles/themes';
 
 const PortfolioContainer = styled.div`
-    color: white;
+    color: ${colors.white.textWhite};
 
     @media ${device.laptop} {
         margin: 0 150px 0 78px;
@@ -370,47 +370,8 @@ const Writing = () => {
                 <Details>
                     <Summary>My personal blog</Summary>
                     <p>
-                        I wrote technical articles for Refine, a React framework
-                        for building data-intensive applications. My articles
-                        cover topics such as data fetching, image optimization,
-                        and using Material UI components.
+                        I write technical articles on my personal blog, covering a wide range of topics in software development, programming languages, and web technologies. Visit my blog to explore more of my writing.
                     </p>
-                    <ArticleList>
-                        <ArticleItem>
-                            <Link
-                                href="https://refine.dev/blog/data-fetching-next-js-useswr/#custom-caching-strategies"
-                                target="_blank"
-                            >
-                                How to Fetch Data in React with useSWR
-                            </Link>
-                        </ArticleItem>
-                        <ArticleItem>
-                            <Link
-                                href="https://refine.dev/blog/using-next-image/"
-                                target="_blank"
-                            >
-                                Nextjs Image Optimization With Examples
-                            </Link>
-                        </ArticleItem>
-                        <ArticleItem>
-                            <Link
-                                href="https://refine.dev/blog/mui-datagrid-refine/"
-                                target="_blank"
-                            >
-                                Using Material UI DataGrid component with Refine
-                                App{' '}
-                            </Link>
-                        </ArticleItem>
-                        <ArticleItem>
-                            <Link
-                                href="https://refine.dev/blog/next-js-with-typescript/
-"
-                                target="_blank"
-                            >
-                                A Guide For Using Nextjs With TypeScript{' '}
-                            </Link>
-                        </ArticleItem>
-                    </ArticleList>
                 </Details>
 
             </Section>

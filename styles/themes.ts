@@ -1,6 +1,6 @@
 export const colors = {
     white: {
-        default_white: '#f5f6f8',
+        textWhite: 'rgb(237, 237, 237)',
         white_pink:
             'linear-gradient(to right, #f5f6f8, rgb(239 217 217), rgb(255 253 227))',
         white_pink2:
@@ -14,8 +14,8 @@ export const colors = {
     },
 
     gray: {
-        grayPrimary: '#dfdcdc',
-        darkGray: 'rgb(46 66 94)',
+        grayPrimary: 'rgb(139, 169, 169)',
+        darkGray: '#767979',
         lightGray: 'rgb(140 150 169)',
     },
     blue: {

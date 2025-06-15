@@ -33,6 +33,7 @@ const Article = styled.div`
 
 const Title = styled.h3`
     font-weight: bold;
+    color: ${colors.gray.grayPrimary};
     text-decoration: underline;
 `;
 
@@ -40,7 +41,7 @@ const Title = styled.h3`
 const Excerpt = styled.p`
     font-size: 14px;
     font-weight: 500;
-    color: white;
+    color: ${colors.white.textWhite};
     margin-top: 0;
 `;
 

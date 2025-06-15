@@ -68,7 +68,7 @@ const Link = styled.a``;
 
 const Title = styled.h3`
 margin-bottom: 6px;
-color: #c7d9db;
+color: ${colors.gray.lightGray};
     :hover {
         cursor: pointer;
     }
@@ -87,7 +87,7 @@ height: auto
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
-    color: #a9b8c2;
+    color: ${colors.white.textWhite};
     font-weight: 500;
 `;
 
