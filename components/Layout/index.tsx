@@ -17,7 +17,7 @@ const Main = styled.main`
 
 const MainOverlay = styled.div`
     position: relative;
-    
+    margin-top: 3.5em;
 `;
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
