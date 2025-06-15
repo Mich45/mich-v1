@@ -121,7 +121,7 @@ const Navbar = (): JSX.Element => {
                             <Anchor href="/blog">Blog</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="/#contact">Contact</Anchor>
+                            <Anchor href="/about">About</Anchor>
                         </NavItem>
                         <NavItem></NavItem>
                     </NavLinkWrapper>

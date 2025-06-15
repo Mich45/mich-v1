@@ -10,7 +10,7 @@ const FooterWrapper = styled.footer`
     margin-top: 30px;
     flex-direction: column;
     border-top: 1px solid darkslategrey;
-    background-color: rgb(24 40 40);
+    background-color: rgb(21 23 23 / 86%);
     position: relative;
 
     .linkwrapper {
@@ -47,13 +47,27 @@ const FooterWrapper = styled.footer`
 `;
 
 const QuickLinks = styled.div`
-    display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: end;
     color: ${colors.slate.textSlate};
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 20px;
+    display: none;
+
+    @media ${device.laptop} {
+        display: flex;
+    }
+    @media ${device.tablet} {
+        display: flex;
+    }
+    @media ${device.desktop} {
+        display: flex;
+    }
+
+    .wrapper {
+    margin-top: 5em;
+        margin-right: 230px;}
 
     .title {
         font-size: 18px;
@@ -61,6 +75,7 @@ const QuickLinks = styled.div`
 
     .list {
         list-style: none;
+        padding-inline: 0;
     }
 `;
 
@@ -68,7 +83,18 @@ const QuickLinkItem = styled.li`
     padding-block: 10px;
 `;
 
-const QuickLink = styled.a``;
+const QuickLink = styled.a`
+    font-size: 16px;
+    color: white;
+    transition: color 0.2s ease-in-out 0s;
+
+
+      &:hover {
+        color: rgb(139, 169, 169);
+;
+    }
+}
+`;
 
 const SocialWrapper = styled.div`
     display: flex;
@@ -88,10 +114,11 @@ const Link = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(81 79 79 / 50%);
+    border: 1px solid rgb(73, 82, 82);
     border-radius: 10px;
     transition: all 0.3s ease;
     text-decoration: none;
+
 
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
@@ -105,7 +132,7 @@ const Footer = (): JSX.Element => {
         <>
             <FooterWrapper>
                 <QuickLinks>
-                    <div>
+                    <div className='wrapper'>
                         <p className="title">Quick Links</p>
                         <ul className="list">
                             <QuickLinkItem>

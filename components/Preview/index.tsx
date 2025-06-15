@@ -103,17 +103,11 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
                             .split('posts/')[1]
                             .replace(/.md?./, '')}`}>
                 <TitleWrapper>
-                    <Link
-                        href={`posts/${meta.postPath
-                            .split('posts/')[1]
-                            .replace(/.md?./, '')}`}
-                    >
                         <Title>{meta.data.title}</Title>
-                    </Link>
                 </TitleWrapper>
                 <InfoWrapper>
                     <ExcerptWrapper>
-                    <Excerpt>{meta.data.excerpt.split(/\s+/).slice(0, 10).join(' ') + '...' }</Excerpt>
+                    <Excerpt>{meta.data.excerpt.split(/\s+/).slice(0, 25).join(' ') + '...' }</Excerpt>
                     </ExcerptWrapper>
                     {/* <TagsWrapper>
                         <Tag>

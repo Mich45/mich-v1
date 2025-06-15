@@ -162,7 +162,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                         {data ? (
                             <Writing articles={data} />
                         ) : (
-                            <div> Unable to fetch external articles... </div>
+                            <div> Unable to fetch articles. </div>
                         )}
                     </div>
                 </ArticlesWrapper>
