@@ -91,7 +91,8 @@ const DropdownWrapper = styled.div`
 
 const Anchor = styled.a`
     text-decoration: none;
-    color: white;
+    color: ${colors.white.textWhite};
+    font-size: 14px;
     transition: color 0.2s ease-in-out 0s;
 
     :hover {
@@ -115,13 +116,13 @@ const Navbar = (): JSX.Element => {
                     </DropdownWrapper>
                     <NavLinkWrapper className="links">
                         <NavItem>
-                            <Anchor href="/writing">Writing</Anchor>
+                            <Anchor href="/writing">WRITING</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="/blog">Blog</Anchor>
+                            <Anchor href="/blog">BLOG</Anchor>
                         </NavItem>
                         <NavItem>
-                            <Anchor href="/about">About</Anchor>
+                            <Anchor href="/about">ABOUT</Anchor>
                         </NavItem>
                         <NavItem></NavItem>
                     </NavLinkWrapper>

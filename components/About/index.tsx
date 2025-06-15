@@ -35,7 +35,7 @@ const Right = styled.div`
     height: 100%;
     font-size: 14px;
     font-weight: 500;
-    color: ${colors.gray.grayPrimary};
+    color: ${colors.white.textWhite};
 
     @media ${device.laptop} {
         width: 50%;
@@ -60,26 +60,17 @@ const Resume = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(
-        to right,
-        rgb(67, 231, 172),
-        rgb(45, 235, 187),
-        rgb(83, 226, 197),
-        rgb(46 232 186),
-        rgb(66 231 173)
-    );
+    background-color:  rgb(45, 235, 187);
     place-items: center;
     place-content: center;
     display: inline-block;
     color: black;
-    font-size: 14px;
     margin: 0;
     text-decoration: none;
     transition: color 0.2s ease-in-out, ease-in-out;
     &:hover {
         cursor: pointer;
-        color: floralwhite;
-        font-weight: normal;
+        color:rgb(34, 42, 42);
     }
 `;
 

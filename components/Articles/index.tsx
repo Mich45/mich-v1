@@ -65,7 +65,7 @@ const Button = styled.a`
     outline: none;
     padding-inline: 10px;
     border-radius: 4px;
-    background-image: linear-gradient(to right, rgb(67, 231, 172), rgb(45, 235, 187), rgb(83, 226, 197), rgb(46 232 186), rgb(66 231 173));
+    background-color: rgb(45, 235, 187);
     place-items: center;
     place-content: center;
     display: inline-block;
@@ -77,7 +77,8 @@ const Button = styled.a`
     &:hover {
         cursor: pointer;
         box-shadow: none;
-        color: floralwhite;
+        color:rgb(34, 42, 42);
+;
     }
 `;
 
