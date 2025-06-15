@@ -13,7 +13,6 @@ const Main = styled.main`
     @media ${device.laptop} {
             padding-inline: 0px;
         }
-
 `;
 
 const MainOverlay = styled.div`

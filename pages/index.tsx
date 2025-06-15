@@ -29,16 +29,6 @@ const slideIn = keyframes`
 }
 `;
 
-const gradient = keyframes`
-0% {
-background-position: 200% 50%
-}
-
-100% {
-background-position: 0% 50%
-}
-`;
-
 const MainContent = styled.section`
     width: 100%;
     height: 100%;
@@ -63,19 +53,10 @@ const BannerWrapper = styled.div`
 
 const SectionHeading = styled.h2`
     color: transparent;
-    background: linear-gradient(
-        to right,
-        rgb(83 224 173),
-        rgb(45 235 187),
-        rgb(83 226 197),
-        rgb(141 248 212),
-        rgb(94 235 168)
-    );
+    background-color:  rgb(45, 235, 187);
     padding-top: 45px;
     background-clip: text;
     background-size: 225% auto;
-    -webkit-animation: ${gradient} 3s linear infinite;
-    animation: ${gradient} 3s linear infinite;
 
     @media ${device.tablet} {
         padding-top: 0;
@@ -207,17 +188,9 @@ const ProjectSection = styled.section`
 
 const Name = styled.span`
     color: transparent;
-    background: linear-gradient(
-        to right,
-        rgb(67 231 172),
-        rgb(45 235 187),
-        rgb(83 226 197),
-        rgb(125 226 168),
-        rgb(94 235 168)
-    );
+    background:  rgb(45, 235, 187);
     background-clip: text;
     background-size: 225% auto;
-    animation: ${gradient} 3s linear infinite;
 `;
 
 const ContactSection = styled.section`
