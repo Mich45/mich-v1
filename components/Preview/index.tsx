@@ -22,7 +22,8 @@ const Wrapper = styled.a`
     display: flex;
     flex-direction: column;
     transition: 0.2s ease-out;
-    margin: 20px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(94 98 97 / 42%);
    
 }
 
@@ -68,7 +69,7 @@ const Link = styled.a``;
 
 const Title = styled.h3`
 margin-bottom: 6px;
-color: ${colors.gray.lightGray};
+color: ${colors.white.textWhite};
     :hover {
         cursor: pointer;
     }
@@ -87,7 +88,7 @@ height: auto
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
-    color: ${colors.white.textWhite};
+    color: ${colors.gray.grayPrimary};
     font-weight: 500;
 `;
 

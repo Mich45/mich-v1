@@ -51,6 +51,9 @@ const Anchor = styled.a`
     flex-direction: column;
     place-content: center;
     place-items: center;
+    margin-top: 3px;
+    padding: 0;
+    justify-content: start;
 
     :hover {
         cursor: pointer;

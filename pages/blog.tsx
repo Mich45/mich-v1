@@ -3,7 +3,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import useSWR, { Fetcher } from 'swr';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import Search from '../components/Search';
 import Preview from '../components/Preview';
 import Writing from '../components/Writing';
@@ -30,13 +30,13 @@ background-position: 0% 50%
 const Jumbotron = styled.section`
     width: 100%;
     height: auto;
-    
+
     .heading {
-    margin-top: 4em;
+        margin-top: 4em;
     }
 
-    .text{
-    color: #a9b8c2;
+    .text {
+        color: #a9b8c2;
     }
 
     @media ${device.laptop} {
@@ -47,7 +47,7 @@ const Jumbotron = styled.section`
         padding-inline: 20px;
     }
 
-     @media ${device.desktop} {
+    @media ${device.desktop} {
         padding: 20px 135px;
     }
 `;
@@ -57,25 +57,24 @@ const ArticlesWrapper = styled.div`
     margin-bottom: 30px;
 
     .text {
-    color: transparent;
-    background: linear-gradient(
-        to right,
-        rgb(67 231 172),
-        rgb(45 235 187),
-        rgb(83 226 197),
-        rgb(125 226 168),
-        rgb(94 235 168)
-    );
-    background-clip: text;
-    background-size: 225% auto;
-    animation: ${gradient} 3s linear infinite;
-    
+        color: transparent;
+        background: linear-gradient(
+            to right,
+            rgb(67 231 172),
+            rgb(45 235 187),
+            rgb(83 226 197),
+            rgb(125 226 168),
+            rgb(94 235 168)
+        );
+        background-clip: text;
+        background-size: 225% auto;
+        animation: ${gradient} 3s linear infinite;
     }
 
     @media ${device.laptop} {
         padding-inline: 134px;
     }
-        
+
     @media ${device.tablet} {
         padding-inline: 20px;
     }
@@ -93,20 +92,23 @@ const PostsWrapper = styled.div`
     height: auto;
     display: flex;
     flex-direction: column;
+    margin-top: 4em;
 
     @media ${device.laptop} {
         padding: 20px 135px;
         display: grid;
+        margin-top: 0;
         grid-template-columns: repeat(2, 1fr);
     }
 
     @media ${device.tablet} {
         padding-inline: 20px;
         display: grid;
+        margin-top: 0;
         grid-template-columns: repeat(2, 1fr);
     }
 
-     @media ${device.desktop} {
+    @media ${device.desktop} {
         padding: 20px 135px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -147,7 +149,12 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                         <h1 className="heading-text">Bits and Bytes</h1>
                     </div>
                     <div className="text-wrapper">
-                        <p className="text">This is where I document my journey as a software developer and technical writer. From tutorials to tech rants, if it involves code or curiosity, it might end up here.</p>
+                        <p className="text">
+                            This is where I document my journey as a software
+                            developer and technical writer. From tutorials to
+                            tech rants, if it involves code or curiosity, it
+                            might end up here.
+                        </p>
                     </div>
                 </Jumbotron>
                 <PostsWrapper>
