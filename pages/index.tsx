@@ -53,20 +53,18 @@ const BannerWrapper = styled.div`
 
 const SectionHeading = styled.h2`
     color: transparent;
-    background-color:  rgb(45, 235, 187);
+    background-color: rgb(45, 235, 187);
     padding-top: 45px;
     background-clip: text;
     background-size: 225% auto;
 
     @media ${device.tablet} {
         padding-top: 0;
-
     }
-    
+
     @media ${device.laptop} {
         padding-left: 0;
         padding-top: 0;
-
     }
 `;
 
@@ -141,10 +139,26 @@ const AboutSection = styled.section`
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding-bottom: 0;
 
     @media ${device.laptop} {
         width: 80%;
         margin: 100px 135px 0 135px;
+
+        ::before {
+            content: '';
+            position: absolute;
+            height: 708px; 
+            width: 100%;
+            top: -180px;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            right: 0;
+            opacity: 0.1;
+            background: url(/assets/bgGrid.svg);
+            background-size: cover;
+        }
     }
 `;
 
@@ -155,11 +169,11 @@ const LineBreak = styled.hr`
     background-color: darkslategray;
     border: 0 none;
 
-     @media ${device.laptop} {
-         margin: 100px auto;
-         height: 1px;    }
+    @media ${device.laptop} {
+        margin: 100px auto;
+        height: 1px;
+    }
 `;
-
 
 const ArticlesSection = styled.section`
     width: 100%;
@@ -171,7 +185,6 @@ const ArticlesSection = styled.section`
         margin: 100px 135px;
     }
 `;
-
 
 const ProjectSection = styled.section`
     width: 100%;
@@ -188,7 +201,7 @@ const ProjectSection = styled.section`
 
 const Name = styled.span`
     color: transparent;
-    background:  rgb(45, 235, 187);
+    background: rgb(45, 235, 187);
     background-clip: text;
     background-size: 225% auto;
 `;
@@ -202,7 +215,6 @@ const ContactSection = styled.section`
     @media ${device.laptop} {
         width: 80%;
         margin: 100px 135px;
-
     }
 `;
 
@@ -215,8 +227,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
         <>
             <Head>
                 <title>
-                    Michael Hungbo - Software Developer & Technical
-                    Writer
+                    Michael Hungbo - Software Developer & Technical Writer
                 </title>
                 <meta
                     name="viewport"
@@ -289,7 +300,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     <About />
                 </AboutSection>
 
-                <LineBreak/>
+                <LineBreak />
                 <ArticlesSection>
                     <SectionHeading>Articles and thoughts.</SectionHeading>
                     <Articles posts={posts} />
