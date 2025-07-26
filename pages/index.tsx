@@ -294,6 +294,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     <SectionHeading
                         data-aos="fade-right"
                         data-aos-duration="1000"
+                  style={{ minHeight: '36px' }}
                     >
                         <Name>Software Developer & Technical Writer.</Name>
                     </SectionHeading>

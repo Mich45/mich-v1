@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import Gradient from '../Gradient';
 import { colors, device } from '../../styles/themes';
 
 const AboutWrapper = styled.section`
@@ -78,8 +77,6 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
-                <Gradient />
-
                 {/* data-aos="zoom-in-down" data-aos-duration="2000" */}
                 {/* <Left> 
                     <Image

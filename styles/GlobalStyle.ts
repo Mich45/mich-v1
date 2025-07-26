@@ -67,8 +67,6 @@ h1{
     background-clip: text;
     background-size: 225% auto;
 }
-
-
 `;
 
 export default GlobalStyle;

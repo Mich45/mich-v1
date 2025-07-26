@@ -10,7 +10,7 @@ const Navigation = styled.div`
     height: 40px;
     width: 100%;
     margin-top: 40px;
-
+    position: relative;
 `;
 
 const NavigationWrapper = styled.div`
@@ -88,6 +88,8 @@ const DropdownWrapper = styled.div`
         transform: translateX(0px);
     }
 `;
+
+
 
 const Anchor = styled.a`
     text-decoration: none;

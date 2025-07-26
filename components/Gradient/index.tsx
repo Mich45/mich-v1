@@ -38,7 +38,7 @@ const Shape2 = styled.div`
     height: 380px;
     border-radius: 9999px;
     position: relative;
-    background-color: rgb(0 215 175);
+    background-color: ;
     opacity: 0.5;
     filter: blur(90px);
     top: 4%;
