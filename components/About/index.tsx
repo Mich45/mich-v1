@@ -31,7 +31,7 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-    height: 100%;
+    min-height: 360px;
     font-size: 14px;
     font-weight: 500;
     color: ${colors.white.textWhite};
