@@ -34,7 +34,15 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="en">
-                <Head></Head>
+                <Head>
+                    <link
+                        rel="preload"
+                        href="/assets/fonts/inter/Inter-Bold.woff2"
+                        as="font"
+                        type="font/woff2"
+                        crossOrigin="anonymous"
+                    />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />
