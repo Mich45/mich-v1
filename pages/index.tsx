@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
-import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
@@ -9,11 +8,6 @@ import Articles from '../components/Articles';
 import Contact from '../components/Contact';
 import About from '../components/About';
 import * as api from '../lib/api';
-
-const DynamicProjects: any = dynamic(
-    () => import('../components/Projects'),
-    {}
-);
 
 const slideIn = keyframes`
 0%{
@@ -155,7 +149,7 @@ const AboutSection = styled.section`
             bottom: 0;
             z-index: -1;
             right: 0;
-            opacity: 0.1;
+            opacity: 0.5;
             background: url(/assets/bgGrid.svg);
             background-size: cover;
         }
@@ -292,8 +286,9 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
 
                 <AboutSection>
                     <SectionHeading
-                        data-aos="fade-right"
-                        data-aos-duration="1000"
+                        data-aos="fade-up"
+                        data-aos-duration="200"
+                        data-aos-offset="10"
                   style={{ minHeight: '36px' }}
                     >
                         <Name>Software Developer & Technical Writer.</Name>

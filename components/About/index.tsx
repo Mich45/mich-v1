@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 import { colors, device } from '../../styles/themes';
 
 const AboutWrapper = styled.section`
@@ -8,13 +7,14 @@ const AboutWrapper = styled.section`
     display: flex;
     flex-direction: column;
     place-items: center;
-    height: 100%;
+    max-height: 360px;
     margin-top: 50px;
     z-index: 1000;
     position: relative;
 
     @media ${device.laptop} {
         flex-direction: row;
+        max-height: 360px;
     }
 `;
 
@@ -31,10 +31,11 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-    min-height: 360px;
+    max-height: 360px;
     font-size: 14px;
-    font-weight: 500;
     font-display: swap;
+    position: relative;
+    overflow: hidden;
     color: ${colors.white.textWhite};
 
     @media ${device.laptop} {

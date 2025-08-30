@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
-import { TwitterIcon, GitHubIcon, LinkedInIcon } from '../Icons';
+import { TwitterIcon, GitHubIcon, LinkedInIcon, MichaelHungbo } from '../Icons';
 import { colors, device } from '../../styles/themes';
 
 const FooterWrapper = styled.footer`
@@ -10,7 +10,7 @@ const FooterWrapper = styled.footer`
     margin-top: 30px;
     flex-direction: column;
     border-top: 1px solid darkslategrey;
-    background-color: rgb(21 23 23 / 86%);
+    background-color: rgb(90 196 168);
     position: relative;
 
     .linkwrapper {
@@ -18,7 +18,6 @@ const FooterWrapper = styled.footer`
         flex-direction: column;
         height: 100%;
         width: 80%;
-        justify-content: end;
         margin: 0 auto;
         position: relative;
         padding: 30px 10px;
@@ -26,9 +25,9 @@ const FooterWrapper = styled.footer`
         @media ${device.laptop} {
             flex-direction: row;
             justify-content: space-between;
-            align-items: end;
+            padding-inline: 20px;
+            width: 100%;
 
-            margin: 0px 135px;
         }
     }
 
@@ -49,7 +48,7 @@ const FooterWrapper = styled.footer`
 const QuickLinks = styled.div`
     flex-direction: column;
     align-items: end;
-    color: ${colors.slate.textSlate};
+    color: black;
     font-size: 14px;
     font-weight: 500;
     margin-bottom: 20px;
@@ -67,7 +66,7 @@ const QuickLinks = styled.div`
 
     .wrapper {
     margin-top: 5em;
-        margin-right: 230px;}
+        margin-right: 70px;}
 
     .title {
         font-size: 18px;
@@ -80,12 +79,12 @@ const QuickLinks = styled.div`
 `;
 
 const QuickLinkItem = styled.li`
-    padding-block: 10px;
+    padding-block: 2px;
 `;
 
 const QuickLink = styled.a`
     font-size: 16px;
-    color: white;
+    color: black;
     transition: color 0.2s ease-in-out 0s;
 
 
@@ -103,8 +102,15 @@ const SocialWrapper = styled.div`
     gap: 15px;
 `;
 
+const CopyWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
 const Paragraph = styled.p`
     font-size: 14px;
+    color: black;
     text-align: center;
 `;
 
@@ -133,7 +139,6 @@ const Footer = (): JSX.Element => {
             <FooterWrapper>
                 <QuickLinks>
                     <div className='wrapper'>
-                        <p className="title">Quick Links</p>
                         <ul className="list">
                             <QuickLinkItem>
                                 <QuickLink href="/about">About</QuickLink>
@@ -147,11 +152,16 @@ const Footer = (): JSX.Element => {
                         </ul>
                     </div>
                 </QuickLinks>
+                <div>
+                <MichaelHungbo/>
+                </div>
 
                 <div className="linkwrapper">
-                    <Paragraph>
+                   <CopyWrapper>
+                     <Paragraph>
                         Copyright © {date} Michael Hungbo. All rights reserved.
                     </Paragraph>
+                   </CopyWrapper>
                     <SocialWrapper>
                         <Link
                             href="https://github.com/Mich45"

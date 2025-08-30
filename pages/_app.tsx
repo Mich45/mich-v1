@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 // @ts-nocheck
-
 import { useEffect } from 'react';
+import Head from "next/head";
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import Layout from '../components/Layout';
@@ -46,6 +46,36 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     return (
         <>
+            <Head>
+        <title>Michael Hungbo</title>
+        <meta
+          name="description"
+          content="Michael Hungbo - Software Developer & Technical Writer"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mich-v1.vercel.app" />
+        <meta property="og:title" content="Michael Hungbo" />
+        <meta
+          property="og:description"
+          content="Michael Hungbo - Software Developer & Technical Writer"
+        />
+        <meta
+          property="og:image"
+          content="https://mich-v1.vercel.app/preview-image.jpg"
+        />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Michael Hungbo" />
+        <meta
+          name="twitter:description"
+          content="Michael Hungbo - Software Developer & Technical Writer"
+        />
+        <meta
+          name="twitter:image"
+          content="https://mich-v1.vercel.app/preview-image.jpg"
+        />
+      </Head>
             <Script
                 src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"
                 strategy="afterInteractive"
