@@ -12,23 +12,13 @@ const FooterWrapper = styled.footer`
     border-top: 1px solid darkslategrey;
     background-color: rgb(90 196 168);
     position: relative;
+    place-content: end;
+    padding-bottom: 10px;
 
-    .linkwrapper {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
-        padding: 30px 10px;
+    @media ${device.laptop} {
+        flex-wrap: nowrap;
+        place-content: ;
 
-        @media ${device.laptop} {
-            flex-direction: row;
-            justify-content: space-between;
-            padding-inline: 20px;
-            width: 100%;
-
-        }
     }
 
     .divider {
@@ -65,12 +55,13 @@ const QuickLinks = styled.div`
     }
 
     .wrapper {
-    margin-top: 5em;
-        margin-right: 70px;}
+        margin-top: 5em;
+        margin-right: 70px;
+    }
 
     .title {
         font-size: 18px;
-}
+    }
 
     .list {
         list-style: none;
@@ -89,10 +80,32 @@ const QuickLink = styled.a`
 
 
       &:hover {
-        color: rgb(139, 169, 169);
+        color: rgba(9, 88, 44, 1);
 ;
     }
 }
+`;
+
+const TextWrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+
+    .linkwrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 8px;
+
+        @media ${device.laptop} {
+            flex-direction: row;
+            justify-content: space-between;
+            padding-inline: 20px;
+            width: 100%;
+        }
+    }
 `;
 
 const SocialWrapper = styled.div`
@@ -125,7 +138,6 @@ const Link = styled.a`
     transition: all 0.3s ease;
     text-decoration: none;
 
-
     &:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
@@ -138,7 +150,7 @@ const Footer = (): JSX.Element => {
         <>
             <FooterWrapper>
                 <QuickLinks>
-                    <div className='wrapper'>
+                    <div className="wrapper">
                         <ul className="list">
                             <QuickLinkItem>
                                 <QuickLink href="/about">About</QuickLink>
@@ -152,40 +164,43 @@ const Footer = (): JSX.Element => {
                         </ul>
                     </div>
                 </QuickLinks>
-                <div>
-                <MichaelHungbo/>
-                </div>
 
-                <div className="linkwrapper">
-                   <CopyWrapper>
-                     <Paragraph>
-                        Copyright © {date} Michael Hungbo. All rights reserved.
-                    </Paragraph>
-                   </CopyWrapper>
-                    <SocialWrapper>
-                        <Link
-                            href="https://github.com/Mich45"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <GitHubIcon />
-                        </Link>
-                        <Link
-                            href="https://twitter.com/michaelhungbo"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <TwitterIcon />
-                        </Link>
-                        <Link
-                            href="https://www.linkedin.com/in/michaelhungbo/"
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <LinkedInIcon />
-                        </Link>
-                    </SocialWrapper>
-                </div>
+                <TextWrapper>
+                    <div style={{ marginTop: '150px' }}>
+                        <MichaelHungbo />
+                    </div>
+
+                    <div className="linkwrapper">
+                        <CopyWrapper>
+                            <Paragraph>
+                                Copyright © {date}. All rights reserved.
+                            </Paragraph>
+                        </CopyWrapper>
+                        <SocialWrapper>
+                            <Link
+                                href="https://github.com/Mich45"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <GitHubIcon />
+                            </Link>
+                            <Link
+                                href="https://twitter.com/michaelhungbo"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <TwitterIcon />
+                            </Link>
+                            <Link
+                                href="https://www.linkedin.com/in/michaelhungbo/"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                <LinkedInIcon />
+                            </Link>
+                        </SocialWrapper>
+                    </div>
+                </TextWrapper>
             </FooterWrapper>
         </>
     );
