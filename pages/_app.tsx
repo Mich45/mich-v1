@@ -1,7 +1,7 @@
 // eslint-disable-next-line
 // @ts-nocheck
 import { useEffect } from 'react';
-import Head from "next/head";
+import Head from 'next/head';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 import Layout from '../components/Layout';
@@ -13,7 +13,7 @@ import {
     H2,
     Pre,
     HeadingThree,
-    PostImage
+    PostImage,
 } from '../components/MDXComponents/Elements';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -34,48 +34,48 @@ function MyApp({ Component, pageProps }: AppProps) {
         h2: H2,
         img: (props) => (
             <PostImage
-              alt={props.alt}
-              src={props.src}
-              width={500}
-              height={500}
-              {...props}
+                alt={props.alt}
+                src={props.src}
+                width={500}
+                height={500}
+                {...props}
             />
-          ),
+        ),
         wrapper: ({ components, ...rest }) => <PostLayout {...rest} />,
     };
 
     return (
         <>
             <Head>
-        <title>Michael Hungbo</title>
-        <meta
-          name="description"
-          content="Michael Hungbo - Software Developer & Technical Writer"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mich-v1.vercel.app" />
-        <meta property="og:title" content="Michael Hungbo" />
-        <meta
-          property="og:description"
-          content="Michael Hungbo - Software Developer & Technical Writer"
-        />
-        <meta
-          property="og:image"
-          content="https://mich-v1.vercel.app/preview-image.png"
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Michael Hungbo" />
-        <meta
-          name="twitter:description"
-          content="Michael Hungbo - Software Developer & Technical Writer"
-        />
-        <meta
-          name="twitter:image"
-          content="https://mich-v1.vercel.app/preview-image.jpg"
-        />
-      </Head>
+                <title>Michael Hungbo</title>
+                <meta
+                    name="description"
+                    content="Michael Hungbo - Software Developer & Technical Writer"
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://mich-v1.vercel.app" />
+                <meta property="og:title" content="Michael Hungbo" />
+                <meta
+                    property="og:description"
+                    content="Michael Hungbo - Software Developer & Technical Writer"
+                />
+                <meta
+                    property="og:image"
+                    content="https://mich-v1.vercel.app/preview-image.png"
+                />
+                <meta property="og:image:width" content="1200" />
+                <meta property="og:image:height" content="630" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Michael Hungbo" />
+                <meta
+                    name="twitter:description"
+                    content="Michael Hungbo - Software Developer & Technical Writer"
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://mich-v1.vercel.app/preview-image.png"
+                />
+            </Head>
             <Script
                 src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"
                 strategy="afterInteractive"
