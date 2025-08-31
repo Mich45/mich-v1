@@ -133,7 +133,7 @@ const Link = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(73, 82, 82);
+    border: 2px solid rgb(73, 82, 82);
     border-radius: 10px;
     transition: all 0.3s ease;
     text-decoration: none;
