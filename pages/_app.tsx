@@ -61,7 +61,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <meta
                     property="og:image"
-                    content="https://mich-v1.vercel.app/preview-image.png"
+                    content="https://mich-v1.vercel.app/assets/preview-image.png"
                 />
                 <meta property="og:image:width" content="1200" />
                 <meta property="og:image:height" content="630" />
@@ -73,7 +73,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <meta
                     name="twitter:image"
-                    content="https://mich-v1.vercel.app/preview-image.png"
+                    content="https://mich-v1.vercel.app/assets/preview-image.png"
                 />
             </Head>
             <Script
