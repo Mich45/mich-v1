@@ -6,7 +6,6 @@ import Head from 'next/head';
 import { colors, device } from '../styles/themes';
 
 const PortfolioContainer = styled.div`
-    color: ${colors.white.textWhite};
 
     @media ${device.laptop} {
         margin: 0 150px 0 78px;

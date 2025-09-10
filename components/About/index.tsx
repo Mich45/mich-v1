@@ -41,6 +41,10 @@ const Right = styled.div`
     @media ${device.laptop} {
         width: 50%;
     }
+
+    p {
+        font-size: 25px
+    }
 `;
 
 const ResumeWrapper = styled.div`
@@ -56,16 +60,16 @@ const ResumeWrapper = styled.div`
 `;
 
 const Resume = styled.a`
-    width: auto;
-    height: 36px;
+    width: 200px;
+    height: 60px;
     outline: none;
-    padding-inline: 10px;
-    border-radius: 4px;
+    padding: 10px;
+    border-radius: 2rem;
     background-color:  rgb(45, 235, 187);
     place-items: center;
     place-content: center;
-    display: inline-block;
     color: black;
+    text-align: center;
     margin: 0;
     text-decoration: none;
     transition: color 0.2s ease-in-out, ease-in-out;
@@ -98,22 +102,6 @@ const About = () => {
                         My name is Michael. I'm a software developer and
                         technical writer with an aptitude for designing and
                         developing user-friendly web applications.
-                    </p>
-
-                    <p>
-                        My main tech stack includes React, Next.js, Node.js,
-                        Python, and PostgreSQL. Beyond software development, I
-                        have a strong flair for writing. As a technical writer,
-                        I’ve created high-quality content ranging from API
-                        documentation and user guides to technical articles and
-                        editing support. Clear, helpful communication is one of the
-                        philosophies that drive my work.
-                    </p>
-                    <p>
-                        I also have a blog where I write about programming and
-                        sometimes, stories from my life. Feel welcome to peruse
-                        my blog, and hopefully you'll find the information there
-                        useful!
                     </p>
                     <ResumeWrapper>
                         <Resume
