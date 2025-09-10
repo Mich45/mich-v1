@@ -9,8 +9,7 @@ const FooterWrapper = styled.footer`
     display: flex;
     margin-top: 30px;
     flex-direction: column;
-    border-top: 1px solid darkslategrey;
-    background-color: rgb(90 196 168);
+    background-color: #FFFFFF;
     position: relative;
     place-content: end;
     padding-bottom: 10px;
@@ -18,21 +17,9 @@ const FooterWrapper = styled.footer`
     @media ${device.laptop} {
         flex-wrap: nowrap;
         place-content: ;
-
     }
 
-    .divider {
-        height: 1px;
-        width: 100%;
-        background: ${colors.slate.textSlate};
-        border-radius: 4px;
-        margin-top: 100px;
-        margin-bottom: 20px;
 
-        @media ${device.laptop} {
-            margin-top: 150px;
-        }
-    }
 `;
 
 const QuickLinks = styled.div`
@@ -127,6 +114,10 @@ const Paragraph = styled.p`
     text-align: center;
 `;
 
+const NameWrapper = styled.div`
+    margin-top: 150px;
+`;
+
 const Link = styled.a`
     width: 40px;
     height: 40px;
@@ -153,22 +144,22 @@ const Footer = (): JSX.Element => {
                     <div className="wrapper">
                         <ul className="list">
                             <QuickLinkItem>
-                                <QuickLink href="/about">About</QuickLink>
+                                <QuickLink href="/about">ABOUT</QuickLink>
                             </QuickLinkItem>
                             <QuickLinkItem>
-                                <QuickLink href="/blog">Blog</QuickLink>
+                                <QuickLink href="/blog">BLOG</QuickLink>
                             </QuickLinkItem>
                             <QuickLinkItem>
-                                <QuickLink href="/projects">Projects</QuickLink>
+                                <QuickLink href="/projects">PROJECTS</QuickLink>
                             </QuickLinkItem>
                         </ul>
                     </div>
                 </QuickLinks>
 
                 <TextWrapper>
-                    <div style={{ marginTop: '150px' }}>
+                    <NameWrapper>
                         <MichaelHungbo />
-                    </div>
+                    </NameWrapper>
 
                     <div className="linkwrapper">
                         <CopyWrapper>

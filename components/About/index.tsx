@@ -36,7 +36,7 @@ const Right = styled.div`
     font-display: swap;
     position: relative;
     overflow: hidden;
-    color: ${colors.white.textWhite};
+    color: ${colors.dark.textDark};
 
     @media ${device.laptop} {
         width: 50%;

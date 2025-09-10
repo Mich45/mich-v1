@@ -93,12 +93,11 @@ const DropdownWrapper = styled.div`
 
 const Anchor = styled.a`
     text-decoration: none;
-    color: ${colors.white.textWhite};
     font-size: 14px;
     transition: color 0.2s ease-in-out 0s;
 
     :hover {
-        color: ${colors.gray.lightGray};
+        color: ${colors.dark.lightDark};
     }
 `;
 

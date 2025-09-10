@@ -16,12 +16,10 @@ const MainContent = styled.section`
     scroll-snap-type: y mandatory;
 `;
 
-const SectionHeading = styled.h2`
-    color: transparent;
-    background-color: rgb(45, 235, 187);
+const SectionHeading = styled.h1`
+    color: black;
     padding-top: 45px;
-    background-clip: text;
-    background-size: 225% auto;
+   
 
     @media ${device.tablet} {
         padding-top: 0;
@@ -67,8 +65,6 @@ const AboutSection = styled.section`
             z-index: -1;
             right: 0;
             opacity: 0.5;
-            background: url(/assets/bgGrid.svg);
-            background-size: cover;
         }
     }
 `;
@@ -93,7 +89,7 @@ const ArticlesSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
-        margin: 100px 135px;
+        margin: 200px 135px;
     }
 `;
 
@@ -111,10 +107,7 @@ const ProjectSection = styled.section`
 `;
 
 const Name = styled.span`
-    color: transparent;
-    background: rgb(45, 235, 187);
-    background-clip: text;
-    background-size: 225% auto;
+    color: black;
 `;
 
 const ContactSection = styled.section`
@@ -162,13 +155,12 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                         data-aos-offset="10"
                   style={{ minHeight: '36px' }}
                     >
-                        <Name>Software Developer & Technical Writer.</Name>
+                        <Name>SOFTWARE DEVELOPER & TECHNICAL WRITER.</Name>
                     </SectionHeading>
                     <About />
                 </AboutSection>
-                <LineBreak />
                 <ArticlesSection>
-                    <SectionHeading>Articles and thoughts.</SectionHeading>
+                    <SectionHeading>ARTICLES & THOUGHTS.</SectionHeading>
                     <Articles posts={posts} />
                 </ArticlesSection>
             </MainContent>

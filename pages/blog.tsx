@@ -31,10 +31,6 @@ const Jumbotron = styled.section`
     width: 100%;
     height: auto;
 
-    .heading {
-        margin-top: 4em;
-    }
-
     .text {
         color: #a9b8c2;
     }
