@@ -47,7 +47,6 @@ const TextWrapper = styled.div`
     height: 40%;
 
     .title{
-    color: #c7d9db;
     }
 `;
 

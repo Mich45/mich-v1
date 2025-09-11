@@ -31,9 +31,6 @@ const Jumbotron = styled.section`
     width: 100%;
     height: auto;
 
-    .text {
-        color: #a9b8c2;
-    }
 
     @media ${device.laptop} {
         padding: 20px 135px;
@@ -52,20 +49,6 @@ const ArticlesWrapper = styled.div`
     width: 100%;
     margin-bottom: 30px;
 
-    .text {
-        color: transparent;
-        background: linear-gradient(
-            to right,
-            rgb(67 231 172),
-            rgb(45 235 187),
-            rgb(83 226 197),
-            rgb(125 226 168),
-            rgb(94 235 168)
-        );
-        background-clip: text;
-        background-size: 225% auto;
-        animation: ${gradient} 3s linear infinite;
-    }
 
     @media ${device.laptop} {
         padding-inline: 134px;
@@ -141,8 +124,8 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             </Head>
             <MainWrapper>
                 <Jumbotron>
-                    <div className="heading">
-                        <h1 className="heading-text">Bits and Bytes</h1>
+                    <div>
+                        <h1 style={{fontSize: "2rem"}}>BITS & BYTES</h1>
                     </div>
                     <div className="text-wrapper">
                         <p className="text">

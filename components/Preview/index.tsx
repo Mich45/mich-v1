@@ -37,6 +37,8 @@ const Wrapper = styled.a`
 
         :hover {
         cursor: pointer;
+        color: #c7d9db;
+
         background-color:rgb(20 55 55);
     }
 
@@ -69,7 +71,6 @@ const Link = styled.a``;
 
 const Title = styled.h3`
 margin-bottom: 6px;
-color: ${colors.white.textWhite};
     :hover {
         cursor: pointer;
     }
@@ -88,7 +89,6 @@ height: auto
 const Excerpt = styled.p`
     font-size: 14px;
     margin-top: 0;
-    color: ${colors.gray.grayPrimary};
     font-weight: 500;
 `;
 

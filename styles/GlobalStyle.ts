@@ -57,16 +57,6 @@ a {
     text-decoration: none;
 }
 
-
-h1{
-    font-size: 40px;
-    position: relative;
-    font-family: 'Product Sans', "Segoe UI", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    color: transparent;
-    background:  rgb(45, 235, 187);
-    background-clip: text;
-    background-size: 225% auto;
-}
 `;
 
 export default GlobalStyle;
