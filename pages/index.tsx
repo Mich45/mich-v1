@@ -2,12 +2,69 @@ import React, { Suspense } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Articles from '../components/Articles';
 import About from '../components/About';
 import * as api from '../lib/api';
 
+const spin = keyframes`
+    10% { transform: translateY(0); }
+    25% { transform: translateY(0); }
+    35% { transform: translateY(-25%); }
+    50% { transform: translateY(-25%); }
+    60% { transform: translateY(-50%); }
+    75% { transform: translateY(-50%); }
+    85% { transform: translateY(-75%); }
+    100% { transform: translateY(-75%); }
+`;
+
+const Loader = styled.div`
+    font-weight: 500;
+    font-size: 2.5rem;
+    box-sizing: content-box;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+
+    p {
+    font-weight: bold;
+    }
+`;
+
+const WordsContainer = styled.div`
+    overflow: hidden;
+    height: 3rem;
+    position: relative;
+    padding-left: 0.375rem;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            var(--bg-color) 10%,
+            transparent 30%,
+            transparent 70%,
+            var(--bg-color) 90%
+        );
+        z-index: 20;
+    }
+`;
+
+const Words = styled.div`
+    animation: ${spin} 8s cubic-bezier(0.8, 0, 0.2, 1) infinite;
+`;
+
+const Word = styled.span`
+    display: block;
+    text-align: left;
+    height: 2.5rem;
+    color: #03f8aaff;
+    font-weight: bold;
+`;
 
 const MainContent = styled.section`
     width: 100%;
@@ -19,7 +76,6 @@ const MainContent = styled.section`
 const SectionHeading = styled.h1`
     color: black;
     padding-top: 45px;
-   
 
     @media ${device.tablet} {
         padding-top: 0;
@@ -57,7 +113,7 @@ const AboutSection = styled.section`
         ::before {
             content: '';
             position: absolute;
-            height: 708px; 
+            height: 708px;
             width: 100%;
             top: -180px;
             left: 0;
@@ -69,18 +125,6 @@ const AboutSection = styled.section`
     }
 `;
 
-const LineBreak = styled.hr`
-    height: 0;
-    margin: 50px auto;
-    width: 100%;
-    background-color: darkslategray;
-    border: 0 none;
-
-    @media ${device.laptop} {
-        margin: 100px auto;
-        height: 1px;
-    }
-`;
 
 const ArticlesSection = styled.section`
     width: 100%;
@@ -106,9 +150,6 @@ const ProjectSection = styled.section`
     }
 `;
 
-const Name = styled.span`
-    color: black;
-`;
 
 const ContactSection = styled.section`
     background-repeat: no-repeat;
@@ -149,14 +190,17 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
             </Head>
             <MainContent>
                 <AboutSection>
-                    <SectionHeading
-                        data-aos="fade-up"
-                        data-aos-duration="600"
-                        data-aos-offset="10"
-                  style={{ minHeight: '36px' }}
-                    >
-                        <Name>SOFTWARE DEVELOPER & TECHNICAL WRITER.</Name>
-                    </SectionHeading>
+            <Loader>
+                <p>MULTIDISCIPLINARY</p>
+                <WordsContainer>
+                    <Words>
+                        <Word>SOFTWARE DEVELOPER</Word>
+                        <Word>TECHNICAL WRITER</Word>
+                        <Word>PROBLEM SOLVER</Word>
+                        <Word>SOFTWARE DEVELOPER</Word>
+                    </Words>
+                </WordsContainer>
+            </Loader>
                     <About />
                 </AboutSection>
                 <ArticlesSection>

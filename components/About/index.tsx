@@ -18,18 +18,6 @@ const AboutWrapper = styled.section`
     }
 `;
 
-const Left = styled.div`
-    width: 50%;
-    height: 100%;
-    display: inherit;
-    position: relative;
-    height: 375px;
-
-    @media ${device.laptop} {
-        width: 30%;
-    }
-`;
-
 const Right = styled.div`
     max-height: 360px;
     font-size: 14px;
@@ -83,19 +71,6 @@ const About = () => {
     return (
         <>
             <AboutWrapper>
-                {/* data-aos="zoom-in-down" data-aos-duration="2000" */}
-                {/* <Left> 
-                    <Image
-                        src={Michael}
-                        // width={700}
-                        // height={950}
-                        priority={true}
-                        quality={100}
-                        alt='Picture of Michael Hungbo'
-                        style={{ display: 'block', objectFit: 'cover' }}
-                        fill = {true}
-                    />
-                </Left> */}
                 <Right>
                     <p>Hey there, I'm glad you're here.</p>
                     <p>
