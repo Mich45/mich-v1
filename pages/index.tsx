@@ -7,6 +7,7 @@ import { colors, device } from '../styles/themes';
 import Articles from '../components/Articles';
 import About from '../components/About';
 import * as api from '../lib/api';
+import { ReactLenis, useLenis } from 'lenis/react'
 
 const spin = keyframes`
     10% { transform: translateY(0); }
@@ -75,7 +76,8 @@ const MainContent = styled.section`
 
 const SectionHeading = styled.h1`
     color: black;
-    padding-top: 45px;
+    font-size: 2.5rem;
+    font-weight: bold;
 
     @media ${device.tablet} {
         padding-top: 0;
@@ -102,12 +104,13 @@ const AboutWrapper = styled.div`
 
 const AboutSection = styled.section`
     width: 100%;
-    height: 100%;
     margin: 0 auto;
     padding-bottom: 0;
+    height: 80vh;
 
     @media ${device.laptop} {
         width: 80%;
+        height: 100%;
         margin: 100px 135px 0 135px;
 
         ::before {
@@ -168,8 +171,13 @@ type BlogProps = {
 };
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
+    const lenis = useLenis((lenis: any) => {
+    // called every scroll
+    console.log(lenis)
+  })
     return (
-        <>
+        <> 
+              <ReactLenis root />
             <Head>
                 <title>
                     Michael Hungbo - Software Developer & Technical Writer

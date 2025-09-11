@@ -54,28 +54,27 @@ const ReadMore = styled.p`
 `;
 
 const ButtonWrapper = styled.div`
-  margin-top: 40px;
 `;
 
 const Button = styled.a`
-    height: 36px;
+    width: 200px;
+    height: 60px;
     outline: none;
-    padding-inline: 10px;
-    border-radius: 4px;
-    background-color: rgb(45, 235, 187);
+    padding: 10px;
+    display: flex;
+    border-radius: 2rem;
+    background-color:  rgb(45, 235, 187);
     place-items: center;
     place-content: center;
-    display: inline-block;
     color: black;
-    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
     margin: 0;
     text-decoration: none;
-    transition: color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, ease-in-out;
     &:hover {
         cursor: pointer;
-        box-shadow: none;
         color:rgb(34, 42, 42);
-;
     }
 `;
 

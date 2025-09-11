@@ -57,6 +57,7 @@ const Resume = styled.a`
     place-items: center;
     place-content: center;
     color: black;
+    font-weight: 500;
     text-align: center;
     margin: 0;
     text-decoration: none;
@@ -74,16 +75,14 @@ const About = () => {
                 <Right>
                     <p>Hey there, I'm glad you're here.</p>
                     <p>
-                        My name is Michael. I'm a software developer and
-                        technical writer with an aptitude for designing and
-                        developing user-friendly web applications.
+                        My name is Michael, and this is my digital garden of showpieces, thoughts, and experiments.
                     </p>
                     <ResumeWrapper>
                         <Resume
                             target="_blank"
                             href="https://docs.google.com/document/d/1Puzs2I0emQXrAo9WJP9ggvIoX2EMQkGQ8kcznwaGSwQ/edit?usp=sharing"
                         >
-                            See my résumé 📰
+                            See my résumé
                         </Resume>
                     </ResumeWrapper>
                 </Right>

@@ -4,3 +4,4 @@ declare module 'pageclip';
 declare module 'aos';
 declare module '@tabler/icons'
 declare module 'tabler/icons'
+declare module 'lenis/react'
