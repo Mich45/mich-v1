@@ -5,9 +5,10 @@ import Head from 'next/head';
 import styled, { keyframes } from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Articles from '../components/Articles';
+import BentoCard from '../components/BentoCard';
 import About from '../components/About';
 import * as api from '../lib/api';
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from 'lenis/react';
 
 const spin = keyframes`
     10% { transform: translateY(0); }
@@ -22,22 +23,22 @@ const spin = keyframes`
 
 const Loader = styled.div`
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 4rem); 
     box-sizing: content-box;
-    height: 2.5rem;
+    height: clamp(2rem, 4vw, 4rem);
     text-align: center;
     display: flex;
     align-items: center;
     border-radius: 0.5rem;
 
     p {
-    font-weight: bold;
+        font-weight: bold;
     }
 `;
 
 const WordsContainer = styled.div`
     overflow: hidden;
-    height: 3rem;
+    height: calc(clamp(2rem, 4vw, 4rem) + 0.8rem);
     position: relative;
     padding-left: 0.375rem;
 
@@ -62,7 +63,7 @@ const Words = styled.div`
 const Word = styled.span`
     display: block;
     text-align: left;
-    height: 2.5rem;
+    height: clamp(2rem, 4vw, 4rem);
     color: #03f8aaff;
     font-weight: bold;
 `;
@@ -128,7 +129,6 @@ const AboutSection = styled.section`
     }
 `;
 
-
 const ArticlesSection = styled.section`
     width: 100%;
     height: 100%;
@@ -136,23 +136,38 @@ const ArticlesSection = styled.section`
 
     @media ${device.laptop} {
         width: 80%;
-        margin: 200px 135px;
+        margin: 3rem 135px;
     }
 `;
 
-const ProjectSection = styled.section`
+const StyledMain = styled.main`
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+`;
+
+const StyledContainer = styled.div`
     width: 100%;
-    height: 100%;
-    margin: 100px auto 0 auto;
-    scroll-snap-align: start;
-    display: none;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    align-items: stretch;
 
-    @media ${device.laptop} {
-        width: 80%;
-        margin: 100px 135px;
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 6rem 0;
+    }
+
+    @media (min-width: 1024px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        padding: 6rem 0;
     }
 `;
-
 
 const ContactSection = styled.section`
     background-repeat: no-repeat;
@@ -172,12 +187,12 @@ type BlogProps = {
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
     const lenis = useLenis((lenis: any) => {
-    // called every scroll
-    console.log(lenis)
-  })
+        // called every scroll
+        console.log(lenis);
+    });
     return (
-        <> 
-              <ReactLenis root />
+        <>
+            <ReactLenis root />
             <Head>
                 <title>
                     Michael Hungbo - Software Developer & Technical Writer
@@ -198,19 +213,41 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
             </Head>
             <MainContent>
                 <AboutSection>
-            <Loader>
-                <p>MULTIDISCIPLINARY</p>
-                <WordsContainer>
-                    <Words>
-                        <Word>SOFTWARE DEVELOPER</Word>
-                        <Word>TECHNICAL WRITER</Word>
-                        <Word>PROBLEM SOLVER</Word>
-                        <Word>SOFTWARE DEVELOPER</Word>
-                    </Words>
-                </WordsContainer>
-            </Loader>
+                    <Loader>
+                        <p>MULTIDISCIPLINARY</p>
+                        <WordsContainer>
+                            <Words>
+                                <Word>DEVELOPER</Word>
+                                <Word>WRITER</Word>
+                                <Word>PROBLEM SOLVER</Word>
+                                <Word>DEVELOPER</Word>
+                            </Words>
+                        </WordsContainer>
+                    </Loader>
                     <About />
                 </AboutSection>
+                <StyledMain>
+                    <StyledContainer>
+                        <BentoCard
+                            title="A digital collection of notes, essays, and ideas growing slowly over time."
+                            subtitle="Digital Garden"
+                            buttonText="Explore"
+                            type="digital-garden"
+                        />
+                        <BentoCard
+                            title="Learn more about me."
+                            subtitle="About Me"
+                            buttonText="Read"
+                            type="about-me"
+                        />
+                        <BentoCard
+                            title="Explore some of my projects with code."
+                            subtitle="Projects"
+                            buttonText="View"
+                            type="projects"
+                        />
+                    </StyledContainer>
+                </StyledMain>
                 <ArticlesSection>
                     <SectionHeading>ARTICLES & THOUGHTS.</SectionHeading>
                     <Articles posts={posts} />

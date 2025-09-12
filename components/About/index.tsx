@@ -20,7 +20,7 @@ const AboutWrapper = styled.section`
 
 const Right = styled.div`
     max-height: 360px;
-    font-size: 14px;
+    font-size: 12px;
     font-display: swap;
     position: relative;
     overflow: hidden;
@@ -31,7 +31,7 @@ const Right = styled.div`
     }
 
     p {
-        font-size: 25px
+        font-size: 18px
     }
 `;
 
@@ -48,15 +48,14 @@ const ResumeWrapper = styled.div`
 `;
 
 const Resume = styled.a`
-    width: 200px;
-    height: 60px;
     outline: none;
-    padding: 10px;
+    padding-block: 20px;
+    padding-inline: 60px;
     border-radius: 2rem;
-    background-color:  rgb(45, 235, 187);
+    background-color:  #4a5568;
     place-items: center;
     place-content: center;
-    color: black;
+    color: white;
     font-weight: 500;
     text-align: center;
     margin: 0;
@@ -82,7 +81,7 @@ const About = () => {
                             target="_blank"
                             href="https://docs.google.com/document/d/1Puzs2I0emQXrAo9WJP9ggvIoX2EMQkGQ8kcznwaGSwQ/edit?usp=sharing"
                         >
-                            See my résumé
+                            See my resume
                         </Resume>
                     </ResumeWrapper>
                 </Right>

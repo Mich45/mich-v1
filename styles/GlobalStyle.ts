@@ -38,7 +38,7 @@ ${fonts}
 
  body {
     text-rendering: optimizeLegibility;
-    background-color: #eeeeeeff;
+    background-color: #FFFFFF;
     color: ${colors.dark.textDark};
      padding: 0;
      margin: 0;
