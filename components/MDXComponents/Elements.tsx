@@ -9,7 +9,7 @@ export const Code = styled.code`
 `;
 
 export const H2 = styled.h2`
-    color:${colors.green.textGreen}
+    color: #4a5568;
 `;
 
 export const Pre = styled.pre`

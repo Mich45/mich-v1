@@ -50,13 +50,13 @@ const ResumeWrapper = styled.div`
 const Resume = styled.a`
     outline: none;
     padding-block: 20px;
-    padding-inline: 60px;
+    padding-inline: 50px;
     border-radius: 2rem;
     background-color:  #4a5568;
     place-items: center;
     place-content: center;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
     text-align: center;
     margin: 0;
     text-decoration: none;

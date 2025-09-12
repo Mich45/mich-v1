@@ -9,7 +9,6 @@ const MainWrapper = styled.div`
     width: 100%;
     height: auto;
     position: relative;
-    color: #a9b8c2;
     font-size: 16px;
     font-family: 'Inter', 'Segoe UI', sans-serif;
 
@@ -18,10 +17,9 @@ const MainWrapper = styled.div`
     }
 
     code:not(pre > code) {
-        color: #14b8a6;
+        color: ${colors.green.textGreen};
         font-family: inherit;
         font-size: 15px;
-        background: #262626;
         padding: 2px 4px;
         border: 1px solid transparent;
         border-radius: 2px;
