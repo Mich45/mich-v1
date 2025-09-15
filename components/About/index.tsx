@@ -47,6 +47,7 @@ const About = () => {
                     <p>
                         My name is Michael, and this is my digital garden of showpieces, thoughts, and experiments.
                     </p>
+                    <p>Feel welcome to explore. :)</p>
                 </Right>
                 {/* <Left>
                     <Image src='/assets/Michael-3D-transparent.png' 

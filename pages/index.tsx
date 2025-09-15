@@ -214,13 +214,13 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
             <MainContent>
                 <AboutSection>
                     <Loader>
-                        <p>MULTIDISCIPLINARY</p>
+                        <p>Multidisciplinary</p>
                         <WordsContainer>
                             <Words>
-                                <Word>DEVELOPER</Word>
-                                <Word>WRITER</Word>
-                                <Word>PROBLEM SOLVER</Word>
-                                <Word>DEVELOPER</Word>
+                                <Word>Developer</Word>
+                                <Word>Writer</Word>
+                                <Word>Problem solver</Word>
+                                <Word>Developer</Word>
                             </Words>
                         </WordsContainer>
                     </Loader>
