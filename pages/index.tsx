@@ -23,9 +23,9 @@ const spin = keyframes`
 
 const Loader = styled.div`
     font-weight: 500;
-    font-size: clamp(2rem, 4vw, 4rem); 
+    font-size: clamp(2rem, 4vw, 3rem); 
     box-sizing: content-box;
-    height: clamp(2rem, 4vw, 4rem);
+    height: clamp(2rem, 4vw, 3rem);
     text-align: center;
     display: flex;
     align-items: center;
@@ -38,7 +38,7 @@ const Loader = styled.div`
 
 const WordsContainer = styled.div`
     overflow: hidden;
-    height: calc(clamp(2rem, 4vw, 4rem) + 0.8rem);
+    height: calc(clamp(2rem, 4vw, 3rem) + 0.8rem);
     position: relative;
     padding-left: 0.375rem;
 
