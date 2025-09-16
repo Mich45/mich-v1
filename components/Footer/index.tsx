@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer`
     display: flex;
     margin-top: 30px;
     flex-direction: column;
-    background-color: #e7ffffff;
+    background-color: #1d2424ff;
     position: relative;
     place-content: end;
     padding-bottom: 10px;
@@ -62,7 +62,7 @@ const QuickLinkItem = styled.li`
 
 const QuickLink = styled.a`
     font-size: 16px;
-    color: black;
+    color: #FFF;
     transition: color 0.2s ease-in-out 0s;
 
 
@@ -124,7 +124,7 @@ const Link = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgb(73, 82, 82);
+    border: 2px solid rgba(133, 133, 133, 1);
     border-radius: 10px;
     transition: all 0.3s ease;
     text-decoration: none;

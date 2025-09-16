@@ -112,7 +112,7 @@ const AboutSection = styled.section`
     @media ${device.laptop} {
         width: 80%;
         height: 100%;
-        margin: 100px 135px 0 135px;
+        margin: 50px 135px 0 135px;
 
         ::before {
             content: '';

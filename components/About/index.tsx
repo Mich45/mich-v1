@@ -9,7 +9,6 @@ const AboutWrapper = styled.section`
     flex-direction: column;
     place-items: center;
     max-height: 360px;
-    margin-top: 50px;
     z-index: 1000;
     position: relative;
 
@@ -47,7 +46,7 @@ const About = () => {
                     <p>
                         My name is Michael, and this is my digital garden of showpieces, thoughts, and experiments.
                     </p>
-                    <p>Feel welcome to explore. :)</p>
+                    <p>Feel welcome to look around. :)</p>
                 </Right>
                 {/* <Left>
                     <Image src='/assets/Michael-3D-transparent.png' 
