@@ -94,6 +94,7 @@ const DropdownWrapper = styled.div`
 const Anchor = styled.a`
     text-decoration: none;
     font-size: 14px;
+    font-weight: bold;
     transition: color 0.2s ease-in-out 0s;
 
     :hover {

@@ -22,12 +22,12 @@ const StyledBentoCard = styled.div`
 
 
   &.digital-garden {
-    background-color: #4a5568;
+    background-color: rgb(19 21 24);
     color: #fff;
   }
 
   &.about-me {
-    background-color: #a0aec0;
+    background-color: rgb(34 134 125);
     color: #2d3748;
   }
 

@@ -13,8 +13,6 @@ const AboutWrapper = styled.section`
     position: relative;
 
     @media ${device.laptop} {
-        flex-direction: row;
-        max-height: 360px;
     }
 `;
 
@@ -32,7 +30,10 @@ const Right = styled.div`
     }
 
     p {
-        font-size: 18px
+        font-size: clamp(18px, -3.0704225352px + 9.014084507vw, 26px);
+        padding:0;
+        font-family: 'Neue Montreal', sans-serif;
+        margin: 0;
     }
 `;
 

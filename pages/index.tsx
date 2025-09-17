@@ -1,4 +1,4 @@
-import React, { Suspense } from 'react';
+import React, { useRef, useState } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
@@ -8,6 +8,8 @@ import Articles from '../components/Articles';
 import BentoCard from '../components/BentoCard';
 import About from '../components/About';
 import * as api from '../lib/api';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 import { ReactLenis, useLenis } from 'lenis/react';
 
 const spin = keyframes`
@@ -22,10 +24,7 @@ const spin = keyframes`
 `;
 
 const Loader = styled.div`
-    font-weight: 500;
-    font-size: clamp(2rem, 4vw, 3rem); 
     box-sizing: content-box;
-    height: clamp(2rem, 4vw, 3rem);
     text-align: center;
     display: flex;
     align-items: center;
@@ -33,6 +32,10 @@ const Loader = styled.div`
 
     p {
         font-weight: bold;
+        line-height: 100%;
+        font-size: clamp(42px, -3.0704225352px + 9.014084507vw, 170px);
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+        letter-spacing: -3px;
     }
 `;
 
@@ -64,7 +67,7 @@ const Word = styled.span`
     display: block;
     text-align: left;
     height: clamp(2rem, 4vw, 4rem);
-    color: #03f8aaff;
+    color: #6ffbcfff;
     font-weight: bold;
 `;
 
@@ -72,7 +75,37 @@ const MainContent = styled.section`
     width: 100%;
     height: 100%;
     position: relative;
+    display: block;
     scroll-snap-type: y mandatory;
+
+    .overlay {
+        width: 100vw;
+        z-index: 2;
+        height: 100vh;
+        position: fixed;
+        display: flex;
+        top: 0;
+
+        .bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 10;
+            border-top-left-radius: 0% 0%;
+            border-top-right-radius: 0% 0%;
+            transform: translateY(100%);
+        }
+
+        .bar1 {
+            background-color: red;
+        }
+
+        .bar2 {
+            background-color: white;
+        }
+    }
 `;
 
 const SectionHeading = styled.h1`
@@ -106,13 +139,17 @@ const AboutWrapper = styled.div`
 const AboutSection = styled.section`
     width: 100%;
     margin: 0 auto;
+    display: flex;
+    flex: direction: column;
+    align-items: center;
+    justify-content: center;
     padding-bottom: 0;
     height: 80vh;
 
     @media ${device.laptop} {
         width: 80%;
         height: 100%;
-        margin: 50px 135px 0 135px;
+        margin: 0 135px 0 135px;
 
         ::before {
             content: '';
@@ -186,10 +223,21 @@ type BlogProps = {
 };
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
-    const lenis = useLenis((lenis: any) => {
-        // called every scroll
-        console.log(lenis);
-    });
+    const container = useRef<HTMLDivElement>(null);
+    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
+
+    useGSAP(
+        () => {
+            tl.to('.bar', {
+                y: '-100%',
+                duration: 0.7,
+                stagger: 0.3,
+            });
+        },
+    );
+
+    useLenis((lenis: any) => {});
+
     return (
         <>
             <ReactLenis root />
@@ -211,18 +259,22 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     content="Software Developer & Technical Writer"
                 />
             </Head>
-            <MainContent>
+            <MainContent className="main" style={{}}>
+                <div className="overlay" ref={container}>
+                    <div className="bar bar1"></div>
+                    <div className="bar bar2"></div>
+                </div>
                 <AboutSection>
                     <Loader>
-                        <p>Multidisciplinary</p>
-                        <WordsContainer>
+                        <p className="header">MULTIDISCIPLINARY PROBLEM SOLVER</p>
+                        {/* <WordsContainer>
                             <Words>
                                 <Word>Developer</Word>
                                 <Word>Writer</Word>
                                 <Word>Problem solver</Word>
                                 <Word>Developer</Word>
                             </Words>
-                        </WordsContainer>
+                        </WordsContainer> */}
                     </Loader>
                     <About />
                 </AboutSection>
