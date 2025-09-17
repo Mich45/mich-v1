@@ -23,6 +23,9 @@ const Wrapper = styled.a`
     flex-direction: column;
     transition: 0.2s ease-out;
     padding-bottom: 15px;
+    background-color: #051612ff;
+    color: #c7d9db;
+
     border-bottom: 1px solid rgb(94 98 97 / 42%);
    
 }
@@ -37,9 +40,7 @@ const Wrapper = styled.a`
 
         :hover {
         cursor: pointer;
-        color: #c7d9db;
 
-        background-color:rgb(20 55 55);
     }
 
     }
