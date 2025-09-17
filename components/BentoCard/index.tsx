@@ -1,8 +1,11 @@
 import styled, { ThemedStyledProps } from 'styled-components';
 
 const StyledBentoCard = styled.div`
-  position: relative;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: space-between;
   border-radius: 0.1rem;
+  height: 300px;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   font-family: 'Neue Montreal', sans-serif;
@@ -20,14 +23,13 @@ const StyledBentoCard = styled.div`
     font-weight: 700;
   }
 
-
   &.digital-garden {
     background-color: rgb(19 21 24);
     color: #fff;
   }
 
   &.about-me {
-    background-color: rgb(34 134 125);
+    background-color: rgb(8 211 193);
     color: #2d3748;
   }
 
@@ -42,8 +44,8 @@ interface StyledButtonProps {
 }
 
 const StyledButton = styled.button<StyledButtonProps>`
-    margin-top: 2rem;
     font-weight: 700;
+    cursor: pointer;
     padding: 0.5rem 1rem;
     border-radius: 9999px;
     outline: none;
@@ -84,8 +86,10 @@ type BentoCardProps = {
 const BentoCard = ({ title, subtitle, buttonText, type }: BentoCardProps) => {
   return (
     <StyledBentoCard className={type}>
-      <h3>{subtitle}</h3>
-      <h2>{title}</h2>
+      <div>
+        <h3>{subtitle}</h3>
+        <h2>{title}</h2>
+      </div>
       <div>
         <StyledButton type={type}>
           {buttonText}

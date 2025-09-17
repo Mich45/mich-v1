@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 
-const AboutWrapper = styled.section`
+const AboutWrapper = styled.div`
     width: 100%;
     display: flex;
     font-family: 'Neue Montreal', sans-serif;
@@ -33,7 +33,7 @@ const Right = styled.div`
     }
 
     p {
-        font-size: clamp(14px, 2.5vw, 20px);
+        font-size: clamp(14px, 2.5vw, 18px);
         padding: 0;
         font-family: 'Neue Montreal', sans-serif;
         margin: 0;
@@ -46,19 +46,11 @@ const About = () => {
         <>
             <AboutWrapper>
                 <Right>
-                    <p>Hey there, I'm glad you're here.</p>
+                    <p>Hey there, I'm glad you're here. 👋🏾</p>
                     <p>
-                        My name is Michael, and this is my digital garden of showpieces, thoughts, and experiments.
+                        My name is Michael, and this is my digital garden 🌱 of showpieces, thoughts 💡, and experiments 🧪. Feel welcome to look around. :)
                     </p>
-                    <p>Feel welcome to look around. :)</p>
                 </Right>
-                {/* <Left>
-                    <Image src='/assets/Michael-3D-transparent.png' 
-                    width={500}
-                    height={500}
-                    quality={100}
-                    alt='Michael Hungbo 3D Headshot'/>
-                </Left> */}
             </AboutWrapper>
         </>
     );

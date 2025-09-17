@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import type { NextPage } from 'next';
 import Image from 'next/image';
 import Head from 'next/head';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { colors, device } from '../styles/themes';
 import Articles from '../components/Articles';
 import BentoCard from '../components/BentoCard';
@@ -12,18 +12,7 @@ import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ReactLenis, useLenis } from 'lenis/react';
 
-const spin = keyframes`
-    10% { transform: translateY(0); }
-    25% { transform: translateY(0); }
-    35% { transform: translateY(-25%); }
-    50% { transform: translateY(-25%); }
-    60% { transform: translateY(-50%); }
-    75% { transform: translateY(-50%); }
-    85% { transform: translateY(-75%); }
-    100% { transform: translateY(-75%); }
-`;
-
-const Loader = styled.div`
+const Header = styled.div`
     box-sizing: content-box;
     text-align: center;
     display: flex;
@@ -39,30 +28,6 @@ const Loader = styled.div`
         font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
         letter-spacing: -3px;
     }
-`;
-
-const WordsContainer = styled.div`
-    overflow: hidden;
-    height: calc(clamp(2rem, 4vw, 3rem) + 0.8rem);
-    position: relative;
-    padding-left: 0.375rem;
-
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-            var(--bg-color) 10%,
-            transparent 30%,
-            transparent 70%,
-            var(--bg-color) 90%
-        );
-        z-index: 20;
-    }
-`;
-
-const Words = styled.div`
-    animation: ${spin} 8s cubic-bezier(0.8, 0, 0.2, 1) infinite;
 `;
 
 const Word = styled.span`
@@ -231,7 +196,10 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
             tl.to('.bar', {
                 y: '-100%',
                 duration: 0.7,
-                stagger: 0.3,
+                stagger: 0.3,   
+                onComplete: () => {
+                    gsap.set(container.current, { display: 'none' });
+                }
             });
         },
     );
@@ -265,31 +233,23 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     <div className="bar bar2"></div>
                 </div>
                 <AboutSection>
-                    <Loader>
+                    <Header>
                         <p className="header">MULTIDISCIPLINARY PROBLEM SOLVER</p>
-                        {/* <WordsContainer>
-                            <Words>
-                                <Word>Developer</Word>
-                                <Word>Writer</Word>
-                                <Word>Problem solver</Word>
-                                <Word>Developer</Word>
-                            </Words>
-                        </WordsContainer> */}
-                    </Loader>
+                    </Header>
                     <About />
                 </AboutSection>
                 <StyledMain>
                     <StyledContainer>
                         <BentoCard
-                            title="A digital collection of notes, essays, and ideas growing slowly over time."
-                            subtitle="Digital Garden"
+                            title="A collection of my notes and ideas growing slowly over time."
+                            subtitle="Bits & bytes"
                             buttonText="Explore"
                             type="digital-garden"
                         />
                         <BentoCard
-                            title="Learn more about me."
+                            title="Who's Michael Hungbo?"
                             subtitle="About Me"
-                            buttonText="Read"
+                            buttonText="Find Out"
                             type="about-me"
                         />
                         <BentoCard
