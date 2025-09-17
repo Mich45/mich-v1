@@ -33,6 +33,8 @@ const Loader = styled.div`
     p {
         font-weight: bold;
         line-height: 100%;
+        padding: 0;
+        margin: 0;
         font-size: clamp(42px, -3.0704225352px + 9.014084507vw, 170px);
         font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
         letter-spacing: -3px;
@@ -140,7 +142,7 @@ const AboutSection = styled.section`
     width: 100%;
     margin: 0 auto;
     display: flex;
-    flex: direction: column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     padding-bottom: 0;

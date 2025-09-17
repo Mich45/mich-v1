@@ -8,6 +8,7 @@ const AboutWrapper = styled.section`
     font-family: 'Neue Montreal', sans-serif;
     flex-direction: column;
     place-items: center;
+    text-align: center;
     max-height: 360px;
     z-index: 1000;
     position: relative;
@@ -31,7 +32,7 @@ const Right = styled.div`
 
     p {
         font-size: clamp(18px, -3.0704225352px + 9.014084507vw, 26px);
-        padding:0;
+        padding: 0;
         font-family: 'Neue Montreal', sans-serif;
         margin: 0;
     }
