@@ -25,13 +25,15 @@ const Right = styled.div`
     position: relative;
     overflow: hidden;
     color: ${colors.dark.textDark};
+    padding-top: 25px;
 
     @media ${device.laptop} {
         width: 50%;
+        padding-top: 10px;
     }
 
     p {
-        font-size: clamp(18px, -3.0704225352px + 9.014084507vw, 26px);
+        font-size: clamp(14px, 2.5vw, 20px);
         padding: 0;
         font-family: 'Neue Montreal', sans-serif;
         margin: 0;

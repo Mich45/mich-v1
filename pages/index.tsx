@@ -146,7 +146,6 @@ const AboutSection = styled.section`
     align-items: center;
     justify-content: center;
     padding-bottom: 0;
-    height: 80vh;
 
     @media ${device.laptop} {
         width: 80%;
@@ -184,7 +183,6 @@ const StyledMain = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3rem;
 `;
 
 const StyledContainer = styled.div`
