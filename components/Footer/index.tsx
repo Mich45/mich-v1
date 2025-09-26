@@ -110,7 +110,7 @@ const CopyWrapper = styled.div`
 
 const Paragraph = styled.p`
     font-size: 14px;
-    color: black;
+    color: white;
     text-align: center;
 `;
 
