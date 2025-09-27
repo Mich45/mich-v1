@@ -56,7 +56,7 @@ const ReadMore = styled.p`
 const ButtonWrapper = styled.div`
 `;
 
-const Button = styled.a`
+const Button = styled.button`
     width: 200px;
     height: 60px;
     outline: none;

@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import type { NextPage } from 'next';
-import Image from 'next/image';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
 import Head from 'next/head';
 import styled from 'styled-components';
 import { colors, device } from '../styles/themes';
@@ -8,8 +9,7 @@ import Articles from '../components/Articles';
 import BentoCard from '../components/BentoCard';
 import About from '../components/About';
 import * as api from '../lib/api';
-import { gsap } from 'gsap';
-import { useGSAP } from '@gsap/react';
+
 import { ReactLenis, useLenis } from 'lenis/react';
 
 const Header = styled.div`
@@ -25,17 +25,10 @@ const Header = styled.div`
         padding: 0;
         margin: 0;
         font-size: clamp(42px, -3.0704225352px + 9.014084507vw, 170px);
-        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen;
+        font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+            Roboto, Oxygen;
         letter-spacing: -3px;
     }
-`;
-
-const Word = styled.span`
-    display: block;
-    text-align: left;
-    height: clamp(2rem, 4vw, 4rem);
-    color: #6ffbcfff;
-    font-weight: bold;
 `;
 
 const MainContent = styled.section`
@@ -52,26 +45,6 @@ const MainContent = styled.section`
         position: fixed;
         display: flex;
         top: 0;
-
-        .bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: 10;
-            border-top-left-radius: 0% 0%;
-            border-top-right-radius: 0% 0%;
-            transform: translateY(100%);
-        }
-
-        .bar1 {
-            background-color: red;
-        }
-
-        .bar2 {
-            background-color: white;
-        }
     }
 `;
 
@@ -87,19 +60,6 @@ const SectionHeading = styled.h1`
     @media ${device.laptop} {
         padding-left: 0;
         padding-top: 0;
-    }
-`;
-
-const AboutWrapper = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    place-content: center;
-    padding-inline: 20px;
-
-    @media ${device.laptop} {
-        width: 70%;
     }
 `;
 
@@ -171,40 +131,86 @@ const StyledContainer = styled.div`
     }
 `;
 
-const ContactSection = styled.section`
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    margin: 100px auto 0 auto;
-
-    @media ${device.laptop} {
-        width: 80%;
-        margin: 100px 135px;
-    }
-`;
-
 type BlogProps = {
     posts: [];
 };
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
-    const container = useRef<HTMLDivElement>(null);
-    const tl = gsap.timeline({ defaults: { ease: 'power4.inOut' } });
+    const headerRef = useRef<HTMLParagraphElement>(null);
+    const aboutRef = useRef<HTMLDivElement>(null);
+    const cardsRef = useRef<HTMLDivElement>(null);
 
-    useGSAP(
-        () => {
-            tl.to('.bar', {
-                y: '-100%',
-                duration: 0.7,
-                stagger: 0.3,   
-                onComplete: () => {
-                    gsap.set(container.current, { display: 'none' });
+    useLenis(() => {});
+
+    // Animate header text on mount
+    useGSAP(() => {
+        const tl = gsap.timeline({
+            defaults: { ease: 'power4.out' },
+        });
+
+        // start all hidden
+        gsap.set([headerRef.current, aboutRef.current], {
+            opacity: 0,
+            y: 50,
+            duration: 0.5,
+        });
+
+        // Set cards individually to hidden
+        if (cardsRef.current) {
+            gsap.set(cardsRef.current.querySelectorAll('.card'), {
+                opacity: 0,
+                y: 50,
+            });
+        }
+
+        const playAnimations = () => {
+            tl.to(headerRef.current, { opacity: 1, y: 0 }).to(
+                aboutRef.current,
+                { opacity: 1, y: 0 },
+                '-=0.3'
+            );
+            if (cardsRef.current) {
+                tl.to(
+                    cardsRef.current.querySelectorAll('.card'),
+                    {
+                        opacity: 1,
+                        y: 0,
+                        stagger: 0.3,
+                    }
+                );
+            }
+        };
+
+        // if (!headerRef.current) return;
+
+        // // Set starting state
+        // gsap.set(headerRef.current, { opacity: 0, y: 50 });
+
+        // // Watch for preloader finish
+        // const handleLoaded = () => {
+        //     gsap.to(headerRef.current, {
+        //         opacity: 1,
+        //         y: 0,
+        //         duration: 0.5,
+        //         ease: 'power4.out',
+        //     });
+        // };
+
+        if (document.body.classList.contains('page-loaded')) {
+            playAnimations();
+        } else {
+            const observer = new MutationObserver(() => {
+                if (document.body.classList.contains('page-loaded')) {
+                    playAnimations();
+                    observer.disconnect();
                 }
             });
-        },
-    );
-
-    useLenis((lenis: any) => {});
+            observer.observe(document.body, {
+                attributes: true,
+                attributeFilter: ['class'],
+            });
+        }
+    }, []);
 
     return (
         <>
@@ -227,36 +233,39 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
                     content="Software Developer & Technical Writer"
                 />
             </Head>
-            <MainContent className="main" style={{}}>
-                <div className="overlay" ref={container}>
-                    <div className="bar bar1"></div>
-                    <div className="bar bar2"></div>
-                </div>
+            <MainContent className="main">
                 <AboutSection>
-                    <Header>
-                        <p className="header">MULTIDISCIPLINARY PROBLEM SOLVER</p>
+                    <Header ref={headerRef}>
+                        <p className="header">
+                            MULTIDISCIPLINARY PROBLEM SOLVER
+                        </p>
                     </Header>
-                    <About />
+                    <div ref={aboutRef}>
+                        <About />
+                    </div>
                 </AboutSection>
                 <StyledMain>
-                    <StyledContainer>
+                    <StyledContainer ref={cardsRef}>
                         <BentoCard
                             title="A collection of my notes and ideas growing slowly over time."
                             subtitle="Bits & bytes"
                             buttonText="Explore"
                             type="digital-garden"
+                            className="card"
                         />
                         <BentoCard
                             title="Who's Michael Hungbo?"
                             subtitle="About Me"
                             buttonText="Find Out"
                             type="about-me"
+                            className="card"
                         />
                         <BentoCard
                             title="Explore some of my projects with code."
                             subtitle="Projects"
                             buttonText="View"
                             type="projects"
+                            className="card"
                         />
                     </StyledContainer>
                 </StyledMain>

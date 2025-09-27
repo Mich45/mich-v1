@@ -1,7 +1,12 @@
-import React from 'react';
-import { IconContext } from 'react-icons';
-import { SiOpensourceinitiative } from 'react-icons/si/index.js';
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
 import styled from 'styled-components';
+
+// Register the plugin
+gsap.registerPlugin(ScrollTrigger);
 
 const SVG = styled.svg`
     width: ${(props: any) => (props.width ? props.width : '30px')};
@@ -20,8 +25,56 @@ const NameSVG = styled.svg`
 `;
 
 export const MichaelHungbo = () => {
+    const svgRef = useRef<SVGSVGElement>(null);
+
+    useGSAP(
+        () => {
+            if (!svgRef.current) return;
+
+            const paths = svgRef.current.querySelectorAll('path');
+            const pathsArray = Array.from(paths);
+
+            // Set all paths to opacity 0.3 initially
+            gsap.set(pathsArray, { opacity: 0.3 });
+
+            const shuffledPaths = [...pathsArray].sort(
+                () => Math.random() - 0.5
+            );
+
+            const tl = gsap.timeline();
+
+            shuffledPaths.forEach((path, i) => {
+                tl.to(
+                    path,
+                    {
+                        opacity: 1,
+                        duration: 0.6,
+                        ease: 'power2.out',
+                    },
+                    i * 0.1
+                ); // Stagger by 0.1s but in random order
+            });
+
+            // Create ScrollTrigger
+            ScrollTrigger.create({
+                trigger: svgRef.current,
+                start: 'top 80%',
+                onEnter: () => tl.restart(),
+                onEnterBack: () => tl.restart(),
+                onLeave: () => tl.reverse(),
+            });
+
+            // Cleanup
+            return () => {
+                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+            };
+        },
+        { scope: svgRef }
+    );
+
     return (
         <NameSVG
+            ref={svgRef}
             width="1376"
             height="184"
             viewBox="0 0 1376 184"
@@ -157,5 +210,3 @@ export const TwitterIcon = () => {
         </SVG>
     );
 };
-
-
