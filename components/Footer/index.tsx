@@ -9,7 +9,7 @@ const FooterWrapper = styled.footer`
     display: flex;
     margin-top: 30px;
     flex-direction: column;
-    background-color: #1d2424ff;
+    background-color: #0d0e0eff;
     position: relative;
     place-content: end;
     padding-bottom: 10px;

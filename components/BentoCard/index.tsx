@@ -2,17 +2,20 @@ import styled, { ThemedStyledProps } from 'styled-components';
 import Image from 'next/image';
 
 const Wrapper = styled.div`
-    border: 1px solid rgb(22 86 69 / 99%);
-    border-radius: 2px;
+display: flex;
+flex-direction: column;
+height: 100%;
+background-color: rgb(19 21 24);
+
 `;
 
 const StyledBentoCard = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 60%;
     padding: 2rem;
     font-family: 'Neue Montreal', sans-serif;
+    color: #fff;
 
     h3 {
         font-size: 0.75rem;
@@ -25,21 +28,6 @@ const StyledBentoCard = styled.div`
         margin-top: 0.5rem;
         font-size: 1.5rem;
         font-weight: 700;
-    }
-
-    &.digital-garden {
-        background-color: rgb(19 21 24);
-        color: #fff;
-    }
-
-    &.about-me {
-        background-color: rgb(8 211 193);
-        color: #2d3748;
-    }
-
-    &.projects {
-        background-color: #2d3748;
-        color: #fff;
     }
 `;
 
@@ -87,14 +75,23 @@ const StyledButton = styled.button<StyledButtonProps>`
     `}
 `;
 
-const IconDiv = styled.div`
-    height: 40%;
-    z-index: -1;
-    background-repeat: no-repeat;
+const ImageDiv = styled.div`
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+
+    .image-container {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border-radius: 0 0 16px 16px;
+    }
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 16/12;
+    }
 `;
 
 type BentoCardProps = {
@@ -105,23 +102,29 @@ type BentoCardProps = {
     className?: string;
 };
 
-const BentoCard = ({ title, subtitle, buttonText, type, ...props }: BentoCardProps) => {
+const BentoCard = ({
+    title,
+    subtitle,
+    buttonText,
+    type,
+    ...props
+}: BentoCardProps) => {
     return (
         <Wrapper className={props.className}>
-            <IconDiv>
-                <Image
-                    alt="icon"
-                    width={340}
-                    height={175}
-                    src={
-                        type === 'about-me'
-                            ? '/assets/person.svg'
-                            : type === 'projects'
-                            ? '/assets/hand-coding.svg'
-                            : '/assets/holding-pen.svg'
-                    }
-                ></Image>
-            </IconDiv>
+            <ImageDiv>
+                <div className="image-container">
+                    <img
+                        alt="icon"
+                        src={
+                            type === 'about-me'
+                                ? '/assets/laptop-image.png'
+                                : type === 'projects'
+                                ? '/assets/working-home.jpg'
+                                : '/assets/journal.png'
+                        }
+                    ></img>
+                </div>
+            </ImageDiv>
             <StyledBentoCard className={type}>
                 <div>
                     <h3>{subtitle}</h3>

@@ -7,9 +7,7 @@ import {Logo} from '../Icons'
 import usePath from '../../hooks/usePath';
 
 const Navigation = styled.div`
-    height: 40px;
     width: 100%;
-    margin-top: 40px;
     position: relative;
 `;
 
@@ -30,7 +28,6 @@ const NavigationWrapper = styled.div`
     }
 
     @media ${device.laptop} {
-        width: 85%;
         margin: 0 auto;
 
         .dropdown {
@@ -51,11 +48,8 @@ const NavLinkWrapper = styled.ul`
 `;
 
 const LogoWrapper = styled.div`
-    width: 80px;
-    height: 100%;
     display: flex;
-    // margin-left: 30px;
-
+    place-items: center;
 
     :hover {
         cursor: pointer;
@@ -66,7 +60,10 @@ const LogoWrapper = styled.div`
     }
 `;
 
-const LogoItem = styled.a``;
+const LogoItem = styled.a`
+    margin-left: 1.5em;
+
+`;
 
 const NavItem = styled.li`
     display: flex;
@@ -95,6 +92,7 @@ const Anchor = styled.a`
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    color: black;
     transition: color 0.2s ease-in-out 0s;
 
     :hover {

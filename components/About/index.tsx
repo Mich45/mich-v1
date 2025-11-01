@@ -7,10 +7,7 @@ const AboutWrapper = styled.div`
     display: flex;
     font-family: 'Neue Montreal', sans-serif;
     flex-direction: column;
-    place-items: center;
-    text-align: center;
-    max-height: 360px;
-    z-index: 1000;
+    align-items: center;
     position: relative;
 
     @media ${device.laptop} {
@@ -18,38 +15,59 @@ const AboutWrapper = styled.div`
 `;
 
 const Right = styled.div`
-    max-height: 360px;
-    font-size: 12px;
     font-family: 'Neue Montreal', sans-serif;
-    font-display: swap;
     position: relative;
+    margin-left: 10em;
+    text-wrap: wrap;
+
     overflow: hidden;
     color: ${colors.dark.textDark};
-    padding-top: 25px;
+
+    h3 {
+        font-size: clamp(25px, 5vw, 2.2rem);
+        font-weight: normal;
+        text-wrap: balance;
+        
+    }
 
     @media ${device.laptop} {
-        width: 50%;
-        padding-top: 10px;
-    }
-
-    p {
-        font-size: clamp(14px, 2.5vw, 18px);
-        padding: 0;
-        font-family: 'Neue Montreal', sans-serif;
-        margin: 0;
     }
 `;
-
 
 const About = () => {
     return (
         <>
             <AboutWrapper>
                 <Right>
-                    <p>Hey there, I'm glad you're here. 👋🏾</p>
-                    <p>
-                        My name is Michael, and this is my digital garden 🌱 of showpieces, thoughts 💡, and experiments 🧪. Feel welcome to look around. :)
-                    </p>
+                    <h3>
+                        <span className="about-word">Hey</span>{' '}
+                        <span className="about-word">there,</span>{' '}
+                        <span className="about-word">I'm</span>{' '}
+                        <span className="about-word">glad</span>{' '}
+                        <span className="about-word">you're</span>{' '}
+                        <span className="about-word">here.</span>{' '}
+                        <span className="about-word">My</span>{' '}
+                        <span className="about-word">name</span>{' '}
+                        <span className="about-word">is</span>{' '}
+                        <span className="about-word">Michael,</span>{' '}
+                        <span className="about-word">and</span>{' '}
+                        <span className="about-word">this</span>{' '}
+                        <span className="about-word">is</span>{' '}
+                        <span className="about-word">my</span>{' '}
+                        <span className="about-word">digital</span>{' '}
+                        <span className="about-word">garden</span>{' '}
+                        <span className="about-word">of</span>{' '}
+                        <span className="about-word">showpieces,</span>{' '}
+                        <span className="about-word">thoughts,</span>{' '}
+                        <span className="about-word">and</span>{' '}
+                        <span className="about-word">experiments.</span>{' '}
+                        <span className="about-word">Feel</span>{' '}
+                        <span className="about-word">welcome</span>{' '}
+                        <span className="about-word">to</span>{' '}
+                        <span className="about-word">look</span>{' '}
+                        <span className="about-word">around.</span>{' '}
+                        <span className="about-word">:)</span>
+                    </h3>
                 </Right>
             </AboutWrapper>
         </>

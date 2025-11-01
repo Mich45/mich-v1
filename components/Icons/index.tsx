@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
-import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 import styled from 'styled-components';
 
-// Register the plugin
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 
 const SVG = styled.svg`
     width: ${(props: any) => (props.width ? props.width : '30px')};
@@ -63,11 +63,6 @@ export const MichaelHungbo = () => {
                 onEnterBack: () => tl.restart(),
                 onLeave: () => tl.reverse(),
             });
-
-            // Cleanup
-            return () => {
-                ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-            };
         },
         { scope: svgRef }
     );
@@ -173,8 +168,8 @@ export const Logo = () => {
                     y2="-0.499999"
                     gradientUnits="userSpaceOnUse"
                 >
-                    <stop stopColor="#4af8e0ff" />
-                    <stop offset="1" stopColor="#2dfed4ff" />
+                    <stop stopColor="#060908ff" />
+                    <stop offset="1" stopColor="#080a0aff" />
                 </linearGradient>
             </defs>
         </svg>

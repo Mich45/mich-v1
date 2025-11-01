@@ -1,0 +1,5 @@
+Video: What is the difference between Single Page Applications and Multiple Page Applications?
+
+(Use twitter as an example. The browser doesn't reload the page when you click on the links in your sidebar, however, the content of the pages changes and the url updates. This is enabled by the browser history api that allows us to manipulate the browser history without causing a page refresh. 
+
+frameworks like react and Nextjs use React Router and Link (from 'next/link') respectively to handle client-side navigation. This is because manipulating the browser history api in your code is complex and these libraries simplify it for you.

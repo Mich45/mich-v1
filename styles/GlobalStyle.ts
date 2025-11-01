@@ -38,13 +38,13 @@ ${fonts}
 
  body {
     text-rendering: optimizeLegibility;
-    background-color: rgb(217, 253, 245);
-    color: ${colors.dark.textDark};
+    color: white;
      padding: 0;
      margin: 0;
+     background-color: black;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-     font-family: "Neue Montreal",  system-ui, sans-serif, "Segoe UI", -apple-system, blinkmacsystemfont, helvetica, arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+     font-family: Neue, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body[data-aos-delay='4000'] [data-aos],

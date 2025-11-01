@@ -27,7 +27,7 @@ export const colors = {
         darkPrimary: '#0d1117',
         dark: '#232529',
         textDark: '#000000ff',
-        lightDark: '#696e79',
+        lightDark: '#3a3d3cff',
     },
     green: {
         greenPrimary: 'rgb(51 251 149)',

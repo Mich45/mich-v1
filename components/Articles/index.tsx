@@ -21,21 +21,21 @@ type PreviewProps = {
 
 const PreviewWrapper = styled.div`
     display: flex;
-    flex-direction: column;
-    gap: 32px;
+    justify-content: space-between;
+    border-bottom: 1px dotted #cbcbd2ff;
+    align-items: center;
+    margin-bottom: 30px;
 `;
 
 const Article = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    max-width: 60%;
 `;
 
 const Title = styled.h3`
     font-weight: bold;
-    text-decoration: underline;
 `;
-
 
 const Excerpt = styled.p`
     font-size: 14px;
@@ -44,17 +44,21 @@ const Excerpt = styled.p`
 `;
 
 const ReadMore = styled.p`
-    font-weight: bold;
     font-size: 0.9rem;
+    color: black;
     text-decoration: none;
     margin-top: 0;
+    padding-inline: 8px;
+    border-radius: 2px;
+    padding-block: 8px;
+    background: #cbcbd2ff;
+    transition: all 0.2s ease-in-out;
     &:hover {
-        text-decoration: underline;
+        background: white;
     }
 `;
 
-const ButtonWrapper = styled.div`
-`;
+const ButtonWrapper = styled.div``;
 
 const Button = styled.button`
     width: 200px;
@@ -63,7 +67,7 @@ const Button = styled.button`
     padding: 10px;
     display: flex;
     border-radius: 2rem;
-    background-color:  rgb(45, 235, 187);
+    background-color: rgb(45, 235, 187);
     place-items: center;
     place-content: center;
     color: black;
@@ -74,17 +78,17 @@ const Button = styled.button`
     transition: color 0.2s ease-in-out, ease-in-out;
     &:hover {
         cursor: pointer;
-        color:rgb(34, 42, 42);
+        color: rgb(34, 42, 42);
     }
 `;
 
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    overflow: hidden;
 
     @media ${device.laptop} {
-        width: 70%;
+        max-width: 100%;
     }
 `;
 
@@ -93,7 +97,7 @@ type BlogProps = {
 };
 
 const Articles: NextPage<BlogProps> = ({ posts }) => {
-    const latestFiveArticles = posts.slice(0, 5)
+    const latestFiveArticles = posts.slice(0, 5);
     return (
         <>
             <div>
@@ -102,10 +106,10 @@ const Articles: NextPage<BlogProps> = ({ posts }) => {
                         return <ArticlesPreview meta={post} key={i} />;
                     })}
                     <ButtonWrapper>
-        <Link href="/blog">
-          <Button>More articles</Button>
-        </Link>
-      </ButtonWrapper>
+                        <Link href="/blog">
+                            <Button>More articles</Button>
+                        </Link>
+                    </ButtonWrapper>
                 </Wrapper>
             </div>
         </>
@@ -124,16 +128,15 @@ const ArticlesPreview = ({ meta }: PreviewProps) => {
                     <Title>{meta.data.title}</Title>
                 </Link>
                 <Excerpt>{meta.data.excerpt}</Excerpt>
-                <Link
-                    href={`posts/${meta.postPath
-                        .split('posts/')[1]
-                        .replace(/.md?./, '')}`}
-                    passHref
-                >
-                    <ReadMore>Read more</ReadMore>
-                </Link>
             </Article>
-            
+            <Link
+                href={`posts/${meta.postPath
+                    .split('posts/')[1]
+                    .replace(/.md?./, '')}`}
+                passHref
+            >
+                <ReadMore>Read more</ReadMore>
+            </Link>
         </PreviewWrapper>
     );
 };
