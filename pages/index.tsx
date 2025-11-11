@@ -15,14 +15,16 @@ gsap.registerPlugin(useGSAP);
 
 const Header = styled.div`
     align-items: center;
+    max-width: 100%;
+    overflow: hidden;
 
     h1 {
         font-weight: bold;
-        line-height: 100%;
+        line-height: 105%;
         padding: 0;
         margin: 0;
         color: black;
-        font-size: clamp(42px, -3.0704225352px + 9.014084507vw, 140px);
+        font-size: clamp(60px, -3.0704225352px + 9.014084507vw, 140px);
     }
 
     .header1 {
@@ -60,14 +62,13 @@ const AboutSection = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 100vh;
     padding-bottom: 3em;
     padding-inline: 0.5rem;
 
     &:after {
         content: '';
         width: 100%;
-        height: 100vh;
+        height: 100%;
         background-color: #a6dbc8; /* #3faf95ff */
         position: absolute;
         z-index: -1;
@@ -75,6 +76,7 @@ const AboutSection = styled.section`
 
     @media ${device.laptop} {
         padding-inline: 0;
+        height: 100vh;
     }
 `;
 
@@ -127,7 +129,7 @@ const WrapperHeader = styled.div`
         font-size: clamp(
             1.5rem,
             -0.6951rem + 9.3659vw,
-            4rem
+            3.7rem
         ); /* generated from  https://clamp.font-size.app */
         color: #cbcbd2ff;
     }
