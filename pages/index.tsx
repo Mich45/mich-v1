@@ -78,14 +78,14 @@ const AboutSection = styled.section`
     align-items: center;
     justify-content: center;
     position: relative;
-    height: 90vh;
+    height: 100vh;
     padding-bottom: 3em;
 
     &:after {
         content: '';
         width: 100%;
-        height: 110vh;
-        background-color: #3faf95ff;
+        height: 100vh;
+        background-color: #a6dbc8; /* #3faf95ff */
         position: absolute;
         z-index: -1;
     }
@@ -102,32 +102,6 @@ const ArticlesSection = styled.section`
 
     @media ${device.laptop} {
     margin: 10rem 2rem;
-    }
-`;
-
-const StyledMain = styled.main`
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-`;
-
-const StyledContainer = styled.div`
-    width: 100%;
-    max-width: 90rem;
-    padding: 3rem 0;
-    display: grid;
-    grid-template-columns: repeat(1, minmax(350px, 1fr));
-    gap: 2rem;
-
-    @media (min-width: 768px) {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        padding: 6rem 0;
-    }
-
-    @media (min-width: 1024px) {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        padding: 6rem 0;
     }
 `;
 
@@ -177,7 +151,7 @@ const GridItem = styled.div`
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
     height: 30rem;
-    background-color: #3faf95ff;
+    background-color: #a6dbc8;
     overflow: hidden;
 `;
 
@@ -186,63 +160,8 @@ type BlogProps = {
 };
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
-    const headerRef = useRef<HTMLParagraphElement>(null);
-    const aboutRef = useRef<HTMLDivElement>(null);
-    const cardsRef = useRef<HTMLDivElement>(null);
 
     useLenis(() => {});
-
-    // Animate header text on mount
-    useGSAP(() => {
-        const tl = gsap.timeline({
-            defaults: { ease: 'power4.out' },
-        });
-
-        // start all hidden
-        gsap.set([headerRef.current, aboutRef.current], {
-            opacity: 0,
-            y: 50,
-            duration: 0.5,
-        });
-
-        // Set cards individually to hidden
-        if (cardsRef.current) {
-            gsap.set(cardsRef.current.querySelectorAll('.card'), {
-                opacity: 0,
-                y: 50,
-            });
-        }
-
-        const playAnimations = () => {
-            tl.to(headerRef.current, { opacity: 1, y: 0 }).to(
-                aboutRef.current,
-                { opacity: 1, y: 0 },
-                '-=0.3'
-            );
-            if (cardsRef.current) {
-                tl.to(cardsRef.current.querySelectorAll('.card'), {
-                    opacity: 1,
-                    y: 0,
-                    stagger: 0.3,
-                });
-            }
-        };
-
-        if (document.body.classList.contains('page-loaded')) {
-            playAnimations();
-        } else {
-            const observer = new MutationObserver(() => {
-                if (document.body.classList.contains('page-loaded')) {
-                    playAnimations();
-                    observer.disconnect();
-                }
-            });
-            observer.observe(document.body, {
-                attributes: true,
-                attributeFilter: ['class'],
-            });
-        }
-    }, []);
 
     return (
         <>
@@ -267,7 +186,7 @@ const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
             </Head>
             <MainContent className="main">
                 <AboutSection>
-                    <Header ref={headerRef}>
+                    <Header>
                         <h1 className="header">HI,</h1>
                         <h1 className="header1">I'M MICHAEL.</h1>
                         <h1 className="header header2">A MULTI-DISCIPLINARY</h1>

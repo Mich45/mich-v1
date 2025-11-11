@@ -23,55 +23,48 @@ const Wrapper = styled.a`
     flex-direction: column;
     transition: 0.2s ease-out;
     padding-bottom: 15px;
-    background-color: #051612ff;
     color: #c7d9db;
-
     border-bottom: 1px solid rgb(94 98 97 / 42%);
-   
-}
 
     @media ${device.laptop} {
         width: 92.5%;
         height: 215px;
         padding: 0px 12px;
         margin: 10px 0;
-        border: 1px solid rgb(22 86 69 / 99%);
-        border-radius: 4px;
+        border: 1px solid #565858ad;
+        border-radius: 8px;
 
         :hover {
-        cursor: pointer;
-
+            cursor: pointer;
+            border: 1px solid #949696ac;
+        }
     }
 
-    }
-
-    @media ${device.tablet}{
+    @media ${device.tablet} {
         width: 92.5%;
         height: 215px;
         padding: 0px 12px;
         margin: 10px 0;
-        border: 1px solid rgb(22 86 69 / 99%);
+        border: 1px solid #565858ad;
+        border-radius: 8px;
 
         :hover {
-        cursor: pointer;
-        background-color:rgb(20 55 55);
-    }
-
+            cursor: pointer;
+            border: 1px solid #949696ac;
+        }
     }
 `;
 const TitleWrapper = styled.div`
     width: 100%;
-   height: auto
+    height: auto;
 
     @media ${device.laptop} {
-    height: 55%;
-
     }
 `;
 const Link = styled.a``;
 
 const Title = styled.h3`
-margin-bottom: 6px;
+    margin-bottom: 6px;
     :hover {
         cursor: pointer;
     }
@@ -79,11 +72,9 @@ margin-bottom: 6px;
 
 const InfoWrapper = styled.div`
     width: 100%;
-height: auto
+    height: auto;
 
     @media ${device.laptop} {
-    height: 45%;
-
     }
 `;
 
@@ -101,15 +92,22 @@ const Preview = ({ meta }: PreviewProps): JSX.Element => {
     console.log(meta.data.createdAt);
     return (
         <>
-            <Wrapper href={`posts/${meta.postPath
-                            .split('posts/')[1]
-                            .replace(/.md?./, '')}`}>
+            <Wrapper
+                href={`posts/${meta.postPath
+                    .split('posts/')[1]
+                    .replace(/.md?./, '')}`}
+            >
                 <TitleWrapper>
-                        <Title>{meta.data.title}</Title>
+                    <Title>{meta.data.title}</Title>
                 </TitleWrapper>
                 <InfoWrapper>
                     <ExcerptWrapper>
-                    <Excerpt>{meta.data.excerpt.split(/\s+/).slice(0, 25).join(' ') + '...' }</Excerpt>
+                        <Excerpt>
+                            {meta.data.excerpt
+                                .split(/\s+/)
+                                .slice(0, 25)
+                                .join(' ') + '...'}
+                        </Excerpt>
                     </ExcerptWrapper>
                     {/* <TagsWrapper>
                         <Tag>

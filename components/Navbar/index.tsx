@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import { colors, device } from '../../styles/themes';
 import Dropdown from '../Dropdown';
 import Image from 'next/image';
-import {Logo} from '../Icons'
+import { Logo } from '../Icons';
 import usePath from '../../hooks/usePath';
 
 const Navigation = styled.div`
     width: 100%;
     position: relative;
+    background-color: #a6dbc8;
 `;
 
 const NavigationWrapper = styled.div`
@@ -18,6 +19,8 @@ const NavigationWrapper = styled.div`
     justify-content: space-between;
 
     @media ${device.tablet} {
+        max-height: 64px;
+
         .dropdown {
             display: none;
         }
@@ -29,6 +32,7 @@ const NavigationWrapper = styled.div`
 
     @media ${device.laptop} {
         margin: 0 auto;
+        max-height: 64px;
 
         .dropdown {
             display: none;
@@ -62,7 +66,6 @@ const LogoWrapper = styled.div`
 
 const LogoItem = styled.a`
     margin-left: 1.5em;
-
 `;
 
 const NavItem = styled.li`
@@ -86,8 +89,6 @@ const DropdownWrapper = styled.div`
     }
 `;
 
-
-
 const Anchor = styled.a`
     text-decoration: none;
     font-size: 14px;
@@ -108,7 +109,7 @@ const Navbar = (): JSX.Element => {
                 <NavigationWrapper>
                     <LogoWrapper>
                         <LogoItem href="/">
-                            <Logo/>
+                            <Logo />
                         </LogoItem>
                     </LogoWrapper>
                     <DropdownWrapper className="dropdown">
