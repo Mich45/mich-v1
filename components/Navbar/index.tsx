@@ -17,9 +17,11 @@ const NavigationWrapper = styled.div`
     width: 100%;
     display: flex;
     justify-content: space-between;
+    padding-top: 1rem;
 
     @media ${device.tablet} {
         max-height: 64px;
+        padding-top: 0;
 
         .dropdown {
             display: none;
@@ -33,6 +35,7 @@ const NavigationWrapper = styled.div`
     @media ${device.laptop} {
         margin: 0 auto;
         max-height: 64px;
+        padding-top: 0;
 
         .dropdown {
             display: none;
@@ -65,7 +68,11 @@ const LogoWrapper = styled.div`
 `;
 
 const LogoItem = styled.a`
-    margin-left: 1.5em;
+    margin-left: 0.5rem;
+
+    @media ${device.laptop} {
+        margin-left: 1.5rem;
+    }
 `;
 
 const NavItem = styled.li`

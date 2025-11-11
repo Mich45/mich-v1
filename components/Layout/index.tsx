@@ -10,7 +10,6 @@ const Main = styled.main`
     height: auto;
     width: 100%;
     overflow: hidden;
-    padding-inline: 20px;
 
     @media ${device.laptop} {
         padding-inline: 0px;
@@ -19,6 +18,11 @@ const Main = styled.main`
 
 const MainOverlay = styled.div`
     position: relative;
+    padding-top: 1rem;
+
+     @media ${device.laptop} {
+        padding-top: 0;
+    }
 `;
 
 const Layout = ({ children }: { children: React.ReactNode }) => {

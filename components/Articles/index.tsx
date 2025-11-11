@@ -24,13 +24,24 @@ const PreviewWrapper = styled.div`
     justify-content: space-between;
     border-bottom: 1px dotted #cbcbd2ff;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+
+    .read-more {
+        display: none;
+
+        @media ${device.laptop}, ${device.tablet} {
+            display: block;
+        }
+    }
 `;
 
 const Article = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 60%;
+
+    @media ${device.laptop}, ${device.tablet} {
+        max-width: 60%;
+    }
 `;
 
 const Title = styled.h3`
@@ -46,6 +57,8 @@ const Excerpt = styled.p`
 const ReadMore = styled.p`
     font-size: 0.9rem;
     color: black;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     margin-top: 0;
     padding-inline: 8px;
@@ -55,6 +68,11 @@ const ReadMore = styled.p`
     transition: all 0.2s ease-in-out;
     &:hover {
         background: white;
+    }
+
+    span {
+        display: flex;
+        align-items: center;
     }
 `;
 
@@ -67,7 +85,7 @@ const Button = styled.button`
     padding: 10px;
     display: flex;
     border-radius: 2rem;
-    background-color: rgb(45, 235, 187);
+    background-color: #a6dbc8;
     place-items: center;
     place-content: center;
     color: black;
@@ -131,12 +149,13 @@ const ArticlesPreview = ({ meta }: PreviewProps) => {
                 <Excerpt>{meta.data.excerpt}</Excerpt>
             </Article>
             <Link
+                className="read-more"
                 href={`posts/${meta.postPath
                     .split('posts/')[1]
                     .replace(/.md?./, '')}`}
                 passHref
             >
-                <ReadMore>Read more</ReadMore>
+                <ReadMore>Read more <span><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></span></ReadMore>
             </Link>
         </PreviewWrapper>
     );

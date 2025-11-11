@@ -26,15 +26,12 @@ const Header = styled.div`
     }
 
     .header1 {
-        margin-right: 70px;
     }
 
     .header2 {
-        text-align: right;
     }
 
     .header3 {
-        text-align: left;
     }
 `;
 
@@ -55,21 +52,6 @@ const MainContent = styled.section`
     }
 `;
 
-const SectionHeading = styled.h1`
-    color: #cbcbd2ff;
-    font-size: clamp(30px, 0.8888888889rem + 0.5555555556vw, 120px);
-    font-weight: bold;
-
-    @media ${device.tablet} {
-        padding-top: 0;
-    }
-
-    @media ${device.laptop} {
-        padding-left: 0;
-        padding-top: 0;
-    }
-`;
-
 const AboutSection = styled.section`
     width: 100%;
     margin: 0 auto;
@@ -80,6 +62,7 @@ const AboutSection = styled.section`
     position: relative;
     height: 100vh;
     padding-bottom: 3em;
+    padding-inline: 0.5rem;
 
     &:after {
         content: '';
@@ -88,6 +71,10 @@ const AboutSection = styled.section`
         background-color: #a6dbc8; /* #3faf95ff */
         position: absolute;
         z-index: -1;
+    }
+
+    @media ${device.laptop} {
+        padding-inline: 0;
     }
 `;
 
@@ -98,10 +85,12 @@ const Info = styled.div`
 const ArticlesSection = styled.section`
     max-width: 100%;
     height: 100%;
+    padding-inline: 0.5rem;
     overflow: hidden;
 
-    @media ${device.laptop} {
-    margin: 10rem 2rem;
+    @media ${device.laptop}, ${device.tablet} {
+        margin: 10rem 2rem;
+        padding-inline: 0;
     }
 `;
 
@@ -113,34 +102,48 @@ const InfoWrapper = styled.div`
 
 const Wrapper = styled.div`
     max-width: 100%;
-    margin-inline: 2em;
-    margin-top: 10rem;
+    margin-inline: 0.5rem;
+    margin-top: 1rem;
+
+    @media ${device.laptop}, ${device.tablet} {
+        margin-inline: 2em;
+        margin-top: 10rem;
+    }
 `;
 
 const WrapperHeader = styled.div`
     max-width: 900px;
 
     span {
-        font-size: clamp(80px, 1.1111111111rem + 1.1111111111vw, 80px);
+        font-size: clamp(
+            2.5rem,
+            1.5854rem + 3.9024vw,
+            5rem
+        ); /* generated from  https://clamp.font-size.app */
     }
 
-     h2 {
+    h2 {
         font-weight: 500;
-        font-size: clamp(30px, 0.8888888889rem + 0.5555555556vw, 120px);
+        font-size: clamp(
+            1.5rem,
+            -0.6951rem + 9.3659vw,
+            4rem
+        ); /* generated from  https://clamp.font-size.app */
         color: #cbcbd2ff;
     }
 `;
 
 const GridWrapper = styled.div`
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    grid-template-columns: 1fr;
     max-width: 100%;
     overflow: hidden;
-    margin-top: 6em;
+    margin-top: 3em;
 
-    @media (max-width: 768px) {
-        grid-template-columns: 1fr;
+    @media ${device.laptop}, ${device.tablet} {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 6em;
     }
 `;
 
@@ -150,9 +153,13 @@ const GridItem = styled.div`
     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
         0 4px 6px -2px rgba(0, 0, 0, 0.05);
     transition: all 0.3s ease;
-    height: 30rem;
+    height: 18rem;
     background-color: #a6dbc8;
     overflow: hidden;
+
+    @media ${device.laptop}, ${device.tablet} {
+        height: 30rem;
+    }
 `;
 
 type BlogProps = {
@@ -160,7 +167,6 @@ type BlogProps = {
 };
 
 const Home: NextPage<BlogProps> = ({ posts }): JSX.Element => {
-
     useLenis(() => {});
 
     return (
